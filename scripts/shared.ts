@@ -1,9 +1,15 @@
+import fs from "fs";
+import path from "path";
+
 import enItemTable from "./ArknightsGameData/en_US/gamedata/excel/item_table.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import { GameDataItem } from "./gamedata-types";
 
 const enItems: { [itemId: string]: GameDataItem } = enItemTable.items;
 const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
+
+export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
+fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
 
 const itemNameOverride: { [itemId: string]: string } = {
   mod_unlock_token: "Module Data Block",

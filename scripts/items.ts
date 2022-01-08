@@ -5,9 +5,9 @@ import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_da
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import { GameDataItem } from "./gamedata-types";
 import { Ingredient, OutputItem } from "./output-types";
-import { getEnglishItemName } from "./utils";
+import { getEnglishItemName, DATA_OUTPUT_DIRECTORY } from "./shared";
 
-const OUTPATH = "../data/items.json";
+const outputPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
 const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
 const {
   workshopFormulas,
@@ -103,9 +103,5 @@ const convertFormulaCostToIngredient = (
       })
   );
 
-  fs.mkdirSync(path.dirname(OUTPATH), { recursive: true });
-  fs.writeFileSync(
-    path.join("../data", "items.json"),
-    JSON.stringify(itemsJson, null, 2)
-  );
+  fs.writeFileSync(outputPath, JSON.stringify(itemsJson, null, 2));
 })();
