@@ -10,3 +10,8 @@ export interface GameDataItem {
   rarity: number; // 0-indexed
   [otherProperties: string]: unknown;
 }
+
+export interface GameDataCost {
+  id: string;
+  count: number;
+}

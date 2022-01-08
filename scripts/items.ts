@@ -3,7 +3,7 @@ import path from "path";
 
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
-import { GameDataItem } from "./gamedata-types";
+import { GameDataCost, GameDataItem } from "./gamedata-types";
 import { Ingredient, OutputItem } from "./output-types";
 import { getEnglishItemName, DATA_OUTPUT_DIRECTORY } from "./shared";
 
@@ -17,15 +17,10 @@ const {
   manufactFormulas: { [formulaId: string]: GameDataFormula };
 } = cnBuildingData;
 
-interface GameDataFormulaCost {
-  id: string;
-  count: number;
-}
-
 interface GameDataFormula {
   goldCost?: number;
   count: number;
-  costs: GameDataFormulaCost[];
+  costs: GameDataCost[];
   formulaType: string;
 }
 
@@ -39,9 +34,7 @@ const isPlannerItem = (itemId: string) => {
   );
 };
 
-const convertFormulaCostToIngredient = (
-  cost: GameDataFormulaCost
-): Ingredient => {
+const convertFormulaCostToIngredient = (cost: GameDataCost): Ingredient => {
   const { id, count } = cost;
   const ingredientEntry = cnItems[id];
 
