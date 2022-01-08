@@ -4,12 +4,27 @@ import {
   Hidden,
   List,
   ListItem,
+  ListItemButton,
   ListItemText,
   Typography,
 } from "@mui/material";
-import Link from "next/link";
 
 import { siteMetadata } from "../pages/_app";
+
+import MuiNextLink from "./MuiNextLink";
+
+const ListItemLink: React.VFC<{ href: string; linkText: string }> = ({
+  href,
+  linkText,
+}) => {
+  return (
+    <ListItem>
+      <ListItemButton component={MuiNextLink} href={href}>
+        <ListItemText primary={linkText} />
+      </ListItemButton>
+    </ListItem>
+  );
+};
 
 interface Props {
   mobileOpen: boolean;
@@ -24,14 +39,12 @@ const AppDrawer: React.VFC<Props> = (props) => {
   const drawerContent = (
     <>
       <Typography component="h1" variant="h5">
-        <Link href={siteUrl}>{siteTitle}</Link>
+        <MuiNextLink href={siteUrl}>{siteTitle}</MuiNextLink>
       </Typography>
       <Divider />
       <List>
         {pages.map(({ slug, pageTitle }) => (
-          <ListItem key={slug} button>
-            <ListItemText primary={pageTitle} />
-          </ListItem>
+          <ListItemLink href={slug} key={slug} linkText={pageTitle} />
         ))}
       </List>
     </>
