@@ -21,14 +21,22 @@ export interface GameDataCharacter {
   appellation: string;
   isNotObtainable: boolean;
   profession: string;
-  allSkillLvlUp: Array<{
-    lvlUpCost: GameDataCost[];
+  rarity: number; // 0-indexed
+  allSkillLvlup: Array<{
+    lvlUpCost: GameDataCost[] | null;
+  }>;
+  phases: Array<{
+    evolveCost: GameDataCost[] | null;
   }>;
   skills: Array<{
-    skillId: string;
+    skillId: string | null;
     levelUpCostCond: Array<{
-      levelUpCost: GameDataCost[];
+      levelUpCost: GameDataCost[] | null;
     }>;
   }>;
   [otherProperties: string]: unknown;
+}
+
+export interface GameDataCharacterCN extends GameDataCharacter {
+  subProfessionId: string;
 }

@@ -4,8 +4,13 @@ import path from "path";
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import { GameDataCost, GameDataItem } from "./gamedata-types";
-import { Ingredient, OutputItem } from "./output-types";
-import { getEnglishItemName, DATA_OUTPUT_DIRECTORY } from "./shared";
+import { OutputItem } from "./output-types";
+import {
+  getEnglishItemName,
+  DATA_OUTPUT_DIRECTORY,
+  gameDataCostToIngredient,
+  convertLMDCostToLMDItem,
+} from "./shared";
 
 const outputPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
 const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
@@ -32,19 +37,6 @@ const isPlannerItem = (itemId: string) => {
     !itemId.startsWith("tier") && // generic potential tokens
     !itemId.startsWith("voucher_full_") // vouchers for event welfare ops like Flamebringer
   );
-};
-
-const convertFormulaCostToIngredient = (cost: GameDataCost): Ingredient => {
-  const { id, count } = cost;
-  const ingredientEntry = cnItems[id];
-
-  return {
-    id,
-    name: getEnglishItemName(id),
-    tier: ingredientEntry.rarity + 1,
-    sortId: ingredientEntry.sortId,
-    quantity: count,
-  };
 };
 
 (() => {
@@ -77,15 +69,9 @@ const convertFormulaCostToIngredient = (cost: GameDataCost): Ingredient => {
           formula = manufactureFormulas[manufactureFormulaId];
         }
         if (formula) {
-          const ingredients = formula.costs.map(convertFormulaCostToIngredient);
+          const ingredients = formula.costs.map(gameDataCostToIngredient);
           if (formula.goldCost != null && formula.goldCost > 0) {
-            ingredients.unshift({
-              id: "4001",
-              name: "LMD",
-              tier: 4,
-              quantity: formula.goldCost,
-              sortId: 10004,
-            });
+            ingredients.unshift(convertLMDCostToLMDItem(formula.goldCost));
           }
           return [
             itemId,
