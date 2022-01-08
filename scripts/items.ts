@@ -1,12 +1,11 @@
 import fs from "fs";
 import path from "path";
 
-import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
-
+import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import { GameDataItem } from "./gamedata-types";
-import { getEnglishItemName } from "./utils";
 import { Ingredient, OutputItem } from "./output-types";
+import { getEnglishItemName } from "./utils";
 
 const OUTPATH = "../data/items.json";
 const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
