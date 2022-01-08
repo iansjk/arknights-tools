@@ -44,6 +44,42 @@ interface OperatorGoal {
   ingredients: Ingredient[];
 }
 
+interface SkillLevelGoal extends OperatorGoal {
+  category: OperatorGoalCategory.SkillLevel;
+  skillLevel: number;
+}
+
+interface EliteGoal extends OperatorGoal {
+  category: OperatorGoalCategory.Elite;
+  eliteLevel: number;
+}
+
+interface MasteryGoal extends OperatorGoal {
+  category: OperatorGoalCategory.Mastery;
+  masteryLevel: number;
+}
+
+interface ModuleGoal extends OperatorGoal {
+  category: OperatorGoalCategory.Module;
+}
+
+interface Operator {
+  id: string;
+  name: string;
+  rarity: number;
+  class: string;
+  branch: string;
+  skillLevels: SkillLevelGoal[];
+  elite: EliteGoal[];
+  skills: Array<{
+    skillId: string;
+    iconId: string | null;
+    skillName: string;
+    masteries: MasteryGoal[];
+  }>;
+  module?: ModuleGoal;
+}
+
 const isOperator = (charId: string) => {
   const entry = cnCharacters[charId];
   return (
