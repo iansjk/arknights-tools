@@ -46,7 +46,11 @@ interface OperatorGoal {
 
 const isOperator = (charId: string) => {
   const entry = cnCharacters[charId];
-  return entry.profession !== "TOKEN" && entry.profession !== "TRAP";
+  return (
+    entry.profession !== "TOKEN" &&
+    entry.profession !== "TRAP" &&
+    !entry.isNotObtainable
+  );
 };
 
 const isSummon = (charId: string) => {
