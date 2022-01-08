@@ -82469,5 +82469,199 @@
         ]
       }
     ]
+  },
+  "char_1001_amiya2": {
+    "id": "char_1001_amiya2",
+    "name": "Amiya (Guard)",
+    "rarity": 5,
+    "class": "Guard",
+    "branch": "artsfghter",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "skchr_amiya2_1",
+        "iconId": null,
+        "skillName": "Ying Xiao - Fleeting Night",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 5
+              },
+              {
+                "id": "31034",
+                "name": "Crystalline Circuit",
+                "tier": 4,
+                "sortId": 100041,
+                "quantity": 4
+              },
+              {
+                "id": "31013",
+                "name": "Coagulating Gel",
+                "tier": 3,
+                "sortId": 100037,
+                "quantity": 4
+              }
+            ],
+            "name": "Skill 1 Mastery 1",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 6
+              },
+              {
+                "id": "31024",
+                "name": "Incandescent Alloy Block",
+                "tier": 4,
+                "sortId": 100038,
+                "quantity": 4
+              },
+              {
+                "id": "30104",
+                "name": "RMA70-24",
+                "tier": 4,
+                "sortId": 100010,
+                "quantity": 5
+              }
+            ],
+            "name": "Skill 1 Mastery 2",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 10
+              },
+              {
+                "id": "30145",
+                "name": "Crystalline Electronic Unit",
+                "tier": 5,
+                "sortId": 100040,
+                "quantity": 4
+              },
+              {
+                "id": "30074",
+                "name": "White Horse Kohl",
+                "tier": 4,
+                "sortId": 100004,
+                "quantity": 4
+              }
+            ],
+            "name": "Skill 1 Mastery 3",
+            "category": "MASTERY"
+          }
+        ]
+      },
+      {
+        "skillId": "skchr_amiya2_2",
+        "iconId": null,
+        "skillName": "Ying Xiao - Shadowless",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 5
+              },
+              {
+                "id": "30054",
+                "name": "Keton Colloid",
+                "tier": 4,
+                "sortId": 100032,
+                "quantity": 4
+              },
+              {
+                "id": "31013",
+                "name": "Coagulating Gel",
+                "tier": 3,
+                "sortId": 100037,
+                "quantity": 4
+              }
+            ],
+            "name": "Skill 2 Mastery 1",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 6
+              },
+              {
+                "id": "31034",
+                "name": "Crystalline Circuit",
+                "tier": 4,
+                "sortId": 100041,
+                "quantity": 4
+              },
+              {
+                "id": "31014",
+                "name": "Polymerized Gel",
+                "tier": 4,
+                "sortId": 100036,
+                "quantity": 5
+              }
+            ],
+            "name": "Skill 2 Mastery 2",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 10
+              },
+              {
+                "id": "30145",
+                "name": "Crystalline Electronic Unit",
+                "tier": 5,
+                "sortId": 100040,
+                "quantity": 4
+              },
+              {
+                "id": "30064",
+                "name": "Optimized Device",
+                "tier": 4,
+                "sortId": 100016,
+                "quantity": 4
+              }
+            ],
+            "name": "Skill 2 Mastery 3",
+            "category": "MASTERY"
+          }
+        ]
+      }
+    ]
   }
 }
