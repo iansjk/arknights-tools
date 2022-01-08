@@ -2,11 +2,15 @@ import fs from "fs";
 import path from "path";
 
 import enItemTable from "./ArknightsGameData/en_US/gamedata/excel/item_table.json";
+import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
-import { GameDataItem } from "./gamedata-types";
+import { GameDataCharacter, GameDataItem } from "./gamedata-types";
 
 const enItems: { [itemId: string]: GameDataItem } = enItemTable.items;
 const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
+const cnCharacters = cnCharacterTable as {
+  [charId: string]: GameDataCharacter;
+};
 
 export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
 fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
@@ -32,4 +36,26 @@ export const getEnglishItemName = (itemId: string) => {
     }
   }
   return name;
+};
+
+const operatorNameOverride: { [operatorId: string]: string } = {
+  ShiraYuki: "Shirayuki",
+  Гум: "Gummy",
+  Зима: "Zima",
+  Истина: "Istina",
+  Роса: "Rosa",
+};
+
+export const getOperatorName = (operatorId: string) => {
+  if (operatorId === "char_1001_amiya2") {
+    return "Amiya (Guard)";
+  }
+  const entry = cnCharacters[operatorId];
+  if (entry == null) {
+    throw new Error(`No such operator: "${operatorId}"`);
+  } else if (entry.isNotObtainable) {
+    console.warn(`Operator is not obtainable: "${operatorId}"`);
+  }
+  const { appellation } = entry;
+  return operatorNameOverride[appellation] ?? appellation;
 };

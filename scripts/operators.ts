@@ -5,7 +5,7 @@ import enCharacterTable from "./ArknightsGameData/en_US/gamedata/excel/character
 import enSkillTable from "./ArknightsGameData/en_US/gamedata/excel/skill_table.json";
 import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json";
 import cnSkillTable from "./ArknightsGameData/zh_CN/gamedata/excel/skill_table.json";
-import { GameDataCost } from "./gamedata-types";
+import { GameDataCharacter } from "./gamedata-types";
 import { Ingredient } from "./output-types";
 import { DATA_OUTPUT_DIRECTORY } from "./shared";
 
@@ -17,22 +17,6 @@ const enCharacters = enCharacterTable as {
 const cnCharacters = cnCharacterTable as {
   [charId: string]: GameDataCharacter;
 };
-
-interface GameDataCharacter {
-  name: string;
-  isNotObtainable: boolean;
-  profession: string;
-  allSkillLvlUp: Array<{
-    lvlUpCost: GameDataCost[];
-  }>;
-  skills: Array<{
-    skillId: string;
-    levelUpCostCond: Array<{
-      levelUpCost: GameDataCost[];
-    }>;
-  }>;
-  [otherProperties: string]: unknown;
-}
 
 interface GameDataSkill {
   skillId: string;

@@ -15,3 +15,20 @@ export interface GameDataCost {
   id: string;
   count: number;
 }
+
+export interface GameDataCharacter {
+  name: string;
+  appellation: string;
+  isNotObtainable: boolean;
+  profession: string;
+  allSkillLvlUp: Array<{
+    lvlUpCost: GameDataCost[];
+  }>;
+  skills: Array<{
+    skillId: string;
+    levelUpCostCond: Array<{
+      levelUpCost: GameDataCost[];
+    }>;
+  }>;
+  [otherProperties: string]: unknown;
+}
