@@ -58,9 +58,11 @@ const isSummon = (charId: string) => {
   return entry.profession === "TOKEN";
 };
 
-const operatorsJson = {};
-
 (() => {
+  const enOperators = {};
+  const cnOperators = {};
+  const operatorsJson = { ...cnOperators, ...enOperators };
+
   fs.writeFileSync(
     path.join(DATA_OUTPUT_DIRECTORY, "operators.json"),
     JSON.stringify(operatorsJson, null, 2)
