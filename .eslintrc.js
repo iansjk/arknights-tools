@@ -1,4 +1,3 @@
-/* eslint-env node */
 module.exports = {
   env: {
     browser: true,
@@ -14,6 +13,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -35,7 +35,10 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
-      { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
+      {
+        varsIgnorePattern: "^_",
+        argsIgnorePattern: "^_",
+      },
     ],
     "import/no-cycle": "error",
     "import/order": [
