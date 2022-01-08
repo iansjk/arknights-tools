@@ -1,6 +1,6 @@
 {
   "name": "arknights-tools",
-  "private": true,
+  "license": "0BSD",
   "scripts": {
     "dev": "next dev",
     "start": "next dev",
