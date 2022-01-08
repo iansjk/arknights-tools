@@ -1,0 +1,1564 @@
+{
+  "2001": {
+    "id": "2001",
+    "name": "Drill Battle Record",
+    "tier": 2,
+    "sortId": 70004
+  },
+  "2002": {
+    "id": "2002",
+    "name": "Frontline Battle Record",
+    "tier": 3,
+    "sortId": 70003
+  },
+  "2003": {
+    "id": "2003",
+    "name": "Tactical Battle Record",
+    "tier": 4,
+    "sortId": 70002
+  },
+  "2004": {
+    "id": "2004",
+    "name": "Strategic Battle Record",
+    "tier": 5,
+    "sortId": 70001
+  },
+  "3211": {
+    "id": "3211",
+    "name": "Vanguard Chip",
+    "tier": 3,
+    "sortId": 400018,
+    "ingredients": [
+      {
+        "id": "3271",
+        "name": "Supporter Chip",
+        "tier": 3,
+        "sortId": 400024,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3212": {
+    "id": "3212",
+    "name": "Vanguard Chip Pack",
+    "tier": 4,
+    "sortId": 400010,
+    "ingredients": [
+      {
+        "id": "3272",
+        "name": "Supporter Chip Pack",
+        "tier": 4,
+        "sortId": 400016,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3213": {
+    "id": "3213",
+    "name": "Vanguard Dualchip",
+    "tier": 5,
+    "sortId": 400002,
+    "ingredients": [
+      {
+        "id": "3212",
+        "name": "Vanguard Chip Pack",
+        "tier": 4,
+        "sortId": 400010,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3221": {
+    "id": "3221",
+    "name": "Guard Chip",
+    "tier": 3,
+    "sortId": 400019,
+    "ingredients": [
+      {
+        "id": "3281",
+        "name": "Specialist Chip",
+        "tier": 3,
+        "sortId": 400025,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3222": {
+    "id": "3222",
+    "name": "Guard Chip Pack",
+    "tier": 4,
+    "sortId": 400011,
+    "ingredients": [
+      {
+        "id": "3282",
+        "name": "Specialist Chip Pack",
+        "tier": 4,
+        "sortId": 400017,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3223": {
+    "id": "3223",
+    "name": "Guard Dualchip",
+    "tier": 5,
+    "sortId": 400003,
+    "ingredients": [
+      {
+        "id": "3222",
+        "name": "Guard Chip Pack",
+        "tier": 4,
+        "sortId": 400011,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3231": {
+    "id": "3231",
+    "name": "Defender Chip",
+    "tier": 3,
+    "sortId": 400020,
+    "ingredients": [
+      {
+        "id": "3261",
+        "name": "Medic Chip",
+        "tier": 3,
+        "sortId": 400023,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3232": {
+    "id": "3232",
+    "name": "Defender Chip Pack",
+    "tier": 4,
+    "sortId": 400012,
+    "ingredients": [
+      {
+        "id": "3262",
+        "name": "Medic Chip Pack",
+        "tier": 4,
+        "sortId": 400015,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3233": {
+    "id": "3233",
+    "name": "Defender Dualchip",
+    "tier": 5,
+    "sortId": 400004,
+    "ingredients": [
+      {
+        "id": "3232",
+        "name": "Defender Chip Pack",
+        "tier": 4,
+        "sortId": 400012,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3241": {
+    "id": "3241",
+    "name": "Sniper Chip",
+    "tier": 3,
+    "sortId": 400021,
+    "ingredients": [
+      {
+        "id": "3251",
+        "name": "Caster Chip",
+        "tier": 3,
+        "sortId": 400022,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3242": {
+    "id": "3242",
+    "name": "Sniper Chip Pack",
+    "tier": 4,
+    "sortId": 400013,
+    "ingredients": [
+      {
+        "id": "3252",
+        "name": "Caster Chip Pack",
+        "tier": 4,
+        "sortId": 400014,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3243": {
+    "id": "3243",
+    "name": "Sniper Dualchip",
+    "tier": 5,
+    "sortId": 400005,
+    "ingredients": [
+      {
+        "id": "3242",
+        "name": "Sniper Chip Pack",
+        "tier": 4,
+        "sortId": 400013,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3251": {
+    "id": "3251",
+    "name": "Caster Chip",
+    "tier": 3,
+    "sortId": 400022,
+    "ingredients": [
+      {
+        "id": "3241",
+        "name": "Sniper Chip",
+        "tier": 3,
+        "sortId": 400021,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3252": {
+    "id": "3252",
+    "name": "Caster Chip Pack",
+    "tier": 4,
+    "sortId": 400014,
+    "ingredients": [
+      {
+        "id": "3242",
+        "name": "Sniper Chip Pack",
+        "tier": 4,
+        "sortId": 400013,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3253": {
+    "id": "3253",
+    "name": "Caster Dualchip",
+    "tier": 5,
+    "sortId": 400006,
+    "ingredients": [
+      {
+        "id": "3252",
+        "name": "Caster Chip Pack",
+        "tier": 4,
+        "sortId": 400014,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3261": {
+    "id": "3261",
+    "name": "Medic Chip",
+    "tier": 3,
+    "sortId": 400023,
+    "ingredients": [
+      {
+        "id": "3231",
+        "name": "Defender Chip",
+        "tier": 3,
+        "sortId": 400020,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3262": {
+    "id": "3262",
+    "name": "Medic Chip Pack",
+    "tier": 4,
+    "sortId": 400015,
+    "ingredients": [
+      {
+        "id": "3232",
+        "name": "Defender Chip Pack",
+        "tier": 4,
+        "sortId": 400012,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3263": {
+    "id": "3263",
+    "name": "Medic Dualchip",
+    "tier": 5,
+    "sortId": 400007,
+    "ingredients": [
+      {
+        "id": "3262",
+        "name": "Medic Chip Pack",
+        "tier": 4,
+        "sortId": 400015,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3271": {
+    "id": "3271",
+    "name": "Supporter Chip",
+    "tier": 3,
+    "sortId": 400024,
+    "ingredients": [
+      {
+        "id": "3211",
+        "name": "Vanguard Chip",
+        "tier": 3,
+        "sortId": 400018,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3272": {
+    "id": "3272",
+    "name": "Supporter Chip Pack",
+    "tier": 4,
+    "sortId": 400016,
+    "ingredients": [
+      {
+        "id": "3212",
+        "name": "Vanguard Chip Pack",
+        "tier": 4,
+        "sortId": 400010,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3273": {
+    "id": "3273",
+    "name": "Supporter Dualchip",
+    "tier": 5,
+    "sortId": 400008,
+    "ingredients": [
+      {
+        "id": "3272",
+        "name": "Supporter Chip Pack",
+        "tier": 4,
+        "sortId": 400016,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3281": {
+    "id": "3281",
+    "name": "Specialist Chip",
+    "tier": 3,
+    "sortId": 400025,
+    "ingredients": [
+      {
+        "id": "3221",
+        "name": "Guard Chip",
+        "tier": 3,
+        "sortId": 400019,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3282": {
+    "id": "3282",
+    "name": "Specialist Chip Pack",
+    "tier": 4,
+    "sortId": 400017,
+    "ingredients": [
+      {
+        "id": "3222",
+        "name": "Guard Chip Pack",
+        "tier": 4,
+        "sortId": 400011,
+        "quantity": 3
+      }
+    ],
+    "yield": 2
+  },
+  "3283": {
+    "id": "3283",
+    "name": "Specialist Dualchip",
+    "tier": 5,
+    "sortId": 400009,
+    "ingredients": [
+      {
+        "id": "3282",
+        "name": "Specialist Chip Pack",
+        "tier": 4,
+        "sortId": 400017,
+        "quantity": 2
+      },
+      {
+        "id": "32001",
+        "name": "Chip Catalyst",
+        "tier": 4,
+        "sortId": 400001,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "3301": {
+    "id": "3301",
+    "name": "Skill Summary - 1",
+    "tier": 2,
+    "sortId": 80003
+  },
+  "3302": {
+    "id": "3302",
+    "name": "Skill Summary - 2",
+    "tier": 3,
+    "sortId": 80002,
+    "ingredients": [
+      {
+        "id": "3301",
+        "name": "Skill Summary - 1",
+        "tier": 2,
+        "sortId": 80003,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "3303": {
+    "id": "3303",
+    "name": "Skill Summary - 3",
+    "tier": 4,
+    "sortId": 80001,
+    "ingredients": [
+      {
+        "id": "3302",
+        "name": "Skill Summary - 2",
+        "tier": 3,
+        "sortId": 80002,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30011": {
+    "id": "30011",
+    "name": "Orirock",
+    "tier": 1,
+    "sortId": 100015
+  },
+  "30012": {
+    "id": "30012",
+    "name": "Orirock Cube",
+    "tier": 2,
+    "sortId": 100014,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30011",
+        "name": "Orirock",
+        "tier": 1,
+        "sortId": 100015,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30013": {
+    "id": "30013",
+    "name": "Orirock Cluster",
+    "tier": 3,
+    "sortId": 100013,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30012",
+        "name": "Orirock Cube",
+        "tier": 2,
+        "sortId": 100014,
+        "quantity": 5
+      }
+    ],
+    "yield": 1
+  },
+  "30014": {
+    "id": "30014",
+    "name": "Orirock Concentration",
+    "tier": 4,
+    "sortId": 100012,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30013",
+        "name": "Orirock Cluster",
+        "tier": 3,
+        "sortId": 100013,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30021": {
+    "id": "30021",
+    "name": "Sugar Substitute",
+    "tier": 1,
+    "sortId": 100027
+  },
+  "30022": {
+    "id": "30022",
+    "name": "Sugar",
+    "tier": 2,
+    "sortId": 100026,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30021",
+        "name": "Sugar Substitute",
+        "tier": 1,
+        "sortId": 100027,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30023": {
+    "id": "30023",
+    "name": "Sugar Pack",
+    "tier": 3,
+    "sortId": 100025,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30022",
+        "name": "Sugar",
+        "tier": 2,
+        "sortId": 100026,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30024": {
+    "id": "30024",
+    "name": "Sugar Lump",
+    "tier": 4,
+    "sortId": 100024,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30023",
+        "name": "Sugar Pack",
+        "tier": 3,
+        "sortId": 100025,
+        "quantity": 2
+      },
+      {
+        "id": "30043",
+        "name": "Oriron Cluster",
+        "tier": 3,
+        "sortId": 100029,
+        "quantity": 1
+      },
+      {
+        "id": "30083",
+        "name": "Manganese Ore",
+        "tier": 3,
+        "sortId": 100007,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30031": {
+    "id": "30031",
+    "name": "Ester",
+    "tier": 1,
+    "sortId": 100023
+  },
+  "30032": {
+    "id": "30032",
+    "name": "Polyester",
+    "tier": 2,
+    "sortId": 100022,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30031",
+        "name": "Ester",
+        "tier": 1,
+        "sortId": 100023,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30033": {
+    "id": "30033",
+    "name": "Polyester Pack",
+    "tier": 3,
+    "sortId": 100021,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30032",
+        "name": "Polyester",
+        "tier": 2,
+        "sortId": 100022,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30034": {
+    "id": "30034",
+    "name": "Polyester Lump",
+    "tier": 4,
+    "sortId": 100020,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30033",
+        "name": "Polyester Pack",
+        "tier": 3,
+        "sortId": 100021,
+        "quantity": 2
+      },
+      {
+        "id": "30053",
+        "name": "Aketon",
+        "tier": 3,
+        "sortId": 100033,
+        "quantity": 1
+      },
+      {
+        "id": "30073",
+        "name": "Loxic Kohl",
+        "tier": 3,
+        "sortId": 100005,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30041": {
+    "id": "30041",
+    "name": "Oriron Shard",
+    "tier": 1,
+    "sortId": 100031
+  },
+  "30042": {
+    "id": "30042",
+    "name": "Oriron",
+    "tier": 2,
+    "sortId": 100030,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30041",
+        "name": "Oriron Shard",
+        "tier": 1,
+        "sortId": 100031,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30043": {
+    "id": "30043",
+    "name": "Oriron Cluster",
+    "tier": 3,
+    "sortId": 100029,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30042",
+        "name": "Oriron",
+        "tier": 2,
+        "sortId": 100030,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30044": {
+    "id": "30044",
+    "name": "Oriron Block",
+    "tier": 4,
+    "sortId": 100028,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30043",
+        "name": "Oriron Cluster",
+        "tier": 3,
+        "sortId": 100029,
+        "quantity": 2
+      },
+      {
+        "id": "30063",
+        "name": "Integrated Device",
+        "tier": 3,
+        "sortId": 100017,
+        "quantity": 1
+      },
+      {
+        "id": "30033",
+        "name": "Polyester Pack",
+        "tier": 3,
+        "sortId": 100021,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30051": {
+    "id": "30051",
+    "name": "Diketon",
+    "tier": 1,
+    "sortId": 100035
+  },
+  "30052": {
+    "id": "30052",
+    "name": "Polyketon",
+    "tier": 2,
+    "sortId": 100034,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30051",
+        "name": "Diketon",
+        "tier": 1,
+        "sortId": 100035,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30053": {
+    "id": "30053",
+    "name": "Aketon",
+    "tier": 3,
+    "sortId": 100033,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30052",
+        "name": "Polyketon",
+        "tier": 2,
+        "sortId": 100034,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30054": {
+    "id": "30054",
+    "name": "Keton Colloid",
+    "tier": 4,
+    "sortId": 100032,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30053",
+        "name": "Aketon",
+        "tier": 3,
+        "sortId": 100033,
+        "quantity": 2
+      },
+      {
+        "id": "30023",
+        "name": "Sugar Pack",
+        "tier": 3,
+        "sortId": 100025,
+        "quantity": 1
+      },
+      {
+        "id": "30083",
+        "name": "Manganese Ore",
+        "tier": 3,
+        "sortId": 100007,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30061": {
+    "id": "30061",
+    "name": "Damaged Device",
+    "tier": 1,
+    "sortId": 100019
+  },
+  "30062": {
+    "id": "30062",
+    "name": "Device",
+    "tier": 2,
+    "sortId": 100018,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 100,
+        "sortId": 10004
+      },
+      {
+        "id": "30061",
+        "name": "Damaged Device",
+        "tier": 1,
+        "sortId": 100019,
+        "quantity": 3
+      }
+    ],
+    "yield": 1
+  },
+  "30063": {
+    "id": "30063",
+    "name": "Integrated Device",
+    "tier": 3,
+    "sortId": 100017,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 200,
+        "sortId": 10004
+      },
+      {
+        "id": "30062",
+        "name": "Device",
+        "tier": 2,
+        "sortId": 100018,
+        "quantity": 4
+      }
+    ],
+    "yield": 1
+  },
+  "30064": {
+    "id": "30064",
+    "name": "Optimized Device",
+    "tier": 4,
+    "sortId": 100016,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30063",
+        "name": "Integrated Device",
+        "tier": 3,
+        "sortId": 100017,
+        "quantity": 1
+      },
+      {
+        "id": "30013",
+        "name": "Orirock Cluster",
+        "tier": 3,
+        "sortId": 100013,
+        "quantity": 2
+      },
+      {
+        "id": "30093",
+        "name": "Grindstone",
+        "tier": 3,
+        "sortId": 100009,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30073": {
+    "id": "30073",
+    "name": "Loxic Kohl",
+    "tier": 3,
+    "sortId": 100005
+  },
+  "30074": {
+    "id": "30074",
+    "name": "White Horse Kohl",
+    "tier": 4,
+    "sortId": 100004,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30073",
+        "name": "Loxic Kohl",
+        "tier": 3,
+        "sortId": 100005,
+        "quantity": 1
+      },
+      {
+        "id": "30023",
+        "name": "Sugar Pack",
+        "tier": 3,
+        "sortId": 100025,
+        "quantity": 1
+      },
+      {
+        "id": "30103",
+        "name": "RMA70-12",
+        "tier": 3,
+        "sortId": 100011,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30083": {
+    "id": "30083",
+    "name": "Manganese Ore",
+    "tier": 3,
+    "sortId": 100007
+  },
+  "30084": {
+    "id": "30084",
+    "name": "Manganese Trihydrate",
+    "tier": 4,
+    "sortId": 100006,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30083",
+        "name": "Manganese Ore",
+        "tier": 3,
+        "sortId": 100007,
+        "quantity": 2
+      },
+      {
+        "id": "30033",
+        "name": "Polyester Pack",
+        "tier": 3,
+        "sortId": 100021,
+        "quantity": 1
+      },
+      {
+        "id": "30073",
+        "name": "Loxic Kohl",
+        "tier": 3,
+        "sortId": 100005,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30093": {
+    "id": "30093",
+    "name": "Grindstone",
+    "tier": 3,
+    "sortId": 100009
+  },
+  "30094": {
+    "id": "30094",
+    "name": "Grindstone Pentahydrate",
+    "tier": 4,
+    "sortId": 100008,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30093",
+        "name": "Grindstone",
+        "tier": 3,
+        "sortId": 100009,
+        "quantity": 1
+      },
+      {
+        "id": "30043",
+        "name": "Oriron Cluster",
+        "tier": 3,
+        "sortId": 100029,
+        "quantity": 1
+      },
+      {
+        "id": "30063",
+        "name": "Integrated Device",
+        "tier": 3,
+        "sortId": 100017,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30103": {
+    "id": "30103",
+    "name": "RMA70-12",
+    "tier": 3,
+    "sortId": 100011
+  },
+  "30104": {
+    "id": "30104",
+    "name": "RMA70-24",
+    "tier": 4,
+    "sortId": 100010,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30103",
+        "name": "RMA70-12",
+        "tier": 3,
+        "sortId": 100011,
+        "quantity": 1
+      },
+      {
+        "id": "30013",
+        "name": "Orirock Cluster",
+        "tier": 3,
+        "sortId": 100013,
+        "quantity": 2
+      },
+      {
+        "id": "30053",
+        "name": "Aketon",
+        "tier": 3,
+        "sortId": 100033,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30115": {
+    "id": "30115",
+    "name": "Polymerization Preparation",
+    "tier": 5,
+    "sortId": 100003,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 400,
+        "sortId": 10004
+      },
+      {
+        "id": "30014",
+        "name": "Orirock Concentration",
+        "tier": 4,
+        "sortId": 100012,
+        "quantity": 1
+      },
+      {
+        "id": "30044",
+        "name": "Oriron Block",
+        "tier": 4,
+        "sortId": 100028,
+        "quantity": 1
+      },
+      {
+        "id": "30054",
+        "name": "Keton Colloid",
+        "tier": 4,
+        "sortId": 100032,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30125": {
+    "id": "30125",
+    "name": "Bipolar Nanoflake",
+    "tier": 5,
+    "sortId": 100002,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 400,
+        "sortId": 10004
+      },
+      {
+        "id": "30064",
+        "name": "Optimized Device",
+        "tier": 4,
+        "sortId": 100016,
+        "quantity": 1
+      },
+      {
+        "id": "30074",
+        "name": "White Horse Kohl",
+        "tier": 4,
+        "sortId": 100004,
+        "quantity": 2
+      }
+    ],
+    "yield": 1
+  },
+  "30135": {
+    "id": "30135",
+    "name": "D32 Steel",
+    "tier": 5,
+    "sortId": 100001,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 400,
+        "sortId": 10004
+      },
+      {
+        "id": "30084",
+        "name": "Manganese Trihydrate",
+        "tier": 4,
+        "sortId": 100006,
+        "quantity": 1
+      },
+      {
+        "id": "30094",
+        "name": "Grindstone Pentahydrate",
+        "tier": 4,
+        "sortId": 100008,
+        "quantity": 1
+      },
+      {
+        "id": "30104",
+        "name": "RMA70-24",
+        "tier": 4,
+        "sortId": 100010,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "30145": {
+    "id": "30145",
+    "name": "Crystalline Electronic Unit",
+    "tier": 5,
+    "sortId": 100040,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 400,
+        "sortId": 10004
+      },
+      {
+        "id": "31034",
+        "name": "Crystalline Circuit",
+        "tier": 4,
+        "sortId": 100041,
+        "quantity": 1
+      },
+      {
+        "id": "31014",
+        "name": "Polymerized Gel",
+        "tier": 4,
+        "sortId": 100036,
+        "quantity": 2
+      },
+      {
+        "id": "31024",
+        "name": "Incandescent Alloy Block",
+        "tier": 4,
+        "sortId": 100038,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31013": {
+    "id": "31013",
+    "name": "Coagulating Gel",
+    "tier": 3,
+    "sortId": 100037
+  },
+  "31014": {
+    "id": "31014",
+    "name": "Polymerized Gel",
+    "tier": 4,
+    "sortId": 100036,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30043",
+        "name": "Oriron Cluster",
+        "tier": 3,
+        "sortId": 100029,
+        "quantity": 1
+      },
+      {
+        "id": "31013",
+        "name": "Coagulating Gel",
+        "tier": 3,
+        "sortId": 100037,
+        "quantity": 1
+      },
+      {
+        "id": "31023",
+        "name": "Incandescent Alloy",
+        "tier": 3,
+        "sortId": 100039,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31023": {
+    "id": "31023",
+    "name": "Incandescent Alloy",
+    "tier": 3,
+    "sortId": 100039
+  },
+  "31024": {
+    "id": "31024",
+    "name": "Incandescent Alloy Block",
+    "tier": 4,
+    "sortId": 100038,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "30063",
+        "name": "Integrated Device",
+        "tier": 3,
+        "sortId": 100017,
+        "quantity": 1
+      },
+      {
+        "id": "30093",
+        "name": "Grindstone",
+        "tier": 3,
+        "sortId": 100009,
+        "quantity": 1
+      },
+      {
+        "id": "31023",
+        "name": "Incandescent Alloy",
+        "tier": 3,
+        "sortId": 100039,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31033": {
+    "id": "31033",
+    "name": "Crystalline Component",
+    "tier": 3,
+    "sortId": 100042
+  },
+  "31034": {
+    "id": "31034",
+    "name": "Crystalline Circuit",
+    "tier": 4,
+    "sortId": 100041,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "31033",
+        "name": "Crystalline Component",
+        "tier": 3,
+        "sortId": 100042,
+        "quantity": 2
+      },
+      {
+        "id": "31013",
+        "name": "Coagulating Gel",
+        "tier": 3,
+        "sortId": 100037,
+        "quantity": 1
+      },
+      {
+        "id": "31023",
+        "name": "Incandescent Alloy",
+        "tier": 3,
+        "sortId": 100039,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31043": {
+    "id": "31043",
+    "name": "Compound Cutting Fluid",
+    "tier": 3,
+    "sortId": 100044
+  },
+  "31044": {
+    "id": "31044",
+    "name": "Cutting Stock Solution",
+    "tier": 4,
+    "sortId": 100043,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "31043",
+        "name": "Compound Cutting Fluid",
+        "tier": 3,
+        "sortId": 100044,
+        "quantity": 1
+      },
+      {
+        "id": "31053",
+        "name": "Semi-natural Solvent",
+        "tier": 3,
+        "sortId": 100046,
+        "quantity": 1
+      },
+      {
+        "id": "31013",
+        "name": "Coagulating Gel",
+        "tier": 3,
+        "sortId": 100037,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31053": {
+    "id": "31053",
+    "name": "Semi-natural Solvent",
+    "tier": 3,
+    "sortId": 100046
+  },
+  "31054": {
+    "id": "31054",
+    "name": "Refined Solvent",
+    "tier": 4,
+    "sortId": 100045,
+    "ingredients": [
+      {
+        "id": "4001",
+        "name": "LMD",
+        "tier": 4,
+        "quantity": 300,
+        "sortId": 10004
+      },
+      {
+        "id": "31053",
+        "name": "Semi-natural Solvent",
+        "tier": 3,
+        "sortId": 100046,
+        "quantity": 1
+      },
+      {
+        "id": "31033",
+        "name": "Crystalline Component",
+        "tier": 3,
+        "sortId": 100042,
+        "quantity": 1
+      },
+      {
+        "id": "30103",
+        "name": "RMA70-12",
+        "tier": 3,
+        "sortId": 100011,
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "32001": {
+    "id": "32001",
+    "name": "Chip Catalyst",
+    "tier": 4,
+    "sortId": 400001
+  },
+  "mod_unlock_token": {
+    "id": "mod_unlock_token",
+    "name": "Module Data Block",
+    "tier": 5,
+    "sortId": 90001
+  }
+}
