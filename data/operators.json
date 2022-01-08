@@ -4602,7 +4602,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "便携测电设备",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30063",
+          "name": "Integrated Device",
+          "tier": 3,
+          "sortId": 100017,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_235_jesica": {
     "id": "char_235_jesica",
@@ -7297,7 +7324,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "便携雷达的辅助器材",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30033",
+          "name": "Polyester Pack",
+          "tier": 3,
+          "sortId": 100021,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_366_acdrop": {
     "id": "char_366_acdrop",
@@ -8837,7 +8891,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "伟大的摇滚",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30083",
+          "name": "Manganese Ore",
+          "tier": 3,
+          "sortId": 100007,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_151_myrtle": {
     "id": "char_151_myrtle",
@@ -9992,7 +10073,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "军用望远镜",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30023",
+          "name": "Sugar Pack",
+          "tier": 3,
+          "sortId": 100025,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_289_gyuki": {
     "id": "char_289_gyuki",
@@ -12302,7 +12410,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "可替换刀具套装",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30073",
+          "name": "Loxic Kohl",
+          "tier": 3,
+          "sortId": 100005,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_337_utage": {
     "id": "char_337_utage",
@@ -13457,7 +13592,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "隐秘行动工具包",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30053",
+          "name": "Aketon",
+          "tier": 3,
+          "sortId": 100033,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_272_strong": {
     "id": "char_272_strong",
@@ -15767,7 +15929,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "“爱琴之吻”",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30043",
+          "name": "Oriron Cluster",
+          "tier": 3,
+          "sortId": 100029,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_385_finlpp": {
     "id": "char_385_finlpp",
@@ -18462,7 +18651,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "诡异的调色盘",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 1
+        },
+        {
+          "id": "30013",
+          "name": "Orirock Cluster",
+          "tier": 3,
+          "sortId": 100013,
+          "quantity": 4
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 20000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_183_skgoat": {
     "id": "char_183_skgoat",
@@ -20779,7 +20995,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "医疗环境分析装置",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30074",
+          "name": "White Horse Kohl",
+          "tier": 4,
+          "sortId": 100004,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_275_breeze": {
     "id": "char_275_breeze",
@@ -21171,7 +21414,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "外科医疗套组",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30084",
+          "name": "Manganese Trihydrate",
+          "tier": 4,
+          "sortId": 100006,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_115_headbr": {
     "id": "char_115_headbr",
@@ -22739,7 +23009,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "枪刃清洁套装",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30024",
+          "name": "Sugar Lump",
+          "tier": 4,
+          "sortId": 100024,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_496_wildmn": {
     "id": "char_496_wildmn",
@@ -23131,7 +23428,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "长枪替补套装",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30014",
+          "name": "Orirock Concentration",
+          "tier": 4,
+          "sortId": 100012,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_401_elysm": {
     "id": "char_401_elysm",
@@ -23915,7 +24239,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "防身口红",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30044",
+          "name": "Oriron Block",
+          "tier": 4,
+          "sortId": 100028,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_265_sophia": {
     "id": "char_265_sophia",
@@ -24307,7 +24658,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "加长鞭刃丝线",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30034",
+          "name": "Polyester Lump",
+          "tier": 4,
+          "sortId": 100020,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_106_franka": {
     "id": "char_106_franka",
@@ -27051,7 +27429,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "做工优良的衬衣",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "31044",
+          "name": "Cutting Stock Solution",
+          "tier": 4,
+          "sortId": 100043,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_459_tachak": {
     "id": "char_459_tachak",
@@ -27443,7 +27848,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "轻机枪枪架",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "31034",
+          "name": "Crystalline Circuit",
+          "tier": 4,
+          "sortId": 100041,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_143_ghost": {
     "id": "char_143_ghost",
@@ -35374,7 +35806,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "“天地通明”",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "31024",
+          "name": "Incandescent Alloy Block",
+          "tier": 4,
+          "sortId": 100038,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_344_beewax": {
     "id": "char_344_beewax",
@@ -38510,7 +38969,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "咪波控制终端XP",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30024",
+          "name": "Sugar Lump",
+          "tier": 4,
+          "sortId": 100024,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_336_folivo": {
     "id": "char_336_folivo",
@@ -38902,7 +39388,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "专业级改良镜头",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30014",
+          "name": "Orirock Concentration",
+          "tier": 4,
+          "sortId": 100012,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_108_silent": {
     "id": "char_108_silent",
@@ -43214,7 +43727,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "神秘的道具包",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30104",
+          "name": "RMA70-24",
+          "tier": 4,
+          "sortId": 100010,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_243_waaifu": {
     "id": "char_243_waaifu",
@@ -43606,7 +44146,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "红眉咏春拳谱",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "31014",
+          "name": "Polymerized Gel",
+          "tier": 4,
+          "sortId": 100036,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_214_kafka": {
     "id": "char_214_kafka",
@@ -43998,7 +44565,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "魔方挂坠",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30094",
+          "name": "Grindstone Pentahydrate",
+          "tier": 4,
+          "sortId": 100008,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_455_nothin": {
     "id": "char_455_nothin",
@@ -49094,7 +49688,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "野战狙击套装",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30054",
+          "name": "Keton Colloid",
+          "tier": 4,
+          "sortId": 100032,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_218_cuttle": {
     "id": "char_218_cuttle",
@@ -49486,7 +50107,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "枪支调试工具组",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "30064",
+          "name": "Optimized Device",
+          "tier": 4,
+          "sortId": 100016,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_363_toddi": {
     "id": "char_363_toddi",
@@ -57851,7 +58499,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "首战支援套组",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30135",
+          "name": "D32 Steel",
+          "tier": 5,
+          "sortId": 100001,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_113_cqbw": {
     "id": "char_113_cqbw",
@@ -60833,7 +61508,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "破城矛弹夹",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30145",
+          "name": "Crystalline Electronic Unit",
+          "tier": 5,
+          "sortId": 100040,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_362_saga": {
     "id": "char_362_saga",
@@ -65306,7 +66008,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "电磁调节器",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30125",
+          "name": "Bipolar Nanoflake",
+          "tier": 5,
+          "sortId": 100002,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_426_billro": {
     "id": "char_426_billro",
@@ -67791,7 +68520,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "专业无人机操作模块",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30115",
+          "name": "Polymerization Preparation",
+          "tier": 5,
+          "sortId": 100003,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_1012_skadi2": {
     "id": "char_1012_skadi2",
@@ -68785,7 +69541,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "克里斯汀小姐的毛毡",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30115",
+          "name": "Polymerization Preparation",
+          "tier": 5,
+          "sortId": 100003,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_400_weedy": {
     "id": "char_400_weedy",
@@ -71767,7 +72550,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "“封闭的希望”",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30145",
+          "name": "Crystalline Electronic Unit",
+          "tier": 5,
+          "sortId": 100040,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_003_kalts": {
     "id": "char_003_kalts",
@@ -77234,7 +78044,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "罗德岛制式剑",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30135",
+          "name": "D32 Steel",
+          "tier": 5,
+          "sortId": 100001,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_017_huang": {
     "id": "char_017_huang",
@@ -79222,7 +80059,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "“故乡的山岩”",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 4
+        },
+        {
+          "id": "30125",
+          "name": "Bipolar Nanoflake",
+          "tier": 5,
+          "sortId": 100002,
+          "quantity": 2
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 80000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_1014_nearl2": {
     "id": "char_1014_nearl2",
@@ -81971,7 +82835,34 @@
           }
         ]
       }
-    ]
+    ],
+    "module": {
+      "name": "骑警套装",
+      "ingredients": [
+        {
+          "id": "mod_unlock_token",
+          "name": "Module Data Block",
+          "tier": 5,
+          "sortId": 90001,
+          "quantity": 2
+        },
+        {
+          "id": "31054",
+          "name": "Refined Solvent",
+          "tier": 4,
+          "sortId": 100045,
+          "quantity": 3
+        },
+        {
+          "id": "4001",
+          "name": "LMD",
+          "tier": 4,
+          "sortId": 10004,
+          "quantity": 40000
+        }
+      ],
+      "category": "MODULE"
+    }
   },
   "char_263_skadi": {
     "id": "char_263_skadi",

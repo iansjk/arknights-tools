@@ -7,7 +7,12 @@ import enSkillTable from "./ArknightsGameData/en_US/gamedata/excel/skill_table.j
 import cnCharacterPatchTable from "./ArknightsGameData/zh_CN/gamedata/excel/char_patch_table.json";
 import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json";
 import cnSkillTable from "./ArknightsGameData/zh_CN/gamedata/excel/skill_table.json";
-import { GameDataCharacter, GameDataCharacterCN } from "./gamedata-types";
+import cnUniequipTable from "./ArknightsGameData/zh_CN/gamedata/excel/uniequip_table.json";
+import {
+  GameDataCharacter,
+  GameDataCharacterCN,
+  GameDataCost,
+} from "./gamedata-types";
 import { Ingredient } from "./output-types";
 import {
   DATA_OUTPUT_DIRECTORY,
@@ -31,6 +36,24 @@ const enPatchCharacters = enCharacterPatchTable.patchChars as {
 const cnPatchCharacters = cnCharacterPatchTable.patchChars as {
   [charId: string]: GameDataCharacterCN;
 };
+const {
+  equipDict,
+  charEquip,
+}: {
+  equipDict: {
+    [moduleId: string]: GameDataModule;
+  };
+  charEquip: {
+    [charId: string]: string[];
+  };
+} = cnUniequipTable;
+
+interface GameDataModule {
+  uniEquipName: string;
+  charId: string;
+  type: string;
+  itemCost: GameDataCost[] | null;
+}
 
 interface GameDataSkill {
   skillId: string;
@@ -183,6 +206,17 @@ const isSummon = (charId: string) => {
           };
         });
 
+      let module: ModuleGoal | undefined = undefined;
+      if (charEquip[id] != null) {
+        const advancedModuleId = charEquip[id].at(-1)!;
+        const moduleData = equipDict[advancedModuleId];
+        module = {
+          name: moduleData.uniEquipName,
+          ingredients: moduleData.itemCost!.map(gameDataCostToIngredient),
+          category: OperatorGoalCategory.Module,
+        };
+      }
+
       const outputOperator = {
         id,
         name: getOperatorName(id),
@@ -193,6 +227,7 @@ const isSummon = (charId: string) => {
         skillLevels: skillLevelGoals,
         elite: eliteGoals,
         skills,
+        module,
       };
       return [id, outputOperator];
     })
