@@ -28,11 +28,11 @@ const ListItemLink: React.VFC<{ href: string; linkText: string }> = ({
 
 interface Props {
   mobileOpen: boolean;
-  onClose: () => void;
+  onDrawerToggle: () => void;
 }
 
 const AppDrawer: React.VFC<Props> = (props) => {
-  const { mobileOpen, onClose } = props;
+  const { mobileOpen, onDrawerToggle } = props;
   const { siteTitle, siteUrl, pages } = siteMetadata;
   const container = typeof window !== "undefined" ? document.body : undefined;
 
@@ -43,8 +43,8 @@ const AppDrawer: React.VFC<Props> = (props) => {
       </Typography>
       <Divider />
       <List>
-        {pages.map(({ slug, pageTitle }) => (
-          <ListItemLink href={slug} key={slug} linkText={pageTitle} />
+        {Object.entries(pages).map(([slug, { title }]) => (
+          <ListItemLink href={slug} key={slug} linkText={title} />
         ))}
       </List>
     </>
@@ -58,7 +58,7 @@ const AppDrawer: React.VFC<Props> = (props) => {
           variant="temporary"
           anchor="left"
           open={mobileOpen}
-          onClose={onClose}
+          onClose={onDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}

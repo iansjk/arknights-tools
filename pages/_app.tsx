@@ -10,30 +10,26 @@ export const siteMetadata = {
   siteUrl: "https://samidare.io/arknights",
   description:
     "A collection of tools for Arknights, a tower defense mobile game by Hypergryph/Yostar",
-  pages: [
-    {
-      slug: "/planner",
-      pageTitle: "Operator Planner",
+  pages: {
+    "/planner": {
+      title: "Operator Planner",
       description: "Track material requirements for your operator goals",
     },
-    {
-      slug: "/recruitment",
-      pageTitle: "Recruitment Calculator",
+    "/recruitment": {
+      title: "Recruitment Calculator",
       description:
         "See what operators can be obtained from your recruitment tags",
     },
-    {
-      slug: "/gacha",
-      pageTitle: "Pull Probability Calculator",
+    "/gacha": {
+      title: "Pull Probability Calculator",
       description:
         "Calculate probabilities for obtaining units from a gacha banner",
     },
-    {
-      slug: "/leveling",
-      pageTitle: "Leveling Costs",
+    "/leveling": {
+      title: "Leveling Costs",
       description: "Show LMD and XP costs for leveling operators",
     },
-  ],
+  },
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
