@@ -3,7 +3,11 @@ import type { AppProps } from "next/app";
 
 import "../styles/globals.css";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 export const siteMetadata = {
   siteTitle: "Arknights Tools",
