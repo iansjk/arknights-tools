@@ -14,14 +14,14 @@ import { siteMetadata } from "../pages/_app";
 import AppDrawer from "./AppDrawer";
 
 interface Props {
-  pageTitle?: string;
-  pageDescription?: string;
+  page: keyof typeof siteMetadata.pages;
 }
 
 const Layout: React.FC<Props> = (props) => {
-  const { pageTitle, pageDescription, children } = props;
+  const { page, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { siteTitle, description } = siteMetadata;
+  const { siteTitle, description, pages } = siteMetadata;
+  const { title: pageTitle, description: pageDescription } = pages[page] ?? {};
   const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
 
   const handleDrawerToggle = () => {
