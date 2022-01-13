@@ -12,6 +12,7 @@ import * as React from "react";
 import { siteMetadata } from "../pages/_app";
 
 import AppDrawer from "./AppDrawer";
+import AppFooter from "./AppFooter";
 
 interface Props {
   page: keyof typeof siteMetadata.pages;
@@ -60,6 +61,8 @@ const Layout: React.FC<Props> = (props) => {
         <Container component="main" maxWidth="lg">
           {children}
         </Container>
+
+        <AppFooter />
       </div>
     </div>
   );
