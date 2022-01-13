@@ -88,7 +88,7 @@ const AppFooter: React.VFC = () => {
           </FooterLink>
         </FooterListItem>
 
-        <FooterListItem>
+        <FooterListItem className="longer-list-item">
           efficiency and pull probability calculations:&nbsp;
           <DiscordTag>Luzark#8152</DiscordTag>
         </FooterListItem>
@@ -108,7 +108,7 @@ const AppFooter: React.VFC = () => {
 
         <FooterListItem>Arknights is &copy; Hypergryph/Yostar</FooterListItem>
 
-        <FooterListItem>
+        <FooterListItem className="longer-list-item">
           this project is unaffiliated with Arknights&apos;
           creators/distributors
         </FooterListItem>
