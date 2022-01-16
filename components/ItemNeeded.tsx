@@ -99,7 +99,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
         }}
         InputProps={{
           startAdornment: (
-            <InputAdornment position="start">
+            <InputAdornment position="start" sx={{ mr: 0 }}>
               <IconButton
                 aria-label="Remove 1 from owned amount"
                 edge="start"
@@ -111,7 +111,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
             </InputAdornment>
           ),
           endAdornment: (
-            <InputAdornment position="end">
+            <InputAdornment position="end" sx={{ ml: 0 }}>
               <IconButton
                 aria-label="Add 1 to owned amount"
                 edge="end"
@@ -150,6 +150,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
             aria-label="Craft one using your materials"
             disabled={!isCrafting}
             onClick={() => onCraftOne(id)}
+            sx={{ width: "auto" }}
           >
             +1
           </Button>
