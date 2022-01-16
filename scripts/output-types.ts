@@ -1,17 +1,16 @@
-interface BaseItem {
+export interface Item {
   id: string;
   name: string;
   tier: number;
   sortId: number;
-}
-
-export interface Ingredient extends BaseItem {
-  quantity: number;
-}
-
-export interface Item extends BaseItem {
-  quantity?: number;
+  iconId: string;
+  yield?: number;
   ingredients?: Ingredient[];
+}
+
+export interface Ingredient {
+  id: string;
+  quantity: number;
 }
 
 export enum OperatorGoalCategory {

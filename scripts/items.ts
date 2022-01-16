@@ -40,6 +40,7 @@ const isPlannerItem = (itemId: string) => {
         const baseOutputItem = {
           id: itemId,
           name: getEnglishItemName(itemId),
+          iconId: item.iconId,
           tier: item.rarity + 1,
           sortId: item.sortId,
         };

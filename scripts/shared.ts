@@ -62,23 +62,15 @@ export const getOperatorName = (operatorId: string) => {
 
 export const gameDataCostToIngredient = (cost: GameData.Cost): Ingredient => {
   const { id, count } = cost;
-  const ingredientEntry = cnItems[id];
-
   return {
     id,
-    name: getEnglishItemName(id),
-    tier: ingredientEntry.rarity + 1,
-    sortId: ingredientEntry.sortId,
     quantity: count,
   };
 };
 
 export const convertLMDCostToLMDItem = (cost: number): Ingredient => ({
   id: "4001",
-  name: "LMD",
-  tier: 4,
   quantity: cost,
-  sortId: 10004,
 });
 
 export const getEliteLMDCost = (
