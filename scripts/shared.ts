@@ -17,7 +17,6 @@ export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
 fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
 
 const itemNameOverride: { [itemId: string]: string } = {
-  mod_unlock_token: "Module Data Block",
   31043: "Compound Cutting Fluid",
   31044: "Cutting Stock Solution",
   31053: "Semi-natural Solvent",
