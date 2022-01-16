@@ -12,9 +12,9 @@ const Template: ComponentStory<typeof ItemBase> = (args) => (
   <ItemBase {...args} />
 );
 
-export const SeminaturalSolvent = Template.bind({});
-SeminaturalSolvent.args = {
-  id: "31053",
+export const RefinedSolvent = Template.bind({});
+RefinedSolvent.args = {
+  id: "31054",
 };
 
 export const LMD = Template.bind({});

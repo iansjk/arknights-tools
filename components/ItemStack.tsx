@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 
 import ItemBase, { ItemBaseProps } from "./ItemBase";
 
-interface Props extends ItemBaseProps {
+export interface ItemStackProps extends ItemBaseProps {
   quantity: number;
 }
 
-const ItemStack: React.VFC<Props> = (props) => {
+const ItemStack: React.VFC<ItemStackProps> = (props) => {
   const { quantity, ...rest } = props;
   return (
     <ItemBase {...rest}>

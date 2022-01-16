@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, SxProps, Theme } from "@mui/material";
 import Image from "next/image";
 
 import items from "../data/items.json";
@@ -9,11 +9,13 @@ const DEFAULT_SIZE = 100;
 export interface ItemBaseProps {
   id: string;
   size?: number;
+  sx?: SxProps<Theme>;
 }
 
 const ItemBase: React.FC<ItemBaseProps> = ({
   id,
   size = DEFAULT_SIZE,
+  sx,
   children,
 }) => {
   const item: Output.Item = items[id as keyof typeof items];
@@ -25,6 +27,7 @@ const ItemBase: React.FC<ItemBaseProps> = ({
         "& > *": {
           gridArea: "1 / -1",
         },
+        ...(sx ?? {}),
       }}
     >
       <Image
