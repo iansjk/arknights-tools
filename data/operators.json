@@ -29843,7 +29843,7 @@
     "rarity": 5,
     "class": "Guard",
     "branch": "reaper",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -30048,7 +30048,7 @@
       {
         "skillId": "skchr_crow_1",
         "iconId": null,
-        "skillName": "高速切割",
+        "skillName": "Rapid Slashing",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -30139,7 +30139,7 @@
       {
         "skillId": "skchr_crow_2",
         "iconId": null,
-        "skillName": "收割",
+        "skillName": "Reap",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -30235,7 +30235,7 @@
     "rarity": 5,
     "class": "Guard",
     "branch": "librator",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -30440,7 +30440,7 @@
       {
         "skillId": "skchr_takila_1",
         "iconId": null,
-        "skillName": "当机立断",
+        "skillName": "Decisive Action",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -30531,7 +30531,7 @@
       {
         "skillId": "skchr_takila_2",
         "iconId": null,
-        "skillName": "剑走偏锋",
+        "skillName": "Esoteric Bladework",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -53664,6 +53664,398 @@
       }
     ]
   },
+  "char_4019_ncdeer": {
+    "id": "char_4019_ncdeer",
+    "name": "Nine-Colored Deer",
+    "rarity": 5,
+    "class": "Supporter",
+    "branch": "blessing",
+    "isCnOnly": true,
+    "skillLevels": [
+      {
+        "skillLevel": 2,
+        "ingredients": [
+          {
+            "id": "3301",
+            "name": "Skill Summary - 1",
+            "tier": 2,
+            "sortId": 80003,
+            "quantity": 4
+          }
+        ],
+        "name": "Skill Level 2",
+        "category": "SKILL_LEVEL"
+      },
+      {
+        "skillLevel": 3,
+        "ingredients": [
+          {
+            "id": "3301",
+            "name": "Skill Summary - 1",
+            "tier": 2,
+            "sortId": 80003,
+            "quantity": 4
+          },
+          {
+            "id": "30021",
+            "name": "Sugar Substitute",
+            "tier": 1,
+            "sortId": 100027,
+            "quantity": 7
+          }
+        ],
+        "name": "Skill Level 3",
+        "category": "SKILL_LEVEL"
+      },
+      {
+        "skillLevel": 4,
+        "ingredients": [
+          {
+            "id": "3302",
+            "name": "Skill Summary - 2",
+            "tier": 3,
+            "sortId": 80002,
+            "quantity": 6
+          },
+          {
+            "id": "30032",
+            "name": "Polyester",
+            "tier": 2,
+            "sortId": 100022,
+            "quantity": 3
+          }
+        ],
+        "name": "Skill Level 4",
+        "category": "SKILL_LEVEL"
+      },
+      {
+        "skillLevel": 5,
+        "ingredients": [
+          {
+            "id": "3302",
+            "name": "Skill Summary - 2",
+            "tier": 3,
+            "sortId": 80002,
+            "quantity": 6
+          },
+          {
+            "id": "30042",
+            "name": "Oriron",
+            "tier": 2,
+            "sortId": 100030,
+            "quantity": 4
+          }
+        ],
+        "name": "Skill Level 5",
+        "category": "SKILL_LEVEL"
+      },
+      {
+        "skillLevel": 6,
+        "ingredients": [
+          {
+            "id": "3302",
+            "name": "Skill Summary - 2",
+            "tier": 3,
+            "sortId": 80002,
+            "quantity": 6
+          },
+          {
+            "id": "31023",
+            "name": "Incandescent Alloy",
+            "tier": 3,
+            "sortId": 100039,
+            "quantity": 4
+          }
+        ],
+        "name": "Skill Level 6",
+        "category": "SKILL_LEVEL"
+      },
+      {
+        "skillLevel": 7,
+        "ingredients": [
+          {
+            "id": "3303",
+            "name": "Skill Summary - 3",
+            "tier": 4,
+            "sortId": 80001,
+            "quantity": 6
+          },
+          {
+            "id": "30043",
+            "name": "Oriron Cluster",
+            "tier": 3,
+            "sortId": 100029,
+            "quantity": 2
+          },
+          {
+            "id": "30093",
+            "name": "Grindstone",
+            "tier": 3,
+            "sortId": 100009,
+            "quantity": 3
+          }
+        ],
+        "name": "Skill Level 7",
+        "category": "SKILL_LEVEL"
+      }
+    ],
+    "elite": [
+      {
+        "eliteLevel": 1,
+        "ingredients": [
+          {
+            "id": "4001",
+            "name": "LMD",
+            "tier": 4,
+            "quantity": 20000,
+            "sortId": 10004
+          },
+          {
+            "id": "3271",
+            "name": "Supporter Chip",
+            "tier": 3,
+            "sortId": 400024,
+            "quantity": 4
+          },
+          {
+            "id": "30012",
+            "name": "Orirock Cube",
+            "tier": 2,
+            "sortId": 100014,
+            "quantity": 6
+          },
+          {
+            "id": "30032",
+            "name": "Polyester",
+            "tier": 2,
+            "sortId": 100022,
+            "quantity": 3
+          }
+        ],
+        "name": "Elite 1",
+        "category": "ELITE"
+      },
+      {
+        "eliteLevel": 2,
+        "ingredients": [
+          {
+            "id": "4001",
+            "name": "LMD",
+            "tier": 4,
+            "quantity": 120000,
+            "sortId": 10004
+          },
+          {
+            "id": "3273",
+            "name": "Supporter Dualchip",
+            "tier": 5,
+            "sortId": 400008,
+            "quantity": 3
+          },
+          {
+            "id": "30084",
+            "name": "Manganese Trihydrate",
+            "tier": 4,
+            "sortId": 100006,
+            "quantity": 7
+          },
+          {
+            "id": "31033",
+            "name": "Crystalline Component",
+            "tier": 3,
+            "sortId": 100042,
+            "quantity": 14
+          }
+        ],
+        "name": "Elite 2",
+        "category": "ELITE"
+      }
+    ],
+    "skills": [
+      {
+        "skillId": "skchr_ncdeer_1",
+        "iconId": null,
+        "skillName": "人间降吉",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 5
+              },
+              {
+                "id": "30104",
+                "name": "RMA70-24",
+                "tier": 4,
+                "sortId": 100010,
+                "quantity": 3
+              },
+              {
+                "id": "30083",
+                "name": "Manganese Ore",
+                "tier": 3,
+                "sortId": 100007,
+                "quantity": 2
+              }
+            ],
+            "name": "Skill 1 Mastery 1",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 6
+              },
+              {
+                "id": "30054",
+                "name": "Keton Colloid",
+                "tier": 4,
+                "sortId": 100032,
+                "quantity": 3
+              },
+              {
+                "id": "31044",
+                "name": "Cutting Stock Solution",
+                "tier": 4,
+                "sortId": 100043,
+                "quantity": 5
+              }
+            ],
+            "name": "Skill 1 Mastery 2",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 10
+              },
+              {
+                "id": "30145",
+                "name": "Crystalline Electronic Unit",
+                "tier": 5,
+                "sortId": 100040,
+                "quantity": 4
+              },
+              {
+                "id": "31044",
+                "name": "Cutting Stock Solution",
+                "tier": 4,
+                "sortId": 100043,
+                "quantity": 3
+              }
+            ],
+            "name": "Skill 1 Mastery 3",
+            "category": "MASTERY"
+          }
+        ]
+      },
+      {
+        "skillId": "skchr_ncdeer_2",
+        "iconId": null,
+        "skillName": "仙山去远",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 5
+              },
+              {
+                "id": "31034",
+                "name": "Crystalline Circuit",
+                "tier": 4,
+                "sortId": 100041,
+                "quantity": 3
+              },
+              {
+                "id": "31013",
+                "name": "Coagulating Gel",
+                "tier": 3,
+                "sortId": 100037,
+                "quantity": 1
+              }
+            ],
+            "name": "Skill 2 Mastery 1",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 6
+              },
+              {
+                "id": "30064",
+                "name": "Optimized Device",
+                "tier": 4,
+                "sortId": 100016,
+                "quantity": 3
+              },
+              {
+                "id": "30044",
+                "name": "Oriron Block",
+                "tier": 4,
+                "sortId": 100028,
+                "quantity": 3
+              }
+            ],
+            "name": "Skill 2 Mastery 2",
+            "category": "MASTERY"
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "name": "Skill Summary - 3",
+                "tier": 4,
+                "sortId": 80001,
+                "quantity": 10
+              },
+              {
+                "id": "30115",
+                "name": "Polymerization Preparation",
+                "tier": 5,
+                "sortId": 100003,
+                "quantity": 4
+              },
+              {
+                "id": "31054",
+                "name": "Refined Solvent",
+                "tier": 4,
+                "sortId": 100045,
+                "quantity": 4
+              }
+            ],
+            "name": "Skill 2 Mastery 3",
+            "category": "MASTERY"
+          }
+        ]
+      }
+    ]
+  },
   "char_215_mantic": {
     "id": "char_215_mantic",
     "name": "Manticore",
@@ -60025,7 +60417,7 @@
     "rarity": 6,
     "class": "Sniper",
     "branch": "reaperrange",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -60244,7 +60636,7 @@
       {
         "skillId": "skchr_chen2_1",
         "iconId": null,
-        "skillName": "高压冲击",
+        "skillName": "High-Pressure Splash",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -60335,7 +60727,7 @@
       {
         "skillId": "skchr_chen2_2",
         "iconId": null,
-        "skillName": "“堇青之夜”",
+        "skillName": "'Night of Violet'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -60426,7 +60818,7 @@
       {
         "skillId": "skchr_chen2_3",
         "iconId": null,
-        "skillName": "“假日风暴”",
+        "skillName": "'Holiday Storm'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -71067,7 +71459,7 @@
     "rarity": 6,
     "class": "Specialist",
     "branch": "stalker",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -71286,7 +71678,7 @@
       {
         "skillId": "skchr_mizuki_1",
         "iconId": null,
-        "skillName": "唤醒",
+        "skillName": "Awaken",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -71377,7 +71769,7 @@
       {
         "skillId": "skchr_mizuki_2",
         "iconId": null,
-        "skillName": "囚徒困境",
+        "skillName": "Prisoner's Dilemma",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -71468,7 +71860,7 @@
       {
         "skillId": "skchr_mizuki_3",
         "iconId": null,
-        "skillName": "镜花水月",
+        "skillName": "Moon in the Water",
         "masteries": [
           {
             "masteryLevel": 1,
