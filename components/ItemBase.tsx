@@ -6,12 +6,16 @@ import * as Output from "../scripts/output-types";
 
 const DEFAULT_SIZE = 100;
 
-interface ItemBaseProps {
+export interface ItemBaseProps {
   id: string;
   size?: number;
 }
 
-const ItemBase: React.VFC<ItemBaseProps> = ({ id, size = DEFAULT_SIZE }) => {
+const ItemBase: React.FC<ItemBaseProps> = ({
+  id,
+  size = DEFAULT_SIZE,
+  children,
+}) => {
   const item: Output.Item = items[id as keyof typeof items];
   const bgSize = Math.floor(size * (95 / 100));
   return (
@@ -36,6 +40,7 @@ const ItemBase: React.VFC<ItemBaseProps> = ({ id, size = DEFAULT_SIZE }) => {
         height={size}
         objectFit="contain"
       />
+      {children}
     </Box>
   );
 };
