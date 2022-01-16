@@ -4,17 +4,13 @@ import path from "path";
 import enItemTable from "./ArknightsGameData/en_US/gamedata/excel/item_table.json";
 import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
-import {
-  GameDataCharacter,
-  GameDataCost,
-  GameDataItem,
-} from "./gamedata-types";
+import * as GameData from "./gamedata-types";
 import { Ingredient } from "./output-types";
 
-const enItems: { [itemId: string]: GameDataItem } = enItemTable.items;
-const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
+const enItems: { [itemId: string]: GameData.Item } = enItemTable.items;
+const cnItems: { [itemId: string]: GameData.Item } = cnItemTable.items;
 const cnCharacters = cnCharacterTable as {
-  [charId: string]: GameDataCharacter;
+  [charId: string]: GameData.Character;
 };
 
 export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
@@ -65,7 +61,7 @@ export const getOperatorName = (operatorId: string) => {
   return operatorNameOverride[appellation] ?? appellation;
 };
 
-export const gameDataCostToIngredient = (cost: GameDataCost): Ingredient => {
+export const gameDataCostToIngredient = (cost: GameData.Cost): Ingredient => {
   const { id, count } = cost;
   const ingredientEntry = cnItems[id];
 

@@ -3,7 +3,7 @@ import path from "path";
 
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
-import { GameDataCost, GameDataItem } from "./gamedata-types";
+import * as GameData from "./gamedata-types";
 import { OutputItem } from "./output-types";
 import {
   getEnglishItemName,
@@ -13,21 +13,14 @@ import {
 } from "./shared";
 
 const outputPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
-const cnItems: { [itemId: string]: GameDataItem } = cnItemTable.items;
+const cnItems: { [itemId: string]: GameData.Item } = cnItemTable.items;
 const {
   workshopFormulas,
   manufactFormulas: manufactureFormulas,
 }: {
-  workshopFormulas: { [formulaId: string]: GameDataFormula };
-  manufactFormulas: { [formulaId: string]: GameDataFormula };
+  workshopFormulas: { [formulaId: string]: GameData.Formula };
+  manufactFormulas: { [formulaId: string]: GameData.Formula };
 } = cnBuildingData;
-
-interface GameDataFormula {
-  goldCost?: number;
-  count: number;
-  costs: GameDataCost[];
-  formulaType: string;
-}
 
 const isPlannerItem = (itemId: string) => {
   const entry = cnItems[itemId];
@@ -57,7 +50,7 @@ const isPlannerItem = (itemId: string) => {
         const manufactureFormulaId = item.buildingProductList.find(
           ({ roomType }) => roomType === "MANUFACTURE"
         )?.formulaId;
-        let formula: GameDataFormula | null = null;
+        let formula: GameData.Formula | null = null;
 
         if (workshopFormulaId) {
           formula = workshopFormulas[workshopFormulaId];

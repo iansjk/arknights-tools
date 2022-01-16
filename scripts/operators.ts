@@ -8,11 +8,7 @@ import cnCharacterPatchTable from "./ArknightsGameData/zh_CN/gamedata/excel/char
 import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json";
 import cnSkillTable from "./ArknightsGameData/zh_CN/gamedata/excel/skill_table.json";
 import cnUniequipTable from "./ArknightsGameData/zh_CN/gamedata/excel/uniequip_table.json";
-import {
-  GameDataCharacter,
-  GameDataCharacterCN,
-  GameDataCost,
-} from "./gamedata-types";
+import * as GameData from "./gamedata-types";
 import { Ingredient } from "./output-types";
 import {
   DATA_OUTPUT_DIRECTORY,
@@ -22,47 +18,31 @@ import {
   professionToClass,
 } from "./shared";
 
-const enSkills: { [skillId: string]: GameDataSkill } = enSkillTable;
-const cnSkills: { [skillId: string]: GameDataSkill } = cnSkillTable;
+const enSkills: { [skillId: string]: GameData.Skill } = enSkillTable;
+const cnSkills: { [skillId: string]: GameData.Skill } = cnSkillTable;
 const enCharacters = enCharacterTable as {
-  [charId: string]: GameDataCharacter;
+  [charId: string]: GameData.Character;
 };
 const cnCharacters = cnCharacterTable as {
-  [charId: string]: GameDataCharacterCN;
+  [charId: string]: GameData.CharacterCN;
 };
 const enPatchCharacters = enCharacterPatchTable.patchChars as {
-  [charId: string]: GameDataCharacter;
+  [charId: string]: GameData.Character;
 };
 const cnPatchCharacters = cnCharacterPatchTable.patchChars as {
-  [charId: string]: GameDataCharacterCN;
+  [charId: string]: GameData.CharacterCN;
 };
 const {
   equipDict,
   charEquip,
 }: {
   equipDict: {
-    [moduleId: string]: GameDataModule;
+    [moduleId: string]: GameData.Module;
   };
   charEquip: {
     [charId: string]: string[];
   };
 } = cnUniequipTable;
-
-interface GameDataModule {
-  uniEquipName: string;
-  charId: string;
-  type: string;
-  itemCost: GameDataCost[] | null;
-}
-
-interface GameDataSkill {
-  skillId: string;
-  iconId: string | null;
-  levels: Array<{
-    name: string;
-  }>;
-  [otherProperties: string]: unknown;
-}
 
 enum OperatorGoalCategory {
   Elite = "ELITE",

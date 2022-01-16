@@ -1,4 +1,4 @@
-export interface GameDataItem {
+export interface Item {
   itemId: string;
   name: string;
   classifyType: string;
@@ -11,32 +11,55 @@ export interface GameDataItem {
   [otherProperties: string]: unknown;
 }
 
-export interface GameDataCost {
+export interface Cost {
   id: string;
   count: number;
 }
 
-export interface GameDataCharacter {
+export interface Character {
   name: string;
   appellation: string;
   isNotObtainable: boolean;
   profession: string;
   rarity: number; // 0-indexed
   allSkillLvlup: Array<{
-    lvlUpCost: GameDataCost[] | null;
+    lvlUpCost: Cost[] | null;
   }>;
   phases: Array<{
-    evolveCost: GameDataCost[] | null;
+    evolveCost: Cost[] | null;
   }>;
   skills: Array<{
     skillId: string | null;
     levelUpCostCond: Array<{
-      levelUpCost: GameDataCost[] | null;
+      levelUpCost: Cost[] | null;
     }>;
   }>;
   [otherProperties: string]: unknown;
 }
 
-export interface GameDataCharacterCN extends GameDataCharacter {
+export interface CharacterCN extends Character {
   subProfessionId: string;
+}
+
+export interface Formula {
+  goldCost?: number;
+  count: number;
+  costs: Cost[];
+  formulaType: string;
+}
+
+export interface Module {
+  uniEquipName: string;
+  charId: string;
+  type: string;
+  itemCost: Cost[] | null;
+}
+
+export interface Skill {
+  skillId: string;
+  iconId: string | null;
+  levels: Array<{
+    name: string;
+  }>;
+  [otherProperties: string]: unknown;
 }
