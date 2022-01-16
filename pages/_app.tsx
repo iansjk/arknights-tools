@@ -1,8 +1,6 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
 
-import "../styles/globals.css";
-
 export const theme = createTheme({
   palette: {
     mode: "dark",
