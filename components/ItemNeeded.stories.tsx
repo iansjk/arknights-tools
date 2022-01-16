@@ -16,6 +16,7 @@ RefinedSolvent.args = {
   id: "31054",
   quantity: 35,
   owned: 0,
+  isCrafting: true,
 };
 
 export const LMD = Template.bind({});

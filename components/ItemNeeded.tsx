@@ -1,5 +1,15 @@
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { Box, Button, ButtonGroup } from "@mui/material";
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  IconButton,
+  InputAdornment,
+  TextField,
+} from "@mui/material";
+import { useState } from "react";
 
 import items from "../data/items.json";
 import * as Output from "../scripts/output-types";
@@ -31,6 +41,16 @@ const ItemNeeded: React.VFC<Props> = (props) => {
   const item: Output.Item = items[id as keyof typeof items];
   const isCraftable = Boolean(item.ingredients);
   const isComplete = owned >= needed;
+  const [rawValue, setRawValue] = useState<string>(`${owned}`);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newRawValue = e.target.value;
+    setRawValue(newRawValue);
+    const numberValue = Number(newRawValue);
+    if (!Number.isNaN(numberValue)) {
+      onChange(id, numberValue);
+    }
+  };
 
   return (
     <Box display="inline-grid">
@@ -57,10 +77,82 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           />
         )}
       </Box>
+      <TextField
+        size="small"
+        fullWidth
+        value={rawValue}
+        onFocus={(e) => e.target.select()}
+        onChange={handleChange}
+        inputProps={{
+          type: "number",
+          min: 0,
+          step: 1,
+          "aria-label": "Quantity owned",
+        }}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <IconButton
+                aria-label="Remove 1 from owned amount"
+                edge="start"
+                disabled={owned === 0}
+                onClick={() => onDecrement(id)}
+              >
+                <RemoveCircleIcon />
+              </IconButton>
+            </InputAdornment>
+          ),
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="Add 1 to owned amount"
+                edge="end"
+                onClick={() => onIncrement(id)}
+              >
+                <AddCircleIcon />
+              </IconButton>
+            </InputAdornment>
+          ),
+          sx: {
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+          },
+        }}
+      />
       {isCraftable ? (
-        <ButtonGroup></ButtonGroup>
+        <ButtonGroup
+          color="secondary"
+          fullWidth
+          sx={{
+            mt: "-1px",
+            "& > button": {
+              borderTopLeftRadius: 0,
+              borderTopRightRadius: 0,
+            },
+          }}
+        >
+          <Button
+            variant={isCrafting ? "contained" : "outlined"}
+            onClick={() => onCraftingToggle(id)}
+            aria-label="Toggle crafting"
+          >
+            {isCrafting ? "Crafting" : "Craft"}
+          </Button>
+          <Button
+            aria-label="Craft one using your materials"
+            disabled={!isCrafting}
+            onClick={() => onCraftOne(id)}
+          >
+            +1
+          </Button>
+        </ButtonGroup>
       ) : (
-        <Button fullWidth disabled>
+        <Button
+          fullWidth
+          variant="outlined"
+          disabled
+          sx={{ mt: "-1px", borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+        >
           (Uncraftable)
         </Button>
       )}
