@@ -25,10 +25,11 @@ const {
 const isPlannerItem = (itemId: string) => {
   const entry = cnItems[itemId];
   return (
-    entry.classifyType === "MATERIAL" &&
-    !itemId.startsWith("p_char_") && // character-specific potential tokens
-    !itemId.startsWith("tier") && // generic potential tokens
-    !itemId.startsWith("voucher_full_") // vouchers for event welfare ops like Flamebringer
+    itemId === "4001" || // LMD
+    (entry.classifyType === "MATERIAL" &&
+      !itemId.startsWith("p_char_") && // character-specific potential tokens
+      !itemId.startsWith("tier") && // generic potential tokens
+      !itemId.startsWith("voucher_full_")) // vouchers for event welfare ops like Flamebringer
   );
 };
 

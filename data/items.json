@@ -430,6 +430,13 @@
     ],
     "yield": 1
   },
+  "4001": {
+    "id": "4001",
+    "name": "LMD",
+    "iconId": "GOLD",
+    "tier": 4,
+    "sortId": 10004
+  },
   "30011": {
     "id": "30011",
     "name": "Orirock",
