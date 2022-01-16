@@ -7,7 +7,7 @@ export interface OperatorPlannerGoal {
   operatorId: string;
   elite?: Range;
   skillLevel?: Range;
-  mastery?: {
+  masteries?: {
     [skillNumber: number]: Range;
   };
 }
