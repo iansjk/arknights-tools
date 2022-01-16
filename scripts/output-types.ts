@@ -15,10 +15,10 @@ export interface Item extends BaseItem {
 }
 
 export enum OperatorGoalCategory {
-  Elite = "ELITE",
-  Mastery = "MASTERY",
-  SkillLevel = "SKILL_LEVEL",
-  Module = "MODULE",
+  Elite = 0,
+  Mastery,
+  SkillLevel,
+  Module,
 }
 
 interface OperatorGoal {
