@@ -90,6 +90,8 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           "aria-label": "Quantity owned",
           sx: {
             textAlign: "center",
+            width: "4ch", // width of 4 "0" characters
+            "flex-grow": "1",
             "::-webkit-outer-spin-button, ::-webkit-inner-spin-button": {
               "-webkit-appearance": "none",
               margin: 0,
