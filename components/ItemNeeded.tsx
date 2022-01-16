@@ -88,6 +88,14 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           min: 0,
           step: 1,
           "aria-label": "Quantity owned",
+          sx: {
+            textAlign: "center",
+            "::-webkit-outer-spin-button, ::-webkit-inner-spin-button": {
+              "-webkit-appearance": "none",
+              margin: 0,
+            },
+            "-moz-appearance": "textfield",
+          },
         }}
         InputProps={{
           startAdornment: (
