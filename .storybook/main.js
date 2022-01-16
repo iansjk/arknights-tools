@@ -9,4 +9,8 @@ module.exports = {
   core: {
     builder: "webpack5",
   },
+  // see https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#emotion11-quasi-compatibility
+  features: {
+    emotionAlias: false,
+  },
 };
