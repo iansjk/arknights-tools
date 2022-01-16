@@ -9,7 +9,7 @@ export interface Ingredient extends BaseItem {
   quantity: number;
 }
 
-export interface OutputItem extends BaseItem {
+export interface Item extends BaseItem {
   quantity?: number;
   ingredients?: Ingredient[];
 }

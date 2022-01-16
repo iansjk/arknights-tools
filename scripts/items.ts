@@ -4,7 +4,7 @@ import path from "path";
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
 import * as GameData from "./gamedata-types";
-import { OutputItem } from "./output-types";
+import { Item } from "./output-types";
 import {
   getEnglishItemName,
   DATA_OUTPUT_DIRECTORY,
@@ -33,7 +33,7 @@ const isPlannerItem = (itemId: string) => {
 };
 
 (() => {
-  const itemsJson: { [itemId: string]: OutputItem } = Object.fromEntries(
+  const itemsJson: { [itemId: string]: Item } = Object.fromEntries(
     Object.entries(cnItems)
       .filter(([itemId]) => isPlannerItem(itemId))
       .map(([itemId, item]) => {
