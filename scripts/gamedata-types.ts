@@ -1,6 +1,7 @@
 export interface Item {
   itemId: string;
   name: string;
+  iconId: string;
   classifyType: string;
   sortId: number;
   buildingProductList: Array<{
