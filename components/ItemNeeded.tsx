@@ -146,6 +146,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
             variant={isCrafting ? "contained" : "outlined"}
             onClick={() => onCraftingToggle(id)}
             aria-label="Toggle crafting"
+            aria-pressed={isCrafting}
           >
             {isCrafting ? "Crafting" : "Craft"}
           </Button>
