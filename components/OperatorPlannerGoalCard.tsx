@@ -35,7 +35,7 @@ const OperatorPlannerGoalCard: React.VFC<OperatorPlannerGoal> = (props) => {
     >
       <Box
         position="absolute"
-        left={-40}
+        left={-30}
         top={-40}
         sx={{
           "& img": {
@@ -45,7 +45,7 @@ const OperatorPlannerGoalCard: React.VFC<OperatorPlannerGoal> = (props) => {
         }}
       >
         <Image
-          src={getPortraitSrc(operator, elite?.end ?? 0)}
+          src={getPortraitSrc(operator, masteries ? 2 : elite?.end ?? 0)}
           width={130}
           height={260}
           objectFit="contain"
@@ -53,7 +53,7 @@ const OperatorPlannerGoalCard: React.VFC<OperatorPlannerGoal> = (props) => {
           alt=""
         />
       </Box>
-      <CardContent sx={{ pl: 7, position: "relative", zIndex: 1 }}>
+      <CardContent sx={{ pl: 8, position: "relative", zIndex: 1 }}>
         <Typography component="h4" variant="h6" gutterBottom>
           {operator.name}
         </Typography>
