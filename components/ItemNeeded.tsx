@@ -104,6 +104,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           startAdornment: (
             <InputAdornment position="start" sx={{ mr: 0 }}>
               <IconButton
+                size="small"
                 aria-label="Remove 1 from owned amount"
                 edge="start"
                 disabled={owned === 0}
@@ -116,6 +117,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           endAdornment: (
             <InputAdornment position="end" sx={{ ml: 0 }}>
               <IconButton
+                size="small"
                 aria-label="Add 1 to owned amount"
                 edge="end"
                 onClick={() => onIncrement(id)}
@@ -125,51 +127,56 @@ const ItemNeeded: React.VFC<Props> = (props) => {
             </InputAdornment>
           ),
           sx: {
+            px: "5px",
             borderBottomLeftRadius: 0,
             borderBottomRightRadius: 0,
           },
         }}
       />
-      {isCraftable ? (
-        <ButtonGroup
-          color="secondary"
-          fullWidth
-          sx={{
-            mt: "-1px",
-            "& > button": {
-              borderTopLeftRadius: 0,
-              borderTopRightRadius: 0,
-            },
-          }}
-        >
-          <Button
-            variant={isCrafting ? "contained" : "outlined"}
-            onClick={() => onCraftingToggle(id)}
-            aria-label="Toggle crafting"
-            aria-pressed={isCrafting}
+      <Box minWidth={126}>
+        {isCraftable ? (
+          <ButtonGroup
+            size="small"
+            color="secondary"
+            fullWidth
+            sx={{
+              mt: "-1px",
+              "& > button": {
+                borderTopLeftRadius: 0,
+                borderTopRightRadius: 0,
+              },
+            }}
           >
-            {isCrafting ? "Crafting" : "Craft"}
-          </Button>
-          <Tooltip title="Craft one using your materials">
             <Button
-              disabled={!isCrafting}
-              onClick={() => onCraftOne(id)}
-              sx={{ width: "auto" }}
+              variant={isCrafting ? "contained" : "outlined"}
+              onClick={() => onCraftingToggle(id)}
+              aria-label="Toggle crafting"
+              aria-pressed={isCrafting}
             >
-              +1
+              {isCrafting ? "Crafting" : "Craft"}
             </Button>
-          </Tooltip>
-        </ButtonGroup>
-      ) : (
-        <Button
-          fullWidth
-          variant="outlined"
-          disabled
-          sx={{ mt: "-1px", borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
-        >
-          (Uncraftable)
-        </Button>
-      )}
+            <Tooltip title="Craft one using your materials">
+              <Button
+                disabled={!isCrafting}
+                onClick={() => onCraftOne(id)}
+                sx={{ width: "auto" }}
+              >
+                +1
+              </Button>
+            </Tooltip>
+          </ButtonGroup>
+        ) : (
+          <Button
+            size="small"
+            fullWidth
+            variant="outlined"
+            disabled
+            sx={{ mt: "-1px", borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+          >
+            (Uncraftable)
+          </Button>
+        )}
+      </Box>
     </Box>
   );
 };
