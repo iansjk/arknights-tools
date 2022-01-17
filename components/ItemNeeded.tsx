@@ -8,6 +8,7 @@ import {
   IconButton,
   InputAdornment,
   TextField,
+  Tooltip,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -148,14 +149,15 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           >
             {isCrafting ? "Crafting" : "Craft"}
           </Button>
-          <Button
-            aria-label="Craft one using your materials"
-            disabled={!isCrafting}
-            onClick={() => onCraftOne(id)}
-            sx={{ width: "auto" }}
-          >
-            +1
-          </Button>
+          <Tooltip title="Craft one using your materials">
+            <Button
+              disabled={!isCrafting}
+              onClick={() => onCraftOne(id)}
+              sx={{ width: "auto" }}
+            >
+              +1
+            </Button>
+          </Tooltip>
         </ButtonGroup>
       ) : (
         <Button
