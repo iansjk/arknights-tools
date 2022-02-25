@@ -9,19 +9,19 @@ import {
 import Head from "next/head";
 import * as React from "react";
 
-import { siteMetadata } from "../../pages/_app";
+import config from "../config";
 
 import AppDrawer from "./AppDrawer";
 import AppFooter from "./AppFooter";
 
 interface Props {
-  page: keyof typeof siteMetadata.pages;
+  page: keyof typeof config.pages;
 }
 
 const Layout: React.FC<Props> = (props) => {
   const { page, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { siteTitle, description, pages } = siteMetadata;
+  const { siteTitle, description, pages } = config;
   const { title: pageTitle, description: pageDescription } = pages[page] ?? {};
   const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
 

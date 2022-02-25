@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { siteMetadata } from "../../pages/_app";
+import config from "../config";
 
 import MuiNextLink from "./MuiNextLink";
 
@@ -33,7 +33,7 @@ interface Props {
 
 const AppDrawer: React.VFC<Props> = (props) => {
   const { mobileOpen, onDrawerToggle } = props;
-  const { siteTitle, siteUrl, pages } = siteMetadata;
+  const { siteTitle, siteUrl, pages } = config;
   const container = typeof window !== "undefined" ? document.body : undefined;
 
   const drawerContent = (
