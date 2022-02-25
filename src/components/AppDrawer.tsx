@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 
 import config from "../config";
+import theme from "../theme";
 
 import MuiNextLink from "./MuiNextLink";
 
@@ -18,7 +19,7 @@ const ListItemLink: React.VFC<{ href: string; linkText: string }> = ({
   linkText,
 }) => {
   return (
-    <ListItem>
+    <ListItem sx={{ p: 0 }}>
       <ListItemButton component={MuiNextLink} href={href}>
         <ListItemText primary={linkText} />
       </ListItemButton>
@@ -38,8 +39,25 @@ const AppDrawer: React.VFC<Props> = (props) => {
 
   const drawerContent = (
     <>
-      <Typography component="h1" variant="h5">
-        <MuiNextLink href={siteUrl}>{siteTitle}</MuiNextLink>
+      <Typography
+        component="h1"
+        variant="h5"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "start",
+          pl: 2,
+          ...theme.mixins.toolbar,
+        }}
+      >
+        <MuiNextLink
+          href={siteUrl}
+          sx={{
+            textDecoration: "none",
+          }}
+        >
+          {siteTitle}
+        </MuiNextLink>
       </Typography>
       <Divider />
       <List>
