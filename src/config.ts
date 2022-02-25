@@ -1,7 +1,7 @@
 const config = {
   siteTitle: "Arknights Tools",
   siteUrl: "https://samidare.io/arknights",
-  description:
+  siteDescription:
     "A collection of tools for Arknights, a tower defense mobile game by Hypergryph/Yostar",
   pages: {
     "/planner": {

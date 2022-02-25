@@ -21,7 +21,7 @@ interface Props {
 const Layout: React.FC<Props> = (props) => {
   const { page, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { siteTitle, description, pages } = config;
+  const { siteTitle, pages } = config;
   const { title: pageTitle, description: pageDescription } = pages[page] ?? {};
   const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
 
@@ -34,10 +34,27 @@ const Layout: React.FC<Props> = (props) => {
       <Head>
         <title>{title}</title>
         <meta
-          property="og:description"
-          content={pageDescription ?? description}
-          key="description"
+          key="ogUrl"
+          property="og:url"
+          content={`${config.siteUrl}${page}`}
         />
+        {pageTitle && (
+          <meta key="ogTitle" property="og:title" content={pageTitle} />
+        )}
+        {pageDescription && (
+          <>
+            <meta
+              key="description"
+              name="description"
+              content={pageDescription}
+            />
+            <meta
+              key="ogDescription"
+              property="og:description"
+              content={pageDescription}
+            />
+          </>
+        )}
       </Head>
 
       <AppDrawer mobileOpen={mobileOpen} onDrawerToggle={handleDrawerToggle} />
