@@ -1,7 +1,7 @@
 import createEmotionServer from "@emotion/server/create-instance";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import createEmotionCache from "../src/createEmotionCache";
+import createEmotionCache from "../createEmotionCache";
 
 import { theme } from "./_app";
 

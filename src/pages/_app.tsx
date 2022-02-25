@@ -4,7 +4,7 @@ import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import createEmotionCache from "../src/createEmotionCache";
+import createEmotionCache from "../createEmotionCache";
 
 export const theme = createTheme({
   palette: {

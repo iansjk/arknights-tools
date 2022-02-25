@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-import Layout from "../../src/components/Layout";
+import Layout from "../../components/Layout";
 
 const Gacha: NextPage = () => {
   return <Layout page="/gacha" />;
