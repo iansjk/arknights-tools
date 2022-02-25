@@ -1,4 +1,4 @@
-import createEmotionServer from "@emotion/server/types/create-instance";
+import createEmotionServer from "@emotion/server/create-instance";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import createEmotionCache from "../src/createEmotionCache";
