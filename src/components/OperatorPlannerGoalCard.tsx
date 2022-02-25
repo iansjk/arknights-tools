@@ -1,8 +1,8 @@
 import { Box, Card, CardContent, styled, Typography } from "@mui/material";
 import Image from "next/image";
 
-import operators from "../data/operators.json";
-import * as Output from "../scripts/output-types";
+import operators from "../../data/operators.json";
+import * as Output from "../../scripts/output-types";
 
 import { OperatorPlannerGoal } from "./planner-types";
 

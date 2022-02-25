@@ -9,7 +9,7 @@ import {
 import Head from "next/head";
 import * as React from "react";
 
-import { siteMetadata } from "../pages/_app";
+import { siteMetadata } from "../../pages/_app";
 
 import AppDrawer from "./AppDrawer";
 import AppFooter from "./AppFooter";

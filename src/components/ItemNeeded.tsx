@@ -12,8 +12,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-import items from "../data/items.json";
-import * as Output from "../scripts/output-types";
+import items from "../../data/items.json";
+import * as Output from "../../scripts/output-types";
 
 import ItemStack, { ItemStackProps } from "./ItemStack";
 

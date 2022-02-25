@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { siteMetadata } from "../pages/_app";
+import { siteMetadata } from "../../pages/_app";
 
 import MuiNextLink from "./MuiNextLink";
 

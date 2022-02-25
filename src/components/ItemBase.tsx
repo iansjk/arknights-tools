@@ -1,8 +1,8 @@
 import { Box, SxProps, Theme } from "@mui/material";
 import Image from "next/image";
 
-import items from "../data/items.json";
-import * as Output from "../scripts/output-types";
+import items from "../../data/items.json";
+import * as Output from "../../scripts/output-types";
 
 const DEFAULT_SIZE = 100;
 
