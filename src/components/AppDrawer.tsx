@@ -1,4 +1,5 @@
 import {
+  Box,
   Divider,
   Drawer,
   Hidden,
@@ -6,6 +7,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  styled,
   Typography,
 } from "@mui/material";
 
@@ -13,6 +15,10 @@ import config from "../config";
 import theme from "../theme";
 
 import MuiNextLink from "./MuiNextLink";
+
+const DRAWER_WIDTH_PX = 220;
+
+const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
 
 const ListItemLink: React.VFC<{ href: string; linkText: string }> = ({
   href,
@@ -58,19 +64,33 @@ const AppDrawer: React.VFC<Props> = (props) => {
         >
           {siteTitle}
         </MuiNextLink>
+        <Offset />
       </Typography>
       <Divider />
       <List>
         {Object.entries(pages).map(([slug, { title }]) => (
-          <ListItemLink href={slug} key={slug} linkText={title} />
+          <ListItemLink
+            key={slug}
+            href={`/arknights${slug}`}
+            linkText={title}
+          />
         ))}
       </List>
     </>
   );
 
   return (
-    <nav>
-      <Hidden lgUp implementation="css">
+    <Box
+      component="nav"
+      gridArea="drawer"
+      sx={{
+        width: {
+          xs: 0,
+          lg: `${DRAWER_WIDTH_PX}px`,
+        },
+      }}
+    >
+      <Hidden xlUp implementation="css">
         <Drawer
           container={container}
           variant="temporary"
@@ -80,17 +100,30 @@ const AppDrawer: React.VFC<Props> = (props) => {
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
+          PaperProps={{
+            sx: {
+              width: DRAWER_WIDTH_PX,
+            },
+          }}
         >
           {drawerContent}
         </Drawer>
       </Hidden>
 
-      <Hidden mdDown implementation="css">
-        <Drawer variant="permanent" open>
+      <Hidden lgDown implementation="css">
+        <Drawer
+          variant="permanent"
+          open
+          PaperProps={{
+            sx: {
+              width: DRAWER_WIDTH_PX,
+            },
+          }}
+        >
           {drawerContent}
         </Drawer>
       </Hidden>
-    </nav>
+    </Box>
   );
 };
 export default AppDrawer;

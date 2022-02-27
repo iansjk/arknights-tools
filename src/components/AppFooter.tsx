@@ -38,9 +38,9 @@ const AppFooter: React.VFC = () => {
       variant="body2"
       sx={{
         background: "background.paper",
-        maxWidth: "100%",
         marginTop: 4,
         flexShrink: 0,
+        gridArea: "footer",
       }}
     >
       <Box component="ul" textAlign="center" paddingLeft={0}>

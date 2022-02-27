@@ -5,6 +5,7 @@ import {
   IconButton,
   Typography,
   Container,
+  Box,
 } from "@mui/material";
 import Head from "next/head";
 import * as React from "react";
@@ -30,7 +31,7 @@ const Layout: React.FC<Props> = (props) => {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta
@@ -57,31 +58,46 @@ const Layout: React.FC<Props> = (props) => {
         )}
       </Head>
 
-      <AppDrawer mobileOpen={mobileOpen} onDrawerToggle={handleDrawerToggle} />
+      <Box
+        display="grid"
+        height="100vh"
+        gridTemplateAreas={'"drawer header" "drawer main" "drawer footer"'}
+        gridTemplateRows="auto 1fr auto"
+        gridTemplateColumns="auto 1fr"
+      >
+        <AppDrawer
+          mobileOpen={mobileOpen}
+          onDrawerToggle={handleDrawerToggle}
+        />
 
-      <div>
-        <AppBar position="fixed">
+        <AppBar position="sticky" sx={{ gridArea: "header" }}>
           <Toolbar>
             <IconButton
               aria-label="toggle drawer"
               edge="start"
               onClick={handleDrawerToggle}
+              sx={{
+                mr: 2,
+                display: {
+                  lg: "none",
+                },
+              }}
             >
               <MenuIcon />
             </IconButton>
             <Typography component="h2" variant="h5" noWrap>
-              {pageTitle ?? siteTitle}
+              {pageTitle}
             </Typography>
           </Toolbar>
         </AppBar>
 
-        <Container component="main" maxWidth="lg">
+        <Container component="main" maxWidth="xl" sx={{ gridArea: "main" }}>
           {children}
         </Container>
 
         <AppFooter />
-      </div>
-    </div>
+      </Box>
+    </>
   );
 };
 export default Layout;
