@@ -1,28 +1,21 @@
 import fs from "fs";
 import path from "path";
 
-import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json";
-import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json";
-import * as GameData from "./gamedata-types";
-import { Item } from "./output-types";
+import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json" assert { type: "json" };
+import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
 import {
   getEnglishItemName,
   DATA_OUTPUT_DIRECTORY,
   gameDataCostToIngredient,
   convertLMDCostToLMDItem,
-} from "./shared";
+} from "./shared.mjs";
 
 const outputPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
-const cnItems: { [itemId: string]: GameData.Item } = cnItemTable.items;
-const {
-  workshopFormulas,
-  manufactFormulas: manufactureFormulas,
-}: {
-  workshopFormulas: { [formulaId: string]: GameData.Formula };
-  manufactFormulas: { [formulaId: string]: GameData.Formula };
-} = cnBuildingData;
+const cnItems = cnItemTable.items;
+const { workshopFormulas, manufactFormulas: manufactureFormulas } =
+  cnBuildingData;
 
-const isPlannerItem = (itemId: string) => {
+const isPlannerItem = (itemId) => {
   const entry = cnItems[itemId];
   return (
     itemId === "4001" || // LMD
@@ -34,7 +27,7 @@ const isPlannerItem = (itemId: string) => {
 };
 
 (() => {
-  const itemsJson: { [itemId: string]: Item } = Object.fromEntries(
+  const itemsJson = Object.fromEntries(
     Object.entries(cnItems)
       .filter(([itemId]) => isPlannerItem(itemId))
       .map(([itemId, item]) => {
@@ -52,7 +45,7 @@ const isPlannerItem = (itemId: string) => {
         const manufactureFormulaId = item.buildingProductList.find(
           ({ roomType }) => roomType === "MANUFACTURE"
         )?.formulaId;
-        let formula: GameData.Formula | null = null;
+        let formula = null;
 
         if (workshopFormulaId) {
           formula = workshopFormulas[workshopFormulaId];
