@@ -30,6 +30,7 @@ module.exports = {
   },
   ignorePatterns: ["node_modules/"],
   rules: {
+    "prettier/prettier": "warn",
     "react/prop-types": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
