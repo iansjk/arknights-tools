@@ -4,6 +4,7 @@ import path from "path";
 import enCharacterPatchTable from "./ArknightsGameData/en_US/gamedata/excel/char_patch_table.json" assert { type: "json" };
 import enCharacterTable from "./ArknightsGameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
 import enSkillTable from "./ArknightsGameData/en_US/gamedata/excel/skill_table.json" assert { type: "json" };
+import enUniequipTable from "./ArknightsGameData/en_US/gamedata/excel/uniequip_table.json" assert { type: "json" };
 import cnCharacterPatchTable from "./ArknightsGameData/zh_CN/gamedata/excel/char_patch_table.json" assert { type: "json" };
 import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json" assert { type: "json" };
 import cnSkillTable from "./ArknightsGameData/zh_CN/gamedata/excel/skill_table.json" assert { type: "json" };
@@ -18,7 +19,8 @@ import {
 
 const enPatchCharacters = enCharacterPatchTable.patchChars;
 const cnPatchCharacters = cnCharacterPatchTable.patchChars;
-const { equipDict, charEquip } = cnUniequipTable;
+const { equipDict: cnEquipDict, charEquip: cnCharEquip } = cnUniequipTable;
+const { equipDict: enEquipDict } = enUniequipTable;
 
 const isOperator = (charId) => {
   const operator = cnCharacterTable[charId];
@@ -117,12 +119,13 @@ const OperatorGoalCategory = {
         });
 
       let module;
-      if (charEquip[id] != null) {
-        const advancedModuleId = charEquip[id].at(-1);
-        const moduleData = equipDict[advancedModuleId];
+      if (cnCharEquip[id] != null) {
+        const advancedModuleId = cnCharEquip[id].at(-1);
+        const cnModuleData = cnEquipDict[advancedModuleId];
+        const enModuleData = enEquipDict[advancedModuleId];
         module = {
-          name: moduleData.uniEquipName,
-          ingredients: moduleData.itemCost.map(gameDataCostToIngredient),
+          name: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
+          ingredients: cnModuleData.itemCost.map(gameDataCostToIngredient),
           category: OperatorGoalCategory.Module,
         };
       }
