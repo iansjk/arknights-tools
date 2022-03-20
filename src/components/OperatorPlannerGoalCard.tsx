@@ -3,8 +3,7 @@ import Image from "next/image";
 
 import operators from "../../data/operators.json";
 import * as Output from "../../scripts/output-types";
-
-import { OperatorPlannerGoal } from "./planner-types";
+import { OperatorPlannerGoal } from "../planner-v1-types";
 
 const OperatorGoalList = styled("ul")(({ theme }) => ({
   margin: theme.spacing(0, 0, 0, 1.5),
