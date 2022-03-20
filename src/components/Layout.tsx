@@ -91,7 +91,11 @@ const Layout: React.FC<Props> = (props) => {
           </Toolbar>
         </AppBar>
 
-        <Container component="main" maxWidth="xl" sx={{ gridArea: "main" }}>
+        <Container
+          component="main"
+          maxWidth="xl"
+          sx={{ gridArea: "main", p: 2 }}
+        >
           {children}
         </Container>
 
