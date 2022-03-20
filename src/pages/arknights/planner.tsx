@@ -1,10 +1,18 @@
 import { NextPage } from "next";
+import { useState } from "react";
 
+import { Operator } from "../../../scripts/output-types";
 import Layout from "../../components/Layout";
+import OperatorSearch from "../../components/OperatorSearch";
 
 const Planner: NextPage = () => {
+  const [operator, setOperator] = useState<Operator | null>(null);
   return (
     <Layout page="/planner">
+      <OperatorSearch
+        value={operator}
+        onChange={(newOp) => setOperator(newOp)}
+      />
       <p>
         Paleo vice enamel pin affogato air plant adaptogen. Raw denim jean
         shorts irony succulents synth man braid subway tile chia salvia shaman
