@@ -132,7 +132,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
               <ListItemText primary={goal.name} />
             </GoalMenuCheckboxItem>
           ))
-        : [];
+        : null;
     const skillLevel =
       operator.skillLevels.length > 0
         ? operator.skillLevels.map((goal) => (
@@ -144,7 +144,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
               <ListItemText primary={goal.name} />
             </GoalMenuCheckboxItem>
           ))
-        : [];
+        : null;
     const masteryGoals = operator.skills.flatMap((sk) => sk.masteries);
     const mastery =
       masteryGoals.length > 0
@@ -157,7 +157,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
               <ListItemText primary={goal.name} />
             </GoalMenuCheckboxItem>
           ))
-        : [];
+        : null;
 
     const module =
       operator.module != null ? (
@@ -174,39 +174,42 @@ const GoalSelect: React.VFC<Props> = (props) => {
       >
         Elite 1 Skill Level 7
       </GoalMenuPlainItem>,
-      ...operator.skills.map((_, i) => {
-        const masteryPresetName = `Skill ${i + 1} Mastery 1 → 3`;
-        return (
-          <GoalMenuPlainItem key={masteryPresetName} value={masteryPresetName}>
-            {masteryPresetName}
-          </GoalMenuPlainItem>
-        );
-      }),
+      ...operator.skills
+        .filter((sk) => sk.masteries.length > 0)
+        .map((_, i) => {
+          const masteryPresetName = `Skill ${i + 1} Mastery 1 → 3`;
+          return (
+            <GoalMenuPlainItem
+              key={masteryPresetName}
+              value={masteryPresetName}
+            >
+              {masteryPresetName}
+            </GoalMenuPlainItem>
+          );
+        }),
       <GoalMenuPlainItem key="Everything" value="Everything">
         Everything
       </GoalMenuPlainItem>,
       <ListSubheader key="goals">Goals</ListSubheader>,
     ];
 
-    return module != null
-      ? [
-          ...presets,
-          module,
-          <Divider key="1" />,
-          ...elite,
-          <Divider key="2" />,
-          ...skillLevel,
-          <Divider key="3" />,
-          ...mastery,
-        ]
-      : [
-          ...presets,
-          elite,
-          <Divider key="4" />,
-          ...skillLevel,
-          <Divider key="5" />,
-          ...mastery,
-        ];
+    const options = [...presets];
+    if (module != null) {
+      options.push(module);
+      options.push(<Divider key="1" />);
+    }
+    if (elite) {
+      options.push(...elite);
+    }
+    if (skillLevel) {
+      options.push(<Divider key="2" />);
+      options.push(...skillLevel);
+    }
+    if (mastery) {
+      options.push(<Divider key="3" />);
+      options.push(...mastery);
+    }
+    return options;
   };
 
   return (
