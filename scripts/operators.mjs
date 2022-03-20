@@ -150,4 +150,12 @@ const OperatorGoalCategory = {
     path.join(DATA_OUTPUT_DIRECTORY, "operators.json"),
     JSON.stringify(operatorsJson, null, 2)
   );
+
+  const opNameToId = Object.fromEntries(
+    Object.entries(operatorsJson).map(([id, operator]) => [operator.name, id])
+  );
+  fs.writeFileSync(
+    path.join(DATA_OUTPUT_DIRECTORY, "operator-name-to-id.json"),
+    JSON.stringify(opNameToId, null, 2)
+  );
 })();

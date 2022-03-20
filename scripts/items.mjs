@@ -71,4 +71,12 @@ const isPlannerItem = (itemId) => {
   );
 
   fs.writeFileSync(outputPath, JSON.stringify(itemsJson, null, 2));
+
+  const itemNameToId = Object.fromEntries(
+    Object.entries(itemsJson).map(([id, item]) => [item.name, id])
+  );
+  fs.writeFileSync(
+    path.join(DATA_OUTPUT_DIRECTORY, "item-name-to-id.json"),
+    JSON.stringify(itemNameToId, null, 2)
+  );
 })();
