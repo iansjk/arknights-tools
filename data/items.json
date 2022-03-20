@@ -1176,14 +1176,14 @@
   },
   "31043": {
     "id": "31043",
-    "name": "Compound Cutting Fluid",
+    "name": "Semi-Synthetic Solvent",
     "iconId": "MTL_SL_SS",
     "tier": 3,
     "sortId": 100044
   },
   "31044": {
     "id": "31044",
-    "name": "Cutting Stock Solution",
+    "name": "Refined Solvent",
     "iconId": "MTL_SL_RS",
     "tier": 4,
     "sortId": 100043,
@@ -1209,14 +1209,14 @@
   },
   "31053": {
     "id": "31053",
-    "name": "Semi-natural Solvent",
+    "name": "Compound Cutting Fluid",
     "iconId": "MTL_SL_CCF",
     "tier": 3,
     "sortId": 100046
   },
   "31054": {
     "id": "31054",
-    "name": "Refined Solvent",
+    "name": "Cutting Fluid Solution",
     "iconId": "MTL_SL_PLCF",
     "tier": 4,
     "sortId": 100045,

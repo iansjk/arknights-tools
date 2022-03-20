@@ -13,17 +13,10 @@ const cnItems = cnItemTable.items;
 export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
 fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
 
-const itemNameOverride = {
-  31043: "Compound Cutting Fluid",
-  31044: "Cutting Stock Solution",
-  31053: "Semi-natural Solvent",
-  31054: "Refined Solvent",
-};
-
 export const getEnglishItemName = (itemId) => {
   const enEntry = enItems[itemId];
   const cnName = cnItems[itemId].name;
-  let name = itemNameOverride[itemId] ?? enEntry.name;
+  let name = enEntry?.name;
   if (name == null) {
     if (cnName != null) {
       console.warn(`No item name translation found for ID '${itemId}'`);
