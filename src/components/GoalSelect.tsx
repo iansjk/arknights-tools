@@ -62,50 +62,64 @@ const GoalSelect: React.VFC<Props> = (props) => {
     for (const preset of newPresets) {
       switch (preset) {
         case "Elite 1 Skill Level 7":
-          newSpecificGoals.add("Elite 1");
-          newSpecificGoals.add("Skill Level 2");
-          newSpecificGoals.add("Skill Level 3");
-          newSpecificGoals.add("Skill Level 4");
-          newSpecificGoals.add("Skill Level 5");
-          newSpecificGoals.add("Skill Level 6");
-          newSpecificGoals.add("Skill Level 7");
+          if (
+            operator!.elite?.length > 0 &&
+            operator!.skillLevels.length === 6
+          ) {
+            newSpecificGoals.add("Elite 1");
+            newSpecificGoals.add("Skill Level 2");
+            newSpecificGoals.add("Skill Level 3");
+            newSpecificGoals.add("Skill Level 4");
+            newSpecificGoals.add("Skill Level 5");
+            newSpecificGoals.add("Skill Level 6");
+            newSpecificGoals.add("Skill Level 7");
+          }
           break;
         case "Skill 1 Mastery 1 → 3":
-          newSpecificGoals.add("Skill 1 Mastery 1");
-          newSpecificGoals.add("Skill 1 Mastery 2");
-          newSpecificGoals.add("Skill 1 Mastery 3");
+          if (
+            operator!.skills.length > 0 &&
+            operator!.skills[0].masteries.length > 0
+          ) {
+            newSpecificGoals.add("Skill 1 Mastery 1");
+            newSpecificGoals.add("Skill 1 Mastery 2");
+            newSpecificGoals.add("Skill 1 Mastery 3");
+          }
           break;
         case "Skill 2 Mastery 1 → 3":
-          newSpecificGoals.add("Skill 2 Mastery 1");
-          newSpecificGoals.add("Skill 2 Mastery 2");
-          newSpecificGoals.add("Skill 2 Mastery 3");
+          if (
+            operator!.skills.length > 1 &&
+            operator!.skills[1].masteries.length > 0
+          ) {
+            newSpecificGoals.add("Skill 2 Mastery 1");
+            newSpecificGoals.add("Skill 2 Mastery 2");
+            newSpecificGoals.add("Skill 2 Mastery 3");
+          }
           break;
         case "Skill 3 Mastery 1 → 3":
-          newSpecificGoals.add("Skill 3 Mastery 1");
-          newSpecificGoals.add("Skill 3 Mastery 2");
-          newSpecificGoals.add("Skill 3 Mastery 3");
+          if (
+            operator!.skills.length > 2 &&
+            operator!.skills[2].masteries.length > 0
+          ) {
+            newSpecificGoals.add("Skill 3 Mastery 1");
+            newSpecificGoals.add("Skill 3 Mastery 2");
+            newSpecificGoals.add("Skill 3 Mastery 3");
+          }
           break;
         case "Everything": {
           if (operator!.module != null) {
             newSpecificGoals.add("Module");
           }
-          newSpecificGoals.add("Elite 1");
-          newSpecificGoals.add("Elite 2");
-          newSpecificGoals.add("Skill Level 2");
-          newSpecificGoals.add("Skill Level 3");
-          newSpecificGoals.add("Skill Level 4");
-          newSpecificGoals.add("Skill Level 5");
-          newSpecificGoals.add("Skill Level 6");
-          newSpecificGoals.add("Skill Level 7");
-          newSpecificGoals.add("Skill 1 Mastery 1");
-          newSpecificGoals.add("Skill 1 Mastery 2");
-          newSpecificGoals.add("Skill 1 Mastery 3");
-          newSpecificGoals.add("Skill 2 Mastery 1");
-          newSpecificGoals.add("Skill 2 Mastery 2");
-          newSpecificGoals.add("Skill 2 Mastery 3");
-          newSpecificGoals.add("Skill 3 Mastery 1");
-          newSpecificGoals.add("Skill 3 Mastery 2");
-          newSpecificGoals.add("Skill 3 Mastery 3");
+          operator!.elite?.forEach((_, i) => {
+            newSpecificGoals.add(`Elite ${i + 1}`);
+          });
+          operator!.skillLevels?.forEach((_, i) => {
+            newSpecificGoals.add(`Skill Level ${i + 2}`);
+          });
+          operator!.skills?.forEach((_, i) => {
+            operator!.skills[i].masteries.forEach((_, j) => {
+              newSpecificGoals.add(`Skill ${i + 1} Mastery ${j + 1}`);
+            });
+          });
           break;
         }
         default:
