@@ -34,7 +34,6 @@ const OperatorSearch: React.VFC<Props> = (props) => {
           <TextField
             {...otherParams}
             label="Choose an operator"
-            variant="outlined"
             sx={{
               "& .MuiInputBase-input": {
                 pl: 0,

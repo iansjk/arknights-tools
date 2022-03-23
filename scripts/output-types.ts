@@ -20,30 +20,36 @@ export enum OperatorGoalCategory {
   Module,
 }
 
-interface OperatorGoal {
+interface BaseOperatorGoal {
   name: string;
   category: OperatorGoalCategory;
   ingredients: Ingredient[];
 }
 
-export interface SkillLevelGoal extends OperatorGoal {
+export interface SkillLevelGoal extends BaseOperatorGoal {
   category: OperatorGoalCategory.SkillLevel;
   skillLevel: number;
 }
 
-export interface EliteGoal extends OperatorGoal {
+export interface EliteGoal extends BaseOperatorGoal {
   category: OperatorGoalCategory.Elite;
   eliteLevel: number;
 }
 
-export interface MasteryGoal extends OperatorGoal {
+export interface MasteryGoal extends BaseOperatorGoal {
   category: OperatorGoalCategory.Mastery;
   masteryLevel: number;
 }
 
-export interface ModuleGoal extends OperatorGoal {
+export interface ModuleGoal extends BaseOperatorGoal {
   category: OperatorGoalCategory.Module;
 }
+
+export type OperatorGoal =
+  | SkillLevelGoal
+  | MasteryGoal
+  | ModuleGoal
+  | EliteGoal;
 
 export interface Skill {
   skillId: string;

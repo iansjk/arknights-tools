@@ -1,4 +1,7 @@
+import AddIcon from "@mui/icons-material/Add";
 import {
+  Box,
+  Button,
   Checkbox,
   Divider,
   FormControl,
@@ -12,7 +15,7 @@ import {
 import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
 
-import { Operator } from "../../scripts/output-types";
+import { Operator, OperatorGoal } from "../../scripts/output-types";
 
 const PRESETS = new Set([
   "Elite 1 Skill Level 7",
@@ -37,10 +40,11 @@ const GoalMenuPlainItem = styled(MenuItem)(() => ({
 
 interface Props {
   operator: Operator | null;
+  onGoalsAdded: (goals: OperatorGoal[]) => void;
 }
 
 const GoalSelect: React.VFC<Props> = (props) => {
-  const { operator } = props;
+  const { operator, onGoalsAdded } = props;
   const [goalNames, setGoalNames] = useState<string[]>([]);
 
   useEffect(() => {
@@ -128,6 +132,11 @@ const GoalSelect: React.VFC<Props> = (props) => {
       }
     }
     setGoalNames([...newSpecificGoals]);
+  };
+
+  const handleAddGoals = () => {
+    // TODO
+    onGoalsAdded([]);
   };
 
   const renderOptions = () => {
@@ -227,34 +236,48 @@ const GoalSelect: React.VFC<Props> = (props) => {
   };
 
   return (
-    <FormControl variant="outlined" fullWidth>
-      <InputLabel htmlFor="goal-select">Goals</InputLabel>
-      <Select
-        id="goal-select"
-        name="goal-select"
-        autoWidth
-        multiple
-        displayEmpty
-        value={goalNames}
-        MenuProps={{
-          anchorOrigin: {
-            vertical: "bottom",
-            horizontal: "left",
-          },
-          transformOrigin: {
-            vertical: "top",
-            horizontal: "left",
-          },
-          sx: { "& .MuiList-root": { mr: "25px", width: "100%" } },
+    <Box display="grid" gridTemplateColumns="1fr auto" columnGap={2}>
+      <FormControl>
+        <InputLabel htmlFor="goal-select">Goals</InputLabel>
+        <Select
+          id="goal-select"
+          name="goal-select"
+          autoWidth
+          multiple
+          displayEmpty
+          value={goalNames}
+          MenuProps={{
+            anchorOrigin: {
+              vertical: "bottom",
+              horizontal: "left",
+            },
+            transformOrigin: {
+              vertical: "top",
+              horizontal: "left",
+            },
+            sx: { "& .MuiList-root": { mr: "25px", width: "100%" } },
+          }}
+          renderValue={(selected) =>
+            selected.sort((a, b) => a.localeCompare(b)).join(", ")
+          }
+          onChange={handleChange}
+        >
+          {renderOptions()}
+        </Select>
+      </FormControl>
+      <Button
+        color="primary"
+        variant="contained"
+        startIcon={<AddIcon />}
+        onClick={handleAddGoals}
+        sx={{
+          height: "100%",
+          pl: 2,
         }}
-        renderValue={(selected) =>
-          selected.sort((a, b) => a.localeCompare(b)).join(", ")
-        }
-        onChange={handleChange}
       >
-        {renderOptions()}
-      </Select>
-    </FormControl>
+        Add
+      </Button>
+    </Box>
   );
 };
 export default GoalSelect;
