@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import { OperatorGoalCategory } from "../../scripts/output-types";
@@ -10,7 +11,9 @@ export default {
 } as ComponentMeta<typeof PlannerGoalCard>;
 
 const Template: ComponentStory<typeof PlannerGoalCard> = (args) => (
-  <PlannerGoalCard {...args} />
+  <Box width="500px">
+    <PlannerGoalCard {...args} />
+  </Box>
 );
 
 export const ShawE1 = Template.bind({});
