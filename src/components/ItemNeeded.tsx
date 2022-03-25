@@ -38,10 +38,10 @@ const ItemNeeded: React.VFC<Props> = (props) => {
     onCraftOne,
     ...rest
   } = props;
-  const { id, quantity: needed } = rest;
-  const item: Output.Item = items[id as keyof typeof items];
+  const { itemId, quantity } = rest;
+  const item: Output.Item = items[itemId as keyof typeof items];
   const isCraftable = Boolean(item.ingredients);
-  const isComplete = owned >= needed;
+  const isComplete = owned >= quantity;
   const [rawValue, setRawValue] = useState<string>(`${owned}`);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +49,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
     setRawValue(newRawValue);
     const numberValue = Number(newRawValue);
     if (!Number.isNaN(numberValue)) {
-      onChange(id, numberValue);
+      onChange(itemId, numberValue);
     }
   };
 
@@ -108,7 +108,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
                 aria-label="Remove 1 from owned amount"
                 edge="start"
                 disabled={owned === 0}
-                onClick={() => onDecrement(id)}
+                onClick={() => onDecrement(itemId)}
               >
                 <RemoveCircleIcon />
               </IconButton>
@@ -120,7 +120,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
                 size="small"
                 aria-label="Add 1 to owned amount"
                 edge="end"
-                onClick={() => onIncrement(id)}
+                onClick={() => onIncrement(itemId)}
               >
                 <AddCircleIcon />
               </IconButton>
@@ -149,7 +149,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
           >
             <Button
               variant={isCrafting ? "contained" : "outlined"}
-              onClick={() => onCraftingToggle(id)}
+              onClick={() => onCraftingToggle(itemId)}
               aria-label="Toggle crafting"
               aria-pressed={isCrafting}
             >
@@ -158,7 +158,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
             <Tooltip title="Craft one using your materials">
               <Button
                 disabled={!isCrafting}
-                onClick={() => onCraftOne(id)}
+                onClick={() => onCraftOne(itemId)}
                 sx={{ width: "auto" }}
               >
                 +1
