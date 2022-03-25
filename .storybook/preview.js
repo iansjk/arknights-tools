@@ -1,6 +1,6 @@
 import * as NextImage from "next/image";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { theme } from "../pages/_app";
+import theme from "../src/theme";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
