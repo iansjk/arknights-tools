@@ -39,6 +39,7 @@ const Planner: NextPage = () => {
             setDepot={setDepot}
             crafting={crafting}
             setCrafting={setCrafting}
+            goals={goals}
           />
         </Grid>
         <Grid item xs={5}>
