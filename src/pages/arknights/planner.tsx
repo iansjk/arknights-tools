@@ -2,19 +2,23 @@ import { Grid } from "@mui/material";
 import { NextPage } from "next";
 import { useState } from "react";
 
-import { Operator, OperatorGoal } from "../../../scripts/output-types";
+import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
 import Layout from "../../components/Layout";
 import MaterialsNeeded from "../../components/MaterialsNeeded";
 import OperatorGoals from "../../components/OperatorGoals";
 import OperatorSearch from "../../components/OperatorSearch";
+import usePlannerData, { PlannerGoal } from "../../hooks/usePlannerData";
 
 const Planner: NextPage = () => {
   const [operator, setOperator] = useState<Operator | null>(null);
-  const [goals, setGoals] = useState<OperatorGoal[]>([]);
+  const { depot, setDepot, crafting, setCrafting, goals, setGoals } =
+    usePlannerData();
 
-  const handleGoalsAdded = (goals: OperatorGoal[]) => {
-    setGoals(goals);
+  const handleGoalsAdded = (newGoals: PlannerGoal[]) => {
+    // TODO need to prevent duplicates here
+    setGoals((oldGoals) => [...newGoals, ...oldGoals]);
+    setOperator(null);
   };
 
   return (

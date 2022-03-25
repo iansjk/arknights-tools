@@ -13,17 +13,10 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { styled } from "@mui/system";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-import { Operator, OperatorGoal } from "../../scripts/output-types";
-
-const PRESETS = new Set([
-  "Elite 1 Skill Level 7",
-  "Skill 1 Mastery 1 → 3",
-  "Skill 2 Mastery 1 → 3",
-  "Skill 3 Mastery 1 → 3",
-  "Everything",
-]);
+import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
+import { PlannerGoal } from "../hooks/usePlannerData";
 
 const GoalMenuCheckboxItem = styled(MenuItem)(({ theme }) => ({
   height: "50px",
@@ -38,18 +31,82 @@ const GoalMenuPlainItem = styled(MenuItem)(() => ({
   height: "50px",
 }));
 
+const masteryGoalRegex = /Skill (?<skillNumber>\d) Mastery (?<masteryLevel>\d)/;
+
 interface Props {
   operator: Operator | null;
-  onGoalsAdded: (goals: OperatorGoal[]) => void;
+  onGoalsAdded: (goals: PlannerGoal[]) => void;
 }
 
 const GoalSelect: React.VFC<Props> = (props) => {
   const { operator, onGoalsAdded } = props;
-  const [goalNames, setGoalNames] = useState<string[]>([]);
+  const [selectedGoalNames, setSelectedGoalNames] = useState<string[]>([]);
 
   useEffect(() => {
-    setGoalNames([]);
+    setSelectedGoalNames([]);
   }, [operator]);
+
+  const availablePresets = useMemo(() => {
+    if (!operator) {
+      return [];
+    }
+
+    const presets = [];
+    if (operator.elite.length > 0 && operator.skillLevels.length === 6) {
+      presets.push("Elite 1 Skill Level 7");
+    }
+    operator.skills.forEach((skill, i) => {
+      if (skill.masteries.length === 3) {
+        presets.push(`Skill ${i + 1} Mastery 1 → 3`);
+      }
+    });
+    if (presets.length > 0) {
+      presets.unshift("Everything");
+    }
+    return presets;
+  }, [operator]);
+
+  const goalNameToGoal = (goalName: string): PlannerGoal => {
+    if (operator == null) {
+      throw new Error(
+        "Can't convert goal/preset name without an operator selected!"
+      );
+    }
+
+    if (goalName.startsWith("Elite")) {
+      const eliteLevel = Number(goalName.at(-1));
+      return {
+        operatorId: operator.id,
+        category: OperatorGoalCategory.Elite,
+        eliteLevel,
+      };
+    } else if (goalName.startsWith("Skill Level")) {
+      const skillLevel = Number(goalName.at(-1));
+      return {
+        operatorId: operator.id,
+        category: OperatorGoalCategory.SkillLevel,
+        skillLevel,
+      };
+    } else if (masteryGoalRegex.test(goalName)) {
+      const match = masteryGoalRegex.exec(goalName);
+      const skillNumber = Number(match!.groups!.skillNumber);
+      const masteryLevel = Number(match!.groups!.masteryLevel);
+      const { skillId } = operator.skills[skillNumber - 1];
+      return {
+        operatorId: operator.id,
+        category: OperatorGoalCategory.Mastery,
+        skillId,
+        masteryLevel,
+      };
+    } else if (goalName === "Module") {
+      return {
+        operatorId: operator.id,
+        category: OperatorGoalCategory.Module,
+      };
+    } else {
+      throw new Error(`Unrecognized goal or preset name: ${goalName}`);
+    }
+  };
 
   const handleChange = (e: SelectChangeEvent<string[]>) => {
     const newGoalNames =
@@ -57,7 +114,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
     const newSpecificGoals = new Set<string>();
     const newPresets = [];
     for (const goalName of newGoalNames) {
-      if (PRESETS.has(goalName)) {
+      if (availablePresets.includes(goalName)) {
         newPresets.push(goalName);
       } else {
         newSpecificGoals.add(goalName);
@@ -131,12 +188,11 @@ const GoalSelect: React.VFC<Props> = (props) => {
           break;
       }
     }
-    setGoalNames([...newSpecificGoals]);
+    setSelectedGoalNames([...newSpecificGoals]);
   };
 
   const handleAddGoals = () => {
-    // TODO
-    onGoalsAdded([]);
+    onGoalsAdded(selectedGoalNames.map(goalNameToGoal));
   };
 
   const renderOptions = () => {
@@ -149,7 +205,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
         ? operator.elite.map((goal) => (
             <GoalMenuCheckboxItem key={goal.name} value={goal.name}>
               <Checkbox
-                checked={goalNames.indexOf(goal.name) > -1}
+                checked={selectedGoalNames.indexOf(goal.name) > -1}
                 size="small"
               />
               <ListItemText primary={goal.name} />
@@ -161,7 +217,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
         ? operator.skillLevels.map((goal) => (
             <GoalMenuCheckboxItem key={goal.name} value={goal.name}>
               <Checkbox
-                checked={goalNames.indexOf(goal.name) > -1}
+                checked={selectedGoalNames.indexOf(goal.name) > -1}
                 size="small"
               />
               <ListItemText primary={goal.name} />
@@ -174,7 +230,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
         ? masteryGoals.map((goal) => (
             <GoalMenuCheckboxItem key={goal.name} value={goal.name}>
               <Checkbox
-                checked={goalNames.indexOf(goal.name) > -1}
+                checked={selectedGoalNames.indexOf(goal.name) > -1}
                 size="small"
               />
               <ListItemText primary={goal.name} />
@@ -189,32 +245,18 @@ const GoalSelect: React.VFC<Props> = (props) => {
         </GoalMenuPlainItem>
       ) : null;
 
-    const presets = [
-      <ListSubheader key="presets">Presets</ListSubheader>,
-      <GoalMenuPlainItem
-        key="Elite 1 Skill Level 7"
-        value="Elite 1 Skill Level 7"
-      >
-        Elite 1 Skill Level 7
-      </GoalMenuPlainItem>,
-      ...operator.skills
-        .filter((sk) => sk.masteries.length > 0)
-        .map((_, i) => {
-          const masteryPresetName = `Skill ${i + 1} Mastery 1 → 3`;
-          return (
-            <GoalMenuPlainItem
-              key={masteryPresetName}
-              value={masteryPresetName}
-            >
-              {masteryPresetName}
-            </GoalMenuPlainItem>
-          );
-        }),
-      <GoalMenuPlainItem key="Everything" value="Everything">
-        Everything
-      </GoalMenuPlainItem>,
-      <ListSubheader key="goals">Goals</ListSubheader>,
-    ];
+    const presets =
+      availablePresets.length > 0
+        ? [
+            <ListSubheader key="presets">Presets</ListSubheader>,
+            ...availablePresets.map((preset) => (
+              <GoalMenuPlainItem key={preset} value={preset}>
+                {preset}
+              </GoalMenuPlainItem>
+            )),
+            <ListSubheader key="goals">Goals</ListSubheader>,
+          ]
+        : [];
 
     const options = [...presets];
     if (module != null) {
@@ -245,7 +287,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
           autoWidth
           multiple
           displayEmpty
-          value={goalNames}
+          value={selectedGoalNames}
           MenuProps={{
             anchorOrigin: {
               vertical: "bottom",
