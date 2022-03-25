@@ -6,7 +6,7 @@ import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
 import Layout from "../../components/Layout";
 import MaterialsNeeded from "../../components/MaterialsNeeded";
-import OperatorGoals from "../../components/OperatorGoals";
+import PlannerGoals from "../../components/OperatorGoals";
 import OperatorSearch from "../../components/OperatorSearch";
 import usePlannerData, { PlannerGoal } from "../../hooks/usePlannerData";
 
@@ -34,10 +34,15 @@ const Planner: NextPage = () => {
           <GoalSelect operator={operator} onGoalsAdded={handleGoalsAdded} />
         </Grid>
         <Grid item xs={7}>
-          <MaterialsNeeded />
+          <MaterialsNeeded
+            depot={depot}
+            setDepot={setDepot}
+            crafting={crafting}
+            setCrafting={setCrafting}
+          />
         </Grid>
         <Grid item xs={5}>
-          <OperatorGoals />
+          <PlannerGoals goals={goals} setGoals={setGoals} />
         </Grid>
       </Grid>
     </Layout>
