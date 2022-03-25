@@ -6,8 +6,8 @@ import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
 import Layout from "../../components/Layout";
 import MaterialsNeeded from "../../components/MaterialsNeeded";
-import PlannerGoals from "../../components/OperatorGoals";
 import OperatorSearch from "../../components/OperatorSearch";
+import PlannerGoals from "../../components/PlannerGoals";
 import usePlannerData, { PlannerGoal } from "../../hooks/usePlannerData";
 
 const Planner: NextPage = () => {
