@@ -14,15 +14,15 @@ const Template: ComponentStory<typeof ItemBase> = (args) => (
 
 export const RefinedSolvent = Template.bind({});
 RefinedSolvent.args = {
-  id: "31054",
+  itemId: "31054",
 };
 
 export const LMD = Template.bind({});
 LMD.args = {
-  id: "4001",
+  itemId: "4001",
 };
 
 export const ModuleDataBlock = Template.bind({});
 ModuleDataBlock.args = {
-  id: "mod_unlock_token",
+  itemId: "mod_unlock_token",
 };

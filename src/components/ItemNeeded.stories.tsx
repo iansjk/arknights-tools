@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof ItemNeeded> = (args) => (
 
 export const RefinedSolvent = Template.bind({});
 RefinedSolvent.args = {
-  id: "31054",
+  itemId: "31054",
   quantity: 35,
   owned: 0,
   isCrafting: true,
@@ -21,14 +21,14 @@ RefinedSolvent.args = {
 
 export const LMD = Template.bind({});
 LMD.args = {
-  id: "4001",
+  itemId: "4001",
   quantity: 999,
   owned: 0,
 };
 
 export const ModuleDataBlock = Template.bind({});
 ModuleDataBlock.args = {
-  id: "mod_unlock_token",
+  itemId: "mod_unlock_token",
   quantity: 5,
   owned: 0,
 };

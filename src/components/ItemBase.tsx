@@ -7,18 +7,18 @@ import * as Output from "../../scripts/output-types";
 const DEFAULT_SIZE = 100;
 
 export interface ItemBaseProps {
-  id: string;
+  itemId: string;
   size?: number;
   sx?: SxProps<Theme>;
 }
 
 const ItemBase: React.FC<ItemBaseProps> = ({
-  id,
+  itemId,
   size = DEFAULT_SIZE,
   sx,
   children,
 }) => {
-  const item: Output.Item = items[id as keyof typeof items];
+  const item: Output.Item = items[itemId as keyof typeof items];
   const bgSize = Math.floor(size * (95 / 100));
   return (
     <Box
