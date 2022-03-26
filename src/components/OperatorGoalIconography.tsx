@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import Image from "next/image";
 
 import operatorsJson from "../../data/operators.json";
@@ -20,14 +21,16 @@ interface Props {
 const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
   const operator: Operator =
     operatorsJson[goal.operatorId as keyof typeof operatorsJson];
+
+  let icon = null;
   switch (goal.category) {
     case OperatorGoalCategory.Elite:
       if (goal.eliteLevel === 1) {
-        return <Image src={elite1Icon} width={24} height={24} alt="" />;
+        icon = <Image src={elite1Icon} width={24} height={24} alt="" />;
       } else if (goal.eliteLevel === 2) {
-        return <Image src={elite2Icon} width={24} height={24} alt="" />;
+        icon = <Image src={elite2Icon} width={24} height={24} alt="" />;
       }
-      return null;
+      break;
     case OperatorGoalCategory.Mastery: {
       const skill = operator.skills.find((sk) => sk.skillId === goal.skillId)!;
       const skillImage = (
@@ -39,41 +42,49 @@ const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
         />
       );
       if (goal.masteryLevel === 1) {
-        return (
+        icon = (
           <>
             {skillImage}
             <Image src={mastery1Icon} width={24} height={24} alt="" />
           </>
         );
       } else if (goal.masteryLevel === 2) {
-        return (
+        icon = (
           <>
             {skillImage}
             <Image src={mastery2Icon} width={24} height={24} alt="" />
           </>
         );
       } else if (goal.masteryLevel === 3) {
-        return (
+        icon = (
           <>
             {skillImage}
             <Image src={mastery3Icon} width={24} height={24} alt="" />
           </>
         );
       }
-      return null;
+      break;
     }
     case OperatorGoalCategory.SkillLevel:
       if (goal.skillLevel >= 2 && goal.skillLevel < 4) {
-        return <Image src={skillBook1Icon} width={24} height={24} alt="" />;
+        icon = <Image src={skillBook1Icon} width={24} height={24} alt="" />;
       } else if (goal.skillLevel >= 4 && goal.skillLevel < 6) {
-        return <Image src={skillBook2Icon} width={24} height={24} alt="" />;
+        icon = <Image src={skillBook2Icon} width={24} height={24} alt="" />;
       } else {
-        return <Image src={skillBook3Icon} width={24} height={24} alt="" />;
+        icon = <Image src={skillBook3Icon} width={24} height={24} alt="" />;
       }
+      break;
     case OperatorGoalCategory.Module:
-      return <Image src={moduleIcon} width={24} height={24} alt="" />;
-    default:
-      return null;
+      icon = <Image src={moduleIcon} width={24} height={24} alt="" />;
+      break;
   }
+  if (icon != null) {
+    return (
+      <Box component="span" mr={0.5} sx={{ lineHeight: 0 }}>
+        {icon}
+      </Box>
+    );
+  }
+  return null;
 };
 export default OperatorGoalIconography;

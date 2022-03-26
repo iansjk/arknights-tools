@@ -33,7 +33,7 @@ const Planner: NextPage = () => {
         <Grid item xs={8}>
           <GoalSelect operator={operator} onGoalsAdded={handleGoalsAdded} />
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={7} p={2}>
           <MaterialsNeeded
             depot={depot}
             setDepot={setDepot}
@@ -42,7 +42,7 @@ const Planner: NextPage = () => {
             goals={goals}
           />
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={5} p={2}>
           <PlannerGoals goals={goals} setGoals={setGoals} />
         </Grid>
       </Grid>

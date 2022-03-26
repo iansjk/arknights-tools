@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import { useMemo } from "react";
 
@@ -37,32 +37,37 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
   }, [goal, operator]);
 
   return (
-    <Box
+    <Paper
       component="li"
-      display="grid"
-      gridTemplateRows="32px auto"
-      gridTemplateColumns="32px 1fr auto"
-      columnGap={1}
-      rowGap={0.5}
-      mb={1}
+      elevation={3}
       sx={{
+        display: "grid",
+        mb: 1,
+        p: 1,
+        alignItems: "center",
+        gridTemplateRows: "auto auto",
+        gridTemplateColumns: "48px 40% 1fr",
+        columnGap: 1,
         "& .operator-avatar": {
           borderRadius: "50%",
         },
       }}
     >
-      <Image
-        src={`/images/avatars/${operator.id}.png`}
-        width={32}
-        height={32}
-        alt=""
-        className="operator-avatar"
-      />
-      <Typography component="span" variant="h6">
+      <Box display="flex" gridRow="span 2">
+        <Image
+          src={`/images/avatars/${operator.id}.png`}
+          width={48}
+          height={48}
+          alt=""
+          className="operator-avatar"
+        />
+      </Box>
+
+      <Typography component="span" variant="h6" sx={{ lineHeight: 1 }}>
         {appellation ?? operator.name}
       </Typography>
 
-      <Box gridRow="span 2">
+      <Box gridRow="span 2" display="flex" justifyContent="space-evenly">
         {ingredients.map((ingredient) => (
           <ItemStack
             key={ingredient.id}
@@ -73,7 +78,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         ))}
       </Box>
 
-      <Box gridColumn="span 2" display="flex" alignItems="center" columnGap={1}>
+      <Box display="flex" alignItems="center">
         <OperatorGoalIconography goal={goal} />
         {(() => {
           switch (goal.category) {
@@ -92,7 +97,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           }
         })()}
       </Box>
-    </Box>
+    </Paper>
   );
 };
 export default PlannerGoalCard;
