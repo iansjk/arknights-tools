@@ -74,6 +74,14 @@ const OperatorSearch: React.VFC<Props> = (props) => {
           {option.name}
         </li>
       )}
+      filterOptions={(options, state) => {
+        return options.filter((op) =>
+          op.name
+            .toLowerCase()
+            .replace(/['"]/g, "")
+            .startsWith(state.inputValue)
+        );
+      }}
       sx={{
         flexGrow: 1,
         mr: 2,
