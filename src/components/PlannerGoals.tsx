@@ -10,10 +10,16 @@ interface Props {
 const OperatorGoals: React.VFC<Props> = (props) => {
   const { goals, setGoals } = props;
 
-  // TODO
-  const handleGoalDeleted = (goal: PlannerGoal) => {};
-  // TODO
-  const handleGoalCompleted = (goal: PlannerGoal) => {};
+  const handleGoalDeleted = (goal: PlannerGoal) => {
+    setGoals((oldGoals) => {
+      return oldGoals.filter((g) => g !== goal);
+    });
+  };
+
+  const handleGoalCompleted = (goal: PlannerGoal) => {
+    // TODO also deduct materials
+    handleGoalDeleted(goal);
+  };
 
   return (
     <>

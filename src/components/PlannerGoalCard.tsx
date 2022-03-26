@@ -140,13 +140,13 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
       >
         <GoalCardButton
           aria-label={`Delete goal: ${goalLabel}`}
-          onClick={onGoalDeleted}
+          onClick={() => onGoalDeleted(goal)}
         >
           <DeleteGoalIcon />
         </GoalCardButton>
         <GoalCardButton
           aria-label={`Complete goal: ${goalLabel}`}
-          onClick={onGoalCompleted}
+          onClick={() => onGoalCompleted(goal)}
         >
           <CompleteGoalIcon />
         </GoalCardButton>
