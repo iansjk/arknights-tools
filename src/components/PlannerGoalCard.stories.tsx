@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof PlannerGoalCard>;
 
 const Template: ComponentStory<typeof PlannerGoalCard> = (args) => (
-  <Box width="500px">
+  <Box width="620px">
     <PlannerGoalCard {...args} />
   </Box>
 );
