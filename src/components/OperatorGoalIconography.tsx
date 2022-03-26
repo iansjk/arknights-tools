@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import clsx from "clsx";
 import Image from "next/image";
 
 import operatorsJson from "../../data/operators.json";
@@ -80,7 +81,20 @@ const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
   }
   if (icon != null) {
     return (
-      <Box component="span" mr={0.5} sx={{ lineHeight: 0 }}>
+      <Box
+        className={clsx(
+          goal.category === OperatorGoalCategory.Elite && "elite"
+        )}
+        component="span"
+        mr={0.5}
+        sx={{
+          lineHeight: 0,
+          "&.elite": {
+            position: "relative",
+            top: "-2px",
+          },
+        }}
+      >
         {icon}
       </Box>
     );
