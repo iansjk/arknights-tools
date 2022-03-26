@@ -9,10 +9,21 @@ interface Props {
 
 const OperatorGoals: React.VFC<Props> = (props) => {
   const { goals, setGoals } = props;
+
+  // TODO
+  const handleGoalDeleted = (goal: PlannerGoal) => {};
+  // TODO
+  const handleGoalCompleted = (goal: PlannerGoal) => {};
+
   return (
     <>
       {goals.map((goal, i) => (
-        <PlannerGoalCard key={i} goal={goal} />
+        <PlannerGoalCard
+          key={i}
+          goal={goal}
+          onGoalDeleted={handleGoalDeleted}
+          onGoalCompleted={handleGoalCompleted}
+        />
       ))}
     </>
   );

@@ -41,7 +41,7 @@ const Planner: NextPage = () => {
 
   return (
     <Layout page="/planner">
-      <Grid container>
+      <Grid container mb={2}>
         <Grid item xs={4}>
           <OperatorSearch
             value={operator}
@@ -51,6 +51,9 @@ const Planner: NextPage = () => {
         <Grid item xs={8}>
           <GoalSelect operator={operator} onGoalsAdded={handleGoalsAdded} />
         </Grid>
+      </Grid>
+
+      <Grid container>
         <Grid item xs={7} p={2}>
           <MaterialsNeeded
             depot={depot}
@@ -60,7 +63,7 @@ const Planner: NextPage = () => {
             goals={goals}
           />
         </Grid>
-        <Grid item xs={5} p={2}>
+        <Grid item xs={5}>
           <PlannerGoals goals={goals} setGoals={setGoals} />
         </Grid>
       </Grid>
