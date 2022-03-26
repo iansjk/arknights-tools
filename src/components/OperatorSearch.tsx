@@ -15,7 +15,9 @@ const OperatorSearch: React.VFC<Props> = (props) => {
   const { value, onChange } = props;
   const operators = useMemo(
     () =>
-      Object.values(operatorsJson).sort((a, b) => a.name.localeCompare(b.name)),
+      Object.values(operatorsJson)
+        .filter((op) => op.rarity >= 3)
+        .sort((a, b) => a.name.localeCompare(b.name)),
     []
   );
 

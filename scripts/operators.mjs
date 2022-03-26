@@ -48,8 +48,7 @@ const OperatorGoalCategory = {
   const operatorsJson = Object.fromEntries(
     [
       ...Object.entries(cnCharacterTable).filter(
-        // only include operators of rarity 3+, since 1* and 2* operators don't have any goals to add
-        ([charId]) => isOperator(charId) && cnCharacterTable[charId].rarity >= 2
+        ([_, op]) => !op.isNotObtainable
       ),
       ...Object.entries(cnPatchCharacters),
     ].map(([id, operator]) => {

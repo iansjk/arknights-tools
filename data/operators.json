@@ -1,4 +1,103 @@
 {
+  "char_285_medic2": {
+    "id": "char_285_medic2",
+    "name": "Lancet-2",
+    "rarity": 1,
+    "class": "Medic",
+    "branch": "physician",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_286_cast3": {
+    "id": "char_286_cast3",
+    "name": "Castle-3",
+    "rarity": 1,
+    "class": "Guard",
+    "branch": "fearless",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_376_therex": {
+    "id": "char_376_therex",
+    "name": "Thermal-EX",
+    "rarity": 1,
+    "class": "Specialist",
+    "branch": "executor",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_4000_jnight": {
+    "id": "char_4000_jnight",
+    "name": "\"Justice Knight\"",
+    "rarity": 1,
+    "class": "Sniper",
+    "branch": "fastshot",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_502_nblade": {
+    "id": "char_502_nblade",
+    "name": "Yato",
+    "rarity": 2,
+    "class": "Vanguard",
+    "branch": "pioneer",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_500_noirc": {
+    "id": "char_500_noirc",
+    "name": "Noir Corne",
+    "rarity": 2,
+    "class": "Defender",
+    "branch": "protector",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_503_rang": {
+    "id": "char_503_rang",
+    "name": "Rangers",
+    "rarity": 2,
+    "class": "Sniper",
+    "branch": "fastshot",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_501_durin": {
+    "id": "char_501_durin",
+    "name": "Durin",
+    "rarity": 2,
+    "class": "Caster",
+    "branch": "corecaster",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "char_009_12fce": {
+    "id": "char_009_12fce",
+    "name": "12F",
+    "rarity": 2,
+    "class": "Caster",
+    "branch": "splashcaster",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
   "char_123_fang": {
     "id": "char_123_fang",
     "name": "Fang",
@@ -5388,7 +5487,7 @@
       }
     ],
     "module": {
-      "name": "便携雷达的辅助器材",
+      "name": "Portable Radar Equipment",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -11560,7 +11659,7 @@
       }
     ],
     "module": {
-      "name": "“爱琴之吻”",
+      "name": "'Aegean's Kiss'",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -14068,7 +14167,7 @@
     "rarity": 4,
     "class": "Supporter",
     "branch": "craftsman",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -14209,7 +14308,7 @@
       {
         "skillId": "skchr_robrta_1",
         "iconId": null,
-        "skillName": "叙拉古式上妆",
+        "skillName": "Siracusan-Style Makeup",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -14273,7 +14372,7 @@
       {
         "skillId": "skchr_robrta_2",
         "iconId": null,
-        "skillName": "全自动造型仪",
+        "skillName": "Full Auto Modeler",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -15162,7 +15261,7 @@
       }
     ],
     "module": {
-      "name": "医疗环境分析装置",
+      "name": "Medic Environment Analyze System",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -15458,7 +15557,7 @@
       }
     ],
     "module": {
-      "name": "外科医疗套组",
+      "name": "Surgical Instrument Kit",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -30568,7 +30667,7 @@
     "rarity": 5,
     "class": "Medic",
     "branch": "wandermedic",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -30713,7 +30812,7 @@
       {
         "skillId": "skchr_mberry_1",
         "iconId": null,
-        "skillName": "治愈云雾",
+        "skillName": "Healing Haze",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -30777,7 +30876,7 @@
       {
         "skillId": "skchr_mberry_2",
         "iconId": null,
-        "skillName": "安全区域",
+        "skillName": "Safe Zone",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -36194,7 +36293,7 @@
       }
     ],
     "module": {
-      "name": "野战狙击套装",
+      "name": "Field Sniper Equipment",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -36490,7 +36589,7 @@
       }
     ],
     "module": {
-      "name": "枪支调试工具组",
+      "name": "Gunsmithing Toolkit",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -46418,7 +46517,7 @@
     "rarity": 6,
     "class": "Vanguard",
     "branch": "bearer",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -46571,7 +46670,7 @@
       {
         "skillId": "skcom_assist_cost[3]",
         "iconId": null,
-        "skillName": "支援号令·γ型",
+        "skillName": "Support γ",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -46635,7 +46734,7 @@
       {
         "skillId": "skchr_sleach_2",
         "iconId": null,
-        "skillName": "信仰传承",
+        "skillName": "Inheritance of Faith",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -46699,7 +46798,7 @@
       {
         "skillId": "skchr_sleach_3",
         "iconId": null,
-        "skillName": "光辉旗帜",
+        "skillName": "Glorious Banner",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -54938,7 +55037,7 @@
       }
     ],
     "module": {
-      "name": "“封闭的希望”",
+      "name": "'Closed Hope'",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -60609,6 +60708,1335 @@
       ],
       "category": 3
     }
+  },
+  "token_10000_silent_healrb": {
+    "id": "token_10000_silent_healrb",
+    "name": "Medical Drone",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "skcom_withdraw",
+        "iconId": null,
+        "skillName": "Self-Destruct",
+        "masteries": []
+      },
+      {
+        "skillId": "skcom_withdraw",
+        "iconId": null,
+        "skillName": "Self-Destruct",
+        "masteries": []
+      }
+    ]
+  },
+  "token_10001_deepcl_tentac": {
+    "id": "token_10001_deepcl_tentac",
+    "name": "Tentacle",
+    "rarity": 4,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10002_kalts_mon3tr": {
+    "id": "token_10002_kalts_mon3tr",
+    "name": "Mon3tr",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10003_cgbird_bird": {
+    "id": "token_10003_cgbird_bird",
+    "name": "Cage",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10004_otter_motter": {
+    "id": "token_10004_otter_motter",
+    "name": "Mibo",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10005_mgllan_drone1": {
+    "id": "token_10005_mgllan_drone1",
+    "name": "DDF Type-F",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10005_mgllan_drone2": {
+    "id": "token_10005_mgllan_drone2",
+    "name": "DDF Type-L",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10005_mgllan_drone3": {
+    "id": "token_10005_mgllan_drone3",
+    "name": "DDF Type-A",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10006_vodfox_doll": {
+    "id": "token_10006_vodfox_doll",
+    "name": "Curse Doll",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10007_phatom_twin": {
+    "id": "token_10007_phatom_twin",
+    "name": "The Mirror",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "executor",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10008_cqbw_box": {
+    "id": "token_10008_cqbw_box",
+    "name": "F.T.E",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10009_weedy_cannon": {
+    "id": "token_10009_weedy_cannon",
+    "name": "Cannon",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10010_folivo_car": {
+    "id": "token_10010_folivo_car",
+    "name": "M.P.M",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10011_beewax_oblisk": {
+    "id": "token_10011_beewax_oblisk",
+    "name": "Desert Obelisk",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10012_rosmon_shield": {
+    "id": "token_10012_rosmon_shield",
+    "name": "Rosmontis-gear",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10013_robin_mine": {
+    "id": "token_10013_robin_mine",
+    "name": "\"Clip\" Charge",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10014_bstalk_crab": {
+    "id": "token_10014_bstalk_crab",
+    "name": "M.C.G",
+    "rarity": 4,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10015_dusk_drgn": {
+    "id": "token_10015_dusk_drgn",
+    "name": "Little Instinct",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10016_rfrost_mine": {
+    "id": "token_10016_rfrost_mine",
+    "name": "Welcome Mat",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10017_skadi2_dedant": {
+    "id": "token_10017_skadi2_dedant",
+    "name": "Skadi's seaborn",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10018_robrta_mach": {
+    "id": "token_10018_robrta_mach",
+    "name": "Making-up Machine",
+    "rarity": 4,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_robrta",
+        "iconId": null,
+        "skillName": "Full Auto Modeler",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_robrta",
+        "iconId": null,
+        "skillName": "Full Auto Modeler",
+        "masteries": []
+      }
+    ]
+  },
+  "token_10019_nearl2_sword": {
+    "id": "token_10019_nearl2_sword",
+    "name": "Blazing Sun",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10020_ling_soul1": {
+    "id": "token_10020_ling_soul1",
+    "name": "Tranquility",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10020_ling_soul2": {
+    "id": "token_10020_ling_soul2",
+    "name": "Peripateticism",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10020_ling_soul3": {
+    "id": "token_10020_ling_soul3",
+    "name": "Thunderer",
+    "rarity": 6,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "token_10021_blkngt_hypnos": {
+    "id": "token_10021_blkngt_hypnos",
+    "name": "Hypnos",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_blkngt_hypnos_s_1",
+        "iconId": "sktok_blkngt_hypnos",
+        "skillName": "食梦",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_blkngt_hypnos_s_2",
+        "iconId": "sktok_blkngt_hypnos",
+        "skillName": "食梦",
+        "masteries": []
+      }
+    ]
+  },
+  "token_10022_kazema_shadow": {
+    "id": "token_10022_kazema_shadow",
+    "name": "Kaminingyo",
+    "rarity": 5,
+    "class": "Token",
+    "branch": "notchar1",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "trap_001_crate": {
+    "id": "trap_001_crate",
+    "name": "Crate",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_crate",
+        "iconId": null,
+        "skillName": "Obstruct",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_002_emp": {
+    "id": "trap_002_emp",
+    "name": "EMP",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_emp",
+        "iconId": null,
+        "skillName": "EMP Blast",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_003_gate": {
+    "id": "trap_003_gate",
+    "name": "闸门",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_gate",
+        "iconId": null,
+        "skillName": "Gate Closing",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_005_sensor": {
+    "id": "trap_005_sensor",
+    "name": "Detector",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_sensor",
+        "iconId": null,
+        "skillName": "Detection",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_006_antidr": {
+    "id": "trap_006_antidr",
+    "name": "Anti-Drone",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_antidr",
+        "iconId": null,
+        "skillName": "Drone Interference",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_007_ballis": {
+    "id": "trap_007_ballis",
+    "name": "Ballista",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_ballis",
+        "iconId": null,
+        "skillName": "Bolt Launching",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_008_farm": {
+    "id": "trap_008_farm",
+    "name": "CT-01",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_farm",
+        "iconId": null,
+        "skillName": "Startup!",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_009_battery": {
+    "id": "trap_009_battery",
+    "name": "Portable Supply",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "trap_010_frosts": {
+    "id": "trap_010_frosts",
+    "name": "Originium ICrystal",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_frosts",
+        "iconId": null,
+        "skillName": "Frigid Tide",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_011_ore": {
+    "id": "trap_011_ore",
+    "name": "Originium Shrine",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_ore",
+        "iconId": null,
+        "skillName": "Pulse Wave",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_012_mine": {
+    "id": "trap_012_mine",
+    "name": "Interferential Mine",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_mine",
+        "iconId": null,
+        "skillName": "Detonate",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_013_blower": {
+    "id": "trap_013_blower",
+    "name": "F.O.O",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_blower",
+        "iconId": null,
+        "skillName": "Airflow",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_014_tower": {
+    "id": "trap_014_tower",
+    "name": "Gramophone",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_tower",
+        "iconId": null,
+        "skillName": "Arts Transfer Protocol",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_015_tree": {
+    "id": "trap_015_tree",
+    "name": "Huge Fungus",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_tree",
+        "iconId": null,
+        "skillName": "Natural Camouflage",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_016_peon": {
+    "id": "trap_016_peon",
+    "name": "Temporary Employer",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "trap_018_bomb": {
+    "id": "trap_018_bomb",
+    "name": "Mr.Rumble",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_bomb",
+        "iconId": null,
+        "skillName": "Ill Temper",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_019_electric": {
+    "id": "trap_019_electric",
+    "name": "Mieszko coil",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_electric",
+        "iconId": null,
+        "skillName": "Energized!",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_020_roadblock": {
+    "id": "trap_020_roadblock",
+    "name": "Roads Obstacles",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_roadblock",
+        "iconId": null,
+        "skillName": "Obstruction",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_021_flame": {
+    "id": "trap_021_flame",
+    "name": "Energy Crystal",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_flame",
+        "iconId": null,
+        "skillName": "Energy Crystallization",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_022_frosts_friend": {
+    "id": "trap_022_frosts_friend",
+    "name": "Yelena-Crystal",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_frosts_friend",
+        "iconId": null,
+        "skillName": "Frigid Tide",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_023_ore_friend": {
+    "id": "trap_023_ore_friend",
+    "name": "Patriot-Shrine",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_ore_friend",
+        "iconId": null,
+        "skillName": "Pulse Wave",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_024_npcsld": {
+    "id": "trap_024_npcsld",
+    "name": "Shield Guard",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_npcsld",
+        "iconId": null,
+        "skillName": "Form Up!",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_025_prison": {
+    "id": "trap_025_prison",
+    "name": "Prison Device",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_prison",
+        "iconId": null,
+        "skillName": "Lock 'em Up!",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_026_inverter": {
+    "id": "trap_026_inverter",
+    "name": "D.B.F2.1ver ",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_inverter",
+        "iconId": null,
+        "skillName": "Warping Reality",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_027_stone": {
+    "id": "trap_027_stone",
+    "name": "Rubble",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_stone",
+        "iconId": null,
+        "skillName": "Obstruct",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_028_cannon": {
+    "id": "trap_028_cannon",
+    "name": "Pulse Former",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_cannon_1",
+        "iconId": null,
+        "skillName": "Pulse Beam",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_cannon_2",
+        "iconId": null,
+        "skillName": "Pulse Beam",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_029_poison": {
+    "id": "trap_029_poison",
+    "name": "lachrymator Control Valve",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_poison_1",
+        "iconId": null,
+        "skillName": "Close Valve",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_poison_2",
+        "iconId": null,
+        "skillName": "Open Valve",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_030_factory": {
+    "id": "trap_030_factory",
+    "name": "Drone Factory",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_factory_1",
+        "iconId": null,
+        "skillName": "Production Line",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_factory_2",
+        "iconId": null,
+        "skillName": "Production Line",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_031_sleep": {
+    "id": "trap_031_sleep",
+    "name": "Safety Harness",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_sleep",
+        "iconId": null,
+        "skillName": "Rescue Rope",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_032_mound": {
+    "id": "trap_032_mound",
+    "name": "Rockfill Construct",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_mound",
+        "iconId": null,
+        "skillName": "Sandstorm Protection",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_033_sbomb": {
+    "id": "trap_033_sbomb",
+    "name": "Originium Demo-charge",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_sbomb",
+        "iconId": null,
+        "skillName": "Detonate",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_034_machst": {
+    "id": "trap_034_machst",
+    "name": "Reinforcing Materials",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_machst",
+        "iconId": null,
+        "skillName": "Strengthen and Reinforce",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_035_emperor": {
+    "id": "trap_035_emperor",
+    "name": "Emperor",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_emperor",
+        "iconId": null,
+        "skillName": "Punchline",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_036_storm": {
+    "id": "trap_036_storm",
+    "name": "Sand Storm",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_storm",
+        "iconId": null,
+        "skillName": "Sandstorm",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_037_airsup": {
+    "id": "trap_037_airsup",
+    "name": "Maneuver Drone Hangar",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_airsup",
+        "iconId": null,
+        "skillName": "Dispatch Air Support",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_038_dsbell": {
+    "id": "trap_038_dsbell",
+    "name": "Emergency Aid Building",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_dsbell",
+        "iconId": null,
+        "skillName": "Emergency Medical Agreement",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_039_dstnta": {
+    "id": "trap_039_dstnta",
+    "name": "Seaborn's Filial Generation",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_dstnta",
+        "iconId": null,
+        "skillName": "Devour",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_040_canoe": {
+    "id": "trap_040_canoe",
+    "name": "TinyBoat",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_canoe_1",
+        "iconId": "sktok_canoe",
+        "skillName": "Deployment Platform",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_canoe_2",
+        "iconId": "sktok_canoe",
+        "skillName": "Deployment Platform",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_041_fcanon": {
+    "id": "trap_041_fcanon",
+    "name": "Kite",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_fcanon",
+        "iconId": null,
+        "skillName": "Fire!",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_042_tidectrl": {
+    "id": "trap_042_tidectrl",
+    "name": "Tide Controller",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_tidectrl_1",
+        "iconId": null,
+        "skillName": "Small Rising Tide",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_tidectrl_2",
+        "iconId": null,
+        "skillName": "Large Rising Tide",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_tidectrl_3",
+        "iconId": null,
+        "skillName": "Deep Water",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_043_dupilr": {
+    "id": "trap_043_dupilr",
+    "name": "Tattered Pillar",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_dupilr",
+        "iconId": null,
+        "skillName": "Collapsing Pillar",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_044_duruin": {
+    "id": "trap_044_duruin",
+    "name": "Battlefield Ruins",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_duruin",
+        "iconId": null,
+        "skillName": "Obstruct",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_045_dublst": {
+    "id": "trap_045_dublst",
+    "name": "Demolition Device",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_dublst",
+        "iconId": null,
+        "skillName": "Explode",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_046_oxygen": {
+    "id": "trap_046_oxygen",
+    "name": "Erosionproof Coating Device",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": false,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_oxygen",
+        "iconId": null,
+        "skillName": "Erosion-Resistant Coating Application Device",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_048_neonlamp": {
+    "id": "trap_048_neonlamp",
+    "name": "City Neon ",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_neonlamp",
+        "iconId": null,
+        "skillName": "文明的光芒",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_049_candle": {
+    "id": "trap_049_candle",
+    "name": "Knight Trophy",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_candle",
+        "iconId": null,
+        "skillName": "骑士的荣耀",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_050_blizzard": {
+    "id": "trap_050_blizzard",
+    "name": "blizzard",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_blizzard",
+        "iconId": null,
+        "skillName": "暴风雪",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_051_vultres": {
+    "id": "trap_051_vultres",
+    "name": "Unowned Treasure",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_vultres",
+        "iconId": null,
+        "skillName": "诱人珍宝",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_052_slowfd": {
+    "id": "trap_052_slowfd",
+    "name": "Broken Fog Machine",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_slowfd",
+        "iconId": null,
+        "skillName": "高压喷射",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_053_airbomb": {
+    "id": "trap_053_airbomb",
+    "name": "Gas Tank P.",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_airbomb",
+        "iconId": null,
+        "skillName": "砰！",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_054_dancdol": {
+    "id": "trap_054_dancdol",
+    "name": "“Host's Assistant”",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_dancdol",
+        "iconId": null,
+        "skillName": "剧目宣告",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_055_tileblock": {
+    "id": "trap_055_tileblock",
+    "name": "Sealed Floor",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_tileblock",
+        "iconId": null,
+        "skillName": "不可部署",
+        "masteries": []
+      }
+    ]
+  },
+  "trap_056_sfsuifire": {
+    "id": "trap_056_sfsuifire",
+    "name": "Sealed Floor",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": []
+  },
+  "trap_057_wpnsts": {
+    "id": "trap_057_wpnsts",
+    "name": "\"Gelato Stop\"",
+    "rarity": 1,
+    "class": "Trap",
+    "branch": "notchar2",
+    "isCnOnly": true,
+    "skillLevels": [],
+    "elite": [],
+    "skills": [
+      {
+        "skillId": "sktok_wpnsts_1",
+        "iconId": "sktok_wpnsts",
+        "skillName": "拉特兰式冰淇淋",
+        "masteries": []
+      },
+      {
+        "skillId": "sktok_wpnsts_2",
+        "iconId": "sktok_wpnsts",
+        "skillName": "拉特兰式冰淇淋",
+        "masteries": []
+      }
+    ]
   },
   "char_230_savage": {
     "id": "char_230_savage",
