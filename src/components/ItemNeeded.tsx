@@ -10,7 +10,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material";
-import { useState } from "react";
+import { ElementType, useState } from "react";
 
 import items from "../../data/items.json";
 import * as Output from "../../scripts/output-types";
@@ -25,6 +25,7 @@ interface Props extends ItemStackProps {
   onChange: (itemId: string, newQuantity: number) => void;
   onCraftingToggle: (itemId: string) => void;
   onCraftOne: (itemId: string) => void;
+  component?: ElementType;
 }
 
 const ItemNeeded: React.VFC<Props> = (props) => {
@@ -36,6 +37,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
     onChange,
     onCraftingToggle,
     onCraftOne,
+    component,
     ...rest
   } = props;
   const { itemId, quantity } = rest;
@@ -54,7 +56,7 @@ const ItemNeeded: React.VFC<Props> = (props) => {
   };
 
   return (
-    <Box display="inline-grid">
+    <Box display="inline-grid" component={component ?? "div"}>
       <Box
         sx={{
           display: "inline-grid",

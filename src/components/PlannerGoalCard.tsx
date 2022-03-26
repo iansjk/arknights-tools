@@ -9,13 +9,13 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import { useMemo } from "react";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import { PlannerGoal } from "../hooks/usePlannerData";
 
 import ItemStack from "./ItemStack";
+import { getGoalIngredients } from "./MaterialsNeeded";
 import OperatorGoalIconography from "./OperatorGoalIconography";
 
 const GoalCardButton = styled(Button)(({ theme }) => ({
@@ -62,22 +62,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
   })();
   const goalLabel = `${operator.name} ${goalName}`;
 
-  const ingredients = useMemo(() => {
-    switch (goal.category) {
-      case OperatorGoalCategory.Elite:
-        return operator.elite[goal.eliteLevel - 1].ingredients;
-      case OperatorGoalCategory.SkillLevel:
-        return operator.skillLevels[goal.skillLevel - 2].ingredients;
-      case OperatorGoalCategory.Mastery: {
-        const skill = operator.skills.find(
-          (sk) => sk.skillId === goal.skillId
-        )!;
-        return skill.masteries[goal.masteryLevel - 1].ingredients;
-      }
-      case OperatorGoalCategory.Module:
-        return operator.module!.ingredients;
-    }
-  }, [goal, operator]);
+  const ingredients = getGoalIngredients(operator, goal);
 
   return (
     <Box component="li" display="grid" gridTemplateColumns="1fr auto">

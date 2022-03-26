@@ -53,8 +53,8 @@ const Planner: NextPage = () => {
         </Grid>
       </Grid>
 
-      <Grid container>
-        <Grid item xs={7} p={2}>
+      <Grid container spacing={2}>
+        <Grid item xs={7}>
           <MaterialsNeeded
             depot={depot}
             setDepot={setDepot}
