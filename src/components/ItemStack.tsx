@@ -7,7 +7,16 @@ export interface ItemStackProps extends ItemBaseProps {
 }
 
 const ItemStack: React.VFC<ItemStackProps> = (props) => {
-  const { quantity, ...rest } = props;
+  const { quantity: rawQuantity, ...rest } = props;
+  const quantity =
+    rawQuantity < 1000
+      ? rawQuantity
+      : `${
+          rawQuantity % 1000 === 0
+            ? `${rawQuantity / 1000}`
+            : (rawQuantity / 1000).toFixed(1)
+        }K`;
+
   return (
     <ItemBase {...rest}>
       <Box
