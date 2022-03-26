@@ -7,6 +7,7 @@ import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import { PlannerGoal } from "../hooks/usePlannerData";
 
 import ItemStack from "./ItemStack";
+import OperatorGoalIconography from "./OperatorGoalIconography";
 
 interface Props {
   goal: PlannerGoal;
@@ -72,7 +73,8 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         ))}
       </Box>
 
-      <Box gridColumn="span 2">
+      <Box gridColumn="span 2" display="flex" alignItems="center" columnGap={1}>
+        <OperatorGoalIconography goal={goal} />
         {(() => {
           switch (goal.category) {
             case OperatorGoalCategory.Elite:
