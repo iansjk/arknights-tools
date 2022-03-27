@@ -1,9 +1,11 @@
-import { Paper } from "@mui/material";
+import { Box, Divider, Paper, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import { Crafting, Depot, PlannerGoal } from "../hooks/usePlannerData";
+import lmdIcon from "../images/lmd-icon.png";
 
 import ItemNeeded from "./ItemNeeded";
 
@@ -35,6 +37,7 @@ type Needed = Depot;
 const MaterialsNeeded: React.VFC<Props> = (props) => {
   const { depot, setDepot, crafting, setCrafting, goals } = props;
 
+  let totalCost = 0;
   const materialsNeeded: Needed = {};
   goals
     .flatMap((goal) => {
@@ -43,36 +46,62 @@ const MaterialsNeeded: React.VFC<Props> = (props) => {
       return getGoalIngredients(operator, goal);
     })
     .forEach((ingredient) => {
-      materialsNeeded[ingredient.id] =
-        (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
+      if (ingredient.id === "4001") {
+        // LMD
+        totalCost += ingredient.quantity;
+      } else {
+        materialsNeeded[ingredient.id] =
+          (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
+      }
     });
 
   return (
-    <Paper
-      component="ul"
-      sx={{
-        display: "grid",
-        m: 0,
-        p: 2,
-        gap: 2,
-        gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
-      }}
-    >
-      {Object.entries(materialsNeeded).map(([itemId, needed]) => (
-        <ItemNeeded
-          key={itemId}
-          component="li"
-          itemId={itemId}
-          owned={depot[itemId] ?? 0}
-          quantity={needed}
-          isCrafting={crafting[itemId] ?? false}
-          onChange={() => void 0}
-          onCraftOne={() => void 0}
-          onDecrement={() => void 0}
-          onIncrement={() => void 0}
-          onCraftingToggle={() => void 0}
-        />
-      ))}
+    <Paper sx={{ p: 2 }}>
+      <Typography component="h2" variant="h5">
+        Materials needed
+      </Typography>
+      <Divider sx={{ my: 1, width: "90%" }} />
+      <Typography component="span" variant="h6">
+        Total cost:
+        <Box
+          component="span"
+          display="inline-flex"
+          alignItems="center"
+          columnGap={0.5}
+          ml={1}
+        >
+          <b>{totalCost.toLocaleString()}</b>
+          <Image src={lmdIcon} width={26} height={18} alt="LMD" />
+        </Box>
+      </Typography>
+      <Box
+        component="ul"
+        sx={{
+          display: "grid",
+          mt: 2,
+          mb: 0,
+          mx: 0,
+          p: 0,
+          gap: 2,
+          gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
+        }}
+      >
+        {Object.entries(materialsNeeded).map(([itemId, needed]) => (
+          <ItemNeeded
+            key={itemId}
+            component="li"
+            itemId={itemId}
+            owned={depot[itemId] ?? 0}
+            quantity={needed}
+            isCrafting={crafting[itemId] ?? false}
+            onChange={() => void 0}
+            onCraftOne={() => void 0}
+            onDecrement={() => void 0}
+            onIncrement={() => void 0}
+            onCraftingToggle={() => void 0}
+          />
+        ))}
+      </Box>
     </Paper>
   );
 };
