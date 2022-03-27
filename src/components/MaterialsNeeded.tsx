@@ -48,7 +48,16 @@ const MaterialsNeeded: React.VFC<Props> = (props) => {
     });
 
   return (
-    <Paper component="ul" sx={{ m: 0, p: 2 }}>
+    <Paper
+      component="ul"
+      sx={{
+        display: "grid",
+        m: 0,
+        p: 2,
+        gap: 2,
+        gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
+      }}
+    >
       {Object.entries(materialsNeeded).map(([itemId, needed]) => (
         <ItemNeeded
           key={itemId}
