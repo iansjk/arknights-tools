@@ -26,9 +26,9 @@ const Layout: React.FC<Props> = (props) => {
   const { title: pageTitle, description: pageDescription } = pages[page] ?? {};
   const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle;
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  const handleDrawerToggle = React.useCallback(() => {
+    setMobileOpen((open) => !open);
+  }, []);
 
   return (
     <>
