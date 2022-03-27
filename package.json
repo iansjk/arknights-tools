@@ -10,6 +10,10 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "resolutions": {
+    "minimist": "^1.2.6",
+    "prismjs": "^1.27.0"
+  },
   "dependencies": {
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.7.1",
