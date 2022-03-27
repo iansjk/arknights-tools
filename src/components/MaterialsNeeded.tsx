@@ -37,6 +37,30 @@ type Needed = Depot;
 const MaterialsNeeded: React.VFC<Props> = (props) => {
   const { depot, setDepot, crafting, setCrafting, goals } = props;
 
+  const handleChange = (itemId: string, newQuantity: number) => {
+    setDepot((oldDepot) => {
+      const newDepot = { ...oldDepot };
+      newDepot[itemId] = newQuantity;
+      return newDepot;
+    });
+  };
+
+  const handleIncrement = (itemId: string) => {
+    setDepot((oldDepot) => {
+      const newDepot = { ...oldDepot };
+      newDepot[itemId] = oldDepot[itemId] + 1;
+      return newDepot;
+    });
+  };
+
+  const handleDecrement = (itemId: string) => {
+    setDepot((oldDepot) => {
+      const newDepot = { ...oldDepot };
+      newDepot[itemId] = oldDepot[itemId] - 1;
+      return newDepot;
+    });
+  };
+
   let totalCost = 0;
   const materialsNeeded: Needed = {};
   goals
@@ -94,10 +118,10 @@ const MaterialsNeeded: React.VFC<Props> = (props) => {
             owned={depot[itemId] ?? 0}
             quantity={needed}
             isCrafting={crafting[itemId] ?? false}
-            onChange={() => void 0}
+            onChange={handleChange}
             onCraftOne={() => void 0}
-            onDecrement={() => void 0}
-            onIncrement={() => void 0}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
             onCraftingToggle={() => void 0}
           />
         ))}

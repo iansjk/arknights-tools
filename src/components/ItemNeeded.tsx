@@ -10,7 +10,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material";
-import { ElementType, useState } from "react";
+import { ElementType, useEffect, useState } from "react";
 
 import items from "../../data/items.json";
 import * as Output from "../../scripts/output-types";
@@ -44,7 +44,11 @@ const ItemNeeded: React.VFC<Props> = (props) => {
   const item: Output.Item = items[itemId as keyof typeof items];
   const isCraftable = Boolean(item.ingredients);
   const isComplete = owned >= quantity;
-  const [rawValue, setRawValue] = useState<string>(`${owned}`);
+  const [rawValue, setRawValue] = useState<string>("");
+
+  useEffect(() => {
+    setRawValue(`${owned}`);
+  }, [owned]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newRawValue = e.target.value;
