@@ -2,6 +2,7 @@ import { Box, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useMemo } from "react";
 
+import itemsJson from "../../data/items.json";
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import lmdIcon from "../images/lmd-icon.png";
@@ -74,9 +75,9 @@ const MaterialsNeeded: React.VFC = () => {
     [dispatch]
   );
 
-  const { materialsNeeded, totalCost } = useMemo(() => {
+  const { materialsNeededEntries, totalCost } = useMemo(() => {
     let totalCost = 0;
-    const materialsNeeded: DepotState["stock"] = {};
+    const needed: DepotState["stock"] = {};
     goals
       .flatMap((goal) => {
         const operator =
@@ -88,11 +89,11 @@ const MaterialsNeeded: React.VFC = () => {
           // LMD
           totalCost += ingredient.quantity;
         } else {
-          materialsNeeded[ingredient.id] =
-            (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
+          needed[ingredient.id] =
+            (needed[ingredient.id] ?? 0) + ingredient.quantity;
         }
       });
-    return { materialsNeeded, totalCost };
+    return { materialsNeededEntries: Object.entries(needed), totalCost };
   }, [goals]);
 
   return (
@@ -126,21 +127,27 @@ const MaterialsNeeded: React.VFC = () => {
           gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
         }}
       >
-        {Object.entries(materialsNeeded).map(([itemId, needed]) => (
-          <ItemNeeded
-            key={itemId}
-            component="li"
-            itemId={itemId}
-            owned={stock[itemId] ?? 0}
-            quantity={needed}
-            isCrafting={crafting[itemId] ?? false}
-            onChange={handleChange}
-            onCraftOne={handleCraftOne}
-            onDecrement={handleDecrement}
-            onIncrement={handleIncrement}
-            onCraftingToggle={handleCraftingToggle}
-          />
-        ))}
+        {materialsNeededEntries
+          .sort(
+            ([a], [b]) =>
+              itemsJson[a as keyof typeof itemsJson].sortId -
+              itemsJson[b as keyof typeof itemsJson].sortId
+          )
+          .map(([itemId, needed]) => (
+            <ItemNeeded
+              key={itemId}
+              component="li"
+              itemId={itemId}
+              owned={stock[itemId] ?? 0}
+              quantity={needed}
+              isCrafting={crafting[itemId] ?? false}
+              onChange={handleChange}
+              onCraftOne={handleCraftOne}
+              onDecrement={handleDecrement}
+              onIncrement={handleIncrement}
+              onCraftingToggle={handleCraftingToggle}
+            />
+          ))}
       </Box>
     </Paper>
   );
