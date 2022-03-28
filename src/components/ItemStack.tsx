@@ -1,13 +1,17 @@
-import { Box } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
+
+import itemsJson from "../../data/items.json";
 
 import ItemBase, { ItemBaseProps } from "./ItemBase";
 
 export interface ItemStackProps extends ItemBaseProps {
   quantity: number;
+  showItemNameTooltip?: boolean;
 }
 
 const ItemStack: React.VFC<ItemStackProps> = (props) => {
-  const { quantity: rawQuantity, ...rest } = props;
+  const { quantity: rawQuantity, showItemNameTooltip, ...rest } = props;
+  const { itemId } = rest;
   const quantity =
     rawQuantity < 1000
       ? rawQuantity
@@ -16,8 +20,8 @@ const ItemStack: React.VFC<ItemStackProps> = (props) => {
             ? `${rawQuantity / 1000}`
             : (rawQuantity / 1000).toFixed(1)
         }K`;
-
-  return (
+  const { name } = itemsJson[itemId as keyof typeof itemsJson];
+  const itemBase = (
     <ItemBase {...rest}>
       <Box
         boxShadow={3}
@@ -35,6 +39,14 @@ const ItemStack: React.VFC<ItemStackProps> = (props) => {
         {quantity}
       </Box>
     </ItemBase>
+  );
+
+  return showItemNameTooltip ? (
+    <Tooltip arrow title={name}>
+      {itemBase}
+    </Tooltip>
+  ) : (
+    itemBase
   );
 };
 export default ItemStack;

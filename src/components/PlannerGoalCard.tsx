@@ -102,6 +102,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
               itemId={ingredient.id}
               quantity={ingredient.quantity}
               size={60}
+              showItemNameTooltip={true}
             />
           ))}
         </Box>
