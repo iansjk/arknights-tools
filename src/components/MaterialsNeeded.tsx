@@ -152,7 +152,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       canCompleteByCrafting[ingrId] = true;
     }
   });
-  const lmdCost = materialsNeeded[LMD_ITEM_ID];
+  const lmdCost = materialsNeeded[LMD_ITEM_ID] ?? 0;
   delete materialsNeeded[LMD_ITEM_ID];
 
   return (
