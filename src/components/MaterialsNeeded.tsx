@@ -7,12 +7,14 @@ import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import lmdIcon from "../images/lmd-icon.png";
 import {
+  craftOneWithStock,
   decrement,
   DepotState,
   increment,
   selectCrafting,
   selectStock,
   setStock,
+  toggleCrafting,
 } from "../store/depotSlice";
 import { selectGoals, PlannerGoal } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -123,7 +125,8 @@ const MaterialsNeeded: React.VFC = () => {
           mb: 0,
           mx: 0,
           p: 0,
-          gap: 2,
+          columnGap: 2,
+          rowGap: 1.5,
           gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
         }}
       >

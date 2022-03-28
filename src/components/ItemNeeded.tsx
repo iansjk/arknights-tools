@@ -144,7 +144,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
           },
         }}
       />
-      <Box minWidth={126}>
+      <Box minWidth={126} height={31}>
         {isCraftable ? (
           <ButtonGroup
             size="small"
