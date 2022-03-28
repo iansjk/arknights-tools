@@ -47,9 +47,7 @@ const OperatorGoalCategory = {
 (() => {
   const operatorsJson = Object.fromEntries(
     [
-      ...Object.entries(cnCharacterTable).filter(
-        ([_, op]) => !op.isNotObtainable
-      ),
+      ...Object.entries(cnCharacterTable).filter(([opId]) => isOperator(opId)),
       ...Object.entries(cnPatchCharacters),
     ].map(([id, operator]) => {
       const rarity = operator.rarity + 1;
