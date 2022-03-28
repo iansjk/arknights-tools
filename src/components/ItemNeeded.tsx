@@ -59,6 +59,16 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
     }
   };
 
+  const craftOneButton = (
+    <Button
+      disabled={!isCrafting}
+      onClick={() => onCraftOne(itemId)}
+      sx={{ width: "auto" }}
+    >
+      +1
+    </Button>
+  );
+
   return (
     <Box display="inline-grid" component={component ?? "div"}>
       <Box
@@ -156,15 +166,13 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
             >
               {isCrafting ? "Crafting" : "Craft"}
             </Button>
-            <Tooltip title="Craft one using your materials">
-              <Button
-                disabled={!isCrafting}
-                onClick={() => onCraftOne(itemId)}
-                sx={{ width: "auto" }}
-              >
-                +1
-              </Button>
-            </Tooltip>
+            {isCrafting ? (
+              <Tooltip arrow title="Craft one using your materials">
+                {craftOneButton}
+              </Tooltip>
+            ) : (
+              craftOneButton
+            )}
           </ButtonGroup>
         ) : (
           <Button
