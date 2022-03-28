@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+import itemsJson from "../../data/items.json";
+import { Item } from "../../scripts/output-types";
+import getGoalIngredients from "../getGoalIngredients";
+
 import { completeGoal } from "./goalsActions";
 import type { RootState } from "./store";
 
@@ -38,13 +42,31 @@ export const depotSlice = createSlice({
       const itemId = action.payload;
       state.crafting[itemId] = !state.crafting[itemId];
     },
-    craftOneWithStock: (_state, _action: PayloadAction<string>) => {
-      throw new Error("Not yet implemented");
+    craftOneWithStock: (state, action: PayloadAction<string>) => {
+      const { ingredients, yield: itemYield } = itemsJson[
+        action.payload as keyof typeof itemsJson
+      ] as Item;
+      if (ingredients != null) {
+        ingredients.forEach((ingr) => {
+          state.stock[ingr.id] = Math.max(
+            (state.stock[ingr.id] ?? 0) - ingr.quantity,
+            0
+          );
+        });
+        state.stock[action.payload] =
+          (state.stock[action.payload] ?? 0) + (itemYield ?? 1);
+      }
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(completeGoal, (_state, _action) => {
-      throw new Error("Not yet implemented");
+    builder.addCase(completeGoal, (state, action) => {
+      const ingredients = getGoalIngredients(action.payload);
+      ingredients.forEach((ingr) => {
+        state.stock[ingr.id] = Math.max(
+          (state.stock[ingr.id] ?? 0) - ingr.quantity,
+          0
+        );
+      });
     });
   },
 });

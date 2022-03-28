@@ -76,9 +76,17 @@ export const goalsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(completeGoal, (_state, _action) => {
-      throw new Error("Not yet implemented");
-    });
+    builder.addCase(
+      completeGoal,
+      (state, action: PayloadAction<PlannerGoal>) => {
+        // same as deleteGoal: remove it from goals, and let depotSlice handle removing mats
+        state.forEach((goal, i) => {
+          if (isEqual(goal, action.payload)) {
+            state.splice(i, 1);
+          }
+        });
+      }
+    );
   },
 });
 

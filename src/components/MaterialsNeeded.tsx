@@ -3,8 +3,7 @@ import Image from "next/image";
 import React, { useCallback, useMemo } from "react";
 
 import itemsJson from "../../data/items.json";
-import operatorsJson from "../../data/operators.json";
-import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
+import getGoalIngredients from "../getGoalIngredients";
 import lmdIcon from "../images/lmd-icon.png";
 import {
   craftOneWithStock,
@@ -16,25 +15,10 @@ import {
   setStock,
   toggleCrafting,
 } from "../store/depotSlice";
-import { selectGoals, PlannerGoal } from "../store/goalsSlice";
+import { selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import ItemNeeded from "./ItemNeeded";
-
-export const getGoalIngredients = (operator: Operator, goal: PlannerGoal) => {
-  switch (goal.category) {
-    case OperatorGoalCategory.Elite:
-      return operator.elite[goal.eliteLevel - 1].ingredients;
-    case OperatorGoalCategory.SkillLevel:
-      return operator.skillLevels[goal.skillLevel - 2].ingredients;
-    case OperatorGoalCategory.Mastery: {
-      const skill = operator.skills.find((sk) => sk.skillId === goal.skillId)!;
-      return skill.masteries[goal.masteryLevel - 1].ingredients;
-    }
-    case OperatorGoalCategory.Module:
-      return operator.module!.ingredients;
-  }
-};
 
 const MaterialsNeeded: React.VFC = () => {
   const dispatch = useAppDispatch();
@@ -80,21 +64,15 @@ const MaterialsNeeded: React.VFC = () => {
   const { materialsNeededEntries, totalCost } = useMemo(() => {
     let totalCost = 0;
     const needed: DepotState["stock"] = {};
-    goals
-      .flatMap((goal) => {
-        const operator =
-          operatorsJson[goal.operatorId as keyof typeof operatorsJson];
-        return getGoalIngredients(operator, goal);
-      })
-      .forEach((ingredient) => {
-        if (ingredient.id === "4001") {
-          // LMD
-          totalCost += ingredient.quantity;
-        } else {
-          needed[ingredient.id] =
-            (needed[ingredient.id] ?? 0) + ingredient.quantity;
-        }
-      });
+    goals.flatMap(getGoalIngredients).forEach((ingredient) => {
+      if (ingredient.id === "4001") {
+        // LMD
+        totalCost += ingredient.quantity;
+      } else {
+        needed[ingredient.id] =
+          (needed[ingredient.id] ?? 0) + ingredient.quantity;
+      }
+    });
     return { materialsNeededEntries: Object.entries(needed), totalCost };
   }, [goals]);
 

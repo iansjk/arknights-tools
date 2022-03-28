@@ -12,10 +12,10 @@ import Image from "next/image";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
+import getGoalIngredients from "../getGoalIngredients";
 import { PlannerGoal } from "../hooks/usePlannerData";
 
 import ItemStack from "./ItemStack";
-import { getGoalIngredients } from "./MaterialsNeeded";
 import OperatorGoalIconography from "./OperatorGoalIconography";
 
 const GoalCardButton = styled(Button)(({ theme }) => ({
@@ -62,7 +62,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
   })();
   const goalLabel = `${operator.name} ${goalName}`;
 
-  const ingredients = getGoalIngredients(operator, goal);
+  const ingredients = getGoalIngredients(goal);
 
   return (
     <Box component="li" display="grid" gridTemplateColumns="1fr auto">
