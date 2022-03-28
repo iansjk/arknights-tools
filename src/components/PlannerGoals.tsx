@@ -1,24 +1,20 @@
 import { PlannerGoal } from "../hooks/usePlannerData";
+import { completeGoal } from "../store/goalsActions";
+import { deleteGoal, selectGoals } from "../store/goalsSlice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import PlannerGoalCard from "./PlannerGoalCard";
 
-interface Props {
-  goals: PlannerGoal[];
-  setGoals: React.Dispatch<React.SetStateAction<PlannerGoal[]>>;
-}
-
-const OperatorGoals: React.VFC<Props> = (props) => {
-  const { goals, setGoals } = props;
+const OperatorGoals: React.VFC = () => {
+  const dispatch = useAppDispatch();
+  const goals = useAppSelector(selectGoals);
 
   const handleGoalDeleted = (goal: PlannerGoal) => {
-    setGoals((oldGoals) => {
-      return oldGoals.filter((g) => g !== goal);
-    });
+    dispatch(deleteGoal(goal));
   };
 
   const handleGoalCompleted = (goal: PlannerGoal) => {
-    // TODO also deduct materials
-    handleGoalDeleted(goal);
+    dispatch(completeGoal(goal));
   };
 
   return (

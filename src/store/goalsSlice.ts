@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import * as Output from "../../scripts/output-types";
+import { OperatorGoalCategory } from "../../scripts/output-types";
 
 import { completeGoal } from "./goalsActions";
 import type { RootState } from "./store";
@@ -40,14 +41,34 @@ export type GoalsState = PlannerGoal[];
 
 const initialState: GoalsState = [];
 
+const getGoalKey = (goal: PlannerGoal) => {
+  switch (goal.category) {
+    case OperatorGoalCategory.Elite:
+      return `${goal.operatorId}-${goal.category}-${goal.eliteLevel}`;
+    case OperatorGoalCategory.SkillLevel:
+      return `${goal.operatorId}-${goal.category}-${goal.skillLevel}`;
+    case OperatorGoalCategory.Mastery:
+      return `${goal.operatorId}-${goal.category}-${goal.skillId}-${goal.masteryLevel}`;
+    case OperatorGoalCategory.Module:
+      return `${goal.operatorId}-${goal.category}`;
+  }
+};
+
 export const goalsSlice = createSlice({
   name: "goals",
   initialState,
   reducers: {
-    addGoal: (state, action: PayloadAction<PlannerGoal>) => {
-      state.push(action.payload);
+    addGoals: (state, action: PayloadAction<PlannerGoal[]>) => {
+      const existingKeys = new Set(state.map(getGoalKey));
+      const newGoals = action.payload;
+      const goalsToAdd = newGoals.filter(
+        (goal) => !existingKeys.has(getGoalKey(goal))
+      );
+      if (goalsToAdd.length > 0) {
+        state = [...goalsToAdd, ...state];
+      }
     },
-    removeGoal: (_state, _action: PayloadAction<PlannerGoal>) => {
+    deleteGoal: (_state, _action: PayloadAction<PlannerGoal>) => {
       throw new Error("Not yet implemented");
     },
   },
@@ -60,6 +81,6 @@ export const goalsSlice = createSlice({
 
 export const selectGoals = (state: RootState) => state.goals;
 
-export const { addGoal, removeGoal } = goalsSlice.actions;
+export const { addGoals, deleteGoal } = goalsSlice.actions;
 
 export default goalsSlice.reducer;

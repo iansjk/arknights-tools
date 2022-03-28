@@ -1,11 +1,20 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
+import React, { useCallback } from "react";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
-import { Crafting, Depot, PlannerGoal } from "../hooks/usePlannerData";
 import lmdIcon from "../images/lmd-icon.png";
+import {
+  decrement,
+  DepotState,
+  increment,
+  selectCrafting,
+  selectStock,
+  setStock,
+} from "../store/depotSlice";
+import { selectGoals, PlannerGoal } from "../store/goalsSlice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import ItemNeeded from "./ItemNeeded";
 
@@ -24,45 +33,35 @@ export const getGoalIngredients = (operator: Operator, goal: PlannerGoal) => {
   }
 };
 
-interface Props {
-  depot: Depot;
-  setDepot: React.Dispatch<React.SetStateAction<Depot>>;
-  crafting: Crafting;
-  setCrafting: React.Dispatch<React.SetStateAction<Crafting>>;
-  goals: PlannerGoal[];
-}
+const MaterialsNeeded: React.VFC = () => {
+  const dispatch = useAppDispatch();
+  const stock = useAppSelector(selectStock);
+  const crafting = useAppSelector(selectCrafting);
+  const goals = useAppSelector(selectGoals);
 
-type Needed = Depot;
+  const handleChange = useCallback(
+    (itemId: string, newQuantity: number) => {
+      dispatch(setStock({ itemId, newQuantity }));
+    },
+    [dispatch]
+  );
 
-const MaterialsNeeded: React.VFC<Props> = (props) => {
-  const { depot, setDepot, crafting, setCrafting, goals } = props;
+  const handleIncrement = useCallback(
+    (itemId: string) => {
+      dispatch(increment(itemId));
+    },
+    [dispatch]
+  );
 
-  const handleChange = (itemId: string, newQuantity: number) => {
-    setDepot((oldDepot) => {
-      const newDepot = { ...oldDepot };
-      newDepot[itemId] = newQuantity;
-      return newDepot;
-    });
-  };
-
-  const handleIncrement = (itemId: string) => {
-    setDepot((oldDepot) => {
-      const newDepot = { ...oldDepot };
-      newDepot[itemId] = oldDepot[itemId] + 1;
-      return newDepot;
-    });
-  };
-
-  const handleDecrement = (itemId: string) => {
-    setDepot((oldDepot) => {
-      const newDepot = { ...oldDepot };
-      newDepot[itemId] = oldDepot[itemId] - 1;
-      return newDepot;
-    });
-  };
+  const handleDecrement = useCallback(
+    (itemId: string) => {
+      dispatch(decrement(itemId));
+    },
+    [dispatch]
+  );
 
   let totalCost = 0;
-  const materialsNeeded: Needed = {};
+  const materialsNeeded: DepotState["stock"] = {};
   goals
     .flatMap((goal) => {
       const operator =
@@ -115,7 +114,7 @@ const MaterialsNeeded: React.VFC<Props> = (props) => {
             key={itemId}
             component="li"
             itemId={itemId}
-            owned={depot[itemId] ?? 0}
+            owned={stock[itemId] ?? 0}
             quantity={needed}
             isCrafting={crafting[itemId] ?? false}
             onChange={handleChange}
