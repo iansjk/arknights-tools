@@ -79,9 +79,6 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           borderTopRightRadius: 0,
           borderBottomRightRadius: 0,
           clipPath: "inset(-5px 0 -5px -5px)",
-          "& .operator-avatar": {
-            borderRadius: "50%",
-          },
         }}
       >
         <Box display="flex" gridRow="span 2">

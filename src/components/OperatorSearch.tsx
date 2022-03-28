@@ -87,9 +87,6 @@ const OperatorSearch: React.VFC<Props> = (props) => {
       sx={{
         flexGrow: 1,
         mr: 2,
-        "& .operator-avatar": {
-          borderRadius: "50%",
-        },
       }}
     />
   );

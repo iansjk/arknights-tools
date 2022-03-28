@@ -98,12 +98,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
           sx: {
             textAlign: "center",
             width: "4ch", // width of 4 "0" characters
-            "flex-grow": "1",
-            "::-webkit-outer-spin-button, ::-webkit-inner-spin-button": {
-              "-webkit-appearance": "none",
-              margin: 0,
-            },
-            "-moz-appearance": "textfield",
+            flexGrow: 1,
           },
         }}
         InputProps={{

@@ -10,6 +10,7 @@ import createEmotionCache from "../createEmotionCache";
 import performLegacyMigration from "../store/performLegacyMigration";
 import { store, persistor } from "../store/store";
 import theme from "../theme";
+import "../styles/global.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
