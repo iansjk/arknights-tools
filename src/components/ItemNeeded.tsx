@@ -10,7 +10,7 @@ import {
   TextField,
   Tooltip,
 } from "@mui/material";
-import { ElementType, useEffect, useState } from "react";
+import React, { ElementType, useEffect, useState } from "react";
 
 import items from "../../data/items.json";
 import * as Output from "../../scripts/output-types";
@@ -28,7 +28,7 @@ interface Props extends ItemStackProps {
   component?: ElementType;
 }
 
-const ItemNeeded: React.VFC<Props> = (props) => {
+const ItemNeeded: React.VFC<Props> = React.memo((props) => {
   const {
     owned,
     isCrafting,
@@ -185,5 +185,6 @@ const ItemNeeded: React.VFC<Props> = (props) => {
       </Box>
     </Box>
   );
-};
+});
+ItemNeeded.displayName = "ItemNeeded";
 export default ItemNeeded;

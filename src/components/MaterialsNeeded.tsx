@@ -60,6 +60,20 @@ const MaterialsNeeded: React.VFC = () => {
     [dispatch]
   );
 
+  const handleCraftOne = useCallback(
+    (itemId: string) => {
+      // TODO
+    },
+    [dispatch]
+  );
+
+  const handleCraftingToggle = useCallback(
+    (itemId: string) => {
+      // TODO
+    },
+    [dispatch]
+  );
+
   const { materialsNeeded, totalCost } = useMemo(() => {
     let totalCost = 0;
     const materialsNeeded: DepotState["stock"] = {};
@@ -121,10 +135,10 @@ const MaterialsNeeded: React.VFC = () => {
             quantity={needed}
             isCrafting={crafting[itemId] ?? false}
             onChange={handleChange}
-            onCraftOne={() => void 0}
+            onCraftOne={handleCraftOne}
             onDecrement={handleDecrement}
             onIncrement={handleIncrement}
-            onCraftingToggle={() => void 0}
+            onCraftingToggle={handleCraftingToggle}
           />
         ))}
       </Box>
