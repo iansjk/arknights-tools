@@ -64,9 +64,7 @@ export const goalsSlice = createSlice({
       const goalsToAdd = newGoals.filter(
         (goal) => !existingKeys.has(getGoalKey(goal))
       );
-      if (goalsToAdd.length > 0) {
-        state = [...goalsToAdd, ...state];
-      }
+      state.unshift(...goalsToAdd);
     },
     deleteGoal: (_state, _action: PayloadAction<PlannerGoal>) => {
       throw new Error("Not yet implemented");
