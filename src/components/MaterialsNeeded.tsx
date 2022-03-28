@@ -1,6 +1,6 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo } from "react";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
@@ -60,23 +60,26 @@ const MaterialsNeeded: React.VFC = () => {
     [dispatch]
   );
 
-  let totalCost = 0;
-  const materialsNeeded: DepotState["stock"] = {};
-  goals
-    .flatMap((goal) => {
-      const operator =
-        operatorsJson[goal.operatorId as keyof typeof operatorsJson];
-      return getGoalIngredients(operator, goal);
-    })
-    .forEach((ingredient) => {
-      if (ingredient.id === "4001") {
-        // LMD
-        totalCost += ingredient.quantity;
-      } else {
-        materialsNeeded[ingredient.id] =
-          (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
-      }
-    });
+  const { materialsNeeded, totalCost } = useMemo(() => {
+    let totalCost = 0;
+    const materialsNeeded: DepotState["stock"] = {};
+    goals
+      .flatMap((goal) => {
+        const operator =
+          operatorsJson[goal.operatorId as keyof typeof operatorsJson];
+        return getGoalIngredients(operator, goal);
+      })
+      .forEach((ingredient) => {
+        if (ingredient.id === "4001") {
+          // LMD
+          totalCost += ingredient.quantity;
+        } else {
+          materialsNeeded[ingredient.id] =
+            (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
+        }
+      });
+    return { materialsNeeded, totalCost };
+  }, [goals]);
 
   return (
     <Paper sx={{ p: 2 }}>
