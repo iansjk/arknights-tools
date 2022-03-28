@@ -7,6 +7,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
 import createEmotionCache from "../createEmotionCache";
+import performLegacyMigration from "../store/performLegacyMigration";
 import { store, persistor } from "../store/store";
 import theme from "../theme";
 
@@ -21,7 +22,11 @@ export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
     <ReduxProvider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate
+        loading={null}
+        persistor={persistor}
+        onBeforeLift={performLegacyMigration}
+      >
         <CacheProvider value={emotionCache}>
           <Head>
             <meta
