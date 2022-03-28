@@ -63,14 +63,14 @@ const MaterialsNeeded: React.VFC = () => {
 
   const handleCraftOne = useCallback(
     (itemId: string) => {
-      // TODO
+      dispatch(craftOneWithStock(itemId));
     },
     [dispatch]
   );
 
   const handleCraftingToggle = useCallback(
     (itemId: string) => {
-      // TODO
+      dispatch(toggleCrafting(itemId));
     },
     [dispatch]
   );
