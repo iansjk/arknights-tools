@@ -1,5 +1,6 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import GavelIcon from "@mui/icons-material/Gavel";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import {
   Box,
@@ -20,6 +21,7 @@ import ItemStack, { ItemStackProps } from "./ItemStack";
 interface Props extends ItemStackProps {
   owned: number;
   isCrafting: boolean;
+  canCompleteByCrafting: boolean;
   onIncrement: (itemId: string) => void;
   onDecrement: (itemId: string) => void;
   onChange: (itemId: string, newQuantity: number) => void;
@@ -32,6 +34,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
   const {
     owned,
     isCrafting,
+    canCompleteByCrafting,
     onIncrement,
     onDecrement,
     onChange,
@@ -81,10 +84,18 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
           },
         }}
       >
-        <ItemStack {...rest} sx={isComplete ? { opacity: 0.5 } : undefined} />
+        <ItemStack
+          {...rest}
+          sx={
+            isComplete || (isCrafting && canCompleteByCrafting)
+              ? { opacity: 0.5 }
+              : undefined
+          }
+        />
         {isComplete && (
           <CheckCircleIcon
             htmlColor="greenyellow"
+            opacity={0.8}
             fontSize="large"
             sx={{
               alignSelf: "center",
@@ -93,6 +104,16 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
             }}
           />
         )}
+        {isCrafting && canCompleteByCrafting && (
+          <Tooltip arrow title="Can be completed by crafting">
+            <GavelIcon
+              htmlColor="yellow"
+              opacity={0.8}
+              fontSize="large"
+              sx={{ alignSelf: "center", justifySelf: "center", zIndex: 1 }}
+            />
+          </Tooltip>
+        )}{" "}
       </Box>
       <TextField
         size="small"
