@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import isEqual from "lodash.isequal";
 
 import * as Output from "../../scripts/output-types";
 import { OperatorGoalCategory } from "../../scripts/output-types";
@@ -66,8 +67,12 @@ export const goalsSlice = createSlice({
       );
       state.unshift(...goalsToAdd);
     },
-    deleteGoal: (_state, _action: PayloadAction<PlannerGoal>) => {
-      throw new Error("Not yet implemented");
+    deleteGoal: (state, action: PayloadAction<PlannerGoal>) => {
+      state.forEach((goal, i) => {
+        if (isEqual(goal, action.payload)) {
+          state.splice(i, 1);
+        }
+      });
     },
   },
   extraReducers: (builder) => {
