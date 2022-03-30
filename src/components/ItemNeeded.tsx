@@ -78,8 +78,9 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
   return (
     <Box display="inline-grid" component={component ?? "div"}>
       <ButtonBase
-        disableRipple
+        aria-label={item.name}
         onClick={() => onClick(itemId)}
+        disableRipple
         sx={{
           display: "inline-grid",
           alignSelf: "center",
