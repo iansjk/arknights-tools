@@ -1,4 +1,4 @@
-import { Box, Tooltip } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 
 import itemsJson from "../../data/items.json";
 
@@ -23,9 +23,12 @@ const ItemStack: React.VFC<ItemStackProps> = (props) => {
   const { name } = itemsJson[itemId as keyof typeof itemsJson];
   const itemBase = (
     <ItemBase {...rest}>
-      <Box
+      <Typography
+        variant="body1"
+        component="span"
         boxShadow={3}
         sx={{
+          display: "inline-block",
           py: 0.25,
           px: 1,
           mr: 1,
@@ -37,7 +40,7 @@ const ItemStack: React.VFC<ItemStackProps> = (props) => {
         }}
       >
         {quantity}
-      </Box>
+      </Typography>
     </ItemBase>
   );
 

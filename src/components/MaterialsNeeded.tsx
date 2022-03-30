@@ -64,6 +64,10 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
     [dispatch]
   );
 
+  const handleClick = useCallback((itemId: string) => {
+    console.log(`clicked ${itemId}`);
+  }, []);
+
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
   goals.flatMap(getGoalIngredients).forEach((ingredient) => {
@@ -207,6 +211,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
               onDecrement={handleDecrement}
               onIncrement={handleIncrement}
               onCraftingToggle={handleCraftingToggle}
+              onClick={handleClick}
             />
           ))}
       </Box>

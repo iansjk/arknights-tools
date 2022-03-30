@@ -5,6 +5,7 @@ import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import {
   Box,
   Button,
+  ButtonBase,
   ButtonGroup,
   IconButton,
   InputAdornment,
@@ -27,6 +28,7 @@ interface Props extends ItemStackProps {
   onChange: (itemId: string, newQuantity: number) => void;
   onCraftingToggle: (itemId: string) => void;
   onCraftOne: (itemId: string) => void;
+  onClick: (itemId: string) => void;
   component?: ElementType;
 }
 
@@ -40,6 +42,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
     onChange,
     onCraftingToggle,
     onCraftOne,
+    onClick,
     component,
     ...rest
   } = props;
@@ -74,11 +77,16 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
 
   return (
     <Box display="inline-grid" component={component ?? "div"}>
-      <Box
+      <ButtonBase
+        disableRipple
+        onClick={() => onClick(itemId)}
         sx={{
           display: "inline-grid",
           alignSelf: "center",
           justifySelf: "center",
+          "&:focus, &:active": {
+            filter: "brightness(0.5)",
+          },
           "& > *": {
             gridArea: "1 / -1",
           },
@@ -113,8 +121,8 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
               sx={{ alignSelf: "center", justifySelf: "center", zIndex: 1 }}
             />
           </Tooltip>
-        )}{" "}
-      </Box>
+        )}
+      </ButtonBase>
       <TextField
         size="small"
         fullWidth
@@ -201,7 +209,11 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
             fullWidth
             variant="outlined"
             disabled
-            sx={{ mt: "-1px", borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+            sx={{
+              mt: "-1px",
+              borderTopLeftRadius: 0,
+              borderTopRightRadius: 0,
+            }}
           >
             (Uncraftable)
           </Button>
