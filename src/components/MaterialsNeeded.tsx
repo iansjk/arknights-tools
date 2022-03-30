@@ -156,7 +156,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   delete materialsNeeded[LMD_ITEM_ID];
 
   return (
-    <Paper sx={{ p: 2 }}>
+    <Paper component="section" sx={{ p: 2 }}>
       <Typography component="h2" variant="h5">
         Materials needed
       </Typography>

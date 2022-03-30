@@ -1,3 +1,5 @@
+import { Typography } from "@mui/material";
+
 import { PlannerGoal } from "../hooks/usePlannerData";
 import { completeGoal } from "../store/goalsActions";
 import { deleteGoal, selectGoals } from "../store/goalsSlice";
@@ -18,7 +20,11 @@ const OperatorGoals: React.VFC = () => {
   };
 
   return (
-    <>
+    <section>
+      <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
+        Goals
+      </Typography>
+
       {goals.map((goal, i) => (
         <PlannerGoalCard
           key={i}
@@ -27,7 +33,7 @@ const OperatorGoals: React.VFC = () => {
           onGoalCompleted={handleGoalCompleted}
         />
       ))}
-    </>
+    </section>
   );
 };
 export default OperatorGoals;
