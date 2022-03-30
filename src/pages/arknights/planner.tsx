@@ -1,15 +1,18 @@
 import { Grid } from "@mui/material";
 import { NextPage } from "next";
-import { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
 import Layout from "../../components/Layout";
-import MaterialsNeeded from "../../components/MaterialsNeeded";
 import OperatorSearch from "../../components/OperatorSearch";
-import PlannerGoals from "../../components/PlannerGoals";
 import { addGoals, PlannerGoal } from "../../store/goalsSlice";
 import { useAppDispatch } from "../../store/hooks";
+
+const MaterialsNeeded = React.lazy(
+  () => import("../../components/MaterialsNeeded")
+);
+const PlannerGoals = React.lazy(() => import("../../components/PlannerGoals"));
 
 const Planner: NextPage = () => {
   const [operator, setOperator] = useState<Operator | null>(null);
@@ -36,10 +39,14 @@ const Planner: NextPage = () => {
 
       <Grid container spacing={2}>
         <Grid item xs={7}>
-          <MaterialsNeeded />
+          <Suspense fallback={null}>
+            <MaterialsNeeded />
+          </Suspense>
         </Grid>
         <Grid item xs={5}>
-          <PlannerGoals />
+          <Suspense fallback={null}>
+            <PlannerGoals />
+          </Suspense>
         </Grid>
       </Grid>
     </Layout>
