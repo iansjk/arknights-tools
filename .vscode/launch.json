@@ -5,13 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "name": "Launch Script (Node 17)",
+      "program": "${file}",
       "request": "launch",
-      "name": "Launch TS Script",
       "skipFiles": ["<node_internals>/**"],
-      "runtimeArgs": ["-r", "ts-node/register"],
-      "args": ["${file}"],
-      "cwd": "${fileDirname}"
+      "type": "pwa-node",
+      "runtimeVersion": "17"
     }
   ]
 }
