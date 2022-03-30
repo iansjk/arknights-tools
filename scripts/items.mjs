@@ -2,8 +2,11 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import puppeteer from "puppeteer";
+
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json" assert { type: "json" };
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
+import cnStageData from "./ArknightsGameData/zh_CN/gamedata/excel/stage_table.json" assert { type: "json" };
 import {
   getEnglishItemName,
   DATA_OUTPUT_DIRECTORY,
@@ -24,6 +27,74 @@ const isPlannerItem = (itemId) => {
       !itemId.startsWith("tier") && // generic potential tokens
       !itemId.startsWith("voucher_full_")) // vouchers for event welfare ops like Flamebringer
   );
+};
+
+const fetchLuzarkLPSolverOutput = async () => {
+  const LUZARK_LP_SOLVER_URL =
+    "https://colab.research.google.com/drive/1lHwJDG7WCAr3KMlxY-HLyD8-yG3boazq";
+  const SANITY_VALUE_CELL_ID = "feRucRPwWGZo";
+  const STAGE_INFO_CELL_ID = "znmVNbnNWIre";
+  const stageRegex =
+    /^Activity (?<stageName>[A-Z0-9-]+) \([^)]+\).*Efficiency 100\.000%/;
+  const itemRegex = /^(?<itemName>[^:]+): (?<sanityValue>[0-9.]+) sanity value/;
+  const cnStageTable = cnStageData.stages;
+  const stageNameToKey = Object.fromEntries(
+    Object.entries(cnStageTable)
+      .filter(([key]) => !key.endsWith("#f#")) // challenge mode stage suffix
+      .map(([key, value]) => [value.code, key])
+  );
+
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto(LUZARK_LP_SOLVER_URL);
+  await Promise.all([
+    page.waitForSelector(`#cell-${SANITY_VALUE_CELL_ID}`),
+    page.waitForSelector(`#cell-${STAGE_INFO_CELL_ID}`),
+  ]);
+
+  const stagesOutputElement = await page.$(
+    `#cell-${STAGE_INFO_CELL_ID} .output pre`
+  );
+  const stagesOutputText = await page.evaluate(
+    (el) => el.innerText,
+    stagesOutputElement
+  );
+  /** @type{string[]} */
+  const efficientStageNames = stagesOutputText
+    .split("\n")
+    .map((line) => {
+      const result = line.match(stageRegex);
+      return result?.groups?.stageName ?? null;
+    })
+    .filter((item) => item != null)
+    .map((stageName) => stageNameToKey[stageName]);
+
+  const sanityValuesOutputElement = await page.$(
+    `#cell-${SANITY_VALUE_CELL_ID} .output pre`
+  );
+  const sanityValuesOutputText = await page.evaluate(
+    (el) => el.innerText,
+    sanityValuesOutputElement
+  );
+  /** @type{{[itemName: string]: number}} */
+  const itemSanityValues = Object.fromEntries(
+    sanityValuesOutputText
+      .split("\n")
+      .map((line) => {
+        const result = line.match(itemRegex);
+        if (result && result.groups?.itemName && result.groups?.sanityValue) {
+          return [
+            result.groups.itemName,
+            parseFloat(result.groups.sanityValue),
+          ];
+        }
+        return [];
+      })
+      .filter((pair) => pair.length > 0)
+  );
+  await browser.close();
+
+  return { efficientStageNames, itemSanityValues };
 };
 
 const createItemsJson = () => {
