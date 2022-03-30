@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 import enCharacterPatchTable from "./ArknightsGameData/en_US/gamedata/excel/char_patch_table.json" assert { type: "json" };
 import enCharacterTable from "./ArknightsGameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
@@ -44,7 +45,7 @@ const OperatorGoalCategory = {
   Module: 3,
 };
 
-(() => {
+const createOperatorsJson = () => {
   const operatorsJson = Object.fromEntries(
     [
       ...Object.entries(cnCharacterTable).filter(([opId]) => isOperator(opId)),
@@ -151,8 +152,13 @@ const OperatorGoalCategory = {
   const opNameToId = Object.fromEntries(
     Object.entries(operatorsJson).map(([id, operator]) => [operator.name, id])
   );
-  fs.writeFileSync(
-    path.join(DATA_OUTPUT_DIRECTORY, "operator-name-to-id.json"),
-    JSON.stringify(opNameToId, null, 2)
-  );
-})();
+  const outPath = path.join(DATA_OUTPUT_DIRECTORY, "operator-name-to-id.json");
+  fs.writeFileSync(outPath, JSON.stringify(opNameToId, null, 2));
+  console.log(`operators: wrote ${outPath}`);
+};
+
+export default createOperatorsJson;
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  createOperatorsJson();
+}

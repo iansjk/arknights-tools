@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
 import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json" assert { type: "json" };
 import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
@@ -10,7 +11,6 @@ import {
   convertLMDCostToLMDItem,
 } from "./shared.mjs";
 
-const outputPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
 const cnItems = cnItemTable.items;
 const { workshopFormulas, manufactFormulas: manufactureFormulas } =
   cnBuildingData;
@@ -26,7 +26,7 @@ const isPlannerItem = (itemId) => {
   );
 };
 
-(() => {
+const createItemsJson = () => {
   const itemsJson = Object.fromEntries(
     Object.entries(cnItems)
       .filter(([itemId]) => isPlannerItem(itemId))
@@ -70,13 +70,23 @@ const isPlannerItem = (itemId) => {
       })
   );
 
-  fs.writeFileSync(outputPath, JSON.stringify(itemsJson, null, 2));
+  const itemsJsonPath = path.join(DATA_OUTPUT_DIRECTORY, "items.json");
+  fs.writeFileSync(itemsJsonPath, JSON.stringify(itemsJson, null, 2));
+  console.log(`items: wrote ${itemsJsonPath}`);
 
   const itemNameToId = Object.fromEntries(
     Object.entries(itemsJson).map(([id, item]) => [item.name, id])
   );
-  fs.writeFileSync(
-    path.join(DATA_OUTPUT_DIRECTORY, "item-name-to-id.json"),
-    JSON.stringify(itemNameToId, null, 2)
+  const itemNameToIdJsonPath = path.join(
+    DATA_OUTPUT_DIRECTORY,
+    "item-name-to-id.json"
   );
-})();
+  fs.writeFileSync(itemNameToIdJsonPath, JSON.stringify(itemNameToId, null, 2));
+  console.log(`items: wrote ${itemNameToIdJsonPath}`);
+};
+
+export default createItemsJson;
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  createItemsJson();
+}
