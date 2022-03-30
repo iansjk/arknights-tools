@@ -1,6 +1,6 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback } from "react";
 
 import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
