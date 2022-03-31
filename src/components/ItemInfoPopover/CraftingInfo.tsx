@@ -19,7 +19,7 @@ const CraftingInfo: React.VFC<Props> = (props) => {
 
   return (
     <ItemInfoSection heading="Crafting recipe">
-      <Stack spacing={1} direction="row">
+      <Stack spacing={1} direction="row" justifyContent="space-evenly">
         {item.ingredients.map((ingredient) => {
           const { name: ingredientName } =
             itemsJson[ingredient.id as keyof typeof itemsJson];
