@@ -33,7 +33,9 @@ const CraftingInfo: React.VFC<Props> = (props) => {
                   color: (theme) => theme.palette.text.primary,
                 }}
               />
-              <Typography variant="body2">{ingredientName}</Typography>
+              <Typography component="span" variant="body2">
+                {ingredientName}
+              </Typography>
             </Stack>
           );
         })}

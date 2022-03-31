@@ -52,20 +52,20 @@ const Stage: React.VFC<{ stage: StageData; stageType: string }> = (props) => {
   const { stageName, dropRate, stageSanityCost, itemSanityCost } = stage;
 
   return (
-    <Box textAlign="center">
-      <Typography>{stageType}</Typography>
+    <Stack alignItems="center">
+      <span>{stageType}</span>
       <Typography variant="h4" component="span">
         {stageName}
       </Typography>
-      <Typography>{Math.round(dropRate * 100)}% chance</Typography>
-      <Typography>
+      <span>{Math.round(dropRate * 100)}% chance</span>
+      <span>
         Stage cost: {stageSanityCost}
         <Image src={sanityIcon} alt="Sanity" width={18} height={18} />
-      </Typography>
-      <Typography>
+      </span>
+      <span>
         Cost per item: {itemSanityCost}
         <Image src={sanityIcon} alt="Sanity" width={18} height={18} />
-      </Typography>
-    </Box>
+      </span>
+    </Stack>
   );
 };
