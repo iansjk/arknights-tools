@@ -9,7 +9,7 @@ const ItemInfoDivider = styled(Divider)`
   width: 100%;
   margin: 0;
   left: 0;
-  top: 17px;
+  top: 11px;
   background-color: #888;
 `;
 
