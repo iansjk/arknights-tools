@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 import itemsJson from "../../../data/items.json";
 import { Item } from "../../../scripts/output-types";
@@ -19,12 +19,21 @@ const CraftingInfo: React.VFC<Props> = (props) => {
 
   return (
     <ItemInfoSection heading="Crafting recipe">
-      <Stack spacing={1} direction="row" justifyContent="space-evenly">
+      <Grid container spacing={1} direction="row" justifyContent="space-evenly">
         {item.ingredients.map((ingredient) => {
           const { name: ingredientName } =
             itemsJson[ingredient.id as keyof typeof itemsJson];
           return (
-            <Stack spacing={0.5} key={ingredient.id} alignItems="center">
+            <Grid
+              item
+              xs
+              key={ingredient.id}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <ItemStack
                 itemId={ingredient.id}
                 quantity={ingredient.quantity}
@@ -33,13 +42,20 @@ const CraftingInfo: React.VFC<Props> = (props) => {
                   color: (theme) => theme.palette.text.primary,
                 }}
               />
-              <Typography component="span" variant="body2">
+              <Typography
+                component="span"
+                variant="body2"
+                sx={{
+                  wordBreak: "break-word",
+                  textAlign: "center",
+                }}
+              >
                 {ingredientName}
               </Typography>
-            </Stack>
+            </Grid>
           );
         })}
-      </Stack>
+      </Grid>
     </ItemInfoSection>
   );
 };
