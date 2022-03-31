@@ -83,7 +83,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       (materialsNeeded[ingredient.id] ?? 0) + ingredient.quantity;
   });
   // 2. populate number of ingredients required for items being crafted
-  const ingredientToCraftedItemMapping: { [ingredientId: string]: string[] } =
+  const ingredientToCraftedItemsMapping: { [ingredientId: string]: string[] } =
     {};
   Object.values(itemsJson)
     .filter((item) => materialsNeeded[item.id] != null)
@@ -100,8 +100,8 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
         if (ingredients != null) {
           const multiplier = Math.ceil(remaining / (itemYield ?? 1));
           ingredients.forEach((ingr) => {
-            ingredientToCraftedItemMapping[ingr.id] = [
-              ...(ingredientToCraftedItemMapping[ingr.id] ?? []),
+            ingredientToCraftedItemsMapping[ingr.id] = [
+              ...(ingredientToCraftedItemsMapping[ingr.id] ?? []),
               item.id,
             ];
             materialsNeeded[ingr.id] =
@@ -159,7 +159,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           (stockCopy[craftedItemId] ?? 0) + numTimesToCraft * itemYield;
       }
     });
-  Object.keys(ingredientToCraftedItemMapping).forEach((ingrId) => {
+  Object.keys(ingredientToCraftedItemsMapping).forEach((ingrId) => {
     if ((materialsNeeded[ingrId] ?? 0) - (stockCopy[ingrId] ?? 0) <= 0) {
       canCompleteByCrafting[ingrId] = true;
     }
@@ -225,6 +225,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       </Box>
       <ItemInfoPopover
         itemId={popoverItemId}
+        ingredientToCraftedItemsMapping={ingredientToCraftedItemsMapping}
         open={popoverOpen}
         onClose={handlePopoverClose}
       />

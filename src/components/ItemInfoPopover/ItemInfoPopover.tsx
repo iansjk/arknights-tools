@@ -5,16 +5,18 @@ import itemsJson from "../../../data/items.json";
 import { Item } from "../../../scripts/output-types";
 
 import CraftingInfo from "./CraftingInfo";
+import NeededToCraft from "./NeededToCraft";
 import StageInfo from "./StageInfo";
 
 interface Props {
   itemId: string | null;
+  ingredientToCraftedItemsMapping: { [ingredientId: string]: string[] };
   open: boolean;
   onClose: () => void;
 }
 
 const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
-  const { itemId, open, onClose } = props;
+  const { itemId, ingredientToCraftedItemsMapping, open, onClose } = props;
   const item: Item | null =
     itemId != null ? itemsJson[itemId as keyof typeof itemsJson] : null;
   return (
@@ -60,6 +62,10 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
             {item.name}
           </Typography>
           <CraftingInfo item={item} />
+          <NeededToCraft
+            item={item}
+            ingredientToCraftedItemsMapping={ingredientToCraftedItemsMapping}
+          />
           <StageInfo item={item} />
         </Paper>
       )}
