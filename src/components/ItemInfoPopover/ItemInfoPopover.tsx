@@ -5,6 +5,7 @@ import itemsJson from "../../../data/items.json";
 import { Item } from "../../../scripts/output-types";
 
 import CraftingInfo from "./CraftingInfo";
+import StageInfo from "./StageInfo";
 
 interface Props {
   itemId: string | null;
@@ -59,6 +60,7 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
             {item.name}
           </Typography>
           <CraftingInfo item={item} />
+          <StageInfo item={item} />
         </Paper>
       )}
     </Popover>

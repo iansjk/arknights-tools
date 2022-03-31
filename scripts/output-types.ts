@@ -6,11 +6,22 @@ export interface Item {
   iconId: string;
   yield?: number;
   ingredients?: Ingredient[];
+  stages?: {
+    leastSanity?: StageData;
+    mostEfficient?: StageData;
+  };
 }
 
 export interface Ingredient {
   id: string;
   quantity: number;
+}
+
+export interface StageData {
+  stageSanityCost: number;
+  stageName: string;
+  itemSanityCost: number;
+  dropRate: number;
 }
 
 export enum OperatorGoalCategory {
