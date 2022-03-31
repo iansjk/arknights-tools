@@ -1,4 +1,4 @@
-import { Popover, Typography } from "@mui/material";
+import { Paper, Popover, Typography } from "@mui/material";
 import React from "react";
 
 import itemsJson from "../../../data/items.json";
@@ -34,7 +34,29 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
       }}
       sx={{ opacity: 0.9 }}
     >
-      {itemId != null && item != null && <Typography>{item.name}</Typography>}
+      {itemId != null && item != null && (
+        <Paper
+          elevation={3}
+          sx={{
+            backgroundColor: "rgba(255, 255, 255, 0.8)",
+            color: "#000",
+          }}
+        >
+          <Typography
+            component="h1"
+            variant="h5"
+            sx={{
+              display: "inline-block",
+              p: 1,
+              backgroundColor: (theme) => theme.palette.background.default,
+              color: "#fff",
+              borderRadius: (theme) => theme.spacing(0.5),
+            }}
+          >
+            {item.name}
+          </Typography>
+        </Paper>
+      )}
     </Popover>
   );
 });
