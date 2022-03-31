@@ -1,6 +1,6 @@
 import { Box, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
@@ -19,6 +19,7 @@ import {
 import { selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
+import ItemInfoPopover from "./ItemInfoPopover";
 import ItemNeeded from "./ItemNeeded";
 
 const LMD_ITEM_ID = "4001";
@@ -28,6 +29,8 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const stock = useAppSelector(selectStock);
   const crafting = useAppSelector(selectCrafting);
   const goals = useAppSelector(selectGoals);
+  const [popoverOpen, setPopoverOpen] = useState(false);
+  const [popoverItemId, setPopoverItemId] = useState<string | null>(null);
 
   const handleChange = useCallback(
     (itemId: string, newQuantity: number) => {
@@ -65,7 +68,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   );
 
   const handleClick = useCallback((itemId: string) => {
-    console.log(`clicked ${itemId}`);
+    setPopoverItemId(itemId);
+    setPopoverOpen(true);
+  }, []);
+
+  const handlePopoverClose = useCallback(() => {
+    setPopoverOpen(false);
   }, []);
 
   const materialsNeeded: DepotState["stock"] = {};
@@ -215,6 +223,11 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             />
           ))}
       </Box>
+      <ItemInfoPopover
+        itemId={popoverItemId}
+        open={popoverOpen}
+        onClose={handlePopoverClose}
+      />
     </Paper>
   );
 });
