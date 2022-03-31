@@ -196,7 +196,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           p: 0,
           columnGap: 2,
           rowGap: 1.5,
-          gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
         }}
       >
         {Object.entries(materialsNeeded)
