@@ -1,8 +1,8 @@
 import { Popover, Typography } from "@mui/material";
 import React from "react";
 
-import itemsJson from "../../data/items.json";
-import { Item } from "../../scripts/output-types";
+import itemsJson from "../../../data/items.json";
+import { Item } from "../../../scripts/output-types";
 
 interface Props {
   itemId: string | null;
