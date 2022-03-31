@@ -28,6 +28,7 @@ const CraftingInfo: React.VFC<Props> = (props) => {
               <ItemStack
                 itemId={ingredient.id}
                 quantity={ingredient.quantity}
+                size={60}
                 sx={{
                   color: (theme) => theme.palette.text.primary,
                 }}
