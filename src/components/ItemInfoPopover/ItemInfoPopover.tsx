@@ -4,6 +4,8 @@ import React from "react";
 import itemsJson from "../../../data/items.json";
 import { Item } from "../../../scripts/output-types";
 
+import CraftingInfo from "./CraftingInfo";
+
 interface Props {
   itemId: string | null;
   open: boolean;
@@ -38,6 +40,7 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
         <Paper
           elevation={3}
           sx={{
+            p: 2,
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             color: "#000",
           }}
@@ -55,6 +58,7 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
           >
             {item.name}
           </Typography>
+          <CraftingInfo item={item} />
         </Paper>
       )}
     </Popover>
