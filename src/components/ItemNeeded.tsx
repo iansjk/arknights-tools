@@ -78,7 +78,6 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
   return (
     <Box display="inline-grid" component={component ?? "div"}>
       <ButtonBase
-        aria-label={item.name}
         data-itemid={itemId}
         onClick={() => onClick(itemId)}
         disableRipple
