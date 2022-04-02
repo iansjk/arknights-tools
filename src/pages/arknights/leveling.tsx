@@ -21,6 +21,7 @@ import Layout from "../../components/Layout";
 import OperatorSearch from "../../components/OperatorSearch";
 import ValidatedTextField from "../../components/ValidatedTextField";
 import lmdIcon from "../../images/lmd-icon.png";
+import noOperatorIcon from "../../images/no-operator.png";
 
 interface LevelingCost {
   exp: number;
@@ -173,7 +174,7 @@ const Leveling: NextPage = () => {
                 Start point
               </Typography>
               <Box display="flex" flexDirection="row">
-                <Box mr={2}>{/* TODO operator image goes here */}</Box>
+                <OperatorImage operator={operator} eliteLevel={startingElite} />
                 <div>
                   <FormControl
                     size="small"
@@ -257,7 +258,7 @@ const Leveling: NextPage = () => {
                 End point
               </Typography>
               <Box display="flex" flexDirection="row">
-                <Box mr={2}>{/* TODO operator image goes here */}</Box>
+                <OperatorImage operator={operator} eliteLevel={targetElite} />
                 <div>
                   <FormControl size="small" fullWidth sx={{ mb: 2 }}>
                     <InputLabel htmlFor="target-elite">Target elite</InputLabel>
@@ -375,6 +376,41 @@ const LmdIcon: React.VFC = () => {
   return (
     <Box component="span" position="relative" top={3}>
       <Image src={lmdIcon} width={26} height={18} alt="LMD" />
+    </Box>
+  );
+};
+
+const OperatorImage: React.VFC<{
+  operator: Operator | null;
+  eliteLevel?: number;
+}> = ({ operator, eliteLevel = 0 }) => {
+  const imageSrc = operator
+    ? `/images/avatars/${operator.id}${
+        eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
+      }.png`
+    : noOperatorIcon;
+  return (
+    <Box
+      border="1px solid #c0c0c0"
+      mr={2}
+      width={100}
+      height={100}
+      flexShrink={0}
+    >
+      <Image
+        // force remounting with explicit key prop
+        key={`${
+          operator ? `${operator.id}-${eliteLevel ?? 0}` : "no-operator"
+        }`}
+        src={imageSrc}
+        width={100}
+        height={100}
+        alt={
+          operator
+            ? `${operator.name}${eliteLevel ? ` Elite ${eliteLevel}` : ""}`
+            : "No operator"
+        }
+      />
     </Box>
   );
 };
