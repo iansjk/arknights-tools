@@ -1,6 +1,5 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { TextFieldProps } from "@material-ui/core/TextField";
-import { TextField } from "@material-ui/core";
+import { TextField, TextFieldProps } from "@mui/material";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 interface Props {
   validator: (newValue: string) => boolean;
@@ -10,14 +9,15 @@ interface Props {
   revalidateOn?: unknown[];
 }
 
-const ValidatedTextField: React.FC<Props & TextFieldProps> = ({
-  validator,
-  onChange,
-  revalidateOn = [],
-  value: _value,
-  error: _error,
-  ...rest
-}) => {
+const ValidatedTextField: React.FC<Props & TextFieldProps> = (props) => {
+  const {
+    validator,
+    onChange,
+    revalidateOn = [],
+    value: _value,
+    error: _error,
+    ...rest
+  } = props;
   const [isValid, setIsValid] = useState(true);
   const ref = useRef<HTMLInputElement>(null);
 
