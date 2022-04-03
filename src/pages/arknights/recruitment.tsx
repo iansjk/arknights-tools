@@ -157,11 +157,8 @@ const Recruitment: NextPage = () => {
               ))}
             </Grid>
             <Grid item xs={12} sm={9} sx={chipContainerStyles}>
-              {operators.map(({ name, rarity, tags: operatorTags }) => (
-                <RecruitableOperatorChip
-                  key={name}
-                  {...{ name, rarity, tags: operatorTags }}
-                />
+              {operators.map((operator) => (
+                <RecruitableOperatorChip key={operator.id} {...operator} />
               ))}
             </Grid>
           </Grid>

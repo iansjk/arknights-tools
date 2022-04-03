@@ -1,4 +1,4 @@
-import { Tooltip, Chip } from "@mui/material";
+import { Tooltip, Chip, Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
@@ -6,16 +6,16 @@ import { RecruitableOperator } from "../../scripts/output-types";
 
 const RecruitableOperatorChip: React.VFC<RecruitableOperator> = React.memo(
   (props) => {
-    const { name, rarity, tags } = props;
+    const { id, name, rarity, tags } = props;
 
     return (
       <>
         <Tooltip
-          title={tags.join(", ")}
-          arrow
-          placement="bottom"
           key="chipWrapper"
-          sx={{}}
+          arrow
+          title={tags.join(", ")}
+          describeChild
+          placement="bottom"
         >
           <Chip
             className={`rarity-${rarity}`}
@@ -41,7 +41,17 @@ const RecruitableOperatorChip: React.VFC<RecruitableOperator> = React.memo(
                 backgroundColor: "#9f9f9f",
               },
             }}
-            // avatar={}
+            avatar={
+              <Box ml={1} mr={-2}>
+                <Image
+                  src={`/images/avatars/${id}.png`}
+                  width={24}
+                  height={24}
+                  className="operator-avatar"
+                  alt=""
+                />
+              </Box>
+            }
             label={name}
           />
         </Tooltip>
