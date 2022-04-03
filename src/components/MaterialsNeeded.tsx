@@ -204,6 +204,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           startIcon={<RotateLeftIcon />}
           sx={{ alignSelf: "start", justifySelf: "end" }}
           variant="outlined"
+          color="grey"
         >
           Reset
         </Button>

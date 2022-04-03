@@ -70,7 +70,7 @@ const Layout: React.FC<Props> = (props) => {
           onDrawerToggle={handleDrawerToggle}
         />
 
-        <AppBar position="sticky" sx={{ gridArea: "header" }}>
+        <AppBar position="sticky" enableColorOnDark sx={{ gridArea: "header" }}>
           <Toolbar>
             <IconButton
               aria-label="toggle drawer"

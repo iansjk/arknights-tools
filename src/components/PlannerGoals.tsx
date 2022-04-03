@@ -38,9 +38,10 @@ const OperatorGoals: React.VFC = () => {
           Operator goals
         </Typography>
         <Button
-          variant="outlined"
           onClick={handleClearAll}
           startIcon={<ClearAllIcon />}
+          variant="outlined"
+          color="grey"
         >
           Clear All
         </Button>
