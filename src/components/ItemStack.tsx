@@ -1,4 +1,4 @@
-import { Box, Tooltip, Typography } from "@mui/material";
+import { Tooltip, Typography } from "@mui/material";
 
 import itemsJson from "../../data/items.json";
 
