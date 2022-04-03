@@ -18,17 +18,13 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: blue[700],
-      light: "rgb(104, 179, 255)",
-      dark: "#303f9f",
-      contrastText: "#fff",
+      main: blue[800],
     },
     secondary: {
       main: pink[100],
     },
     background: {
-      default: "#303030",
-      paper: "#424242",
+      paper: grey[900],
     },
     grey: {
       main: grey[300],
