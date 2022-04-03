@@ -180,7 +180,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           <Typography component="h2" variant="h5">
             Materials needed
           </Typography>
-          <Divider sx={{ my: 1, width: "90%" }} />
+          <Divider sx={{ mt: 2, mb: 1, width: "90%" }} />
           <Typography component="span" variant="h6">
             Total cost:
             <Box
