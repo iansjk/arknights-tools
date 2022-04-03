@@ -26,24 +26,44 @@ const Planner: NextPage = () => {
   return (
     <Layout page="/planner">
       <Grid container mb={2}>
-        <Grid item xs={4}>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          sx={{
+            pr: {
+              xs: 0,
+              md: 1,
+            },
+          }}
+        >
           <OperatorSearch
             value={operator}
             onChange={(newOp) => setOperator(newOp)}
           />
         </Grid>
-        <Grid item xs={8}>
+        <Grid
+          item
+          xs={12}
+          md={8}
+          sx={{
+            mt: {
+              xs: 1,
+              md: 0,
+            },
+          }}
+        >
           <GoalSelect operator={operator} onGoalsAdded={handleGoalsAdded} />
         </Grid>
       </Grid>
 
       <Grid container spacing={2}>
-        <Grid item xs={7}>
+        <Grid item xs={12} lg={7}>
           <Suspense fallback={null}>
             <MaterialsNeeded />
           </Suspense>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={12} lg={5}>
           <Suspense fallback={null}>
             <PlannerGoals />
           </Suspense>
