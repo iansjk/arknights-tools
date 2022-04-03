@@ -44,7 +44,7 @@ const RecruitableOperatorChip: React.VFC<RecruitableOperator> = React.memo(
             avatar={
               <Box ml={1} mr={-2}>
                 <Image
-                  src={`/images/avatars/${id}.png`}
+                  src={`/arknights/avatars/${id}`}
                   width={24}
                   height={24}
                   className="operator-avatar"

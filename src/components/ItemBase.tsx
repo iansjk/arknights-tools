@@ -31,13 +31,13 @@ const ItemBase = React.forwardRef<HTMLDivElement, ItemBaseProps>(
         {...rest}
       >
         <Image
-          src={`/images/items/itembg-tier-${item.tier}.png`}
+          src={`/arknights/item-bgs/tier${item.tier}`}
           width={bgSize}
           height={bgSize}
           alt=""
         />
         <Image
-          src={`/images/items/${item.iconId}.png`}
+          src={`/arknights/items/${item.iconId}`}
           alt={item.name}
           width={size}
           height={size}

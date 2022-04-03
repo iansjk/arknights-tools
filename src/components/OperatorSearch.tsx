@@ -46,7 +46,7 @@ const OperatorSearch: React.VFC<Props> = (props) => {
                 <InputAdornment position="start" sx={{ pl: 1 }}>
                   {value != null ? (
                     <Image
-                      src={`/images/avatars/${value.id}.png`}
+                      src={`/arknights/avatars/${value.id}`}
                       width={32}
                       height={32}
                       alt=""
@@ -66,7 +66,7 @@ const OperatorSearch: React.VFC<Props> = (props) => {
         <li {...props}>
           <Box mr={2} display="inline-flex" alignItems="center">
             <Image
-              src={`/images/avatars/${option.id}.png`}
+              src={`/arknights/avatars/${option.id}`}
               width={32}
               height={32}
               alt=""

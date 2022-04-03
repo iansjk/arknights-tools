@@ -100,7 +100,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           alignSelf={{ xs: "start", xl: undefined }}
         >
           <Image
-            src={`/images/avatars/${operator.id}.png`}
+            src={`/arknights/avatars/${operator.id}`}
             width={48}
             height={48}
             alt=""

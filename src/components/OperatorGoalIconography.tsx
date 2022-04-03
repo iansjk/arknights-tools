@@ -36,7 +36,7 @@ const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
       const skill = operator.skills.find((sk) => sk.skillId === goal.skillId)!;
       const skillImage = (
         <Image
-          src={`/images/skills/skill_icon_${skill.iconId ?? skill.skillId}.png`}
+          src={`/arknights/skills/${skill.iconId ?? skill.skillId}`}
           width={24}
           height={24}
           alt=""
