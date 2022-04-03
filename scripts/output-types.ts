@@ -81,3 +81,15 @@ export interface Operator {
   skills: Skill[];
   module?: ModuleGoal;
 }
+
+export interface RecruitableOperator {
+  name: string;
+  rarity: number;
+  tags: string[];
+}
+
+export interface RecruitmentResult {
+  tags: string[];
+  operators: RecruitableOperator[];
+  guarantees: number[];
+}

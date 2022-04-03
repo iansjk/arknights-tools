@@ -1,8 +1,172 @@
+import {
+  useMediaQuery,
+  useTheme,
+  Autocomplete,
+  TextField,
+  Grid,
+  Chip,
+  SxProps,
+  Theme,
+} from "@mui/material";
+import { Combination } from "js-combinatorics";
 import { NextPage } from "next";
+import { useMemo, useState } from "react";
 
+import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
+import RecruitableOperatorChip from "../../components/RecruitableOperatorChip";
+
+const TAGS_BY_CATEGORY = {
+  Rarity: ["Top Operator", "Senior Operator", "Starter", "Robot"],
+  Position: ["Melee", "Ranged"],
+  Class: [
+    "Caster",
+    "Defender",
+    "Guard",
+    "Medic",
+    "Sniper",
+    "Specialist",
+    "Supporter",
+    "Vanguard",
+  ],
+  Other: [
+    "AoE",
+    "Crowd-Control",
+    "DP-Recovery",
+    "DPS",
+    "Debuff",
+    "Defense",
+    "Fast-Redeploy",
+    "Healing",
+    "Nuker",
+    "Shift",
+    "Slow",
+    "Summon",
+    "Support",
+    "Survival",
+  ],
+};
+const options = Object.entries(TAGS_BY_CATEGORY).flatMap(([type, tagArray]) =>
+  tagArray.flatMap((tag) => ({ type, value: tag }))
+);
+
+function getTagCombinations(activeTags: string[]) {
+  if (activeTags.length === 0) {
+    return [];
+  }
+  const range = Array(activeTags.length)
+    .fill(0)
+    .map((_, i) => i + 1);
+  return range.flatMap((k) =>
+    [...new Combination<string>(activeTags, k)].sort()
+  );
+}
 
 const Recruitment: NextPage = () => {
-  return <Layout page="/recruitment" />;
+  const [activeTags, setActiveTags] = useState<string[]>([]);
+  const [isOpen, setIsOpen] = useState(true);
+  const theme = useTheme();
+  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
+
+  const activeTagCombinations = getTagCombinations(activeTags);
+  const matchingOperators = useMemo(
+    () =>
+      recruitmentJson.filter((result) =>
+        activeTagCombinations.find(
+          (tags) => tags.toString() === result.tags.toString()
+        )
+      ),
+    [activeTagCombinations]
+  );
+
+  const handleTagsChanged = (
+    _: unknown,
+    selectedOptions: {
+      type: string;
+      value: string;
+    }[]
+  ) => {
+    if (selectedOptions.length <= 5) {
+      setActiveTags(selectedOptions.map((option) => option.value).sort());
+    }
+    if (selectedOptions.length === 5) {
+      setIsOpen(false);
+    }
+  };
+
+  const chipContainerStyles: SxProps<Theme> = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: isXSmallScreen ? "center" : "flex-end",
+    gap: (theme) => theme.spacing(1),
+    flexWrap: "wrap",
+  };
+
+  return (
+    <Layout page="/recruitment">
+      <Autocomplete
+        key="input"
+        options={options}
+        multiple
+        autoHighlight
+        open={isOpen}
+        onOpen={() => setIsOpen(true)}
+        onClose={() => setIsOpen(false)}
+        groupBy={(option) => option.type}
+        getOptionLabel={(option) => option.value}
+        disableCloseOnSelect
+        renderInput={(params) => (
+          <TextField {...params} autoFocus label="Available recruitment tags" />
+        )}
+        onChange={handleTagsChanged}
+      />
+      {matchingOperators
+        .sort(
+          (
+            { tags: tagSetA, operators: opSetA },
+            { tags: tagSetB, operators: opSetB }
+          ) =>
+            Math.min(...opSetB.map((op) => (op.rarity === 1 ? 4 : op.rarity))) -
+              Math.min(
+                ...opSetA.map((op) => (op.rarity === 1 ? 4 : op.rarity))
+              ) || tagSetB.length - tagSetA.length
+        )
+        .map(({ tags, operators, guarantees }) => (
+          <Grid
+            container
+            key={tags.join(",")}
+            spacing={2}
+            sx={{
+              my: 2,
+              "& ~ &": {
+                pt: 2,
+                borderTop: "1px solid #4d4d4d",
+              },
+            }}
+          >
+            <Grid item xs={12} sm={3} sx={chipContainerStyles}>
+              {guarantees.map((guaranteedRarity) => (
+                <Chip
+                  key={`guaranteed${guaranteedRarity}`}
+                  label={`${guaranteedRarity}★`}
+                  sx={{ background: "#fff", color: "#000" }}
+                />
+              ))}
+              {tags.map((tag) => (
+                <Chip key={tag} label={tag} />
+              ))}
+            </Grid>
+            <Grid item xs={12} sm={9} sx={chipContainerStyles}>
+              {operators.map(({ name, rarity, tags: operatorTags }) => (
+                <RecruitableOperatorChip
+                  key={name}
+                  {...{ name, rarity, tags: operatorTags }}
+                />
+              ))}
+            </Grid>
+          </Grid>
+        ))}
+    </Layout>
+  );
 };
 export default Recruitment;
