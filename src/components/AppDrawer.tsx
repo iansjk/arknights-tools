@@ -60,6 +60,7 @@ const AppDrawer: React.VFC<Props> = React.memo((props) => {
         <MuiNextLink
           href={siteUrl}
           sx={{
+            color: "inherit",
             textDecoration: "none",
           }}
         >
