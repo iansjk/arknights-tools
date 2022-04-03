@@ -20,6 +20,9 @@ import { Operator } from "../../../scripts/output-types";
 import Layout from "../../components/Layout";
 import OperatorSearch from "../../components/OperatorSearch";
 import ValidatedTextField from "../../components/ValidatedTextField";
+import elite0Icon from "../../images/elite/0.png";
+import elite1Icon from "../../images/elite/1.png";
+import elite2Icon from "../../images/elite/2.png";
 import lmdIcon from "../../images/lmd-icon.png";
 import noOperatorIcon from "../../images/no-operator.png";
 
@@ -389,6 +392,16 @@ const OperatorImage: React.VFC<{
         eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
       }.png`
     : noOperatorIcon;
+  const eliteSrc = (() => {
+    switch (eliteLevel) {
+      case 2:
+        return elite2Icon;
+      case 1:
+        return elite1Icon;
+      default:
+        return elite0Icon;
+    }
+  })();
   return (
     <Box
       border="1px solid #c0c0c0"
@@ -396,6 +409,13 @@ const OperatorImage: React.VFC<{
       width={100}
       height={100}
       flexShrink={0}
+      display="grid"
+      gridTemplateAreas="'x'"
+      sx={{
+        "& > *": {
+          gridArea: "x",
+        },
+      }}
     >
       <Image
         // force remounting with explicit key prop
@@ -411,6 +431,16 @@ const OperatorImage: React.VFC<{
             : "No operator"
         }
       />
+      {operator != null && (
+        <Box alignSelf="end" justifySelf="end" lineHeight={1}>
+          <Image
+            src={eliteSrc}
+            width={35}
+            height={35}
+            alt={`Elite ${eliteLevel ?? 0}`}
+          />
+        </Box>
+      )}
     </Box>
   );
 };
