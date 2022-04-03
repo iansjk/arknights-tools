@@ -73,15 +73,32 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           mb: 1,
           p: 1,
           alignItems: "center",
+          gridTemplateAreas: {
+            xs: `
+              'icon name goalname'
+              'icon mats mats'
+            `,
+            xl: `
+              'icon name     mats'
+              'icon goalname mats'
+            `,
+          },
           gridTemplateRows: "auto auto",
-          gridTemplateColumns: "48px 200px 1fr",
+          gridTemplateColumns: {
+            xs: "48px auto 1fr",
+            xl: "48px 200px 1fr",
+          },
           columnGap: 1,
           borderTopRightRadius: 0,
           borderBottomRightRadius: 0,
           clipPath: "inset(-5px 0 -5px -5px)",
         }}
       >
-        <Box display="flex" gridRow="span 2">
+        <Box
+          gridArea="icon"
+          display="flex"
+          alignSelf={{ xs: "start", xl: undefined }}
+        >
           <Image
             src={`/images/avatars/${operator.id}.png`}
             width={48}
@@ -91,11 +108,20 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           />
         </Box>
 
-        <Typography component="span" variant="h6" sx={{ lineHeight: 1 }}>
+        <Typography
+          component="span"
+          variant="h6"
+          sx={{ lineHeight: 1, gridArea: "name" }}
+        >
           {appellation ?? operator.name}
         </Typography>
 
-        <Box gridRow="span 2" display="flex" justifyContent="space-evenly">
+        <Box gridArea="goalname" display="flex" alignItems="center">
+          <OperatorGoalIconography goal={goal} />
+          {goalName}
+        </Box>
+
+        <Box gridArea="mats" display="flex" justifyContent="space-evenly">
           {ingredients.map((ingredient) => (
             <ItemStack
               key={ingredient.id}
@@ -105,11 +131,6 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
               showItemNameTooltip={true}
             />
           ))}
-        </Box>
-
-        <Box display="flex" alignItems="center">
-          <OperatorGoalIconography goal={goal} />
-          {goalName}
         </Box>
       </Paper>
 
