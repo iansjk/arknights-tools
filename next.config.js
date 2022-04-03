@@ -16,8 +16,7 @@ module.exports = {
     ];
   },
   images: {
-    formats: ["image/avif", "image/webp"],
-    // set minimumCacheTTL to 7 days
-    minimumCacheTTL: 604800,
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/samidare/image/upload",
   },
 };
