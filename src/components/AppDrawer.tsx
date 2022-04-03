@@ -88,7 +88,7 @@ const AppDrawer: React.VFC<Props> = React.memo((props) => {
       sx={{
         width: {
           xs: 0,
-          lg: `${DRAWER_WIDTH_PX}px`,
+          xl: `${DRAWER_WIDTH_PX}px`,
         },
       }}
     >
@@ -112,7 +112,7 @@ const AppDrawer: React.VFC<Props> = React.memo((props) => {
         </Drawer>
       </Hidden>
 
-      <Hidden lgDown implementation="css">
+      <Hidden xlDown implementation="css">
         <Drawer
           variant="permanent"
           open
