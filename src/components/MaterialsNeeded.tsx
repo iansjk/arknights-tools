@@ -6,7 +6,6 @@ import React, { useCallback, useState } from "react";
 import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
 import getGoalIngredients from "../getGoalIngredients";
-import lmdIcon from "../images/lmd-icon.png";
 import {
   resetAll,
   craftOneWithStock,
@@ -191,7 +190,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
               ml={1}
             >
               <b>{lmdCost.toLocaleString()}</b>
-              <Image src={lmdIcon} width={26} height={18} alt="LMD" />
+              <Image
+                src="/arknights/lmd-icon"
+                width={26}
+                height={18}
+                alt="LMD"
+              />
             </Box>
           </Typography>
         </div>

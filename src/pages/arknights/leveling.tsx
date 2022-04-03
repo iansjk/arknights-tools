@@ -20,11 +20,6 @@ import { Operator } from "../../../scripts/output-types";
 import Layout from "../../components/Layout";
 import OperatorSearch from "../../components/OperatorSearch";
 import ValidatedTextField from "../../components/ValidatedTextField";
-import elite0Icon from "../../images/elite/0.png";
-import elite1Icon from "../../images/elite/1.png";
-import elite2Icon from "../../images/elite/2.png";
-import lmdIcon from "../../images/lmd-icon.png";
-import noOperatorIcon from "../../images/no-operator.png";
 
 interface LevelingCost {
   exp: number;
@@ -378,7 +373,7 @@ export default Leveling;
 const LmdIcon: React.VFC = () => {
   return (
     <Box component="span" position="relative" top={3}>
-      <Image src={lmdIcon} width={26} height={18} alt="LMD" />
+      <Image src="/arknights/lmd-icon" width={26} height={18} alt="LMD" />
     </Box>
   );
 };
@@ -387,21 +382,13 @@ const OperatorImage: React.VFC<{
   operator: Operator | null;
   eliteLevel?: number;
 }> = ({ operator, eliteLevel = 0 }) => {
-  const imageSrc = operator
-    ? `/arknights/avatars/${operator.id}${
-        eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
-      }`
-    : noOperatorIcon;
-  const eliteSrc = (() => {
-    switch (eliteLevel) {
-      case 2:
-        return elite2Icon;
-      case 1:
-        return elite1Icon;
-      default:
-        return elite0Icon;
-    }
-  })();
+  const imageSrc = `/arknights/avatars/${
+    operator
+      ? `${operator.id}${
+          eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
+        }`
+      : "no-operator"
+  }`;
   return (
     <Box
       border="1px solid #c0c0c0"
@@ -434,7 +421,7 @@ const OperatorImage: React.VFC<{
       {operator != null && (
         <Box alignSelf="end" justifySelf="end" lineHeight={1}>
           <Image
-            src={eliteSrc}
+            src={`/arknights/elite/${eliteLevel ?? 0}`}
             width={35}
             height={35}
             alt={`Elite ${eliteLevel ?? 0}`}

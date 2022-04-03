@@ -2,7 +2,6 @@ import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
 import { Item, StageData } from "../../../scripts/output-types";
-import sanityIcon from "../../images/sanity.png";
 
 import ItemInfoSection from "./ItemInfoSection";
 
@@ -60,11 +59,11 @@ const Stage: React.VFC<{ stage: StageData; stageType: string }> = (props) => {
       <span>{Math.round(dropRate * 100)}% chance</span>
       <span>
         Stage cost: {stageSanityCost}
-        <Image src={sanityIcon} alt="Sanity" width={18} height={18} />
+        <Image src="/arknights/sanity" alt="Sanity" width={18} height={18} />
       </span>
       <span>
         Cost per item: {itemSanityCost}
-        <Image src={sanityIcon} alt="Sanity" width={18} height={18} />
+        <Image src="/arknights/sanity" alt="Sanity" width={18} height={18} />
       </span>
     </Stack>
   );
