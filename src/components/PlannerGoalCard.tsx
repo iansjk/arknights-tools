@@ -21,15 +21,11 @@ import OperatorGoalIconography from "./OperatorGoalIconography";
 const GoalCardButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(0.75),
   flexGrow: 1,
-  backgroundColor: "rgba(255, 255, 255, 0.4)",
-  clipPath: "inset(-5px -5px -5px 0)",
-  "&:hover": {
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
-  },
+  backgroundColor: theme.palette.background.paper,
   "&:first-of-type": { borderTopLeftRadius: 0 },
   "&:last-of-type": { borderBottomLeftRadius: 0 },
   "&.MuiButtonGroup-grouped:not(:last-of-type)": {
-    borderColor: "rgba(0, 0, 0, 0.8)",
+    borderColor: "rgba(255, 255, 255, 0.2)",
   },
 }));
 
@@ -65,12 +61,18 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
   const ingredients = getGoalIngredients(goal);
 
   return (
-    <Box component="li" display="grid" gridTemplateColumns="1fr auto">
+    <Paper
+      component="li"
+      elevation={3}
+      sx={{
+        display: "grid",
+        mb: 1,
+        gridTemplateColumns: "1fr auto",
+      }}
+    >
       <Paper
-        elevation={3}
         sx={{
           display: "grid",
-          mb: 1,
           p: 1,
           alignItems: "center",
           gridTemplateAreas: {
@@ -91,7 +93,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           columnGap: 1,
           borderTopRightRadius: 0,
           borderBottomRightRadius: 0,
-          clipPath: "inset(-5px 0 -5px -5px)",
+          borderRight: "1px solid rgba(255, 255, 255, 0.2)",
         }}
       >
         <Box
@@ -139,23 +141,33 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         variant="contained"
         sx={{
           display: "flex",
-          pb: 1,
+          backgroundColor: (theme) => theme.palette.background.paper,
         }}
       >
         <GoalCardButton
           aria-label={`Delete goal: ${goalLabel}`}
           onClick={() => onGoalDeleted(goal)}
+          sx={{
+            "&:hover": {
+              backgroundColor: (theme) => theme.palette.error.dark,
+            },
+          }}
         >
           <DeleteGoalIcon />
         </GoalCardButton>
         <GoalCardButton
           aria-label={`Complete goal: ${goalLabel}`}
           onClick={() => onGoalCompleted(goal)}
+          sx={{
+            "&:hover": {
+              backgroundColor: (theme) => theme.palette.success.dark,
+            },
+          }}
         >
           <CompleteGoalIcon />
         </GoalCardButton>
       </ButtonGroup>
-    </Box>
+    </Paper>
   );
 };
 export default PlannerGoalCard;
