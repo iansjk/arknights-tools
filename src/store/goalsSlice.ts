@@ -74,6 +74,9 @@ export const goalsSlice = createSlice({
         }
       });
     },
+    clearAllGoals: () => {
+      return initialState;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(
@@ -92,6 +95,6 @@ export const goalsSlice = createSlice({
 
 export const selectGoals = (state: RootState) => state.goals;
 
-export const { addGoals, deleteGoal } = goalsSlice.actions;
+export const { addGoals, deleteGoal, clearAllGoals } = goalsSlice.actions;
 
 export default goalsSlice.reducer;

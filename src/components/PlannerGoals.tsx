@@ -1,8 +1,9 @@
-import { Typography } from "@mui/material";
+import ClearAllIcon from "@mui/icons-material/ClearAll";
+import { Button, Paper, Typography } from "@mui/material";
 
 import { PlannerGoal } from "../hooks/usePlannerData";
 import { completeGoal } from "../store/goalsActions";
-import { deleteGoal, selectGoals } from "../store/goalsSlice";
+import { clearAllGoals, deleteGoal, selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import PlannerGoalCard from "./PlannerGoalCard";
@@ -19,11 +20,31 @@ const OperatorGoals: React.VFC = () => {
     dispatch(completeGoal(goal));
   };
 
+  const handleClearAll = () => {
+    dispatch(clearAllGoals());
+  };
+
   return (
     <section>
-      <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
-        Goals
-      </Typography>
+      <Paper
+        sx={{
+          display: "grid",
+          mb: 1,
+          p: 2,
+          gridTemplateColumns: "1fr auto",
+        }}
+      >
+        <Typography component="h3" variant="h5">
+          Operator goals
+        </Typography>
+        <Button
+          variant="outlined"
+          onClick={handleClearAll}
+          startIcon={<ClearAllIcon />}
+        >
+          Clear All
+        </Button>
+      </Paper>
 
       {goals.map((goal, i) => (
         <PlannerGoalCard
