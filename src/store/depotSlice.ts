@@ -57,6 +57,10 @@ export const depotSlice = createSlice({
           (state.stock[action.payload] ?? 0) + (itemYield ?? 1);
       }
     },
+    resetAll: (state) => {
+      state.stock = {};
+      state.crafting = {};
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(completeGoal, (state, action) => {
@@ -80,6 +84,7 @@ export const {
   setStock,
   toggleCrafting,
   craftOneWithStock,
+  resetAll,
 } = depotSlice.actions;
 
 export default depotSlice.reducer;

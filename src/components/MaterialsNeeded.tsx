@@ -1,4 +1,5 @@
-import { Box, Divider, Paper, Typography } from "@mui/material";
+import RotateLeftIcon from "@mui/icons-material/RotateLeft";
+import { Box, Button, Divider, Paper, Typography } from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useState } from "react";
 
@@ -7,6 +8,7 @@ import { Item } from "../../scripts/output-types";
 import getGoalIngredients from "../getGoalIngredients";
 import lmdIcon from "../images/lmd-icon.png";
 import {
+  resetAll,
   craftOneWithStock,
   decrement,
   DepotState,
@@ -66,6 +68,10 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
     },
     [dispatch]
   );
+
+  const handleReset = useCallback(() => {
+    dispatch(resetAll());
+  }, [dispatch]);
 
   const handleClick = useCallback((itemId: string) => {
     setPopoverItemId(itemId);
@@ -169,23 +175,35 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 
   return (
     <Paper component="section" sx={{ p: 2 }}>
-      <Typography component="h2" variant="h5">
-        Materials needed
-      </Typography>
-      <Divider sx={{ my: 1, width: "90%" }} />
-      <Typography component="span" variant="h6">
-        Total cost:
-        <Box
-          component="span"
-          display="inline-flex"
-          alignItems="center"
-          columnGap={0.5}
-          ml={1}
+      <Box display="grid" gridTemplateColumns="1fr auto">
+        <div>
+          <Typography component="h2" variant="h5">
+            Materials needed
+          </Typography>
+          <Divider sx={{ my: 1, width: "90%" }} />
+          <Typography component="span" variant="h6">
+            Total cost:
+            <Box
+              component="span"
+              display="inline-flex"
+              alignItems="center"
+              columnGap={0.5}
+              ml={1}
+            >
+              <b>{lmdCost.toLocaleString()}</b>
+              <Image src={lmdIcon} width={26} height={18} alt="LMD" />
+            </Box>
+          </Typography>
+        </div>
+        <Button
+          onClick={handleReset}
+          startIcon={<RotateLeftIcon />}
+          sx={{ alignSelf: "start", justifySelf: "end" }}
+          variant="outlined"
         >
-          <b>{lmdCost.toLocaleString()}</b>
-          <Image src={lmdIcon} width={26} height={18} alt="LMD" />
-        </Box>
-      </Typography>
+          Reset
+        </Button>
+      </Box>
       <Box
         component="ul"
         sx={{
