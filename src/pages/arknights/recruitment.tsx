@@ -1,6 +1,4 @@
 import {
-  useMediaQuery,
-  useTheme,
   Autocomplete,
   TextField,
   Grid,
@@ -65,8 +63,6 @@ function getTagCombinations(activeTags: string[]) {
 const Recruitment: NextPage = () => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(true);
-  const theme = useTheme();
-  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
 
   const activeTagCombinations = getTagCombinations(activeTags);
   const matchingOperators = useMemo(
@@ -99,9 +95,6 @@ const Recruitment: NextPage = () => {
     alignItems: "center",
     gap: (theme) => theme.spacing(1),
     flexWrap: "wrap",
-    "&.guarantees": {
-      justifyContent: isXSmallScreen ? "center" : "flex-end",
-    },
   };
 
   return (
@@ -150,8 +143,15 @@ const Recruitment: NextPage = () => {
               item
               xs={12}
               sm={3}
-              className="guarantees"
-              sx={chipContainerStyles}
+              sx={[
+                chipContainerStyles,
+                {
+                  justifyContent: {
+                    xs: "center",
+                    sm: "flex-end",
+                  },
+                },
+              ]}
             >
               {guarantees.map((guaranteedRarity) => (
                 <Chip
