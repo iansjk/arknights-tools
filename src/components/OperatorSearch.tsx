@@ -1,8 +1,17 @@
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Autocomplete, autocompleteClasses, Box, InputAdornment, Popper, styled, TextField, Typography} from "@mui/material";
+import {
+  Autocomplete,
+  autocompleteClasses,
+  Box,
+  InputAdornment,
+  Popper,
+  styled,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { VariableSizeList, ListChildComponentProps } from 'react-window';
+import { VariableSizeList, ListChildComponentProps } from "react-window";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator } from "../../scripts/output-types";
@@ -87,8 +96,8 @@ export default OperatorSearch;
 // https://mui.com/components/autocomplete/#virtualization
 const StyledPopper = styled(Popper)({
   [`& .${autocompleteClasses.listbox}`]: {
-    boxSizing: 'border-box',
-    '& ul': {
+    boxSizing: "border-box",
+    "& ul": {
       padding: 0,
       margin: 0,
     },
@@ -127,7 +136,9 @@ const OuterElementType = React.forwardRef<HTMLDivElement>((props, ref) => {
   const outerProps = React.useContext(OuterElementContext);
   return <div ref={ref} {...props} {...outerProps} />;
 });
+OuterElementType.displayName = "OuterElementType";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function useResetCache(data: any) {
   const ref = React.useRef<VariableSizeList>(null);
   React.useEffect(() => {
@@ -149,7 +160,7 @@ const ListboxComponent = React.forwardRef<
     (item: React.ReactChild & { children?: React.ReactChild[] }) => {
       itemData.push(item);
       itemData.push(...(item.children || []));
-    },
+    }
   );
 
   const itemCount = itemData.length;
