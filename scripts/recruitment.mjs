@@ -70,7 +70,8 @@ const createRecruitmentJson = () => {
     opNames
       .filter((name) => !!name)
       .map((opName) => {
-        const opData = characterTable[operatorNameToId[opName]];
+        const opId = operatorNameToId[opName];
+        const opData = characterTable[opId];
         const tags = [
           ...(opData.tagList ?? []),
           toTitleCase(opData.position),
@@ -85,6 +86,7 @@ const createRecruitmentJson = () => {
           tags.push("Senior Operator");
         }
         return {
+          id: opId,
           name: nameOverrides[opName] ?? opName,
           rarity,
           tags,

@@ -83,6 +83,7 @@ export interface Operator {
 }
 
 export interface RecruitableOperator {
+  id: string;
   name: string;
   rarity: number;
   tags: string[];
