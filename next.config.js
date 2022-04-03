@@ -15,4 +15,9 @@ module.exports = {
       },
     ];
   },
+  images: {
+    formats: ["image/avif", "image/webp"],
+    // set minimumCacheTTL to 7 days
+    minimumCacheTTL: 604800,
+  },
 };
