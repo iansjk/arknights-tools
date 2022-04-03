@@ -97,9 +97,11 @@ const Recruitment: NextPage = () => {
   const chipContainerStyles: SxProps<Theme> = {
     display: "flex",
     alignItems: "center",
-    justifyContent: isXSmallScreen ? "center" : "flex-end",
     gap: (theme) => theme.spacing(1),
     flexWrap: "wrap",
+    "&.guarantees": {
+      justifyContent: isXSmallScreen ? "center" : "flex-end",
+    },
   };
 
   return (
@@ -144,7 +146,13 @@ const Recruitment: NextPage = () => {
               },
             }}
           >
-            <Grid item xs={12} sm={3} sx={chipContainerStyles}>
+            <Grid
+              item
+              xs={12}
+              sm={3}
+              className="guarantees"
+              sx={chipContainerStyles}
+            >
               {guarantees.map((guaranteedRarity) => (
                 <Chip
                   key={`guaranteed${guaranteedRarity}`}
