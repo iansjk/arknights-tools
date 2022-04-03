@@ -382,9 +382,9 @@ const OperatorImage: React.VFC<{
   operator: Operator | null;
   eliteLevel?: number;
 }> = ({ operator, eliteLevel = 0 }) => {
-  const imageSrc = `/arknights/avatars/${
+  const imageSrc = `/arknights/${
     operator
-      ? `${operator.id}${
+      ? `avatars/${operator.id}${
           eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
         }`
       : "no-operator"
