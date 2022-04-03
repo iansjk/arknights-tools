@@ -1,3 +1,4 @@
+import uploadAllImages from "./images.mjs";
 import createItemsJson from "./items.mjs";
 import createLevelingJson from "./leveling.mjs";
 import createOperatorsJson from "./operators.mjs";
@@ -8,5 +9,6 @@ await Promise.all([
   createOperatorsJson(),
   createRecruitmentJson(),
   createLevelingJson(),
+  uploadAllImages(),
 ]);
 console.log("✅ Done.");
