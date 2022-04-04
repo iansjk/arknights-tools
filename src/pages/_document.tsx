@@ -1,20 +1,17 @@
 import createEmotionServer from "@emotion/server/create-instance";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import config from "../config";
 import createEmotionCache from "../createEmotionCache";
-import theme from "../theme";
 
 export default class MyDocument extends Document {
   render() {
-    const { siteTitle, siteDescription, siteUrl } = config;
-
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="shortcut icon" href="/favicon.ico" />
+          {/* Inject MUI styles first to match with the prepend: true configuration. */}
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {(this.props as any).emotionStyleTags}
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -25,24 +22,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <meta charSet="utf-8" />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content={siteTitle} />
-          <meta key="ogTitle" property="og:title" content={siteTitle} />
-          <meta key="ogUrl" property="og:url" content={siteUrl} />
-          <meta
-            key="description"
-            name="description"
-            content={siteDescription}
-          />
-          <meta
-            key="ogDescription"
-            property="og:description"
-            content={siteDescription}
-          />
-          {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />

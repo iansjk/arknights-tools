@@ -6,6 +6,7 @@ import Head from "next/head";
 import { Provider as ReduxProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 
+import config from "../config";
 import createEmotionCache from "../createEmotionCache";
 import { store, persistor } from "../store/store";
 import theme from "../theme";
@@ -20,6 +21,8 @@ interface MyAppProps extends AppProps {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const { siteTitle, siteDescription, siteUrl } = config;
+
   return (
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -28,6 +31,26 @@ export default function MyApp(props: MyAppProps) {
             <meta
               name="viewport"
               content="initial-scale=1, width=device-width"
+            />
+
+            {/* PWA primary color */}
+            <meta name="theme-color" content={theme.palette.primary.main} />
+
+            <link rel="shortcut icon" href="/favicon.ico" />
+            <meta charSet="utf-8" />
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content={siteTitle} />
+            <meta key="ogTitle" property="og:title" content={siteTitle} />
+            <meta key="ogUrl" property="og:url" content={siteUrl} />
+            <meta
+              key="description"
+              name="description"
+              content={siteDescription}
+            />
+            <meta
+              key="ogDescription"
+              property="og:description"
+              content={siteDescription}
             />
           </Head>
           <ThemeProvider theme={theme}>
