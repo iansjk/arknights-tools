@@ -8,6 +8,8 @@ import {
   styled,
   Tooltip,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -38,6 +40,9 @@ interface Props {
 
 const PlannerGoalCard: React.VFC<Props> = (props) => {
   const { goal, onGoalDeleted, onGoalCompleted } = props;
+  const theme = useTheme();
+  const isXLScreen = useMediaQuery(theme.breakpoints.up("xl"));
+
   const operator: Operator =
     operatorsJson[goal.operatorId as keyof typeof operatorsJson];
   const [_, appellation] = operator.name.split(" the ");
@@ -47,11 +52,13 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
       case OperatorGoalCategory.Elite:
         return `Elite ${goal.eliteLevel}`;
       case OperatorGoalCategory.SkillLevel:
-        return `Skill Level ${goal.skillLevel}`;
+        return `${isXLScreen ? "Skill Level" : "Sk.Lv."} ${goal.skillLevel}`;
       case OperatorGoalCategory.Mastery: {
         const skillNumber =
           operator.skills.findIndex((sk) => sk.skillId === goal.skillId) + 1;
-        return `Skill ${skillNumber} Mastery ${goal.masteryLevel}`;
+        return isXLScreen
+          ? `Skill ${skillNumber} Mastery ${goal.masteryLevel}`
+          : `S${skillNumber} M${goal.masteryLevel}`;
       }
       case OperatorGoalCategory.Module:
         return "Module";
@@ -76,16 +83,10 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           display: "grid",
           p: 1,
           alignItems: "center",
-          gridTemplateAreas: {
-            xs: `
-              'icon name goalname'
-              'icon mats mats'
-            `,
-            xl: `
-              'icon name     mats'
-              'icon goalname mats'
-            `,
-          },
+          gridTemplateAreas: `
+            'icon name     mats'
+            'icon goalname mats'
+          `,
           gridTemplateRows: "auto auto",
           gridTemplateColumns: {
             xs: "48px auto 1fr",
@@ -97,11 +98,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
           borderRight: "1px solid rgba(255, 255, 255, 0.2)",
         }}
       >
-        <Box
-          gridArea="icon"
-          display="flex"
-          alignSelf={{ xs: "start", xl: undefined }}
-        >
+        <Box gridArea="icon" display="flex">
           <Image
             src={`/arknights/avatars/${operator.id}`}
             width={48}
