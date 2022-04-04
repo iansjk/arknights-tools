@@ -41,7 +41,9 @@ interface Props {
 const PlannerGoalCard: React.VFC<Props> = (props) => {
   const { goal, onGoalDeleted, onGoalCompleted } = props;
   const theme = useTheme();
+  const isXSScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isXLScreen = useMediaQuery(theme.breakpoints.up("xl"));
+  const operatorIconSize = isXSScreen ? 32 : 48;
 
   const operator: Operator =
     operatorsJson[goal.operatorId as keyof typeof operatorsJson];
@@ -82,15 +84,25 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         sx={{
           display: "grid",
           p: 1,
+          pb: {
+            xs: 2,
+            sm: 1,
+          },
           alignItems: "center",
-          gridTemplateAreas: `
-            'icon name     mats'
-            'icon goalname mats'
-          `,
+          gridTemplateAreas: {
+            xs: `
+              'icon name goalname'
+              'mats mats mats'
+            `,
+            sm: `
+              'icon name     mats'
+              'icon goalname mats'
+            `,
+          },
           gridTemplateRows: "auto auto",
           gridTemplateColumns: {
-            xs: "48px auto 1fr",
-            xl: "48px 200px 1fr",
+            xs: `${operatorIconSize}px auto 1fr`,
+            xl: `${operatorIconSize}px 200px 1fr`,
           },
           columnGap: 1,
           borderTopRightRadius: 0,
@@ -101,8 +113,8 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         <Box gridArea="icon" display="flex">
           <Image
             src={`/arknights/avatars/${operator.id}`}
-            width={48}
-            height={48}
+            width={operatorIconSize}
+            height={operatorIconSize}
             alt=""
             className="operator-avatar"
           />
@@ -111,13 +123,18 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         <Typography
           component="span"
           variant="h6"
-          sx={{ lineHeight: 1, gridArea: "name" }}
+          sx={{ lineHeight: 1, gridArea: "name", ml: { xs: 0, sm: 1 } }}
         >
           {appellation ?? operator.name}
         </Typography>
 
-        <Box gridArea="goalname" display="flex" alignItems="center">
-          <OperatorGoalIconography goal={goal} />
+        <Box
+          gridArea="goalname"
+          display="flex"
+          alignItems="center"
+          ml={{ xs: 0, sm: 1 }}
+        >
+          {!isXSScreen && <OperatorGoalIconography goal={goal} />}
           {goalName}
         </Box>
 
@@ -127,7 +144,7 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
               key={ingredient.id}
               itemId={ingredient.id}
               quantity={ingredient.quantity}
-              size={60}
+              size={55}
               showItemNameTooltip={true}
             />
           ))}
