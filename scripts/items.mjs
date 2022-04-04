@@ -22,6 +22,10 @@ const cnItems = cnItemTable.items;
 const { workshopFormulas, manufactFormulas: manufactureFormulas } =
   cnBuildingData;
 
+const ADDITIONAL_ITEM_NAME_TO_ID_ENTRIES = {
+  "Crystalline Electroassembly": "30145",
+};
+
 // maximum item sanity cost multiplier when considering a stage as being "efficient"
 // e.g. if Sugar Substitute costs 4x+ sanity per item farming it from the "most efficient" stage
 // compared to the sanity per item from the "least sanity" stage, then don't display a most efficient stage
@@ -268,9 +272,12 @@ const createItemsJson = async () => {
   fs.writeFileSync(itemsJsonPath, JSON.stringify(itemsJson, null, 2));
   console.log(`items: wrote ${itemsJsonPath}`);
 
-  const itemNameToId = Object.fromEntries(
-    Object.entries(itemsJson).map(([id, item]) => [item.name, id])
-  );
+  const itemNameToId = {
+    ...Object.fromEntries(
+      Object.entries(itemsJson).map(([id, item]) => [item.name, id])
+    ),
+    ...ADDITIONAL_ITEM_NAME_TO_ID_ENTRIES,
+  };
   const itemNameToIdJsonPath = path.join(
     DATA_OUTPUT_DIRECTORY,
     "item-name-to-id.json"
