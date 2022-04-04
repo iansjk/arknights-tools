@@ -74,14 +74,14 @@ const GoalSelect: React.VFC<Props> = (props) => {
     }
 
     if (goalName.startsWith("Elite")) {
-      const eliteLevel = Number(goalName.at(-1));
+      const eliteLevel = Number(goalName.charAt(goalName.length - 1));
       return {
         operatorId: operator.id,
         category: OperatorGoalCategory.Elite,
         eliteLevel,
       };
     } else if (goalName.startsWith("Skill Level")) {
-      const skillLevel = Number(goalName.at(-1));
+      const skillLevel = Number(goalName.charAt(goalName.length - 1));
       return {
         operatorId: operator.id,
         category: OperatorGoalCategory.SkillLevel,
