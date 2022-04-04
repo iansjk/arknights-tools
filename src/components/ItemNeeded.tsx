@@ -1,6 +1,5 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import GavelIcon from "@mui/icons-material/Gavel";
 import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
 import {
   Box,
