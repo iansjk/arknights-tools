@@ -79,7 +79,7 @@ const Layout: React.FC<Props> = (props) => {
               sx={{
                 mr: 2,
                 display: {
-                  lg: "none",
+                  xl: "none",
                 },
               }}
             >

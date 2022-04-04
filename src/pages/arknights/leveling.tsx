@@ -385,7 +385,13 @@ const OperatorImage: React.VFC<{
   const imageSrc = `/arknights/${
     operator
       ? `avatars/${operator.id}${
-          eliteLevel === 2 || operator.name === "Amiya" ? `_${eliteLevel}` : ""
+          eliteLevel === 2 || (eliteLevel > 0 && operator.name === "Amiya")
+            ? `_${
+                eliteLevel === 1 && operator.name === "Amiya"
+                  ? `1+`
+                  : eliteLevel
+              }.png`
+            : ""
         }`
       : "no-operator"
   }`;
