@@ -17,6 +17,7 @@ import React, { ElementType, useEffect, useState } from "react";
 import items from "../../data/items.json";
 import * as Output from "../../scripts/output-types";
 
+import CraftingIcon from "./CraftingIcon";
 import ItemStack, { ItemStackProps } from "./ItemStack";
 
 interface Props extends ItemStackProps {
@@ -115,12 +116,14 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
         )}
         {isCrafting && canCompleteByCrafting && (
           <Tooltip arrow title="Can be completed by crafting">
-            <GavelIcon
-              htmlColor="yellow"
-              opacity={0.8}
-              fontSize="large"
-              sx={{ alignSelf: "center", justifySelf: "center", zIndex: 1 }}
-            />
+            <Box
+              alignSelf="center"
+              justifySelf="center"
+              zIndex={1}
+              lineHeight={0}
+            >
+              <CraftingIcon />
+            </Box>
           </Tooltip>
         )}
       </ButtonBase>
