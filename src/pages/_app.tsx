@@ -40,18 +40,6 @@ export default function MyApp(props: MyAppProps) {
             <meta charSet="utf-8" />
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content={siteTitle} />
-            <meta key="ogTitle" property="og:title" content={siteTitle} />
-            <meta key="ogUrl" property="og:url" content={siteUrl} />
-            <meta
-              key="description"
-              name="description"
-              content={siteDescription}
-            />
-            <meta
-              key="ogDescription"
-              property="og:description"
-              content={siteDescription}
-            />
           </Head>
           <ThemeProvider theme={theme}>
             <CssBaseline />
