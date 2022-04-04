@@ -1,4 +1,5 @@
 import { Paper, Popover, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 import itemsJson from "../../../data/items.json";
@@ -37,7 +38,6 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
         vertical: "center",
         horizontal: "left",
       }}
-      sx={{ opacity: 0.9 }}
     >
       {itemId != null && item != null && (
         <Paper
@@ -46,19 +46,32 @@ const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
             p: 2,
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             color: "#000",
+            opacity: 0.9,
           }}
         >
           <Typography
             component="h1"
             variant="h5"
             sx={{
-              display: "inline-block",
+              display: "grid",
               p: 1,
+              gridTemplateColumns: "auto 1fr",
+              columnGap: 1.5,
+              alignItems: "center",
               backgroundColor: (theme) => theme.palette.background.default,
               color: "#fff",
               borderRadius: (theme) => theme.spacing(0.5),
             }}
           >
+            <Image
+              // add key to force remount
+              key={item.iconId}
+              src={`/arknights/items/${item.iconId}`}
+              width={48}
+              height={48}
+              alt=""
+              objectFit="contain"
+            />
             {item.name}
           </Typography>
           <CraftingInfo item={item} />
