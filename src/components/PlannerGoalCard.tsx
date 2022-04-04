@@ -6,6 +6,7 @@ import {
   ButtonGroup,
   Paper,
   styled,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
@@ -155,17 +156,23 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         >
           <DeleteGoalIcon />
         </GoalCardButton>
-        <GoalCardButton
-          aria-label={`Complete goal: ${goalLabel}`}
-          onClick={() => onGoalCompleted(goal)}
-          sx={{
-            "&:hover": {
-              backgroundColor: (theme) => theme.palette.success.dark,
-            },
-          }}
+        <Tooltip
+          arrow
+          describeChild
+          title="Mark this goal as completed and deduct its materials from your depot"
         >
-          <CompleteGoalIcon />
-        </GoalCardButton>
+          <GoalCardButton
+            aria-label={`Complete goal: ${goalLabel}`}
+            onClick={() => onGoalCompleted(goal)}
+            sx={{
+              "&:hover": {
+                backgroundColor: (theme) => theme.palette.success.dark,
+              },
+            }}
+          >
+            <CompleteGoalIcon />
+          </GoalCardButton>
+        </Tooltip>
       </ButtonGroup>
     </Paper>
   );
