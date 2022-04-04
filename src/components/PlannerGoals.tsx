@@ -2,7 +2,12 @@ import ClearAllIcon from "@mui/icons-material/ClearAll";
 import { Button, Paper, Typography } from "@mui/material";
 
 import { completeGoal } from "../store/goalsActions";
-import { PlannerGoal, clearAllGoals, deleteGoal, selectGoals } from "../store/goalsSlice";
+import {
+  PlannerGoal,
+  clearAllGoals,
+  deleteGoal,
+  selectGoals,
+} from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import PlannerGoalCard from "./PlannerGoalCard";
