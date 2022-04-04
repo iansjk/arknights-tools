@@ -16,7 +16,7 @@ import { styled } from "@mui/system";
 import { useEffect, useMemo, useState } from "react";
 
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
-import { PlannerGoal } from "../hooks/usePlannerData";
+import { PlannerGoal } from "../store/goalsSlice";
 
 const GoalMenuCheckboxItem = styled(MenuItem)(({ theme }) => ({
   height: "50px",

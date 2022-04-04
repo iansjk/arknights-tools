@@ -9,9 +9,9 @@ import getGoalIngredients from "../getGoalIngredients";
 import {
   resetAll,
   craftOneWithStock,
-  decrement,
+  subtractStock,
   DepotState,
-  increment,
+  addStock,
   selectCrafting,
   selectStock,
   setStock,
@@ -42,14 +42,14 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 
   const handleIncrement = useCallback(
     (itemId: string) => {
-      dispatch(increment(itemId));
+      dispatch(addStock({ itemId }));
     },
     [dispatch]
   );
 
   const handleDecrement = useCallback(
     (itemId: string) => {
-      dispatch(decrement(itemId));
+      dispatch(subtractStock({ itemId }));
     },
     [dispatch]
   );

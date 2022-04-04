@@ -26,17 +26,30 @@ export const depotSlice = createSlice({
   name: "depot",
   initialState,
   reducers: {
-    decrement: (state, action: PayloadAction<string>) => {
-      const itemId = action.payload;
-      state.stock[itemId] = Math.max((state.stock[itemId] ?? 0) - 1, 0);
+    subtractStock: (
+      state,
+      action: PayloadAction<{ itemId: string; amount?: number }>
+    ) => {
+      const { itemId, amount = 1 } = action.payload;
+      state.stock[itemId] = Math.max((state.stock[itemId] ?? 0) - amount, 0);
     },
-    increment: (state, action: PayloadAction<string>) => {
-      const itemId = action.payload;
-      state.stock[itemId] = (state.stock[itemId] ?? 0) + 1;
+    addStock: (
+      state,
+      action: PayloadAction<{ itemId: string; amount?: number }>
+    ) => {
+      const { itemId, amount = 1 } = action.payload;
+      state.stock[itemId] = (state.stock[itemId] ?? 0) + amount;
     },
     setStock: (state, action: PayloadAction<SetStockPayload>) => {
       const { itemId, newQuantity } = action.payload;
       state.stock[itemId] = newQuantity;
+    },
+    setCrafting: (
+      state,
+      action: PayloadAction<{ itemId: string; isCrafting: boolean }>
+    ) => {
+      const { itemId, isCrafting } = action.payload;
+      state.crafting[itemId] = isCrafting;
     },
     toggleCrafting: (state, action: PayloadAction<string>) => {
       const itemId = action.payload;
@@ -79,9 +92,10 @@ export const selectStock = (state: RootState) => state.depot.stock;
 export const selectCrafting = (state: RootState) => state.depot.crafting;
 
 export const {
-  decrement,
-  increment,
+  subtractStock,
+  addStock,
   setStock,
+  setCrafting,
   toggleCrafting,
   craftOneWithStock,
   resetAll,

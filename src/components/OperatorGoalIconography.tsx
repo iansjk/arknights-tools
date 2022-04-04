@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
-import { PlannerGoal } from "../hooks/usePlannerData";
+import { PlannerGoal } from "../store/goalsSlice";
 interface Props {
   goal: PlannerGoal;
 }

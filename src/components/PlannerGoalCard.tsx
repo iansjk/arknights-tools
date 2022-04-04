@@ -13,7 +13,7 @@ import Image from "next/image";
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 import getGoalIngredients from "../getGoalIngredients";
-import { PlannerGoal } from "../hooks/usePlannerData";
+import { PlannerGoal } from "../store/goalsSlice";
 
 import ItemStack from "./ItemStack";
 import OperatorGoalIconography from "./OperatorGoalIconography";

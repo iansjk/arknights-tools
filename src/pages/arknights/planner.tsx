@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { NextPage } from "next";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
@@ -8,6 +8,7 @@ import Layout from "../../components/Layout";
 import OperatorSearch from "../../components/OperatorSearch";
 import { addGoals, PlannerGoal } from "../../store/goalsSlice";
 import { useAppDispatch } from "../../store/hooks";
+import performLegacyMigration from "../../store/performLegacyMigration";
 
 const MaterialsNeeded = React.lazy(
   () => import("../../components/MaterialsNeeded")
@@ -22,6 +23,19 @@ const Planner: NextPage = () => {
     dispatch(addGoals(newGoals));
     setOperator(null);
   };
+
+  useEffect(() => {
+    try {
+      const version = window.localStorage.getItem("version");
+      if (version == null || version === "0") {
+        dispatch(performLegacyMigration()).then(() => {
+          window.localStorage.setItem("version", "1");
+        });
+      }
+    } catch (e) {
+      console.error("Failed to migrate old data", e);
+    }
+  }, [dispatch]);
 
   return (
     <Layout page="/planner">
