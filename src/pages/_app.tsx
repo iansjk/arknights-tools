@@ -25,8 +25,8 @@ export default function MyApp(props: MyAppProps) {
 
   return (
     <ReduxProvider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <CacheProvider value={emotionCache}>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider theme={theme}>
           <Head>
             <meta
               name="viewport"
@@ -53,12 +53,14 @@ export default function MyApp(props: MyAppProps) {
               content={siteDescription}
             />
           </Head>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </CacheProvider>
-      </PersistGate>
+
+          <CssBaseline />
+
+          <PersistGate loading={null} persistor={persistor}>
+            {() => <Component {...pageProps} />}
+          </PersistGate>
+        </ThemeProvider>
+      </CacheProvider>
     </ReduxProvider>
   );
 }

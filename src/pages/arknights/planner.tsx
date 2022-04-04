@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import { NextPage } from "next";
-import React, { Suspense, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
 import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
@@ -10,10 +11,13 @@ import { addGoals, PlannerGoal } from "../../store/goalsSlice";
 import { useAppDispatch } from "../../store/hooks";
 import performLegacyMigration from "../../store/performLegacyMigration";
 
-const MaterialsNeeded = React.lazy(
-  () => import("../../components/MaterialsNeeded")
+const MaterialsNeeded = dynamic(
+  () => import("../../components/MaterialsNeeded"),
+  { ssr: false }
 );
-const PlannerGoals = React.lazy(() => import("../../components/PlannerGoals"));
+const PlannerGoals = dynamic(() => import("../../components/PlannerGoals"), {
+  ssr: false,
+});
 
 const Planner: NextPage = () => {
   const [operator, setOperator] = useState<Operator | null>(null);
@@ -73,14 +77,10 @@ const Planner: NextPage = () => {
 
       <Grid container spacing={2}>
         <Grid item xs={12} lg={7}>
-          <Suspense fallback={null}>
-            <MaterialsNeeded />
-          </Suspense>
+          <MaterialsNeeded />
         </Grid>
         <Grid item xs={12} lg={5}>
-          <Suspense fallback={null}>
-            <PlannerGoals />
-          </Suspense>
+          <PlannerGoals />
         </Grid>
       </Grid>
     </Layout>
