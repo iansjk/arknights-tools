@@ -7,46 +7,49 @@ import {
   Theme,
 } from "@mui/material";
 import { Combination } from "js-combinatorics";
-import { NextPage } from "next";
+import { InferGetStaticPropsType } from "next";
 import { useMemo, useState } from "react";
 
 import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
 import RecruitableOperatorChip from "../../components/RecruitableOperatorChip";
 
-const TAGS_BY_CATEGORY = {
-  Rarity: ["Top Operator", "Senior Operator", "Starter", "Robot"],
-  Position: ["Melee", "Ranged"],
-  Class: [
-    "Caster",
-    "Defender",
-    "Guard",
-    "Medic",
-    "Sniper",
-    "Specialist",
-    "Supporter",
-    "Vanguard",
-  ],
-  Other: [
-    "AoE",
-    "Crowd-Control",
-    "DP-Recovery",
-    "DPS",
-    "Debuff",
-    "Defense",
-    "Fast-Redeploy",
-    "Healing",
-    "Nuker",
-    "Shift",
-    "Slow",
-    "Summon",
-    "Support",
-    "Survival",
-  ],
+export const getStaticProps = () => {
+  const TAGS_BY_CATEGORY = {
+    Rarity: ["Top Operator", "Senior Operator", "Starter", "Robot"],
+    Position: ["Melee", "Ranged"],
+    Class: [
+      "Caster",
+      "Defender",
+      "Guard",
+      "Medic",
+      "Sniper",
+      "Specialist",
+      "Supporter",
+      "Vanguard",
+    ],
+    Other: [
+      "AoE",
+      "Crowd-Control",
+      "DP-Recovery",
+      "DPS",
+      "Debuff",
+      "Defense",
+      "Fast-Redeploy",
+      "Healing",
+      "Nuker",
+      "Shift",
+      "Slow",
+      "Summon",
+      "Support",
+      "Survival",
+    ],
+  };
+  const options = Object.entries(TAGS_BY_CATEGORY).flatMap(([type, tagArray]) =>
+    tagArray.flatMap((tag) => ({ type, value: tag }))
+  );
+  return { props: { options } };
 };
-const options = Object.entries(TAGS_BY_CATEGORY).flatMap(([type, tagArray]) =>
-  tagArray.flatMap((tag) => ({ type, value: tag }))
-);
 
 function getTagCombinations(activeTags: string[]) {
   if (activeTags.length === 0) {
@@ -60,7 +63,9 @@ function getTagCombinations(activeTags: string[]) {
   );
 }
 
-const Recruitment: NextPage = () => {
+const Recruitment = ({
+  options,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(true);
 
