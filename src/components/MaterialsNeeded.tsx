@@ -91,27 +91,30 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const ingredientToCraftedItemsMapping: { [ingredientId: string]: string[] } =
     {};
   Object.values(itemsJson)
-    .filter((item) => materialsNeeded[item.id] != null)
-    .sort((a, b) => a.tier - b.tier)
+    .sort((a, b) => b.tier - a.tier)
     .forEach((item) => {
-      const remaining = Math.max(
-        materialsNeeded[item.id] - (stock[item.id] ?? 0),
-        0
-      );
-      if (remaining > 0 && crafting[item.id]) {
-        const itemBeingCrafted: Item =
-          itemsJson[item.id as keyof typeof itemsJson];
-        const { ingredients, yield: itemYield } = itemBeingCrafted;
-        if (ingredients != null) {
-          const multiplier = Math.ceil(remaining / (itemYield ?? 1));
-          ingredients.forEach((ingr) => {
-            ingredientToCraftedItemsMapping[ingr.id] = [
-              ...(ingredientToCraftedItemsMapping[ingr.id] ?? []),
-              item.id,
-            ];
-            materialsNeeded[ingr.id] =
-              (materialsNeeded[ingr.id] ?? 0) + ingr.quantity * multiplier;
-          });
+      // n.b. NOT equivalent to filtering the array first,
+      // because we will be modifying materialsNeeded during execution
+      if (materialsNeeded[item.id] != null) {
+        const remaining = Math.max(
+          materialsNeeded[item.id] - (stock[item.id] ?? 0),
+          0
+        );
+        if (remaining > 0 && crafting[item.id]) {
+          const itemBeingCrafted: Item =
+            itemsJson[item.id as keyof typeof itemsJson];
+          const { ingredients, yield: itemYield } = itemBeingCrafted;
+          if (ingredients != null) {
+            const multiplier = Math.ceil(remaining / (itemYield ?? 1));
+            ingredients.forEach((ingr) => {
+              ingredientToCraftedItemsMapping[ingr.id] = [
+                ...(ingredientToCraftedItemsMapping[ingr.id] ?? []),
+                item.id,
+              ];
+              materialsNeeded[ingr.id] =
+                (materialsNeeded[ingr.id] ?? 0) + ingr.quantity * multiplier;
+            });
+          }
         }
       }
     });
