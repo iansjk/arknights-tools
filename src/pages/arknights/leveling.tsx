@@ -155,216 +155,229 @@ const Leveling: NextPage = () => {
 
   return (
     <Layout page="/leveling">
-      <Grid container spacing={2} sx={{ m: "auto", maxWidth: "800px" }}>
-        <Grid item xs={12}>
-          <OperatorSearch value={operator} onChange={handleChange} />
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          container
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Grid item xs={12} sm={5}>
-            <Paper elevation={3} component="section" sx={sectionStyle}>
-              <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
-                Start point
+      <Box display="flex" justifyContent="center">
+        <Grid container spacing={2} sx={{ maxWidth: "800px" }}>
+          <Grid item xs={12}>
+            <OperatorSearch value={operator} onChange={handleChange} />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            container
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Grid item xs={12} sm={5}>
+              <Paper elevation={3} component="section" sx={sectionStyle}>
+                <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
+                  Start point
+                </Typography>
+                <Box display="flex" flexDirection="row">
+                  <OperatorImage
+                    operator={operator}
+                    eliteLevel={startingElite}
+                  />
+                  <div>
+                    <FormControl
+                      size="small"
+                      fullWidth
+                      sx={{
+                        mb: 2,
+                      }}
+                    >
+                      <InputLabel htmlFor="starting-elite">
+                        Starting elite
+                      </InputLabel>
+                      <Select<number>
+                        disabled={!operator}
+                        native
+                        value={startingElite}
+                        label="Starting elite"
+                        onChange={handleChangeStartingElite}
+                        inputProps={{
+                          name: "starting-elite",
+                          id: "starting-elite",
+                        }}
+                      >
+                        <option value={0}>Elite 0</option>
+                        {Array(maxElite(operator?.rarity))
+                          .fill(0)
+                          .map((_, i) => (
+                            <option key={i + 1} value={i + 1}>
+                              Elite {i + 1}
+                            </option>
+                          ))}
+                      </Select>
+                    </FormControl>
+                    <ValidatedTextField
+                      size="small"
+                      fullWidth
+                      disabled={!operator}
+                      id="starting-level"
+                      label="Starting level"
+                      type="numeric"
+                      defaultValue={startingLevel}
+                      onFocus={(e) => e.target.select()}
+                      onChange={(e) =>
+                        setStartingLevel(parseInt(e.target.value, 10))
+                      }
+                      revalidateOn={[startingElite]}
+                      validator={(value) => {
+                        if (!operator) {
+                          return true;
+                        }
+                        const numericValue = parseInt(value, 10);
+                        return (
+                          !Number.isNaN(numericValue) &&
+                          numericValue >= 1 &&
+                          numericValue <= maxStartingLevel
+                        );
+                      }}
+                      helperText={startingLevelHelpText}
+                    />
+                  </div>
+                </Box>
+              </Paper>
+            </Grid>
+            <Grid item xs={2}>
+              {!isXSmallScreen ? (
+                <TrendingFlatIcon
+                  sx={{
+                    fontSize: "3rem",
+                    color: "rgba(255, 255, 255, 0.8)",
+                    stroke: "black",
+                    strokeWidth: "0.2px",
+                    width: "100%",
+                  }}
+                />
+              ) : (
+                <>&nbsp;</>
+              )}
+            </Grid>
+            <Grid item xs={12} sm={5}>
+              <Paper elevation={3} component="section" sx={sectionStyle}>
+                <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
+                  End point
+                </Typography>
+                <Box display="flex" flexDirection="row">
+                  <OperatorImage operator={operator} eliteLevel={targetElite} />
+                  <div>
+                    <FormControl size="small" fullWidth sx={{ mb: 2 }}>
+                      <InputLabel htmlFor="target-elite">
+                        Target elite
+                      </InputLabel>
+                      <Select
+                        disabled={!operator}
+                        native
+                        value={targetElite}
+                        label="Target elite"
+                        onChange={(e) => {
+                          setTargetElite(
+                            parseInt(e.target.value as string, 10)
+                          );
+                        }}
+                        inputProps={{
+                          name: "target-elite",
+                          id: "target-elite",
+                        }}
+                      >
+                        <option value={0}>Elite 0</option>
+                        {Array(maxElite(operator?.rarity))
+                          .fill(0)
+                          .map((_, i) => (
+                            <option key={i + 1} value={i + 1}>
+                              Elite {i + 1}
+                            </option>
+                          ))}
+                      </Select>
+                    </FormControl>
+                    <ValidatedTextField
+                      size="small"
+                      fullWidth
+                      disabled={!operator}
+                      id="target-level"
+                      label="Target level"
+                      type="numeric"
+                      defaultValue={targetLevel}
+                      onFocus={(e) => e.target.select()}
+                      onChange={(e) =>
+                        setTargetLevel(parseInt(e.target.value, 10))
+                      }
+                      revalidateOn={[targetElite]}
+                      validator={(value) => {
+                        if (!operator) {
+                          return true;
+                        }
+                        const numericValue = parseInt(value, 10);
+                        return (
+                          !Number.isNaN(numericValue) &&
+                          numericValue >= 1 &&
+                          numericValue <= maxTargetLevel
+                        );
+                      }}
+                      helperText={targetLevelHelpText}
+                    />
+                  </div>
+                </Box>
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper
+              elevation={3}
+              component="section"
+              sx={{ px: 2, pt: 2, pb: 3 }}
+            >
+              <Typography component="h3" variant="h5" gutterBottom>
+                Costs
               </Typography>
-              <Box display="flex" flexDirection="row">
-                <OperatorImage operator={operator} eliteLevel={startingElite} />
-                <div>
-                  <FormControl
-                    size="small"
-                    fullWidth
+              <Box component="ul" sx={{ m: 0, p: 0, listStyle: "none" }}>
+                <Typography variant="body1" component="li">
+                  Total EXP cost:{" "}
+                  <span>
+                    <strong>{exp.toLocaleString()}</strong> EXP
+                  </span>
+                </Typography>
+                <Typography variant="body1" component="li" sx={{ mt: 1 }}>
+                  Total LMD cost:{" "}
+                  <span>
+                    <strong data-cy="lmd" data-lmd={lmd}>
+                      {lmd.toLocaleString()}
+                    </strong>{" "}
+                    <LmdIcon />
+                  </span>
+                  <Box
+                    component="ul"
                     sx={{
-                      mb: 2,
+                      mt: 1,
+                      "& > li": { display: "list-item", listStyle: "disc" },
+                      "& > li ~ li": { mt: 1 },
                     }}
                   >
-                    <InputLabel htmlFor="starting-elite">
-                      Starting elite
-                    </InputLabel>
-                    <Select<number>
-                      disabled={!operator}
-                      native
-                      value={startingElite}
-                      label="Starting elite"
-                      onChange={handleChangeStartingElite}
-                      inputProps={{
-                        name: "starting-elite",
-                        id: "starting-elite",
-                      }}
-                    >
-                      <option value={0}>Elite 0</option>
-                      {Array(maxElite(operator?.rarity))
-                        .fill(0)
-                        .map((_, i) => (
-                          <option key={i + 1} value={i + 1}>
-                            Elite {i + 1}
-                          </option>
-                        ))}
-                    </Select>
-                  </FormControl>
-                  <ValidatedTextField
-                    size="small"
-                    fullWidth
-                    disabled={!operator}
-                    id="starting-level"
-                    label="Starting level"
-                    type="numeric"
-                    defaultValue={startingLevel}
-                    onFocus={(e) => e.target.select()}
-                    onChange={(e) =>
-                      setStartingLevel(parseInt(e.target.value, 10))
-                    }
-                    revalidateOn={[startingElite]}
-                    validator={(value) => {
-                      if (!operator) {
-                        return true;
-                      }
-                      const numericValue = parseInt(value, 10);
-                      return (
-                        !Number.isNaN(numericValue) &&
-                        numericValue >= 1 &&
-                        numericValue <= maxStartingLevel
-                      );
-                    }}
-                    helperText={startingLevelHelpText}
-                  />
-                </div>
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xs={2}>
-            {!isXSmallScreen ? (
-              <TrendingFlatIcon
-                sx={{
-                  fontSize: "3rem",
-                  color: "rgba(255, 255, 255, 0.8)",
-                  stroke: "black",
-                  strokeWidth: "0.2px",
-                  width: "100%",
-                }}
-              />
-            ) : (
-              <>&nbsp;</>
-            )}
-          </Grid>
-          <Grid item xs={12} sm={5}>
-            <Paper elevation={3} component="section" sx={sectionStyle}>
-              <Typography component="h3" variant="h5" sx={{ mb: 2 }}>
-                End point
-              </Typography>
-              <Box display="flex" flexDirection="row">
-                <OperatorImage operator={operator} eliteLevel={targetElite} />
-                <div>
-                  <FormControl size="small" fullWidth sx={{ mb: 2 }}>
-                    <InputLabel htmlFor="target-elite">Target elite</InputLabel>
-                    <Select
-                      disabled={!operator}
-                      native
-                      value={targetElite}
-                      label="Target elite"
-                      onChange={(e) => {
-                        setTargetElite(parseInt(e.target.value as string, 10));
-                      }}
-                      inputProps={{
-                        name: "target-elite",
-                        id: "target-elite",
-                      }}
-                    >
-                      <option value={0}>Elite 0</option>
-                      {Array(maxElite(operator?.rarity))
-                        .fill(0)
-                        .map((_, i) => (
-                          <option key={i + 1} value={i + 1}>
-                            Elite {i + 1}
-                          </option>
-                        ))}
-                    </Select>
-                  </FormControl>
-                  <ValidatedTextField
-                    size="small"
-                    fullWidth
-                    disabled={!operator}
-                    id="target-level"
-                    label="Target level"
-                    type="numeric"
-                    defaultValue={targetLevel}
-                    onFocus={(e) => e.target.select()}
-                    onChange={(e) =>
-                      setTargetLevel(parseInt(e.target.value, 10))
-                    }
-                    revalidateOn={[targetElite]}
-                    validator={(value) => {
-                      if (!operator) {
-                        return true;
-                      }
-                      const numericValue = parseInt(value, 10);
-                      return (
-                        !Number.isNaN(numericValue) &&
-                        numericValue >= 1 &&
-                        numericValue <= maxTargetLevel
-                      );
-                    }}
-                    helperText={targetLevelHelpText}
-                  />
-                </div>
+                    <Typography variant="body1" component="li">
+                      LMD cost for leveling:{" "}
+                      <span>
+                        <span
+                          data-cy="levelingLmd"
+                          data-leveling-lmd={levelingLmd}
+                        >
+                          {levelingLmd.toLocaleString()}
+                        </span>{" "}
+                      </span>
+                    </Typography>
+                    <Typography variant="body1" component="li">
+                      LMD cost for elite promotions:{" "}
+                      <span>
+                        <span>{eliteLmd.toLocaleString()}</span> <LmdIcon />
+                      </span>
+                    </Typography>
+                  </Box>
+                </Typography>
               </Box>
             </Paper>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <Paper elevation={3} component="section" sx={{ px: 2, pt: 2, pb: 3 }}>
-            <Typography component="h3" variant="h5" gutterBottom>
-              Costs
-            </Typography>
-            <Box component="ul" sx={{ m: 0, p: 0, listStyle: "none" }}>
-              <Typography variant="body1" component="li">
-                Total EXP cost:{" "}
-                <span>
-                  <strong>{exp.toLocaleString()}</strong> EXP
-                </span>
-              </Typography>
-              <Typography variant="body1" component="li" sx={{ mt: 1 }}>
-                Total LMD cost:{" "}
-                <span>
-                  <strong data-cy="lmd" data-lmd={lmd}>
-                    {lmd.toLocaleString()}
-                  </strong>{" "}
-                  <LmdIcon />
-                </span>
-                <Box
-                  component="ul"
-                  sx={{
-                    mt: 1,
-                    "& > li": { display: "list-item", listStyle: "disc" },
-                    "& > li ~ li": { mt: 1 },
-                  }}
-                >
-                  <Typography variant="body1" component="li">
-                    LMD cost for leveling:{" "}
-                    <span>
-                      <span
-                        data-cy="levelingLmd"
-                        data-leveling-lmd={levelingLmd}
-                      >
-                        {levelingLmd.toLocaleString()}
-                      </span>{" "}
-                    </span>
-                  </Typography>
-                  <Typography variant="body1" component="li">
-                    LMD cost for elite promotions:{" "}
-                    <span>
-                      <span>{eliteLmd.toLocaleString()}</span> <LmdIcon />
-                    </span>
-                  </Typography>
-                </Box>
-              </Typography>
-            </Box>
-          </Paper>
-        </Grid>
-      </Grid>
+      </Box>
     </Layout>
   );
 };
