@@ -232,7 +232,10 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       if (sortCompletedToBottom) {
         return (
           (neededA <= stock[itemIdA] ? 1 : 0) -
-            (neededB <= stock[itemIdB] ? 1 : 0) || compareBySortId
+            (neededB <= stock[itemIdB] ? 1 : 0) ||
+          (canCompleteByCrafting[itemIdA] ? 1 : 0) -
+            (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
+          compareBySortId
         );
       }
       return compareBySortId;
