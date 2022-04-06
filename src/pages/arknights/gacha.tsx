@@ -1,4 +1,5 @@
 import {
+  Box,
   Divider,
   FormControl,
   Grid,
@@ -157,159 +158,161 @@ const Gacha: NextPage = () => {
 
   return (
     <Layout page="/gacha">
-      <Grid container spacing={2} sx={{ m: "auto", maxWidth: "800px" }}>
-        <Grid item xs={6} sm={3}>
-          <ValidatedTextField
-            fullWidth
-            label="Number of pulls"
-            type="number"
-            defaultValue="0"
-            name="pulls"
-            helperText={`Max ${MAX_PULL_COUNT}`}
-            onFocus={handleFocus}
-            onChange={handleTextInputChage}
-            validator={(value) => {
-              const numericValue = parseInt(value, 10);
-              return (
-                !Number.isNaN(numericValue) &&
-                numericValue >= 0 &&
-                numericValue <= MAX_PULL_COUNT
-              );
-            }}
-          />
-        </Grid>
-
-        <Grid item xs={6} sm={3}>
-          <ValidatedTextField
-            fullWidth
-            label="Initial pity"
-            type="number"
-            defaultValue="0"
-            name="pity"
-            helperText="Between 0 and 98"
-            onFocus={handleFocus}
-            onChange={handleTextInputChage}
-            validator={(value) => {
-              const numericValue = parseInt(value, 10);
-              return (
-                !Number.isNaN(numericValue) &&
-                numericValue >= 0 &&
-                numericValue <= 98
-              );
-            }}
-          />
-        </Grid>
-
-        <Grid item xs={12} sm={6}>
-          <FormControl fullWidth>
-            <InputLabel htmlFor="banner-type">Banner type</InputLabel>
-            <Select
-              native
-              label="Banner type"
-              inputProps={{
-                name: "banner-type",
-                id: "banner-type",
+      <Box display="flex" justifyContent="center">
+        <Grid container spacing={2} sx={{ maxWidth: "800px" }}>
+          <Grid item xs={6} sm={3}>
+            <ValidatedTextField
+              fullWidth
+              label="Number of pulls"
+              type="number"
+              defaultValue="0"
+              name="pulls"
+              helperText={`Max ${MAX_PULL_COUNT}`}
+              onFocus={handleFocus}
+              onChange={handleTextInputChage}
+              validator={(value) => {
+                const numericValue = parseInt(value, 10);
+                return (
+                  !Number.isNaN(numericValue) &&
+                  numericValue >= 0 &&
+                  numericValue <= MAX_PULL_COUNT
+                );
               }}
-              onChange={handleSelectChange}
-            >
-              <option value="event">Event (one rate-up 6⭐️, 50%)</option>
-              <option value="standard">
-                Standard (two rate-up 6⭐️, each 25%)
-              </option>
-              <option value="limited">
-                Limited (two rate-up 6⭐️, each 35%)
-              </option>
-            </Select>
-          </FormControl>
-        </Grid>
+            />
+          </Grid>
 
-        <Grid item xs={12}>
-          <Paper
-            elevation={3}
-            sx={{
-              p: [2, 2, 3, 3],
-            }}
-          >
-            <Typography variant="h6" component="h3" gutterBottom>
-              Probabilities
-            </Typography>
-            <Grid container alignItems="center">
-              <Grid item xs={8}>
-                <Typography variant="body1">
-                  {!isXSmallScreen && "Chance of obtaining "}
-                  <strong>
-                    at least 1{bannerType !== "event" && " of any"}
-                  </strong>{" "}
-                  rate-up:
-                </Typography>
+          <Grid item xs={6} sm={3}>
+            <ValidatedTextField
+              fullWidth
+              label="Initial pity"
+              type="number"
+              defaultValue="0"
+              name="pity"
+              helperText="Between 0 and 98"
+              onFocus={handleFocus}
+              onChange={handleTextInputChage}
+              validator={(value) => {
+                const numericValue = parseInt(value, 10);
+                return (
+                  !Number.isNaN(numericValue) &&
+                  numericValue >= 0 &&
+                  numericValue <= 98
+                );
+              }}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel htmlFor="banner-type">Banner type</InputLabel>
+              <Select
+                native
+                label="Banner type"
+                inputProps={{
+                  name: "banner-type",
+                  id: "banner-type",
+                }}
+                onChange={handleSelectChange}
+              >
+                <option value="event">Event (one rate-up 6⭐️, 50%)</option>
+                <option value="standard">
+                  Standard (two rate-up 6⭐️, each 25%)
+                </option>
+                <option value="limited">
+                  Limited (two rate-up 6⭐️, each 35%)
+                </option>
+              </Select>
+            </FormControl>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Paper
+              elevation={3}
+              sx={{
+                p: [2, 2, 3, 3],
+              }}
+            >
+              <Typography variant="h6" component="h3" gutterBottom>
+                Probabilities
+              </Typography>
+              <Grid container alignItems="center">
+                <Grid item xs={8}>
+                  <Typography variant="body1">
+                    {!isXSmallScreen && "Chance of obtaining "}
+                    <strong>
+                      at least 1{bannerType !== "event" && " of any"}
+                    </strong>{" "}
+                    rate-up:
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="h6" sx={{ pl: 2 }}>
+                    {toPercentage(1 - finalOdds[0][0])}
+                  </Typography>
+                </Grid>
+                {(bannerType === "standard" || bannerType === "limited") && (
+                  <>
+                    <Grid item xs={8}>
+                      <Typography variant="body1">
+                        {!isXSmallScreen && "Chance of obtaining "}
+                        <strong>at least 1 of a specific</strong> rate-up:
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="h6" sx={{ pl: 2 }}>
+                        {toPercentage(1 - finalOdds[0].reduce((a, b) => a + b))}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={8}>
+                      <Typography variant="body1">
+                        {!isXSmallScreen && "Chance of obtaining "}
+                        <strong>at least 1 of each</strong> rate-up:
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="h6" sx={{ pl: 2 }}>
+                        {toPercentage(chanceOneOfEach(finalOdds))}
+                      </Typography>
+                    </Grid>
+                  </>
+                )}
               </Grid>
-              <Grid item>
-                <Typography variant="h6" sx={{ pl: 2 }}>
-                  {toPercentage(1 - finalOdds[0][0])}
-                </Typography>
+              <Divider sx={{ mt: 1, mb: 2 }} />
+              <Grid container alignItems="center" sx={{ mt: 2 }}>
+                {[...Array(7).keys()].map((i) => (
+                  <React.Fragment key={i}>
+                    <Grid item xs={8}>
+                      <Typography variant="body1">
+                        {!isXSmallScreen && "Chance of obtaining "}
+                        <strong>
+                          {i === 6 ? "6 or more" : `exactly ${i}`}
+                          {bannerType !== "event" && " of any"}
+                        </strong>{" "}
+                        rate-up
+                        {i !== 1 && "s"}:
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Typography variant="h6" sx={{ pl: 2 }}>
+                        {toPercentage(
+                          bannerType === "event"
+                            ? finalOdds[i][0]
+                            : chanceMultiRateups(finalOdds, i)
+                        )}
+                      </Typography>
+                    </Grid>
+                  </React.Fragment>
+                ))}
               </Grid>
-              {(bannerType === "standard" || bannerType === "limited") && (
-                <>
-                  <Grid item xs={8}>
-                    <Typography variant="body1">
-                      {!isXSmallScreen && "Chance of obtaining "}
-                      <strong>at least 1 of a specific</strong> rate-up:
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="h6" sx={{ pl: 2 }}>
-                      {toPercentage(1 - finalOdds[0].reduce((a, b) => a + b))}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={8}>
-                    <Typography variant="body1">
-                      {!isXSmallScreen && "Chance of obtaining "}
-                      <strong>at least 1 of each</strong> rate-up:
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="h6" sx={{ pl: 2 }}>
-                      {toPercentage(chanceOneOfEach(finalOdds))}
-                    </Typography>
-                  </Grid>
-                </>
-              )}
-            </Grid>
-            <Divider sx={{ mt: 1, mb: 2 }} />
-            <Grid container alignItems="center" sx={{ mt: 2 }}>
-              {[...Array(7).keys()].map((i) => (
-                <React.Fragment key={i}>
-                  <Grid item xs={8}>
-                    <Typography variant="body1">
-                      {!isXSmallScreen && "Chance of obtaining "}
-                      <strong>
-                        {i === 6 ? "6 or more" : `exactly ${i}`}
-                        {bannerType !== "event" && " of any"}
-                      </strong>{" "}
-                      rate-up
-                      {i !== 1 && "s"}:
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <Typography variant="h6" sx={{ pl: 2 }}>
-                      {toPercentage(
-                        bannerType === "event"
-                          ? finalOdds[i][0]
-                          : chanceMultiRateups(finalOdds, i)
-                      )}
-                    </Typography>
-                  </Grid>
-                </React.Fragment>
-              ))}
-            </Grid>
-          </Paper>
-          {bannerType === "limited" && (
-            <Typography variant="caption" sx={{ display: "block", mt: 2 }}>
-              * Spark system is not factored into these probabilities
-            </Typography>
-          )}
+            </Paper>
+            {bannerType === "limited" && (
+              <Typography variant="caption" sx={{ display: "block", mt: 2 }}>
+                * Spark system is not factored into these probabilities
+              </Typography>
+            )}
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Layout>
   );
 };
