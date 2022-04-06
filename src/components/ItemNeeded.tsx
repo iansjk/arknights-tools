@@ -113,7 +113,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
             }}
           />
         )}
-        {isCrafting && canCompleteByCrafting && (
+        {!isComplete && isCrafting && canCompleteByCrafting && (
           <Tooltip arrow title="Can be completed by crafting">
             <Box
               alignSelf="center"
