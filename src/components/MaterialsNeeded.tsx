@@ -53,6 +53,9 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM
     )
   );
+  const hideIncrementDecrementButtons = useAppSelector((state) =>
+    selectPreference(state, UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS)
+  );
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [popoverItemId, setPopoverItemId] = useState<string | null>(null);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -129,6 +132,15 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
       })
     );
   }, [dispatch, sortCompletedToBottom]);
+
+  const handleToggleHideIncrementDecrementButtons = useCallback(() => {
+    dispatch(
+      setPreference({
+        preference: UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS,
+        value: !hideIncrementDecrementButtons,
+      })
+    );
+  }, [dispatch, hideIncrementDecrementButtons]);
 
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
@@ -310,6 +322,16 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             )}
             <ListItemText inset={!sortCompletedToBottom}>
               Sort completed items to bottom
+            </ListItemText>
+          </MenuItem>
+          <MenuItem onClick={handleToggleHideIncrementDecrementButtons}>
+            {hideIncrementDecrementButtons && (
+              <ListItemIcon>
+                <CheckIcon />
+              </ListItemIcon>
+            )}
+            <ListItemText inset={!hideIncrementDecrementButtons}>
+              Hide increment/decrement buttons
             </ListItemText>
           </MenuItem>
           <Divider />

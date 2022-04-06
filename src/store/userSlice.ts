@@ -4,6 +4,7 @@ import type { RootState } from "./store";
 
 export enum UserPreference {
   PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM = "PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM",
+  HIDE_INCREMENT_DECREMENT_BUTTONS = "SHOW_INCREMENT_DECREMENT_BUTTONS",
 }
 
 export interface UserState {
