@@ -3,6 +3,7 @@ import {
   Autocomplete,
   autocompleteClasses,
   Box,
+  createFilterOptions,
   InputAdornment,
   Popper,
   styled,
@@ -31,8 +32,19 @@ const OperatorSearch: React.VFC<Props> = (props) => {
     []
   );
 
+  const filterOptions = useMemo(
+    () =>
+      createFilterOptions<Operator>({
+        matchFrom: "any",
+        ignoreCase: true,
+        ignoreAccents: true,
+        stringify: (option) => option.name.replace(/['"]/g, ""),
+      }),
+    []
+  );
+
   return (
-    <Autocomplete
+    <Autocomplete<Operator>
       autoComplete
       autoHighlight
       value={value}
@@ -76,14 +88,7 @@ const OperatorSearch: React.VFC<Props> = (props) => {
       }}
       renderOption={(props, option) => [props, option]}
       disableListWrap
-      filterOptions={(options, state) => {
-        return options.filter((op) =>
-          op.name
-            .toLowerCase()
-            .replace(/['"]/g, "")
-            .startsWith(state.inputValue)
-        );
-      }}
+      filterOptions={filterOptions}
       sx={{
         flexGrow: 1,
       }}
