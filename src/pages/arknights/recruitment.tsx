@@ -109,7 +109,6 @@ const Recruitment = ({
     isOpen && popperRef.current != null
       ? popperRef.current.state.rects.popper.height
       : 0;
-  console.log("resultPaddingTop:", resultPaddingTop);
 
   return (
     <Layout page="/recruitment">
