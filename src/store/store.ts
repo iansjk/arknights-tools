@@ -13,6 +13,7 @@ import {
 import depotReducer from "./depotSlice";
 import goalsReducer from "./goalsSlice";
 import storage from "./storage";
+import userReducer from "./userSlice";
 
 const persistConfig = {
   key: "root",
@@ -25,6 +26,7 @@ const persistedReducer = persistReducer(
   combineReducers({
     depot: depotReducer,
     goals: goalsReducer,
+    user: userReducer,
   })
 );
 
