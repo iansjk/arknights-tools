@@ -5,10 +5,12 @@ import {
   Chip,
   SxProps,
   Theme,
+  Popper,
 } from "@mui/material";
+import { Instance } from "@popperjs/core";
 import { Combination } from "js-combinatorics";
 import { InferGetStaticPropsType } from "next";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
@@ -68,6 +70,8 @@ const Recruitment = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(true);
+  const popperRef = useRef<Instance>(null);
+  const rootRef = useRef(null);
 
   const activeTagCombinations = getTagCombinations(activeTags);
   const matchingOperators = useMemo(
@@ -102,6 +106,22 @@ const Recruitment = ({
     flexWrap: "wrap",
   };
 
+  useEffect(() => {
+    if (popperRef.current != null) {
+      console.log(popperRef.current.state);
+      console.log(popperRef.current.state.rects.popper.height);
+    }
+    if (rootRef.current != null) {
+      console.log(rootRef.current);
+    }
+  }, [popperRef, rootRef]);
+
+  const resultPaddingTop =
+    isOpen && popperRef.current != null
+      ? popperRef.current.state.rects.popper.height
+      : 0;
+  console.log("resultPaddingTop:", resultPaddingTop);
+
   return (
     <Layout page="/recruitment">
       <Autocomplete
@@ -119,63 +139,71 @@ const Recruitment = ({
           <TextField {...params} autoFocus label="Available recruitment tags" />
         )}
         onChange={handleTagsChanged}
+        PopperComponent={(props) => {
+          console.log("popperprops: ", props);
+          return <Popper {...props} ref={rootRef} popperRef={popperRef} />;
+        }}
       />
-      {matchingOperators
-        .sort(
-          (
-            { tags: tagSetA, operators: opSetA },
-            { tags: tagSetB, operators: opSetB }
-          ) =>
-            Math.min(...opSetB.map((op) => (op.rarity === 1 ? 4 : op.rarity))) -
+      <div style={{ paddingTop: resultPaddingTop }}>
+        {matchingOperators
+          .sort(
+            (
+              { tags: tagSetA, operators: opSetA },
+              { tags: tagSetB, operators: opSetB }
+            ) =>
               Math.min(
-                ...opSetA.map((op) => (op.rarity === 1 ? 4 : op.rarity))
-              ) || tagSetB.length - tagSetA.length
-        )
-        .map(({ tags, operators, guarantees }) => (
-          <Grid
-            container
-            key={tags.join(",")}
-            spacing={2}
-            sx={{
-              my: 2,
-              "& ~ &": {
-                pt: 2,
-                borderTop: "1px solid #4d4d4d",
-              },
-            }}
-          >
+                ...opSetB.map((op) => (op.rarity === 1 ? 4 : op.rarity))
+              ) -
+                Math.min(
+                  ...opSetA.map((op) => (op.rarity === 1 ? 4 : op.rarity))
+                ) || tagSetB.length - tagSetA.length
+          )
+          .map(({ tags, operators, guarantees }) => (
             <Grid
-              item
-              xs={12}
-              sm={3}
-              sx={[
-                chipContainerStyles,
-                {
-                  justifyContent: {
-                    xs: "center",
-                    sm: "flex-end",
-                  },
+              container
+              key={tags.join(",")}
+              spacing={2}
+              sx={{
+                my: 2,
+                "& ~ &": {
+                  pt: 2,
+                  borderTop: "1px solid #4d4d4d",
                 },
-              ]}
+              }}
             >
-              {guarantees.map((guaranteedRarity) => (
-                <Chip
-                  key={`guaranteed${guaranteedRarity}`}
-                  label={`${guaranteedRarity}★`}
-                  sx={{ background: "#fff", color: "#000" }}
-                />
-              ))}
-              {tags.map((tag) => (
-                <Chip key={tag} label={tag} />
-              ))}
+              <Grid
+                item
+                xs={12}
+                sm={3}
+                sx={[
+                  chipContainerStyles,
+                  {
+                    justifyContent: {
+                      xs: "center",
+                      sm: "flex-end",
+                    },
+                  },
+                ]}
+              >
+                {guarantees.map((guaranteedRarity) => (
+                  <Chip
+                    key={`guaranteed${guaranteedRarity}`}
+                    label={`${guaranteedRarity}★`}
+                    sx={{ background: "#fff", color: "#000" }}
+                  />
+                ))}
+                {tags.map((tag) => (
+                  <Chip key={tag} label={tag} />
+                ))}
+              </Grid>
+              <Grid item xs={12} sm={9} sx={chipContainerStyles}>
+                {operators.map((operator) => (
+                  <RecruitableOperatorChip key={operator.id} {...operator} />
+                ))}
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={9} sx={chipContainerStyles}>
-              {operators.map((operator) => (
-                <RecruitableOperatorChip key={operator.id} {...operator} />
-              ))}
-            </Grid>
-          </Grid>
-        ))}
+          ))}
+      </div>
     </Layout>
   );
 };
