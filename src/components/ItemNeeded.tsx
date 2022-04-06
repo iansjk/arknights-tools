@@ -15,6 +15,8 @@ import React, { ElementType, useEffect, useState } from "react";
 
 import items from "../../data/items.json";
 import * as Output from "../../scripts/output-types";
+import { useAppSelector } from "../store/hooks";
+import { selectPreference, UserPreference } from "../store/userSlice";
 
 import CraftingIcon from "./CraftingIcon";
 import ItemStack, { ItemStackProps } from "./ItemStack";
@@ -51,6 +53,9 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
   const isCraftable = Boolean(item.ingredients);
   const isComplete = owned >= quantity;
   const [rawValue, setRawValue] = useState<string>("");
+  const hideIncrementDecrementButtons = useAppSelector((state) =>
+    selectPreference(state, UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS)
+  );
 
   useEffect(() => {
     setRawValue(`${owned}`);
@@ -97,7 +102,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
           {...rest}
           sx={
             isComplete || (isCrafting && canCompleteByCrafting)
-              ? { opacity: 0.5 }
+              ? { opacity: 0.4 }
               : undefined
           }
         />
@@ -143,38 +148,42 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
             flexGrow: 1,
           },
         }}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start" sx={{ mr: 0 }}>
-              <IconButton
-                size="small"
-                aria-label="Remove 1 from owned amount"
-                edge="start"
-                disabled={owned === 0}
-                onClick={() => onDecrement(itemId)}
-              >
-                <RemoveCircleIcon />
-              </IconButton>
-            </InputAdornment>
-          ),
-          endAdornment: (
-            <InputAdornment position="end" sx={{ ml: 0 }}>
-              <IconButton
-                size="small"
-                aria-label="Add 1 to owned amount"
-                edge="end"
-                onClick={() => onIncrement(itemId)}
-              >
-                <AddCircleIcon />
-              </IconButton>
-            </InputAdornment>
-          ),
-          sx: {
-            px: "5px",
-            borderBottomLeftRadius: 0,
-            borderBottomRightRadius: 0,
-          },
-        }}
+        InputProps={
+          hideIncrementDecrementButtons
+            ? {}
+            : {
+                startAdornment: (
+                  <InputAdornment position="start" sx={{ mr: 0 }}>
+                    <IconButton
+                      size="small"
+                      aria-label="Remove 1 from owned amount"
+                      edge="start"
+                      disabled={owned === 0}
+                      onClick={() => onDecrement(itemId)}
+                    >
+                      <RemoveCircleIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+                endAdornment: (
+                  <InputAdornment position="end" sx={{ ml: 0 }}>
+                    <IconButton
+                      size="small"
+                      aria-label="Add 1 to owned amount"
+                      edge="end"
+                      onClick={() => onIncrement(itemId)}
+                    >
+                      <AddCircleIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+                sx: {
+                  px: "5px",
+                  borderBottomLeftRadius: 0,
+                  borderBottomRightRadius: 0,
+                },
+              }
+        }
       />
       <Box minWidth={126} height={31}>
         {isCraftable ? (

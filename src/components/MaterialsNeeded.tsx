@@ -1,5 +1,16 @@
-import RotateLeftIcon from "@mui/icons-material/RotateLeft";
-import { Box, Button, Divider, Paper, Typography } from "@mui/material";
+import CheckIcon from "@mui/icons-material/Check";
+import SettingsIcon from "@mui/icons-material/Settings";
+import {
+  Box,
+  Divider,
+  IconButton,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Paper,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useState } from "react";
 
@@ -7,7 +18,8 @@ import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
 import getGoalIngredients from "../getGoalIngredients";
 import {
-  resetAll,
+  resetStock,
+  resetCrafting,
   craftOneWithStock,
   subtractStock,
   DepotState,
@@ -19,6 +31,11 @@ import {
 } from "../store/depotSlice";
 import { selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import {
+  selectPreference,
+  togglePreference,
+  UserPreference,
+} from "../store/userSlice";
 
 import ItemInfoPopover from "./ItemInfoPopover";
 import ItemNeeded from "./ItemNeeded";
@@ -30,8 +47,19 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const stock = useAppSelector(selectStock);
   const crafting = useAppSelector(selectCrafting);
   const goals = useAppSelector(selectGoals);
+  const sortCompletedToBottom = useAppSelector((state) =>
+    selectPreference(
+      state,
+      UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM
+    )
+  );
+  const hideIncrementDecrementButtons = useAppSelector((state) =>
+    selectPreference(state, UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS)
+  );
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [popoverItemId, setPopoverItemId] = useState<string | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const isSettingsMenuOpen = Boolean(anchorEl);
 
   const handleChange = useCallback(
     (itemId: string, newQuantity: number) => {
@@ -68,11 +96,18 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
     [dispatch]
   );
 
-  const handleReset = useCallback(() => {
-    dispatch(resetAll());
-  }, [dispatch]);
+  const handleSettingsButtonClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(e.currentTarget);
+    },
+    []
+  );
 
-  const handleClick = useCallback((itemId: string) => {
+  const handleSettingsMenuClose = useCallback(() => {
+    setAnchorEl(null);
+  }, []);
+
+  const handleItemClick = useCallback((itemId: string) => {
     setPopoverItemId(itemId);
     setPopoverOpen(true);
   }, []);
@@ -80,6 +115,21 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const handlePopoverClose = useCallback(() => {
     setPopoverOpen(false);
   }, []);
+
+  const handleResetCrafting = useCallback(() => {
+    dispatch(resetCrafting());
+  }, [dispatch]);
+
+  const handleResetStock = useCallback(() => {
+    dispatch(resetStock());
+  }, [dispatch]);
+
+  const handleTogglePreference = useCallback(
+    (preference: UserPreference) => () => {
+      dispatch(togglePreference(preference));
+    },
+    [dispatch]
+  );
 
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
@@ -175,6 +225,24 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const lmdCost = materialsNeeded[LMD_ITEM_ID] ?? 0;
   delete materialsNeeded[LMD_ITEM_ID];
 
+  const sortedMaterialsNeeded = Object.entries(materialsNeeded).sort(
+    ([itemIdA, neededA], [itemIdB, neededB]) => {
+      const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
+      const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
+      const compareBySortId = itemA.sortId - itemB.sortId;
+      if (sortCompletedToBottom) {
+        return (
+          (neededA <= stock[itemIdA] ? 1 : 0) -
+            (neededB <= stock[itemIdB] ? 1 : 0) ||
+          (canCompleteByCrafting[itemIdA] ? 1 : 0) -
+            (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
+          compareBySortId
+        );
+      }
+      return compareBySortId;
+    }
+  );
+
   return (
     <Paper component="section" sx={{ p: 2 }}>
       <Box display="grid" gridTemplateColumns="1fr auto">
@@ -202,15 +270,73 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             </Box>
           </Typography>
         </div>
-        <Button
-          onClick={handleReset}
-          startIcon={<RotateLeftIcon />}
+        <IconButton
+          id="settings-button"
+          onClick={handleSettingsButtonClick}
           sx={{ alignSelf: "start", justifySelf: "end" }}
-          variant="outlined"
-          color="grey"
+          // variant="outlined"
+          aria-label="Settings"
+          aria-haspopup="true"
+          aria-expanded={isSettingsMenuOpen ? "true" : undefined}
+          aria-controls={isSettingsMenuOpen ? "settings-menu" : undefined}
         >
-          Reset
-        </Button>
+          <SettingsIcon />
+        </IconButton>
+        <Menu
+          id="settings-menu"
+          anchorEl={anchorEl}
+          open={isSettingsMenuOpen}
+          onClose={handleSettingsMenuClose}
+          MenuListProps={{
+            "aria-labelledby": "settings-button",
+          }}
+          hideBackdrop={false}
+          BackdropProps={{
+            invisible: false,
+          }}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right",
+          }}
+        >
+          <SettingsMenuItem
+            onClick={handleTogglePreference(
+              UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM
+            )}
+            checked={sortCompletedToBottom}
+          >
+            Sort completed items to bottom
+          </SettingsMenuItem>
+          <SettingsMenuItem
+            onClick={handleTogglePreference(
+              UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS
+            )}
+            checked={hideIncrementDecrementButtons}
+          >
+            Hide increment/decrement buttons
+          </SettingsMenuItem>
+          <Divider />
+          <MenuItem onClick={handleResetCrafting}>
+            <ListItemText
+              inset
+              sx={{ color: (theme) => theme.palette.error.light }}
+            >
+              Reset crafting states
+            </ListItemText>
+          </MenuItem>
+          <MenuItem onClick={handleResetStock}>
+            <ListItemText
+              inset
+              sx={{ color: (theme) => theme.palette.error.light }}
+            >
+              Reset stock
+            </ListItemText>
+          </MenuItem>
+        </Menu>
       </Box>
       <Box
         component="ul"
@@ -225,29 +351,23 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
         }}
       >
-        {Object.entries(materialsNeeded)
-          .sort(
-            ([a], [b]) =>
-              itemsJson[a as keyof typeof itemsJson].sortId -
-              itemsJson[b as keyof typeof itemsJson].sortId
-          )
-          .map(([itemId, needed]) => (
-            <ItemNeeded
-              key={itemId}
-              component="li"
-              itemId={itemId}
-              owned={stock[itemId] ?? 0}
-              quantity={needed}
-              canCompleteByCrafting={canCompleteByCrafting[itemId]}
-              isCrafting={crafting[itemId] ?? false}
-              onChange={handleChange}
-              onCraftOne={handleCraftOne}
-              onDecrement={handleDecrement}
-              onIncrement={handleIncrement}
-              onCraftingToggle={handleCraftingToggle}
-              onClick={handleClick}
-            />
-          ))}
+        {sortedMaterialsNeeded.map(([itemId, needed]) => (
+          <ItemNeeded
+            key={itemId}
+            component="li"
+            itemId={itemId}
+            owned={stock[itemId] ?? 0}
+            quantity={needed}
+            canCompleteByCrafting={canCompleteByCrafting[itemId]}
+            isCrafting={crafting[itemId] ?? false}
+            onChange={handleChange}
+            onCraftOne={handleCraftOne}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
+            onCraftingToggle={handleCraftingToggle}
+            onClick={handleItemClick}
+          />
+        ))}
       </Box>
       <ItemInfoPopover
         itemId={popoverItemId}
@@ -260,3 +380,24 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 });
 MaterialsNeeded.displayName = "MaterialsNeeded";
 export default MaterialsNeeded;
+
+const SettingsMenuItem: React.FC<{
+  onClick: () => void;
+  checked: boolean;
+}> = (props) => {
+  const { onClick, checked, children } = props;
+  return (
+    <MenuItem onClick={onClick}>
+      {checked ? (
+        <>
+          <ListItemIcon>
+            <CheckIcon />
+          </ListItemIcon>
+          {children}
+        </>
+      ) : (
+        <ListItemText inset>{children}</ListItemText>
+      )}
+    </MenuItem>
+  );
+};

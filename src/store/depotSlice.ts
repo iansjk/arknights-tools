@@ -70,8 +70,10 @@ export const depotSlice = createSlice({
           (state.stock[action.payload] ?? 0) + (itemYield ?? 1);
       }
     },
-    resetAll: (state) => {
+    resetStock: (state) => {
       state.stock = {};
+    },
+    resetCrafting: (state) => {
       state.crafting = {};
     },
   },
@@ -98,7 +100,8 @@ export const {
   setCrafting,
   toggleCrafting,
   craftOneWithStock,
-  resetAll,
+  resetStock,
+  resetCrafting,
 } = depotSlice.actions;
 
 export default depotSlice.reducer;
