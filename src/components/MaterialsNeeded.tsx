@@ -33,7 +33,7 @@ import { selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import {
   selectPreference,
-  setPreference,
+  togglePreference,
   UserPreference,
 } from "../store/userSlice";
 
@@ -124,23 +124,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
     dispatch(resetStock());
   }, [dispatch]);
 
-  const handleToggleSortCompletedToBottom = useCallback(() => {
-    dispatch(
-      setPreference({
-        preference: UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM,
-        value: !sortCompletedToBottom,
-      })
-    );
-  }, [dispatch, sortCompletedToBottom]);
-
-  const handleToggleHideIncrementDecrementButtons = useCallback(() => {
-    dispatch(
-      setPreference({
-        preference: UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS,
-        value: !hideIncrementDecrementButtons,
-      })
-    );
-  }, [dispatch, hideIncrementDecrementButtons]);
+  const handleTogglePreference = useCallback(
+    (preference: UserPreference) => () => {
+      dispatch(togglePreference(preference));
+    },
+    [dispatch]
+  );
 
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
@@ -314,26 +303,22 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             horizontal: "right",
           }}
         >
-          <MenuItem onClick={handleToggleSortCompletedToBottom}>
-            {sortCompletedToBottom && (
-              <ListItemIcon>
-                <CheckIcon />
-              </ListItemIcon>
+          <SettingsMenuItem
+            onClick={handleTogglePreference(
+              UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM
             )}
-            <ListItemText inset={!sortCompletedToBottom}>
-              Sort completed items to bottom
-            </ListItemText>
-          </MenuItem>
-          <MenuItem onClick={handleToggleHideIncrementDecrementButtons}>
-            {hideIncrementDecrementButtons && (
-              <ListItemIcon>
-                <CheckIcon />
-              </ListItemIcon>
+            checked={sortCompletedToBottom}
+          >
+            Sort completed items to bottom
+          </SettingsMenuItem>
+          <SettingsMenuItem
+            onClick={handleTogglePreference(
+              UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS
             )}
-            <ListItemText inset={!hideIncrementDecrementButtons}>
-              Hide increment/decrement buttons
-            </ListItemText>
-          </MenuItem>
+            checked={hideIncrementDecrementButtons}
+          >
+            Hide increment/decrement buttons
+          </SettingsMenuItem>
           <Divider />
           <MenuItem onClick={handleResetCrafting}>
             <ListItemText
@@ -395,3 +380,24 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 });
 MaterialsNeeded.displayName = "MaterialsNeeded";
 export default MaterialsNeeded;
+
+const SettingsMenuItem: React.FC<{
+  onClick: () => void;
+  checked: boolean;
+}> = (props) => {
+  const { onClick, checked, children } = props;
+  return (
+    <MenuItem onClick={onClick}>
+      {checked ? (
+        <>
+          <ListItemIcon>
+            <CheckIcon />
+          </ListItemIcon>
+          {children}
+        </>
+      ) : (
+        <ListItemText inset>{children}</ListItemText>
+      )}
+    </MenuItem>
+  );
+};

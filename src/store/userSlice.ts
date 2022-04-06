@@ -19,12 +19,8 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setPreference: (
-      state,
-      action: PayloadAction<{ preference: UserPreference; value: boolean }>
-    ) => {
-      const { preference, value } = action.payload;
-      state.preferences[preference] = value;
+    togglePreference: (state, action: PayloadAction<UserPreference>) => {
+      state.preferences[action.payload] = !state.preferences[action.payload];
     },
   },
 });
@@ -37,6 +33,6 @@ export const selectPreference = createSelector(
   (preferences, preferenceKey) => preferences[preferenceKey]
 );
 
-export const { setPreference } = userSlice.actions;
+export const { togglePreference } = userSlice.actions;
 
 export default userSlice.reducer;
