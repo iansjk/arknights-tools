@@ -16,7 +16,8 @@ import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
 import getGoalIngredients from "../getGoalIngredients";
 import {
-  resetAll,
+  resetStock,
+  resetCrafting,
   craftOneWithStock,
   subtractStock,
   DepotState,
@@ -98,6 +99,14 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const handlePopoverClose = useCallback(() => {
     setPopoverOpen(false);
   }, []);
+
+  const handleResetCrafting = useCallback(() => {
+    dispatch(resetCrafting());
+  }, [dispatch]);
+
+  const handleResetStock = useCallback(() => {
+    dispatch(resetStock());
+  }, [dispatch]);
 
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
@@ -257,7 +266,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             <ListItemText inset>Sort completed items to bottom</ListItemText>
           </MenuItem>
           <Divider />
-          <MenuItem>
+          <MenuItem onClick={handleResetCrafting}>
             <ListItemText
               inset
               sx={{ color: (theme) => theme.palette.error.light }}
@@ -265,7 +274,7 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
               Reset crafting states
             </ListItemText>
           </MenuItem>
-          <MenuItem>
+          <MenuItem onClick={handleResetStock}>
             <ListItemText
               inset
               sx={{ color: (theme) => theme.palette.error.light }}
