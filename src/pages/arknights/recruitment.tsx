@@ -10,7 +10,7 @@ import {
 import { Instance } from "@popperjs/core";
 import { Combination } from "js-combinatorics";
 import { InferGetStaticPropsType } from "next";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
@@ -71,7 +71,6 @@ const Recruitment = ({
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(true);
   const popperRef = useRef<Instance>(null);
-  const rootRef = useRef(null);
 
   const activeTagCombinations = getTagCombinations(activeTags);
   const matchingOperators = useMemo(
@@ -106,16 +105,6 @@ const Recruitment = ({
     flexWrap: "wrap",
   };
 
-  useEffect(() => {
-    if (popperRef.current != null) {
-      console.log(popperRef.current.state);
-      console.log(popperRef.current.state.rects.popper.height);
-    }
-    if (rootRef.current != null) {
-      console.log(rootRef.current);
-    }
-  }, [popperRef, rootRef]);
-
   const resultPaddingTop =
     isOpen && popperRef.current != null
       ? popperRef.current.state.rects.popper.height
@@ -139,10 +128,7 @@ const Recruitment = ({
           <TextField {...params} autoFocus label="Available recruitment tags" />
         )}
         onChange={handleTagsChanged}
-        PopperComponent={(props) => {
-          console.log("popperprops: ", props);
-          return <Popper {...props} ref={rootRef} popperRef={popperRef} />;
-        }}
+        PopperComponent={(props) => <Popper {...props} popperRef={popperRef} />}
       />
       <div style={{ paddingTop: resultPaddingTop }}>
         {matchingOperators
