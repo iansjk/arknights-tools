@@ -1,8 +1,10 @@
+import CheckIcon from "@mui/icons-material/Check";
 import SettingsIcon from "@mui/icons-material/Settings";
 import {
   Box,
   Divider,
   IconButton,
+  ListItemIcon,
   ListItemText,
   Menu,
   MenuItem,
@@ -29,6 +31,11 @@ import {
 } from "../store/depotSlice";
 import { selectGoals } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import {
+  selectPreference,
+  setPreference,
+  UserPreference,
+} from "../store/userSlice";
 
 import ItemInfoPopover from "./ItemInfoPopover";
 import ItemNeeded from "./ItemNeeded";
@@ -40,6 +47,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const stock = useAppSelector(selectStock);
   const crafting = useAppSelector(selectCrafting);
   const goals = useAppSelector(selectGoals);
+  const sortCompletedToBottom = useAppSelector((state) =>
+    selectPreference(
+      state,
+      UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM
+    )
+  );
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [popoverItemId, setPopoverItemId] = useState<string | null>(null);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
@@ -107,6 +120,15 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const handleResetStock = useCallback(() => {
     dispatch(resetStock());
   }, [dispatch]);
+
+  const handleToggleSortCompletedToBottom = useCallback(() => {
+    dispatch(
+      setPreference({
+        preference: UserPreference.PLANNER_SORT_COMPLETE_ITEMS_TO_BOTTOM,
+        value: !sortCompletedToBottom,
+      })
+    );
+  }, [dispatch, sortCompletedToBottom]);
 
   const materialsNeeded: DepotState["stock"] = {};
   // 1. populate the ingredients required for each goal
@@ -202,6 +224,21 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
   const lmdCost = materialsNeeded[LMD_ITEM_ID] ?? 0;
   delete materialsNeeded[LMD_ITEM_ID];
 
+  const sortedMaterialsNeeded = Object.entries(materialsNeeded).sort(
+    ([itemIdA, neededA], [itemIdB, neededB]) => {
+      const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
+      const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
+      const compareBySortId = itemA.sortId - itemB.sortId;
+      if (sortCompletedToBottom) {
+        return (
+          (neededA <= stock[itemIdA] ? 1 : 0) -
+            (neededB <= stock[itemIdB] ? 1 : 0) || compareBySortId
+        );
+      }
+      return compareBySortId;
+    }
+  );
+
   return (
     <Paper component="section" sx={{ p: 2 }}>
       <Box display="grid" gridTemplateColumns="1fr auto">
@@ -262,8 +299,15 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
             horizontal: "right",
           }}
         >
-          <MenuItem>
-            <ListItemText inset>Sort completed items to bottom</ListItemText>
+          <MenuItem onClick={handleToggleSortCompletedToBottom}>
+            {sortCompletedToBottom && (
+              <ListItemIcon>
+                <CheckIcon />
+              </ListItemIcon>
+            )}
+            <ListItemText inset={!sortCompletedToBottom}>
+              Sort completed items to bottom
+            </ListItemText>
           </MenuItem>
           <Divider />
           <MenuItem onClick={handleResetCrafting}>
@@ -297,29 +341,23 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
           gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
         }}
       >
-        {Object.entries(materialsNeeded)
-          .sort(
-            ([a], [b]) =>
-              itemsJson[a as keyof typeof itemsJson].sortId -
-              itemsJson[b as keyof typeof itemsJson].sortId
-          )
-          .map(([itemId, needed]) => (
-            <ItemNeeded
-              key={itemId}
-              component="li"
-              itemId={itemId}
-              owned={stock[itemId] ?? 0}
-              quantity={needed}
-              canCompleteByCrafting={canCompleteByCrafting[itemId]}
-              isCrafting={crafting[itemId] ?? false}
-              onChange={handleChange}
-              onCraftOne={handleCraftOne}
-              onDecrement={handleDecrement}
-              onIncrement={handleIncrement}
-              onCraftingToggle={handleCraftingToggle}
-              onClick={handleItemClick}
-            />
-          ))}
+        {sortedMaterialsNeeded.map(([itemId, needed]) => (
+          <ItemNeeded
+            key={itemId}
+            component="li"
+            itemId={itemId}
+            owned={stock[itemId] ?? 0}
+            quantity={needed}
+            canCompleteByCrafting={canCompleteByCrafting[itemId]}
+            isCrafting={crafting[itemId] ?? false}
+            onChange={handleChange}
+            onCraftOne={handleCraftOne}
+            onDecrement={handleDecrement}
+            onIncrement={handleIncrement}
+            onCraftingToggle={handleCraftingToggle}
+            onClick={handleItemClick}
+          />
+        ))}
       </Box>
       <ItemInfoPopover
         itemId={popoverItemId}
