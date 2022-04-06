@@ -97,7 +97,7 @@ const ItemNeeded: React.VFC<Props> = React.memo((props) => {
           {...rest}
           sx={
             isComplete || (isCrafting && canCompleteByCrafting)
-              ? { opacity: 0.5 }
+              ? { opacity: 0.4 }
               : undefined
           }
         />
