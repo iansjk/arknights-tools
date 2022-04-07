@@ -1,5 +1,13 @@
 import ClearAllIcon from "@mui/icons-material/ClearAll";
-import { Button, Paper, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography } from "@mui/material";
+import {
+  DragDropContext,
+  Draggable,
+  DraggableProvided,
+  Droppable,
+  DroppableProvided,
+  DropResult,
+} from "react-beautiful-dnd";
 
 import { completeGoal } from "../store/goalsActions";
 import {
@@ -7,6 +15,7 @@ import {
   clearAllGoals,
   deleteGoal,
   selectGoals,
+  reorderGoal,
 } from "../store/goalsSlice";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
@@ -26,6 +35,21 @@ const OperatorGoals: React.VFC = () => {
 
   const handleClearAll = () => {
     dispatch(clearAllGoals());
+  };
+
+  const handleDragEnd = (result: DropResult) => {
+    if (!result.destination) {
+      return;
+    }
+
+    const source = result.source;
+    const destination = result.destination;
+    dispatch(
+      reorderGoal({
+        oldIndex: source.index,
+        newIndex: destination.index,
+      })
+    );
   };
 
   return (
@@ -51,14 +75,32 @@ const OperatorGoals: React.VFC = () => {
         </Button>
       </Paper>
 
-      {goals.map((goal, i) => (
-        <PlannerGoalCard
-          key={i}
-          goal={goal}
-          onGoalDeleted={handleGoalDeleted}
-          onGoalCompleted={handleGoalCompleted}
-        />
-      ))}
+      <DragDropContext onDragEnd={handleDragEnd}>
+        <Droppable droppableId="goal-list">
+          {(provided: DroppableProvided) => (
+            <div {...provided.droppableProps} ref={provided.innerRef}>
+              <Box component="ul" sx={{ m: 0, p: 0 }}>
+                {goals.map((goal, i) => (
+                  <Draggable key={i} draggableId={`goal-${i}`} index={i}>
+                    {(provided: DraggableProvided) => (
+                      <PlannerGoalCard
+                        key={i}
+                        goal={goal}
+                        onGoalDeleted={handleGoalDeleted}
+                        onGoalCompleted={handleGoalCompleted}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        ref={provided.innerRef}
+                      />
+                    )}
+                  </Draggable>
+                ))}
+              </Box>
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
     </section>
   );
 };

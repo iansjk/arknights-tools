@@ -12,6 +12,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Image from "next/image";
+import React from "react";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
@@ -38,8 +39,8 @@ interface Props {
   onGoalCompleted: (goal: PlannerGoal) => void;
 }
 
-const PlannerGoalCard: React.VFC<Props> = (props) => {
-  const { goal, onGoalDeleted, onGoalCompleted } = props;
+const PlannerGoalCard = React.forwardRef<HTMLLIElement, Props>((props, ref) => {
+  const { goal, onGoalDeleted, onGoalCompleted, ...rest } = props;
   const theme = useTheme();
   const isXSScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isXLScreen = useMediaQuery(theme.breakpoints.up("xl"));
@@ -79,6 +80,8 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
         mb: 1,
         gridTemplateColumns: "1fr auto",
       }}
+      ref={ref}
+      {...rest}
     >
       <Paper
         sx={{
@@ -190,5 +193,6 @@ const PlannerGoalCard: React.VFC<Props> = (props) => {
       </ButtonGroup>
     </Paper>
   );
-};
+});
+PlannerGoalCard.displayName = "PlannerGoalCard";
 export default PlannerGoalCard;
