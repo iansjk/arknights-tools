@@ -122,7 +122,6 @@ const Recruitment = ({
   return (
     <Layout page="/recruitment">
       <Autocomplete
-        key="input"
         options={options}
         multiple
         autoHighlight
