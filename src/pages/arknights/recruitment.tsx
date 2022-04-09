@@ -10,7 +10,7 @@ import {
 import { Instance } from "@popperjs/core";
 import { Combination } from "js-combinatorics";
 import { InferGetStaticPropsType } from "next";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
@@ -69,7 +69,9 @@ const Recruitment = ({
   options,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputNode, setInputNode] = useState<HTMLInputElement | null>(null);
+  const [resultPaddingTop, setResultPaddingTop] = useState(0);
   const popperRef = useRef<Instance>(null);
 
   const activeTagCombinations = getTagCombinations(activeTags);
@@ -82,6 +84,18 @@ const Recruitment = ({
       ),
     [activeTagCombinations]
   );
+
+  useEffect(() => {
+    if (inputNode != null) {
+      inputNode.focus();
+    }
+  }, [inputNode]);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setResultPaddingTop(0);
+    }
+  }, [isOpen]);
 
   const handleTagsChanged = (
     _: unknown,
@@ -105,18 +119,13 @@ const Recruitment = ({
     flexWrap: "wrap",
   };
 
-  const resultPaddingTop =
-    isOpen && popperRef.current != null
-      ? popperRef.current.state.rects.popper.height
-      : 0;
-
   return (
     <Layout page="/recruitment">
       <Autocomplete
-        key="input"
         options={options}
         multiple
         autoHighlight
+        openOnFocus
         open={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
@@ -124,10 +133,29 @@ const Recruitment = ({
         getOptionLabel={(option) => option.value}
         disableCloseOnSelect
         renderInput={(params) => (
-          <TextField {...params} autoFocus label="Available recruitment tags" />
+          <TextField
+            {...params}
+            label="Available recruitment tags"
+            inputRef={setInputNode}
+          />
         )}
         onChange={handleTagsChanged}
-        PopperComponent={(props) => <Popper {...props} popperRef={popperRef} />}
+        PopperComponent={(props) => (
+          <Popper
+            {...props}
+            popperRef={popperRef}
+            modifiers={[
+              {
+                name: "sizeObserver",
+                enabled: true,
+                phase: "read",
+                fn: (data) => {
+                  setResultPaddingTop(data.state.rects.popper.height);
+                },
+              },
+            ]}
+          />
+        )}
       />
       <div style={{ paddingTop: resultPaddingTop }}>
         {matchingOperators
