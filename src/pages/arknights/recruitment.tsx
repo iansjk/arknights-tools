@@ -10,7 +10,7 @@ import {
 import { Instance } from "@popperjs/core";
 import { Combination } from "js-combinatorics";
 import { InferGetStaticPropsType } from "next";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import recruitmentJson from "../../../data/recruitment.json";
 import Layout from "../../components/Layout";
@@ -69,7 +69,8 @@ const Recruitment = ({
   options,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputNode, setInputNode] = useState<HTMLInputElement | null>(null);
   const popperRef = useRef<Instance>(null);
 
   const activeTagCombinations = getTagCombinations(activeTags);
@@ -82,6 +83,12 @@ const Recruitment = ({
       ),
     [activeTagCombinations]
   );
+
+  useEffect(() => {
+    if (inputNode != null) {
+      inputNode.focus();
+    }
+  }, [inputNode]);
 
   const handleTagsChanged = (
     _: unknown,
@@ -117,6 +124,7 @@ const Recruitment = ({
         options={options}
         multiple
         autoHighlight
+        openOnFocus
         open={isOpen}
         onOpen={() => setIsOpen(true)}
         onClose={() => setIsOpen(false)}
@@ -124,7 +132,11 @@ const Recruitment = ({
         getOptionLabel={(option) => option.value}
         disableCloseOnSelect
         renderInput={(params) => (
-          <TextField {...params} autoFocus label="Available recruitment tags" />
+          <TextField
+            {...params}
+            label="Available recruitment tags"
+            inputRef={setInputNode}
+          />
         )}
         onChange={handleTagsChanged}
         PopperComponent={(props) => <Popper {...props} popperRef={popperRef} />}
