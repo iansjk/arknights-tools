@@ -6,6 +6,7 @@ import {
   SxProps,
   Theme,
   Popper,
+  Typography,
 } from "@mui/material";
 import { Instance } from "@popperjs/core";
 import { Combination } from "js-combinatorics";
@@ -65,6 +66,8 @@ function getTagCombinations(activeTags: string[]) {
   );
 }
 
+const { regularRecruitmentResults, misereRecruitmentResults } = recruitmentJson;
+
 const Recruitment = ({
   options,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
@@ -77,11 +80,38 @@ const Recruitment = ({
   const activeTagCombinations = getTagCombinations(activeTags);
   const matchingOperators = useMemo(
     () =>
-      recruitmentJson.filter((result) =>
-        activeTagCombinations.find(
-          (tags) => tags.toString() === result.tags.toString()
+      activeTagCombinations
+        .map(
+          (tags) =>
+            regularRecruitmentResults[
+              `${tags}` as keyof typeof regularRecruitmentResults
+            ]
         )
-      ),
+        .filter((result) => result != null),
+    [activeTagCombinations]
+  );
+  const isGuaranteeAvailable = matchingOperators
+    .filter((result) => result.guarantees.length > 0)
+    .some(
+      ({ guarantees }: { guarantees: number[] }) =>
+        guarantees.includes(1) || guarantees.some((rarity) => rarity >= 4)
+    );
+  const matchingMisereOperators = useMemo(
+    () =>
+      activeTagCombinations
+        .filter((tags) => tags.length === 2)
+        .flatMap((tags) => {
+          const [tag1, tag2] = tags;
+          return [
+            misereRecruitmentResults[
+              `${tag1}--${tag2}--` as keyof typeof misereRecruitmentResults
+            ],
+            misereRecruitmentResults[
+              `${tag2}--${tag1}--` as keyof typeof misereRecruitmentResults
+            ],
+          ];
+        })
+        .filter((result) => result != null),
     [activeTagCombinations]
   );
 
@@ -117,6 +147,14 @@ const Recruitment = ({
     alignItems: "center",
     gap: (theme) => theme.spacing(1),
     flexWrap: "wrap",
+  };
+
+  const resultContainerStyles: SxProps<Theme> = {
+    my: 2,
+    "& ~ &": {
+      pt: 2,
+      borderTop: "1px solid #4d4d4d",
+    },
   };
 
   return (
@@ -158,6 +196,65 @@ const Recruitment = ({
         )}
       />
       <div style={{ paddingTop: resultPaddingTop }}>
+        {!isGuaranteeAvailable &&
+          matchingMisereOperators.map(
+            ({ wantToStick, wantToDrop, operators, guarantees }) => (
+              <Grid
+                container
+                key={`${wantToStick}--${wantToDrop}--`}
+                spacing={2}
+                sx={resultContainerStyles}
+              >
+                <Grid
+                  item
+                  xs={12}
+                  sm={3}
+                  sx={[
+                    chipContainerStyles,
+                    {
+                      justifyContent: {
+                        xs: "center",
+                        sm: "flex-end",
+                      },
+                    },
+                  ]}
+                >
+                  <Typography
+                    component="span"
+                    variant="overline"
+                    sx={{
+                      color: (theme) => theme.palette.error.main,
+                      fontWeight: "bold",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {Math.min(...guarantees) <= 4 ? "1 hour" : "4 hours"}
+                  </Typography>
+                  {guarantees.map((guaranteedRarity) => (
+                    <Chip
+                      key={`guaranteed${guaranteedRarity}`}
+                      label={`${guaranteedRarity}★`}
+                      sx={{ background: "#fff", color: "#000" }}
+                    />
+                  ))}
+                  <Chip label={wantToStick} />
+                  <Chip
+                    label={wantToDrop}
+                    sx={{
+                      textDecoration: "line-through red 3px",
+                      background: "rgba(255, 255, 255, 0.8)",
+                      color: "#000",
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={9} sx={chipContainerStyles}>
+                  {operators.map((operator) => (
+                    <RecruitableOperatorChip key={operator.id} {...operator} />
+                  ))}
+                </Grid>
+              </Grid>
+            )
+          )}
         {matchingOperators
           .sort(
             (
@@ -176,13 +273,7 @@ const Recruitment = ({
               container
               key={tags.join(",")}
               spacing={2}
-              sx={{
-                my: 2,
-                "& ~ &": {
-                  pt: 2,
-                  borderTop: "1px solid #4d4d4d",
-                },
-              }}
+              sx={resultContainerStyles}
             >
               <Grid
                 item

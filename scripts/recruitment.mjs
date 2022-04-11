@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import { Combination } from "js-combinatorics";
+import { Combination, Permutation } from "js-combinatorics";
 
 import characterTable from "./ArknightsGameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
 import gachaTable from "./ArknightsGameData/en_US/gamedata/excel/gacha_table.json" assert { type: "json" };
@@ -66,6 +66,7 @@ const createRecruitmentJson = () => {
       .filter((item) => !!item && item.trim())
   );
 
+  /** @type{Array<{id: string, name: string, rarity: number, tags: string[]}>} */
   const recruitment = recruitableOperators.flatMap((opNames, rarity) =>
     opNames
       .filter((name) => !!name)
@@ -97,51 +98,128 @@ const createRecruitmentJson = () => {
   const tagSets = Array(3)
     .fill(0)
     .flatMap((_, i) => [...new Combination(RECRUITMENT_TAGS, i + 1)]);
-  const recruitmentResults = tagSets
-    .map((tagSet) => ({
-      tags: tagSet.sort(),
-      operators: recruitment
-        .filter((recruitable) =>
-          tagSet.every(
-            (tag) =>
-              recruitable.tags.includes(tag) &&
-              (recruitable.rarity < 6 || tagSet.includes("Top Operator"))
+  const regularRecruitmentResults = Object.fromEntries(
+    tagSets
+      .map((tagSet) => ({
+        tags: tagSet.sort(),
+        operators: recruitment
+          .filter((recruitable) =>
+            tagSet.every(
+              (tag) =>
+                recruitable.tags.includes(tag) &&
+                (recruitable.rarity < 6 || tagSet.includes("Top Operator"))
+            )
           )
-        )
-        .sort((op1, op2) => op2.rarity - op1.rarity),
-    }))
-    .filter((recruitData) => recruitData.operators.length > 0)
-    .map((result) => {
-      // for guaranteed tags, we only care about 1*, 4*, 5*, and 6*.
-      // we include 1* if
-      // - the otherwise highest rarity is 5 (1* and 5* can't coexist), or
-      // - the Robot tag is available
-      const lowestRarity = Math.min(
-        ...result.operators
-          .map((op) => op.rarity)
-          .filter((rarity) => rarity > 1)
-      );
-      if (lowestRarity > 1 && lowestRarity < 4) {
-        return {
-          ...result,
-          guarantees: [],
-        };
-      }
+          .sort((op1, op2) => op2.rarity - op1.rarity),
+      }))
+      .filter((recruitData) => recruitData.operators.length > 0)
+      .map((result) => {
+        // for guaranteed tags, we only care about 1*, 4*, 5*, and 6*.
+        // we include 1* if
+        // - the otherwise highest rarity is 5 (1* and 5* can't coexist), or
+        // - the Robot tag is available
+        const lowestRarity = Math.min(
+          ...result.operators
+            .map((op) => op.rarity)
+            .filter((rarity) => rarity > 1)
+        );
+        if (lowestRarity > 1 && lowestRarity < 4) {
+          return [
+            result.tags,
+            {
+              ...result,
+              guarantees: [],
+            },
+          ];
+        }
 
-      const guarantees = Number.isFinite(lowestRarity) ? [lowestRarity] : [];
-      if (
-        (result.operators.find((op) => op.rarity === 1) && lowestRarity >= 5) ||
-        result.tags.includes("Robot")
-      ) {
-        guarantees.push(1);
-      }
-      return {
-        ...result,
-        guarantees,
-      };
-    });
+        const guarantees = Number.isFinite(lowestRarity) ? [lowestRarity] : [];
+        if (
+          (result.operators.find((op) => op.rarity === 1) &&
+            lowestRarity >= 5) ||
+          result.tags.includes("Robot")
+        ) {
+          guarantees.push(1);
+        }
+        return [
+          result.tags,
+          {
+            ...result,
+            guarantees,
+          },
+        ];
+      })
+  );
+
+  const misereRecruitmentResults = Object.fromEntries(
+    [...new Permutation(RECRUITMENT_TAGS, 2)]
+      .filter(([wantToStick, wantToDrop]) => {
+        const stickTagResults = regularRecruitmentResults[wantToStick];
+        const dropTagResults = regularRecruitmentResults[wantToDrop];
+        return (
+          (!stickTagResults ||
+            !stickTagResults.guarantees.some(
+              (rarity) => rarity === 1 || rarity >= 4
+            )) &&
+          (!dropTagResults ||
+            !dropTagResults.guarantees.some(
+              (rarity) => rarity === 1 || rarity >= 4
+            ))
+        );
+      })
+      .map(([wantToStick, wantToDrop]) => {
+        const operators = recruitment.filter((recruitable) => {
+          return (
+            recruitable.tags.includes(wantToStick) &&
+            !recruitable.tags.includes(wantToDrop)
+          );
+        });
+
+        if (operators.length === 0) {
+          return null;
+        }
+
+        const lowestRarity = Math.min(
+          ...operators.filter((op) => op.rarity !== 1).map((op) => op.rarity)
+        );
+        const guarantees = [];
+        if (lowestRarity >= 4) {
+          for (let i = lowestRarity; i <= lowestRarity; i++) {
+            guarantees.push(i);
+          }
+        }
+        if (operators.find((op) => op.rarity === 1) && lowestRarity >= 5) {
+          guarantees.push(1);
+        }
+
+        return guarantees.length === 0
+          ? null
+          : {
+              wantToStick,
+              wantToDrop,
+              operators,
+              guarantees,
+            };
+      })
+      .filter((result) => Boolean(result))
+      .map((result) => [
+        `${result.wantToStick}--${result.wantToDrop}--`,
+        result,
+      ])
+  );
+
   const outPath = path.join(DATA_OUTPUT_DIRECTORY, "recruitment.json");
-  fs.writeFileSync(outPath, JSON.stringify(recruitmentResults, null, 2));
+  fs.writeFileSync(
+    outPath,
+    JSON.stringify(
+      {
+        regularRecruitmentResults,
+        misereRecruitmentResults,
+      },
+      null,
+      2
+    )
+  );
   console.log(`recruitment: wrote ${outPath}`);
 };
 
