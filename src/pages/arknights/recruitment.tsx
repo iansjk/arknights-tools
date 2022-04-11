@@ -234,7 +234,9 @@ const Recruitment = ({
                     <Chip
                       key={`guaranteed${guaranteedRarity}`}
                       label={`${guaranteedRarity}★`}
-                      sx={{ background: "#fff", color: "#000" }}
+                      sx={{
+                        boxShadow: "inset 0 0 0 2px #fff",
+                      }}
                     />
                   ))}
                   <Chip label={wantToStick} />
