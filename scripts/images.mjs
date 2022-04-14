@@ -6,6 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 import dotenv from "dotenv";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const ACESHIP_ROOT = path.join(__dirname, "../../AN-EN-Tags");
 
 dotenv.config({
   path: path.join(__dirname, "../.env.local"),
@@ -23,27 +24,27 @@ cloudinary.config({
 /** @type {Array<{ sourceDir: string, destDir: string, replace?: (filename: string) => string, filter?: (filename: string) => boolean}} */
 const tasks = [
   {
-    sourceDir: "aceship/img/skills",
+    sourceDir: `${ACESHIP_ROOT}/img/skills`,
     destDir: "arknights/skills",
     replace: (filename) =>
       path.parse(filename).name.replace(/^skill_icon_/, ""),
   },
   {
-    sourceDir: "aceship/img/avatars",
+    sourceDir: `${ACESHIP_ROOT}/img/avatars`,
     destDir: "arknights/avatars",
     filter: (filename) => /^char_[^_]+_[^_]+(_\d+\+?)?\.png$/.test(filename),
   },
   {
-    sourceDir: "aceship/img/equip/icon",
+    sourceDir: `${ACESHIP_ROOT}/img/equip/icon`,
     destDir: "arknights/equip",
   },
   {
-    sourceDir: "aceship/img/portraits",
+    sourceDir: `${ACESHIP_ROOT}/img/portraits`,
     destDir: "arknights/portraits",
     filter: (filename) => /^char_[^_]+_[^_]+_\d+\+?\.png$/.test(filename),
   },
   {
-    sourceDir: "aceship/img/items",
+    sourceDir: `${ACESHIP_ROOT}/img/items`,
     destDir: "arknights/items",
   },
 ];
@@ -51,7 +52,7 @@ const tasks = [
 const upload = async (existingPublicIds, task) => {
   let uploadCount = 0;
   const { sourceDir, destDir, replace: replaceFn, filter: filterFn } = task;
-  const dirEntries = await fs.readdir(path.join(__dirname, sourceDir), {
+  const dirEntries = await fs.readdir(sourceDir, {
     withFileTypes: true,
   });
   const filenames = dirEntries
@@ -69,12 +70,9 @@ const upload = async (existingPublicIds, task) => {
         console.log(
           `images: "${publicId}" not found in Cloudinary, uploading...`
         );
-        await cloudinary.uploader.upload(
-          path.join(__dirname, sourceDir, filename),
-          {
-            public_id: publicId,
-          }
-        );
+        await cloudinary.uploader.upload(path.join(sourceDir, filename), {
+          public_id: publicId,
+        });
         uploadCount += 1;
       }
     })
