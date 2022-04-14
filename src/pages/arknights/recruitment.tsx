@@ -77,11 +77,11 @@ const Recruitment = ({
   const activeTagCombinations = getTagCombinations(activeTags);
   const matchingOperators = useMemo(
     () =>
-      recruitmentJson.filter((result) =>
-        activeTagCombinations.find(
-          (tags) => tags.toString() === result.tags.toString()
+      activeTagCombinations
+        .map(
+          (tags) => recruitmentJson[`${tags}` as keyof typeof recruitmentJson]
         )
-      ),
+        .filter((result) => result != null),
     [activeTagCombinations]
   );
 

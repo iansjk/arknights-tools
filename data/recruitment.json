@@ -1,5 +1,5 @@
-[
-  {
+{
+  "Top Operator": {
     "tags": [
       "Top Operator"
     ],
@@ -205,7 +205,7 @@
       6
     ]
   },
-  {
+  "Senior Operator": {
     "tags": [
       "Senior Operator"
     ],
@@ -594,7 +594,7 @@
       5
     ]
   },
-  {
+  "Starter": {
     "tags": [
       "Starter"
     ],
@@ -652,7 +652,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Robot": {
     "tags": [
       "Robot"
     ],
@@ -695,7 +695,7 @@
       1
     ]
   },
-  {
+  "Melee": {
     "tags": [
       "Melee"
     ],
@@ -1193,7 +1193,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged": {
     "tags": [
       "Ranged"
     ],
@@ -1633,7 +1633,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster": {
     "tags": [
       "Caster"
     ],
@@ -1726,7 +1726,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender": {
     "tags": [
       "Defender"
     ],
@@ -1845,7 +1845,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Guard": {
     "tags": [
       "Guard"
     ],
@@ -2020,7 +2020,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Medic": {
     "tags": [
       "Medic"
     ],
@@ -2124,7 +2124,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Sniper": {
     "tags": [
       "Sniper"
     ],
@@ -2316,7 +2316,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Specialist": {
     "tags": [
       "Specialist"
     ],
@@ -2428,7 +2428,7 @@
       4
     ]
   },
-  {
+  "Supporter": {
     "tags": [
       "Supporter"
     ],
@@ -2503,7 +2503,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Vanguard": {
     "tags": [
       "Vanguard"
     ],
@@ -2621,7 +2621,7 @@
     ],
     "guarantees": []
   },
-  {
+  "AoE": {
     "tags": [
       "AoE"
     ],
@@ -2750,7 +2750,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control": {
     "tags": [
       "Crowd-Control"
     ],
@@ -2808,7 +2808,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery": {
     "tags": [
       "DP-Recovery"
     ],
@@ -2916,7 +2916,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS": {
     "tags": [
       "DPS"
     ],
@@ -3304,7 +3304,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff": {
     "tags": [
       "Debuff"
     ],
@@ -3371,7 +3371,7 @@
       4
     ]
   },
-  {
+  "Defense": {
     "tags": [
       "Defense"
     ],
@@ -3503,7 +3503,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Fast-Redeploy": {
     "tags": [
       "Fast-Redeploy"
     ],
@@ -3548,7 +3548,7 @@
       4
     ]
   },
-  {
+  "Healing": {
     "tags": [
       "Healing"
     ],
@@ -3710,7 +3710,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Nuker": {
     "tags": [
       "Nuker"
     ],
@@ -3744,7 +3744,7 @@
       1
     ]
   },
-  {
+  "Shift": {
     "tags": [
       "Shift"
     ],
@@ -3810,7 +3810,7 @@
       4
     ]
   },
-  {
+  "Slow": {
     "tags": [
       "Slow"
     ],
@@ -3942,7 +3942,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Summon": {
     "tags": [
       "Summon"
     ],
@@ -3964,7 +3964,7 @@
       5
     ]
   },
-  {
+  "Support": {
     "tags": [
       "Support"
     ],
@@ -4044,7 +4044,7 @@
       4
     ]
   },
-  {
+  "Survival": {
     "tags": [
       "Survival"
     ],
@@ -4168,7 +4168,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Senior Operator,Top Operator": {
     "tags": [
       "Senior Operator",
       "Top Operator"
@@ -4375,7 +4375,7 @@
       6
     ]
   },
-  {
+  "Melee,Top Operator": {
     "tags": [
       "Melee",
       "Top Operator"
@@ -4491,7 +4491,7 @@
       6
     ]
   },
-  {
+  "Ranged,Top Operator": {
     "tags": [
       "Ranged",
       "Top Operator"
@@ -4593,7 +4593,7 @@
       6
     ]
   },
-  {
+  "Caster,Top Operator": {
     "tags": [
       "Caster",
       "Top Operator"
@@ -4631,7 +4631,7 @@
       6
     ]
   },
-  {
+  "Defender,Top Operator": {
     "tags": [
       "Defender",
       "Top Operator"
@@ -4669,7 +4669,7 @@
       6
     ]
   },
-  {
+  "Guard,Top Operator": {
     "tags": [
       "Guard",
       "Top Operator"
@@ -4745,7 +4745,7 @@
       6
     ]
   },
-  {
+  "Medic,Top Operator": {
     "tags": [
       "Medic",
       "Top Operator"
@@ -4782,7 +4782,7 @@
       6
     ]
   },
-  {
+  "Sniper,Top Operator": {
     "tags": [
       "Sniper",
       "Top Operator"
@@ -4817,7 +4817,7 @@
       6
     ]
   },
-  {
+  "Supporter,Top Operator": {
     "tags": [
       "Supporter",
       "Top Operator"
@@ -4842,7 +4842,7 @@
       6
     ]
   },
-  {
+  "Top Operator,Vanguard": {
     "tags": [
       "Top Operator",
       "Vanguard"
@@ -4866,7 +4866,7 @@
       6
     ]
   },
-  {
+  "AoE,Top Operator": {
     "tags": [
       "AoE",
       "Top Operator"
@@ -4904,7 +4904,7 @@
       6
     ]
   },
-  {
+  "Crowd-Control,Top Operator": {
     "tags": [
       "Crowd-Control",
       "Top Operator"
@@ -4929,7 +4929,7 @@
       6
     ]
   },
-  {
+  "DP-Recovery,Top Operator": {
     "tags": [
       "DP-Recovery",
       "Top Operator"
@@ -4953,7 +4953,7 @@
       6
     ]
   },
-  {
+  "DPS,Top Operator": {
     "tags": [
       "DPS",
       "Top Operator"
@@ -5093,7 +5093,7 @@
       6
     ]
   },
-  {
+  "Debuff,Top Operator": {
     "tags": [
       "Debuff",
       "Top Operator"
@@ -5117,7 +5117,7 @@
       6
     ]
   },
-  {
+  "Defense,Top Operator": {
     "tags": [
       "Defense",
       "Top Operator"
@@ -5155,7 +5155,7 @@
       6
     ]
   },
-  {
+  "Healing,Top Operator": {
     "tags": [
       "Healing",
       "Top Operator"
@@ -5206,7 +5206,7 @@
       6
     ]
   },
-  {
+  "Nuker,Top Operator": {
     "tags": [
       "Nuker",
       "Top Operator"
@@ -5230,7 +5230,7 @@
       6
     ]
   },
-  {
+  "Slow,Top Operator": {
     "tags": [
       "Slow",
       "Top Operator"
@@ -5255,7 +5255,7 @@
       6
     ]
   },
-  {
+  "Support,Top Operator": {
     "tags": [
       "Support",
       "Top Operator"
@@ -5347,7 +5347,7 @@
       6
     ]
   },
-  {
+  "Survival,Top Operator": {
     "tags": [
       "Survival",
       "Top Operator"
@@ -5397,7 +5397,7 @@
       6
     ]
   },
-  {
+  "Melee,Senior Operator": {
     "tags": [
       "Melee",
       "Senior Operator"
@@ -5613,7 +5613,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator": {
     "tags": [
       "Ranged",
       "Senior Operator"
@@ -5798,7 +5798,7 @@
       5
     ]
   },
-  {
+  "Caster,Senior Operator": {
     "tags": [
       "Caster",
       "Senior Operator"
@@ -5822,7 +5822,7 @@
       5
     ]
   },
-  {
+  "Defender,Senior Operator": {
     "tags": [
       "Defender",
       "Senior Operator"
@@ -5882,7 +5882,7 @@
       5
     ]
   },
-  {
+  "Guard,Senior Operator": {
     "tags": [
       "Guard",
       "Senior Operator"
@@ -5953,7 +5953,7 @@
       5
     ]
   },
-  {
+  "Medic,Senior Operator": {
     "tags": [
       "Medic",
       "Senior Operator"
@@ -5999,7 +5999,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Sniper": {
     "tags": [
       "Senior Operator",
       "Sniper"
@@ -6089,7 +6089,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Specialist": {
     "tags": [
       "Senior Operator",
       "Specialist"
@@ -6160,7 +6160,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Supporter": {
     "tags": [
       "Senior Operator",
       "Supporter"
@@ -6218,7 +6218,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Vanguard": {
     "tags": [
       "Senior Operator",
       "Vanguard"
@@ -6265,7 +6265,7 @@
       5
     ]
   },
-  {
+  "AoE,Senior Operator": {
     "tags": [
       "AoE",
       "Senior Operator"
@@ -6323,7 +6323,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator": {
     "tags": [
       "Crowd-Control",
       "Senior Operator"
@@ -6382,7 +6382,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Senior Operator": {
     "tags": [
       "DP-Recovery",
       "Senior Operator"
@@ -6429,7 +6429,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator": {
     "tags": [
       "DPS",
       "Senior Operator"
@@ -6618,7 +6618,7 @@
       5
     ]
   },
-  {
+  "Debuff,Senior Operator": {
     "tags": [
       "Debuff",
       "Senior Operator"
@@ -6664,7 +6664,7 @@
       5
     ]
   },
-  {
+  "Defense,Senior Operator": {
     "tags": [
       "Defense",
       "Senior Operator"
@@ -6736,7 +6736,7 @@
       5
     ]
   },
-  {
+  "Fast-Redeploy,Senior Operator": {
     "tags": [
       "Fast-Redeploy",
       "Senior Operator"
@@ -6771,7 +6771,7 @@
       5
     ]
   },
-  {
+  "Healing,Senior Operator": {
     "tags": [
       "Healing",
       "Senior Operator"
@@ -6842,7 +6842,7 @@
       5
     ]
   },
-  {
+  "Nuker,Senior Operator": {
     "tags": [
       "Nuker",
       "Senior Operator"
@@ -6865,7 +6865,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Shift": {
     "tags": [
       "Senior Operator",
       "Shift"
@@ -6912,7 +6912,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Slow": {
     "tags": [
       "Senior Operator",
       "Slow"
@@ -6972,7 +6972,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Summon": {
     "tags": [
       "Senior Operator",
       "Summon"
@@ -6995,7 +6995,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Support": {
     "tags": [
       "Senior Operator",
       "Support"
@@ -7054,7 +7054,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Survival": {
     "tags": [
       "Senior Operator",
       "Survival"
@@ -7126,7 +7126,7 @@
       5
     ]
   },
-  {
+  "Melee,Starter": {
     "tags": [
       "Melee",
       "Starter"
@@ -7155,7 +7155,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Starter": {
     "tags": [
       "Ranged",
       "Starter"
@@ -7194,7 +7194,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,Starter": {
     "tags": [
       "Caster",
       "Starter"
@@ -7223,7 +7223,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Starter": {
     "tags": [
       "Defender",
       "Starter"
@@ -7242,7 +7242,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Sniper,Starter": {
     "tags": [
       "Sniper",
       "Starter"
@@ -7261,7 +7261,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Starter,Vanguard": {
     "tags": [
       "Starter",
       "Vanguard"
@@ -7280,7 +7280,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Melee,Robot": {
     "tags": [
       "Melee",
       "Robot"
@@ -7313,7 +7313,7 @@
       1
     ]
   },
-  {
+  "Ranged,Robot": {
     "tags": [
       "Ranged",
       "Robot"
@@ -7335,7 +7335,7 @@
       1
     ]
   },
-  {
+  "Guard,Robot": {
     "tags": [
       "Guard",
       "Robot"
@@ -7357,7 +7357,7 @@
       1
     ]
   },
-  {
+  "Medic,Robot": {
     "tags": [
       "Medic",
       "Robot"
@@ -7379,7 +7379,7 @@
       1
     ]
   },
-  {
+  "Robot,Specialist": {
     "tags": [
       "Robot",
       "Specialist"
@@ -7401,7 +7401,7 @@
       1
     ]
   },
-  {
+  "Healing,Robot": {
     "tags": [
       "Healing",
       "Robot"
@@ -7423,7 +7423,7 @@
       1
     ]
   },
-  {
+  "Nuker,Robot": {
     "tags": [
       "Nuker",
       "Robot"
@@ -7445,7 +7445,7 @@
       1
     ]
   },
-  {
+  "Robot,Support": {
     "tags": [
       "Robot",
       "Support"
@@ -7467,7 +7467,7 @@
       1
     ]
   },
-  {
+  "Defender,Melee": {
     "tags": [
       "Defender",
       "Melee"
@@ -7587,7 +7587,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Guard,Melee": {
     "tags": [
       "Guard",
       "Melee"
@@ -7763,7 +7763,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Melee,Specialist": {
     "tags": [
       "Melee",
       "Specialist"
@@ -7876,7 +7876,7 @@
       4
     ]
   },
-  {
+  "Melee,Vanguard": {
     "tags": [
       "Melee",
       "Vanguard"
@@ -7995,7 +7995,7 @@
     ],
     "guarantees": []
   },
-  {
+  "AoE,Melee": {
     "tags": [
       "AoE",
       "Melee"
@@ -8050,7 +8050,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control,Melee": {
     "tags": [
       "Crowd-Control",
       "Melee"
@@ -8085,7 +8085,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Melee": {
     "tags": [
       "DP-Recovery",
       "Melee"
@@ -8194,7 +8194,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Melee": {
     "tags": [
       "DPS",
       "Melee"
@@ -8407,7 +8407,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Melee": {
     "tags": [
       "Debuff",
       "Melee"
@@ -8430,7 +8430,7 @@
       5
     ]
   },
-  {
+  "Defense,Melee": {
     "tags": [
       "Defense",
       "Melee"
@@ -8563,7 +8563,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Fast-Redeploy,Melee": {
     "tags": [
       "Fast-Redeploy",
       "Melee"
@@ -8609,7 +8609,7 @@
       4
     ]
   },
-  {
+  "Healing,Melee": {
     "tags": [
       "Healing",
       "Melee"
@@ -8663,7 +8663,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Melee,Nuker": {
     "tags": [
       "Melee",
       "Nuker"
@@ -8685,7 +8685,7 @@
       1
     ]
   },
-  {
+  "Melee,Shift": {
     "tags": [
       "Melee",
       "Shift"
@@ -8752,7 +8752,7 @@
       4
     ]
   },
-  {
+  "Melee,Slow": {
     "tags": [
       "Melee",
       "Slow"
@@ -8786,7 +8786,7 @@
       4
     ]
   },
-  {
+  "Melee,Support": {
     "tags": [
       "Melee",
       "Support"
@@ -8843,7 +8843,7 @@
       4
     ]
   },
-  {
+  "Melee,Survival": {
     "tags": [
       "Melee",
       "Survival"
@@ -8957,7 +8957,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,Ranged": {
     "tags": [
       "Caster",
       "Ranged"
@@ -9051,7 +9051,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Medic,Ranged": {
     "tags": [
       "Medic",
       "Ranged"
@@ -9156,7 +9156,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Sniper": {
     "tags": [
       "Ranged",
       "Sniper"
@@ -9349,7 +9349,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Supporter": {
     "tags": [
       "Ranged",
       "Supporter"
@@ -9425,7 +9425,7 @@
     ],
     "guarantees": []
   },
-  {
+  "AoE,Ranged": {
     "tags": [
       "AoE",
       "Ranged"
@@ -9509,7 +9509,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control,Ranged": {
     "tags": [
       "Crowd-Control",
       "Ranged"
@@ -9544,7 +9544,7 @@
       5
     ]
   },
-  {
+  "DPS,Ranged": {
     "tags": [
       "DPS",
       "Ranged"
@@ -9729,7 +9729,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Ranged": {
     "tags": [
       "Debuff",
       "Ranged"
@@ -9785,7 +9785,7 @@
       4
     ]
   },
-  {
+  "Healing,Ranged": {
     "tags": [
       "Healing",
       "Ranged"
@@ -9903,7 +9903,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Nuker,Ranged": {
     "tags": [
       "Nuker",
       "Ranged"
@@ -9926,7 +9926,7 @@
       5
     ]
   },
-  {
+  "Ranged,Slow": {
     "tags": [
       "Ranged",
       "Slow"
@@ -10036,7 +10036,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Summon": {
     "tags": [
       "Ranged",
       "Summon"
@@ -10059,7 +10059,7 @@
       5
     ]
   },
-  {
+  "Ranged,Support": {
     "tags": [
       "Ranged",
       "Support"
@@ -10094,7 +10094,7 @@
       5
     ]
   },
-  {
+  "Ranged,Survival": {
     "tags": [
       "Ranged",
       "Survival"
@@ -10116,7 +10116,7 @@
       4
     ]
   },
-  {
+  "AoE,Caster": {
     "tags": [
       "AoE",
       "Caster"
@@ -10156,7 +10156,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,DPS": {
     "tags": [
       "Caster",
       "DPS"
@@ -10199,7 +10199,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,Debuff": {
     "tags": [
       "Caster",
       "Debuff"
@@ -10221,7 +10221,7 @@
       4
     ]
   },
-  {
+  "Caster,Healing": {
     "tags": [
       "Caster",
       "Healing"
@@ -10245,7 +10245,7 @@
       5
     ]
   },
-  {
+  "Caster,Slow": {
     "tags": [
       "Caster",
       "Slow"
@@ -10280,7 +10280,7 @@
       4
     ]
   },
-  {
+  "DPS,Defender": {
     "tags": [
       "DPS",
       "Defender"
@@ -10316,7 +10316,7 @@
       5
     ]
   },
-  {
+  "Defender,Defense": {
     "tags": [
       "Defender",
       "Defense"
@@ -10426,7 +10426,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Healing": {
     "tags": [
       "Defender",
       "Healing"
@@ -10469,7 +10469,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Shift": {
     "tags": [
       "Defender",
       "Shift"
@@ -10492,7 +10492,7 @@
       5
     ]
   },
-  {
+  "Defender,Survival": {
     "tags": [
       "Defender",
       "Survival"
@@ -10516,7 +10516,7 @@
       5
     ]
   },
-  {
+  "AoE,Guard": {
     "tags": [
       "AoE",
       "Guard"
@@ -10571,7 +10571,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Guard": {
     "tags": [
       "DPS",
       "Guard"
@@ -10690,7 +10690,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defense,Guard": {
     "tags": [
       "Defense",
       "Guard"
@@ -10713,7 +10713,7 @@
       5
     ]
   },
-  {
+  "Guard,Slow": {
     "tags": [
       "Guard",
       "Slow"
@@ -10735,7 +10735,7 @@
       4
     ]
   },
-  {
+  "Guard,Support": {
     "tags": [
       "Guard",
       "Support"
@@ -10780,7 +10780,7 @@
       4
     ]
   },
-  {
+  "Guard,Survival": {
     "tags": [
       "Guard",
       "Survival"
@@ -10869,7 +10869,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Healing,Medic": {
     "tags": [
       "Healing",
       "Medic"
@@ -10974,7 +10974,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Medic,Support": {
     "tags": [
       "Medic",
       "Support"
@@ -11009,7 +11009,7 @@
       5
     ]
   },
-  {
+  "AoE,Sniper": {
     "tags": [
       "AoE",
       "Sniper"
@@ -11062,7 +11062,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Sniper": {
     "tags": [
       "DPS",
       "Sniper"
@@ -11201,7 +11201,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Sniper": {
     "tags": [
       "Debuff",
       "Sniper"
@@ -11235,7 +11235,7 @@
       4
     ]
   },
-  {
+  "Nuker,Sniper": {
     "tags": [
       "Nuker",
       "Sniper"
@@ -11258,7 +11258,7 @@
       5
     ]
   },
-  {
+  "Slow,Sniper": {
     "tags": [
       "Slow",
       "Sniper"
@@ -11302,7 +11302,7 @@
       4
     ]
   },
-  {
+  "Sniper,Survival": {
     "tags": [
       "Sniper",
       "Survival"
@@ -11324,7 +11324,7 @@
       4
     ]
   },
-  {
+  "Crowd-Control,Specialist": {
     "tags": [
       "Crowd-Control",
       "Specialist"
@@ -11347,7 +11347,7 @@
       5
     ]
   },
-  {
+  "DPS,Specialist": {
     "tags": [
       "DPS",
       "Specialist"
@@ -11382,7 +11382,7 @@
       5
     ]
   },
-  {
+  "Debuff,Specialist": {
     "tags": [
       "Debuff",
       "Specialist"
@@ -11405,7 +11405,7 @@
       5
     ]
   },
-  {
+  "Defense,Specialist": {
     "tags": [
       "Defense",
       "Specialist"
@@ -11427,7 +11427,7 @@
       4
     ]
   },
-  {
+  "Fast-Redeploy,Specialist": {
     "tags": [
       "Fast-Redeploy",
       "Specialist"
@@ -11473,7 +11473,7 @@
       4
     ]
   },
-  {
+  "Nuker,Specialist": {
     "tags": [
       "Nuker",
       "Specialist"
@@ -11495,7 +11495,7 @@
       1
     ]
   },
-  {
+  "Shift,Specialist": {
     "tags": [
       "Shift",
       "Specialist"
@@ -11550,7 +11550,7 @@
       4
     ]
   },
-  {
+  "Slow,Specialist": {
     "tags": [
       "Slow",
       "Specialist"
@@ -11573,7 +11573,7 @@
       5
     ]
   },
-  {
+  "Specialist,Survival": {
     "tags": [
       "Specialist",
       "Survival"
@@ -11596,7 +11596,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Supporter": {
     "tags": [
       "Crowd-Control",
       "Supporter"
@@ -11631,7 +11631,7 @@
       5
     ]
   },
-  {
+  "DPS,Supporter": {
     "tags": [
       "DPS",
       "Supporter"
@@ -11654,7 +11654,7 @@
       5
     ]
   },
-  {
+  "Debuff,Supporter": {
     "tags": [
       "Debuff",
       "Supporter"
@@ -11676,7 +11676,7 @@
       5
     ]
   },
-  {
+  "Slow,Supporter": {
     "tags": [
       "Slow",
       "Supporter"
@@ -11729,7 +11729,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Summon,Supporter": {
     "tags": [
       "Summon",
       "Supporter"
@@ -11752,7 +11752,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Vanguard": {
     "tags": [
       "Crowd-Control",
       "Vanguard"
@@ -11775,7 +11775,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Vanguard"
@@ -11884,7 +11884,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Vanguard": {
     "tags": [
       "DPS",
       "Vanguard"
@@ -11938,7 +11938,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Healing,Vanguard": {
     "tags": [
       "Healing",
       "Vanguard"
@@ -11960,7 +11960,7 @@
       4
     ]
   },
-  {
+  "Support,Vanguard": {
     "tags": [
       "Support",
       "Vanguard"
@@ -11983,7 +11983,7 @@
       5
     ]
   },
-  {
+  "AoE,Debuff": {
     "tags": [
       "AoE",
       "Debuff"
@@ -12006,7 +12006,7 @@
       5
     ]
   },
-  {
+  "AoE,Slow": {
     "tags": [
       "AoE",
       "Slow"
@@ -12039,7 +12039,7 @@
       4
     ]
   },
-  {
+  "AoE,Survival": {
     "tags": [
       "AoE",
       "Survival"
@@ -12094,7 +12094,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control,DP-Recovery": {
     "tags": [
       "Crowd-Control",
       "DP-Recovery"
@@ -12117,7 +12117,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Fast-Redeploy": {
     "tags": [
       "Crowd-Control",
       "Fast-Redeploy"
@@ -12140,7 +12140,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Slow": {
     "tags": [
       "Crowd-Control",
       "Slow"
@@ -12163,7 +12163,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Summon": {
     "tags": [
       "Crowd-Control",
       "Summon"
@@ -12186,7 +12186,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,DPS": {
     "tags": [
       "DP-Recovery",
       "DPS"
@@ -12240,7 +12240,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DP-Recovery,Healing": {
     "tags": [
       "DP-Recovery",
       "Healing"
@@ -12262,7 +12262,7 @@
       4
     ]
   },
-  {
+  "DP-Recovery,Support": {
     "tags": [
       "DP-Recovery",
       "Support"
@@ -12285,7 +12285,7 @@
       5
     ]
   },
-  {
+  "DPS,Debuff": {
     "tags": [
       "DPS",
       "Debuff"
@@ -12318,7 +12318,7 @@
       4
     ]
   },
-  {
+  "DPS,Defense": {
     "tags": [
       "DPS",
       "Defense"
@@ -12366,7 +12366,7 @@
       5
     ]
   },
-  {
+  "DPS,Healing": {
     "tags": [
       "DPS",
       "Healing"
@@ -12390,7 +12390,7 @@
       5
     ]
   },
-  {
+  "DPS,Nuker": {
     "tags": [
       "DPS",
       "Nuker"
@@ -12413,7 +12413,7 @@
       5
     ]
   },
-  {
+  "DPS,Shift": {
     "tags": [
       "DPS",
       "Shift"
@@ -12436,7 +12436,7 @@
       5
     ]
   },
-  {
+  "DPS,Slow": {
     "tags": [
       "DPS",
       "Slow"
@@ -12505,7 +12505,7 @@
       4
     ]
   },
-  {
+  "DPS,Support": {
     "tags": [
       "DPS",
       "Support"
@@ -12539,7 +12539,7 @@
       4
     ]
   },
-  {
+  "DPS,Survival": {
     "tags": [
       "DPS",
       "Survival"
@@ -12618,7 +12618,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Fast-Redeploy": {
     "tags": [
       "Debuff",
       "Fast-Redeploy"
@@ -12641,7 +12641,7 @@
       5
     ]
   },
-  {
+  "Defense,Fast-Redeploy": {
     "tags": [
       "Defense",
       "Fast-Redeploy"
@@ -12663,7 +12663,7 @@
       4
     ]
   },
-  {
+  "Defense,Healing": {
     "tags": [
       "Defense",
       "Healing"
@@ -12706,7 +12706,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defense,Shift": {
     "tags": [
       "Defense",
       "Shift"
@@ -12729,7 +12729,7 @@
       5
     ]
   },
-  {
+  "Defense,Survival": {
     "tags": [
       "Defense",
       "Survival"
@@ -12753,7 +12753,7 @@
       5
     ]
   },
-  {
+  "Healing,Slow": {
     "tags": [
       "Healing",
       "Slow"
@@ -12777,7 +12777,7 @@
       5
     ]
   },
-  {
+  "Healing,Support": {
     "tags": [
       "Healing",
       "Support"
@@ -12812,7 +12812,7 @@
       5
     ]
   },
-  {
+  "Shift,Slow": {
     "tags": [
       "Shift",
       "Slow"
@@ -12835,7 +12835,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Top Operator": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -12952,7 +12952,7 @@
       6
     ]
   },
-  {
+  "Ranged,Senior Operator,Top Operator": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -13055,7 +13055,7 @@
       6
     ]
   },
-  {
+  "Caster,Senior Operator,Top Operator": {
     "tags": [
       "Caster",
       "Senior Operator",
@@ -13094,7 +13094,7 @@
       6
     ]
   },
-  {
+  "Defender,Senior Operator,Top Operator": {
     "tags": [
       "Defender",
       "Senior Operator",
@@ -13133,7 +13133,7 @@
       6
     ]
   },
-  {
+  "Guard,Senior Operator,Top Operator": {
     "tags": [
       "Guard",
       "Senior Operator",
@@ -13210,7 +13210,7 @@
       6
     ]
   },
-  {
+  "Medic,Senior Operator,Top Operator": {
     "tags": [
       "Medic",
       "Senior Operator",
@@ -13248,7 +13248,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Sniper,Top Operator": {
     "tags": [
       "Senior Operator",
       "Sniper",
@@ -13284,7 +13284,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Supporter,Top Operator": {
     "tags": [
       "Senior Operator",
       "Supporter",
@@ -13310,7 +13310,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Top Operator,Vanguard": {
     "tags": [
       "Senior Operator",
       "Top Operator",
@@ -13335,7 +13335,7 @@
       6
     ]
   },
-  {
+  "AoE,Senior Operator,Top Operator": {
     "tags": [
       "AoE",
       "Senior Operator",
@@ -13374,7 +13374,7 @@
       6
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Top Operator": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -13400,7 +13400,7 @@
       6
     ]
   },
-  {
+  "DP-Recovery,Senior Operator,Top Operator": {
     "tags": [
       "DP-Recovery",
       "Senior Operator",
@@ -13425,7 +13425,7 @@
       6
     ]
   },
-  {
+  "DPS,Senior Operator,Top Operator": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -13566,7 +13566,7 @@
       6
     ]
   },
-  {
+  "Debuff,Senior Operator,Top Operator": {
     "tags": [
       "Debuff",
       "Senior Operator",
@@ -13591,7 +13591,7 @@
       6
     ]
   },
-  {
+  "Defense,Senior Operator,Top Operator": {
     "tags": [
       "Defense",
       "Senior Operator",
@@ -13630,7 +13630,7 @@
       6
     ]
   },
-  {
+  "Healing,Senior Operator,Top Operator": {
     "tags": [
       "Healing",
       "Senior Operator",
@@ -13682,7 +13682,7 @@
       6
     ]
   },
-  {
+  "Nuker,Senior Operator,Top Operator": {
     "tags": [
       "Nuker",
       "Senior Operator",
@@ -13707,7 +13707,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Slow,Top Operator": {
     "tags": [
       "Senior Operator",
       "Slow",
@@ -13733,7 +13733,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Support,Top Operator": {
     "tags": [
       "Senior Operator",
       "Support",
@@ -13826,7 +13826,7 @@
       6
     ]
   },
-  {
+  "Senior Operator,Survival,Top Operator": {
     "tags": [
       "Senior Operator",
       "Survival",
@@ -13877,7 +13877,7 @@
       6
     ]
   },
-  {
+  "Defender,Melee,Top Operator": {
     "tags": [
       "Defender",
       "Melee",
@@ -13916,7 +13916,7 @@
       6
     ]
   },
-  {
+  "Guard,Melee,Top Operator": {
     "tags": [
       "Guard",
       "Melee",
@@ -13993,7 +13993,7 @@
       6
     ]
   },
-  {
+  "Melee,Top Operator,Vanguard": {
     "tags": [
       "Melee",
       "Top Operator",
@@ -14018,7 +14018,7 @@
       6
     ]
   },
-  {
+  "DP-Recovery,Melee,Top Operator": {
     "tags": [
       "DP-Recovery",
       "Melee",
@@ -14043,7 +14043,7 @@
       6
     ]
   },
-  {
+  "DPS,Melee,Top Operator": {
     "tags": [
       "DPS",
       "Melee",
@@ -14146,7 +14146,7 @@
       6
     ]
   },
-  {
+  "Defense,Melee,Top Operator": {
     "tags": [
       "Defense",
       "Melee",
@@ -14185,7 +14185,7 @@
       6
     ]
   },
-  {
+  "Healing,Melee,Top Operator": {
     "tags": [
       "Healing",
       "Melee",
@@ -14211,7 +14211,7 @@
       6
     ]
   },
-  {
+  "Melee,Nuker,Top Operator": {
     "tags": [
       "Melee",
       "Nuker",
@@ -14236,7 +14236,7 @@
       6
     ]
   },
-  {
+  "Melee,Support,Top Operator": {
     "tags": [
       "Melee",
       "Support",
@@ -14275,7 +14275,7 @@
       6
     ]
   },
-  {
+  "Melee,Survival,Top Operator": {
     "tags": [
       "Melee",
       "Survival",
@@ -14326,7 +14326,7 @@
       6
     ]
   },
-  {
+  "Caster,Ranged,Top Operator": {
     "tags": [
       "Caster",
       "Ranged",
@@ -14365,7 +14365,7 @@
       6
     ]
   },
-  {
+  "Medic,Ranged,Top Operator": {
     "tags": [
       "Medic",
       "Ranged",
@@ -14403,7 +14403,7 @@
       6
     ]
   },
-  {
+  "Ranged,Sniper,Top Operator": {
     "tags": [
       "Ranged",
       "Sniper",
@@ -14439,7 +14439,7 @@
       6
     ]
   },
-  {
+  "Ranged,Supporter,Top Operator": {
     "tags": [
       "Ranged",
       "Supporter",
@@ -14465,7 +14465,7 @@
       6
     ]
   },
-  {
+  "AoE,Ranged,Top Operator": {
     "tags": [
       "AoE",
       "Ranged",
@@ -14504,7 +14504,7 @@
       6
     ]
   },
-  {
+  "Crowd-Control,Ranged,Top Operator": {
     "tags": [
       "Crowd-Control",
       "Ranged",
@@ -14530,7 +14530,7 @@
       6
     ]
   },
-  {
+  "DPS,Ranged,Top Operator": {
     "tags": [
       "DPS",
       "Ranged",
@@ -14580,7 +14580,7 @@
       6
     ]
   },
-  {
+  "Debuff,Ranged,Top Operator": {
     "tags": [
       "Debuff",
       "Ranged",
@@ -14605,7 +14605,7 @@
       6
     ]
   },
-  {
+  "Healing,Ranged,Top Operator": {
     "tags": [
       "Healing",
       "Ranged",
@@ -14643,7 +14643,7 @@
       6
     ]
   },
-  {
+  "Ranged,Slow,Top Operator": {
     "tags": [
       "Ranged",
       "Slow",
@@ -14669,7 +14669,7 @@
       6
     ]
   },
-  {
+  "Ranged,Support,Top Operator": {
     "tags": [
       "Ranged",
       "Support",
@@ -14735,7 +14735,7 @@
       6
     ]
   },
-  {
+  "AoE,Caster,Top Operator": {
     "tags": [
       "AoE",
       "Caster",
@@ -14774,7 +14774,7 @@
       6
     ]
   },
-  {
+  "Caster,Crowd-Control,Top Operator": {
     "tags": [
       "Caster",
       "Crowd-Control",
@@ -14800,7 +14800,7 @@
       6
     ]
   },
-  {
+  "Caster,Debuff,Top Operator": {
     "tags": [
       "Caster",
       "Debuff",
@@ -14825,7 +14825,7 @@
       6
     ]
   },
-  {
+  "Caster,Support,Top Operator": {
     "tags": [
       "Caster",
       "Support",
@@ -14851,7 +14851,7 @@
       6
     ]
   },
-  {
+  "DPS,Defender,Top Operator": {
     "tags": [
       "DPS",
       "Defender",
@@ -14876,7 +14876,7 @@
       6
     ]
   },
-  {
+  "Defender,Defense,Top Operator": {
     "tags": [
       "Defender",
       "Defense",
@@ -14915,7 +14915,7 @@
       6
     ]
   },
-  {
+  "Defender,Healing,Top Operator": {
     "tags": [
       "Defender",
       "Healing",
@@ -14941,7 +14941,7 @@
       6
     ]
   },
-  {
+  "Defender,Support,Top Operator": {
     "tags": [
       "Defender",
       "Support",
@@ -14967,7 +14967,7 @@
       6
     ]
   },
-  {
+  "DPS,Guard,Top Operator": {
     "tags": [
       "DPS",
       "Guard",
@@ -15044,7 +15044,7 @@
       6
     ]
   },
-  {
+  "Guard,Nuker,Top Operator": {
     "tags": [
       "Guard",
       "Nuker",
@@ -15069,7 +15069,7 @@
       6
     ]
   },
-  {
+  "Guard,Support,Top Operator": {
     "tags": [
       "Guard",
       "Support",
@@ -15094,7 +15094,7 @@
       6
     ]
   },
-  {
+  "Guard,Survival,Top Operator": {
     "tags": [
       "Guard",
       "Survival",
@@ -15145,7 +15145,7 @@
       6
     ]
   },
-  {
+  "Healing,Medic,Top Operator": {
     "tags": [
       "Healing",
       "Medic",
@@ -15183,7 +15183,7 @@
       6
     ]
   },
-  {
+  "Medic,Support,Top Operator": {
     "tags": [
       "Medic",
       "Support",
@@ -15221,7 +15221,7 @@
       6
     ]
   },
-  {
+  "DPS,Sniper,Top Operator": {
     "tags": [
       "DPS",
       "Sniper",
@@ -15257,7 +15257,7 @@
       6
     ]
   },
-  {
+  "DPS,Supporter,Top Operator": {
     "tags": [
       "DPS",
       "Supporter",
@@ -15283,7 +15283,7 @@
       6
     ]
   },
-  {
+  "Slow,Supporter,Top Operator": {
     "tags": [
       "Slow",
       "Supporter",
@@ -15309,7 +15309,7 @@
       6
     ]
   },
-  {
+  "Support,Supporter,Top Operator": {
     "tags": [
       "Support",
       "Supporter",
@@ -15335,7 +15335,7 @@
       6
     ]
   },
-  {
+  "DP-Recovery,Top Operator,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Top Operator",
@@ -15360,7 +15360,7 @@
       6
     ]
   },
-  {
+  "DPS,Top Operator,Vanguard": {
     "tags": [
       "DPS",
       "Top Operator",
@@ -15385,7 +15385,7 @@
       6
     ]
   },
-  {
+  "AoE,Crowd-Control,Top Operator": {
     "tags": [
       "AoE",
       "Crowd-Control",
@@ -15411,7 +15411,7 @@
       6
     ]
   },
-  {
+  "AoE,Debuff,Top Operator": {
     "tags": [
       "AoE",
       "Debuff",
@@ -15436,7 +15436,7 @@
       6
     ]
   },
-  {
+  "AoE,Support,Top Operator": {
     "tags": [
       "AoE",
       "Support",
@@ -15462,7 +15462,7 @@
       6
     ]
   },
-  {
+  "Crowd-Control,Support,Top Operator": {
     "tags": [
       "Crowd-Control",
       "Support",
@@ -15488,7 +15488,7 @@
       6
     ]
   },
-  {
+  "DP-Recovery,DPS,Top Operator": {
     "tags": [
       "DP-Recovery",
       "DPS",
@@ -15513,7 +15513,7 @@
       6
     ]
   },
-  {
+  "DPS,Defense,Top Operator": {
     "tags": [
       "DPS",
       "Defense",
@@ -15538,7 +15538,7 @@
       6
     ]
   },
-  {
+  "DPS,Nuker,Top Operator": {
     "tags": [
       "DPS",
       "Nuker",
@@ -15563,7 +15563,7 @@
       6
     ]
   },
-  {
+  "DPS,Slow,Top Operator": {
     "tags": [
       "DPS",
       "Slow",
@@ -15589,7 +15589,7 @@
       6
     ]
   },
-  {
+  "DPS,Support,Top Operator": {
     "tags": [
       "DPS",
       "Support",
@@ -15628,7 +15628,7 @@
       6
     ]
   },
-  {
+  "DPS,Survival,Top Operator": {
     "tags": [
       "DPS",
       "Survival",
@@ -15679,7 +15679,7 @@
       6
     ]
   },
-  {
+  "Defense,Healing,Top Operator": {
     "tags": [
       "Defense",
       "Healing",
@@ -15705,7 +15705,7 @@
       6
     ]
   },
-  {
+  "Defense,Support,Top Operator": {
     "tags": [
       "Defense",
       "Support",
@@ -15731,7 +15731,7 @@
       6
     ]
   },
-  {
+  "Healing,Support,Top Operator": {
     "tags": [
       "Healing",
       "Support",
@@ -15783,7 +15783,7 @@
       6
     ]
   },
-  {
+  "Slow,Support,Top Operator": {
     "tags": [
       "Slow",
       "Support",
@@ -15809,7 +15809,7 @@
       6
     ]
   },
-  {
+  "Defender,Melee,Senior Operator": {
     "tags": [
       "Defender",
       "Melee",
@@ -15870,7 +15870,7 @@
       5
     ]
   },
-  {
+  "Guard,Melee,Senior Operator": {
     "tags": [
       "Guard",
       "Melee",
@@ -15942,7 +15942,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Specialist": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16014,7 +16014,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Vanguard": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16062,7 +16062,7 @@
       5
     ]
   },
-  {
+  "AoE,Melee,Senior Operator": {
     "tags": [
       "AoE",
       "Melee",
@@ -16098,7 +16098,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Melee,Senior Operator": {
     "tags": [
       "Crowd-Control",
       "Melee",
@@ -16134,7 +16134,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Melee,Senior Operator": {
     "tags": [
       "DP-Recovery",
       "Melee",
@@ -16182,7 +16182,7 @@
       5
     ]
   },
-  {
+  "DPS,Melee,Senior Operator": {
     "tags": [
       "DPS",
       "Melee",
@@ -16291,7 +16291,7 @@
       5
     ]
   },
-  {
+  "Debuff,Melee,Senior Operator": {
     "tags": [
       "Debuff",
       "Melee",
@@ -16315,7 +16315,7 @@
       5
     ]
   },
-  {
+  "Defense,Melee,Senior Operator": {
     "tags": [
       "Defense",
       "Melee",
@@ -16388,7 +16388,7 @@
       5
     ]
   },
-  {
+  "Fast-Redeploy,Melee,Senior Operator": {
     "tags": [
       "Fast-Redeploy",
       "Melee",
@@ -16424,7 +16424,7 @@
       5
     ]
   },
-  {
+  "Healing,Melee,Senior Operator": {
     "tags": [
       "Healing",
       "Melee",
@@ -16448,7 +16448,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Shift": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16496,7 +16496,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Slow": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16520,7 +16520,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Support": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16556,7 +16556,7 @@
       5
     ]
   },
-  {
+  "Melee,Senior Operator,Survival": {
     "tags": [
       "Melee",
       "Senior Operator",
@@ -16629,7 +16629,7 @@
       5
     ]
   },
-  {
+  "Caster,Ranged,Senior Operator": {
     "tags": [
       "Caster",
       "Ranged",
@@ -16654,7 +16654,7 @@
       5
     ]
   },
-  {
+  "Medic,Ranged,Senior Operator": {
     "tags": [
       "Medic",
       "Ranged",
@@ -16701,7 +16701,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator,Sniper": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -16792,7 +16792,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator,Supporter": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -16851,7 +16851,7 @@
       5
     ]
   },
-  {
+  "AoE,Ranged,Senior Operator": {
     "tags": [
       "AoE",
       "Ranged",
@@ -16886,7 +16886,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Ranged,Senior Operator": {
     "tags": [
       "Crowd-Control",
       "Ranged",
@@ -16922,7 +16922,7 @@
       5
     ]
   },
-  {
+  "DPS,Ranged,Senior Operator": {
     "tags": [
       "DPS",
       "Ranged",
@@ -17015,7 +17015,7 @@
       5
     ]
   },
-  {
+  "Debuff,Ranged,Senior Operator": {
     "tags": [
       "Debuff",
       "Ranged",
@@ -17050,7 +17050,7 @@
       5
     ]
   },
-  {
+  "Healing,Ranged,Senior Operator": {
     "tags": [
       "Healing",
       "Ranged",
@@ -17110,7 +17110,7 @@
       5
     ]
   },
-  {
+  "Nuker,Ranged,Senior Operator": {
     "tags": [
       "Nuker",
       "Ranged",
@@ -17134,7 +17134,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator,Slow": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -17183,7 +17183,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator,Summon": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -17207,7 +17207,7 @@
       5
     ]
   },
-  {
+  "Ranged,Senior Operator,Support": {
     "tags": [
       "Ranged",
       "Senior Operator",
@@ -17243,7 +17243,7 @@
       5
     ]
   },
-  {
+  "Caster,DPS,Senior Operator": {
     "tags": [
       "Caster",
       "DPS",
@@ -17268,7 +17268,7 @@
       5
     ]
   },
-  {
+  "Caster,Healing,Senior Operator": {
     "tags": [
       "Caster",
       "Healing",
@@ -17293,7 +17293,7 @@
       5
     ]
   },
-  {
+  "Caster,Senior Operator,Slow": {
     "tags": [
       "Caster",
       "Senior Operator",
@@ -17318,7 +17318,7 @@
       5
     ]
   },
-  {
+  "DPS,Defender,Senior Operator": {
     "tags": [
       "DPS",
       "Defender",
@@ -17355,7 +17355,7 @@
       5
     ]
   },
-  {
+  "Defender,Defense,Senior Operator": {
     "tags": [
       "Defender",
       "Defense",
@@ -17416,7 +17416,7 @@
       5
     ]
   },
-  {
+  "Defender,Healing,Senior Operator": {
     "tags": [
       "Defender",
       "Healing",
@@ -17440,7 +17440,7 @@
       5
     ]
   },
-  {
+  "Defender,Senior Operator,Shift": {
     "tags": [
       "Defender",
       "Senior Operator",
@@ -17464,7 +17464,7 @@
       5
     ]
   },
-  {
+  "Defender,Senior Operator,Survival": {
     "tags": [
       "Defender",
       "Senior Operator",
@@ -17489,7 +17489,7 @@
       5
     ]
   },
-  {
+  "AoE,Guard,Senior Operator": {
     "tags": [
       "AoE",
       "Guard",
@@ -17525,7 +17525,7 @@
       5
     ]
   },
-  {
+  "DPS,Guard,Senior Operator": {
     "tags": [
       "DPS",
       "Guard",
@@ -17573,7 +17573,7 @@
       5
     ]
   },
-  {
+  "Defense,Guard,Senior Operator": {
     "tags": [
       "Defense",
       "Guard",
@@ -17597,7 +17597,7 @@
       5
     ]
   },
-  {
+  "Guard,Senior Operator,Support": {
     "tags": [
       "Guard",
       "Senior Operator",
@@ -17621,7 +17621,7 @@
       5
     ]
   },
-  {
+  "Guard,Senior Operator,Survival": {
     "tags": [
       "Guard",
       "Senior Operator",
@@ -17669,7 +17669,7 @@
       5
     ]
   },
-  {
+  "Healing,Medic,Senior Operator": {
     "tags": [
       "Healing",
       "Medic",
@@ -17716,7 +17716,7 @@
       5
     ]
   },
-  {
+  "Medic,Senior Operator,Support": {
     "tags": [
       "Medic",
       "Senior Operator",
@@ -17752,7 +17752,7 @@
       5
     ]
   },
-  {
+  "AoE,Senior Operator,Sniper": {
     "tags": [
       "AoE",
       "Senior Operator",
@@ -17787,7 +17787,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Sniper": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -17855,7 +17855,7 @@
       5
     ]
   },
-  {
+  "Debuff,Senior Operator,Sniper": {
     "tags": [
       "Debuff",
       "Senior Operator",
@@ -17879,7 +17879,7 @@
       5
     ]
   },
-  {
+  "Nuker,Senior Operator,Sniper": {
     "tags": [
       "Nuker",
       "Senior Operator",
@@ -17903,7 +17903,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Specialist": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -17927,7 +17927,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Specialist": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -17963,7 +17963,7 @@
       5
     ]
   },
-  {
+  "Debuff,Senior Operator,Specialist": {
     "tags": [
       "Debuff",
       "Senior Operator",
@@ -17987,7 +17987,7 @@
       5
     ]
   },
-  {
+  "Fast-Redeploy,Senior Operator,Specialist": {
     "tags": [
       "Fast-Redeploy",
       "Senior Operator",
@@ -18023,7 +18023,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Shift,Specialist": {
     "tags": [
       "Senior Operator",
       "Shift",
@@ -18059,7 +18059,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Slow,Specialist": {
     "tags": [
       "Senior Operator",
       "Slow",
@@ -18083,7 +18083,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Specialist,Survival": {
     "tags": [
       "Senior Operator",
       "Specialist",
@@ -18107,7 +18107,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Supporter": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -18143,7 +18143,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Supporter": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18167,7 +18167,7 @@
       5
     ]
   },
-  {
+  "Debuff,Senior Operator,Supporter": {
     "tags": [
       "Debuff",
       "Senior Operator",
@@ -18190,7 +18190,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Slow,Supporter": {
     "tags": [
       "Senior Operator",
       "Slow",
@@ -18226,7 +18226,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Summon,Supporter": {
     "tags": [
       "Senior Operator",
       "Summon",
@@ -18250,7 +18250,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Vanguard": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -18274,7 +18274,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Senior Operator,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Senior Operator",
@@ -18322,7 +18322,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Vanguard": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18346,7 +18346,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Support,Vanguard": {
     "tags": [
       "Senior Operator",
       "Support",
@@ -18370,7 +18370,7 @@
       5
     ]
   },
-  {
+  "AoE,Debuff,Senior Operator": {
     "tags": [
       "AoE",
       "Debuff",
@@ -18394,7 +18394,7 @@
       5
     ]
   },
-  {
+  "AoE,Senior Operator,Survival": {
     "tags": [
       "AoE",
       "Senior Operator",
@@ -18430,7 +18430,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,DP-Recovery,Senior Operator": {
     "tags": [
       "Crowd-Control",
       "DP-Recovery",
@@ -18454,7 +18454,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Fast-Redeploy,Senior Operator": {
     "tags": [
       "Crowd-Control",
       "Fast-Redeploy",
@@ -18478,7 +18478,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Slow": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -18502,7 +18502,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Senior Operator,Summon": {
     "tags": [
       "Crowd-Control",
       "Senior Operator",
@@ -18526,7 +18526,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,DPS,Senior Operator": {
     "tags": [
       "DP-Recovery",
       "DPS",
@@ -18550,7 +18550,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Senior Operator,Support": {
     "tags": [
       "DP-Recovery",
       "Senior Operator",
@@ -18574,7 +18574,7 @@
       5
     ]
   },
-  {
+  "DPS,Defense,Senior Operator": {
     "tags": [
       "DPS",
       "Defense",
@@ -18623,7 +18623,7 @@
       5
     ]
   },
-  {
+  "DPS,Healing,Senior Operator": {
     "tags": [
       "DPS",
       "Healing",
@@ -18648,7 +18648,7 @@
       5
     ]
   },
-  {
+  "DPS,Nuker,Senior Operator": {
     "tags": [
       "DPS",
       "Nuker",
@@ -18672,7 +18672,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Shift": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18696,7 +18696,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Slow": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18733,7 +18733,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Support": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18757,7 +18757,7 @@
       5
     ]
   },
-  {
+  "DPS,Senior Operator,Survival": {
     "tags": [
       "DPS",
       "Senior Operator",
@@ -18806,7 +18806,7 @@
       5
     ]
   },
-  {
+  "Debuff,Fast-Redeploy,Senior Operator": {
     "tags": [
       "Debuff",
       "Fast-Redeploy",
@@ -18830,7 +18830,7 @@
       5
     ]
   },
-  {
+  "Defense,Healing,Senior Operator": {
     "tags": [
       "Defense",
       "Healing",
@@ -18854,7 +18854,7 @@
       5
     ]
   },
-  {
+  "Defense,Senior Operator,Shift": {
     "tags": [
       "Defense",
       "Senior Operator",
@@ -18878,7 +18878,7 @@
       5
     ]
   },
-  {
+  "Defense,Senior Operator,Survival": {
     "tags": [
       "Defense",
       "Senior Operator",
@@ -18903,7 +18903,7 @@
       5
     ]
   },
-  {
+  "Healing,Senior Operator,Slow": {
     "tags": [
       "Healing",
       "Senior Operator",
@@ -18928,7 +18928,7 @@
       5
     ]
   },
-  {
+  "Healing,Senior Operator,Support": {
     "tags": [
       "Healing",
       "Senior Operator",
@@ -18964,7 +18964,7 @@
       5
     ]
   },
-  {
+  "Senior Operator,Shift,Slow": {
     "tags": [
       "Senior Operator",
       "Shift",
@@ -18988,7 +18988,7 @@
       5
     ]
   },
-  {
+  "Defender,Melee,Starter": {
     "tags": [
       "Defender",
       "Melee",
@@ -19008,7 +19008,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Melee,Starter,Vanguard": {
     "tags": [
       "Melee",
       "Starter",
@@ -19028,7 +19028,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,Ranged,Starter": {
     "tags": [
       "Caster",
       "Ranged",
@@ -19058,7 +19058,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Sniper,Starter": {
     "tags": [
       "Ranged",
       "Sniper",
@@ -19078,7 +19078,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Guard,Melee,Robot": {
     "tags": [
       "Guard",
       "Melee",
@@ -19101,7 +19101,7 @@
       1
     ]
   },
-  {
+  "Melee,Robot,Specialist": {
     "tags": [
       "Melee",
       "Robot",
@@ -19124,7 +19124,7 @@
       1
     ]
   },
-  {
+  "Melee,Nuker,Robot": {
     "tags": [
       "Melee",
       "Nuker",
@@ -19147,7 +19147,7 @@
       1
     ]
   },
-  {
+  "Melee,Robot,Support": {
     "tags": [
       "Melee",
       "Robot",
@@ -19170,7 +19170,7 @@
       1
     ]
   },
-  {
+  "Medic,Ranged,Robot": {
     "tags": [
       "Medic",
       "Ranged",
@@ -19193,7 +19193,7 @@
       1
     ]
   },
-  {
+  "Healing,Ranged,Robot": {
     "tags": [
       "Healing",
       "Ranged",
@@ -19216,7 +19216,7 @@
       1
     ]
   },
-  {
+  "Guard,Robot,Support": {
     "tags": [
       "Guard",
       "Robot",
@@ -19239,7 +19239,7 @@
       1
     ]
   },
-  {
+  "Healing,Medic,Robot": {
     "tags": [
       "Healing",
       "Medic",
@@ -19262,7 +19262,7 @@
       1
     ]
   },
-  {
+  "Nuker,Robot,Specialist": {
     "tags": [
       "Nuker",
       "Robot",
@@ -19285,7 +19285,7 @@
       1
     ]
   },
-  {
+  "DPS,Defender,Melee": {
     "tags": [
       "DPS",
       "Defender",
@@ -19322,7 +19322,7 @@
       5
     ]
   },
-  {
+  "Defender,Defense,Melee": {
     "tags": [
       "Defender",
       "Defense",
@@ -19433,7 +19433,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Healing,Melee": {
     "tags": [
       "Defender",
       "Healing",
@@ -19477,7 +19477,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Melee,Shift": {
     "tags": [
       "Defender",
       "Melee",
@@ -19501,7 +19501,7 @@
       5
     ]
   },
-  {
+  "Defender,Melee,Survival": {
     "tags": [
       "Defender",
       "Melee",
@@ -19526,7 +19526,7 @@
       5
     ]
   },
-  {
+  "AoE,Guard,Melee": {
     "tags": [
       "AoE",
       "Guard",
@@ -19582,7 +19582,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Guard,Melee": {
     "tags": [
       "DPS",
       "Guard",
@@ -19702,7 +19702,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defense,Guard,Melee": {
     "tags": [
       "Defense",
       "Guard",
@@ -19726,7 +19726,7 @@
       5
     ]
   },
-  {
+  "Guard,Melee,Slow": {
     "tags": [
       "Guard",
       "Melee",
@@ -19749,7 +19749,7 @@
       4
     ]
   },
-  {
+  "Guard,Melee,Support": {
     "tags": [
       "Guard",
       "Melee",
@@ -19795,7 +19795,7 @@
       4
     ]
   },
-  {
+  "Guard,Melee,Survival": {
     "tags": [
       "Guard",
       "Melee",
@@ -19885,7 +19885,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control,Melee,Specialist": {
     "tags": [
       "Crowd-Control",
       "Melee",
@@ -19909,7 +19909,7 @@
       5
     ]
   },
-  {
+  "DPS,Melee,Specialist": {
     "tags": [
       "DPS",
       "Melee",
@@ -19945,7 +19945,7 @@
       5
     ]
   },
-  {
+  "Debuff,Melee,Specialist": {
     "tags": [
       "Debuff",
       "Melee",
@@ -19969,7 +19969,7 @@
       5
     ]
   },
-  {
+  "Defense,Melee,Specialist": {
     "tags": [
       "Defense",
       "Melee",
@@ -19992,7 +19992,7 @@
       4
     ]
   },
-  {
+  "Fast-Redeploy,Melee,Specialist": {
     "tags": [
       "Fast-Redeploy",
       "Melee",
@@ -20039,7 +20039,7 @@
       4
     ]
   },
-  {
+  "Melee,Nuker,Specialist": {
     "tags": [
       "Melee",
       "Nuker",
@@ -20062,7 +20062,7 @@
       1
     ]
   },
-  {
+  "Melee,Shift,Specialist": {
     "tags": [
       "Melee",
       "Shift",
@@ -20118,7 +20118,7 @@
       4
     ]
   },
-  {
+  "Melee,Slow,Specialist": {
     "tags": [
       "Melee",
       "Slow",
@@ -20142,7 +20142,7 @@
       5
     ]
   },
-  {
+  "Melee,Specialist,Survival": {
     "tags": [
       "Melee",
       "Specialist",
@@ -20166,7 +20166,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Melee,Vanguard": {
     "tags": [
       "Crowd-Control",
       "Melee",
@@ -20190,7 +20190,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,Melee,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Melee",
@@ -20300,7 +20300,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Melee,Vanguard": {
     "tags": [
       "DPS",
       "Melee",
@@ -20355,7 +20355,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Healing,Melee,Vanguard": {
     "tags": [
       "Healing",
       "Melee",
@@ -20378,7 +20378,7 @@
       4
     ]
   },
-  {
+  "Melee,Support,Vanguard": {
     "tags": [
       "Melee",
       "Support",
@@ -20402,7 +20402,7 @@
       5
     ]
   },
-  {
+  "AoE,Melee,Survival": {
     "tags": [
       "AoE",
       "Melee",
@@ -20458,7 +20458,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Crowd-Control,DP-Recovery,Melee": {
     "tags": [
       "Crowd-Control",
       "DP-Recovery",
@@ -20482,7 +20482,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Fast-Redeploy,Melee": {
     "tags": [
       "Crowd-Control",
       "Fast-Redeploy",
@@ -20506,7 +20506,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,DPS,Melee": {
     "tags": [
       "DP-Recovery",
       "DPS",
@@ -20561,7 +20561,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DP-Recovery,Healing,Melee": {
     "tags": [
       "DP-Recovery",
       "Healing",
@@ -20584,7 +20584,7 @@
       4
     ]
   },
-  {
+  "DP-Recovery,Melee,Support": {
     "tags": [
       "DP-Recovery",
       "Melee",
@@ -20608,7 +20608,7 @@
       5
     ]
   },
-  {
+  "DPS,Defense,Melee": {
     "tags": [
       "DPS",
       "Defense",
@@ -20657,7 +20657,7 @@
       5
     ]
   },
-  {
+  "DPS,Melee,Shift": {
     "tags": [
       "DPS",
       "Melee",
@@ -20681,7 +20681,7 @@
       5
     ]
   },
-  {
+  "DPS,Melee,Slow": {
     "tags": [
       "DPS",
       "Melee",
@@ -20704,7 +20704,7 @@
       4
     ]
   },
-  {
+  "DPS,Melee,Support": {
     "tags": [
       "DPS",
       "Melee",
@@ -20739,7 +20739,7 @@
       4
     ]
   },
-  {
+  "DPS,Melee,Survival": {
     "tags": [
       "DPS",
       "Melee",
@@ -20808,7 +20808,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Fast-Redeploy,Melee": {
     "tags": [
       "Debuff",
       "Fast-Redeploy",
@@ -20832,7 +20832,7 @@
       5
     ]
   },
-  {
+  "Defense,Fast-Redeploy,Melee": {
     "tags": [
       "Defense",
       "Fast-Redeploy",
@@ -20855,7 +20855,7 @@
       4
     ]
   },
-  {
+  "Defense,Healing,Melee": {
     "tags": [
       "Defense",
       "Healing",
@@ -20899,7 +20899,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defense,Melee,Shift": {
     "tags": [
       "Defense",
       "Melee",
@@ -20923,7 +20923,7 @@
       5
     ]
   },
-  {
+  "Defense,Melee,Survival": {
     "tags": [
       "Defense",
       "Melee",
@@ -20948,7 +20948,7 @@
       5
     ]
   },
-  {
+  "Melee,Shift,Slow": {
     "tags": [
       "Melee",
       "Shift",
@@ -20972,7 +20972,7 @@
       5
     ]
   },
-  {
+  "AoE,Caster,Ranged": {
     "tags": [
       "AoE",
       "Caster",
@@ -21013,7 +21013,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,DPS,Ranged": {
     "tags": [
       "Caster",
       "DPS",
@@ -21057,7 +21057,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Caster,Debuff,Ranged": {
     "tags": [
       "Caster",
       "Debuff",
@@ -21080,7 +21080,7 @@
       4
     ]
   },
-  {
+  "Caster,Healing,Ranged": {
     "tags": [
       "Caster",
       "Healing",
@@ -21105,7 +21105,7 @@
       5
     ]
   },
-  {
+  "Caster,Ranged,Slow": {
     "tags": [
       "Caster",
       "Ranged",
@@ -21141,7 +21141,7 @@
       4
     ]
   },
-  {
+  "Healing,Medic,Ranged": {
     "tags": [
       "Healing",
       "Medic",
@@ -21247,7 +21247,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Medic,Ranged,Support": {
     "tags": [
       "Medic",
       "Ranged",
@@ -21283,7 +21283,7 @@
       5
     ]
   },
-  {
+  "AoE,Ranged,Sniper": {
     "tags": [
       "AoE",
       "Ranged",
@@ -21337,7 +21337,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Ranged,Sniper": {
     "tags": [
       "DPS",
       "Ranged",
@@ -21477,7 +21477,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Debuff,Ranged,Sniper": {
     "tags": [
       "Debuff",
       "Ranged",
@@ -21512,7 +21512,7 @@
       4
     ]
   },
-  {
+  "Nuker,Ranged,Sniper": {
     "tags": [
       "Nuker",
       "Ranged",
@@ -21536,7 +21536,7 @@
       5
     ]
   },
-  {
+  "Ranged,Slow,Sniper": {
     "tags": [
       "Ranged",
       "Slow",
@@ -21581,7 +21581,7 @@
       4
     ]
   },
-  {
+  "Ranged,Sniper,Survival": {
     "tags": [
       "Ranged",
       "Sniper",
@@ -21604,7 +21604,7 @@
       4
     ]
   },
-  {
+  "Crowd-Control,Ranged,Supporter": {
     "tags": [
       "Crowd-Control",
       "Ranged",
@@ -21640,7 +21640,7 @@
       5
     ]
   },
-  {
+  "DPS,Ranged,Supporter": {
     "tags": [
       "DPS",
       "Ranged",
@@ -21664,7 +21664,7 @@
       5
     ]
   },
-  {
+  "Debuff,Ranged,Supporter": {
     "tags": [
       "Debuff",
       "Ranged",
@@ -21687,7 +21687,7 @@
       5
     ]
   },
-  {
+  "Ranged,Slow,Supporter": {
     "tags": [
       "Ranged",
       "Slow",
@@ -21741,7 +21741,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Ranged,Summon,Supporter": {
     "tags": [
       "Ranged",
       "Summon",
@@ -21765,7 +21765,7 @@
       5
     ]
   },
-  {
+  "AoE,Debuff,Ranged": {
     "tags": [
       "AoE",
       "Debuff",
@@ -21789,7 +21789,7 @@
       5
     ]
   },
-  {
+  "AoE,Ranged,Slow": {
     "tags": [
       "AoE",
       "Ranged",
@@ -21823,7 +21823,7 @@
       4
     ]
   },
-  {
+  "Crowd-Control,Ranged,Slow": {
     "tags": [
       "Crowd-Control",
       "Ranged",
@@ -21847,7 +21847,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Ranged,Summon": {
     "tags": [
       "Crowd-Control",
       "Ranged",
@@ -21871,7 +21871,7 @@
       5
     ]
   },
-  {
+  "DPS,Debuff,Ranged": {
     "tags": [
       "DPS",
       "Debuff",
@@ -21905,7 +21905,7 @@
       4
     ]
   },
-  {
+  "DPS,Healing,Ranged": {
     "tags": [
       "DPS",
       "Healing",
@@ -21930,7 +21930,7 @@
       5
     ]
   },
-  {
+  "DPS,Nuker,Ranged": {
     "tags": [
       "DPS",
       "Nuker",
@@ -21954,7 +21954,7 @@
       5
     ]
   },
-  {
+  "DPS,Ranged,Slow": {
     "tags": [
       "DPS",
       "Ranged",
@@ -22013,7 +22013,7 @@
       4
     ]
   },
-  {
+  "DPS,Ranged,Survival": {
     "tags": [
       "DPS",
       "Ranged",
@@ -22036,7 +22036,7 @@
       4
     ]
   },
-  {
+  "Healing,Ranged,Slow": {
     "tags": [
       "Healing",
       "Ranged",
@@ -22061,7 +22061,7 @@
       5
     ]
   },
-  {
+  "Healing,Ranged,Support": {
     "tags": [
       "Healing",
       "Ranged",
@@ -22097,7 +22097,7 @@
       5
     ]
   },
-  {
+  "AoE,Caster,Slow": {
     "tags": [
       "AoE",
       "Caster",
@@ -22120,7 +22120,7 @@
       4
     ]
   },
-  {
+  "Caster,DPS,Debuff": {
     "tags": [
       "Caster",
       "DPS",
@@ -22143,7 +22143,7 @@
       4
     ]
   },
-  {
+  "Caster,DPS,Healing": {
     "tags": [
       "Caster",
       "DPS",
@@ -22168,7 +22168,7 @@
       5
     ]
   },
-  {
+  "Caster,DPS,Slow": {
     "tags": [
       "Caster",
       "DPS",
@@ -22193,7 +22193,7 @@
       5
     ]
   },
-  {
+  "Caster,Healing,Slow": {
     "tags": [
       "Caster",
       "Healing",
@@ -22218,7 +22218,7 @@
       5
     ]
   },
-  {
+  "DPS,Defender,Defense": {
     "tags": [
       "DPS",
       "Defender",
@@ -22255,7 +22255,7 @@
       5
     ]
   },
-  {
+  "DPS,Defender,Survival": {
     "tags": [
       "DPS",
       "Defender",
@@ -22280,7 +22280,7 @@
       5
     ]
   },
-  {
+  "Defender,Defense,Healing": {
     "tags": [
       "Defender",
       "Defense",
@@ -22324,7 +22324,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Defender,Defense,Shift": {
     "tags": [
       "Defender",
       "Defense",
@@ -22348,7 +22348,7 @@
       5
     ]
   },
-  {
+  "Defender,Defense,Survival": {
     "tags": [
       "Defender",
       "Defense",
@@ -22373,7 +22373,7 @@
       5
     ]
   },
-  {
+  "AoE,Guard,Survival": {
     "tags": [
       "AoE",
       "Guard",
@@ -22429,7 +22429,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DPS,Defense,Guard": {
     "tags": [
       "DPS",
       "Defense",
@@ -22453,7 +22453,7 @@
       5
     ]
   },
-  {
+  "DPS,Guard,Slow": {
     "tags": [
       "DPS",
       "Guard",
@@ -22476,7 +22476,7 @@
       4
     ]
   },
-  {
+  "DPS,Guard,Support": {
     "tags": [
       "DPS",
       "Guard",
@@ -22511,7 +22511,7 @@
       4
     ]
   },
-  {
+  "DPS,Guard,Survival": {
     "tags": [
       "DPS",
       "Guard",
@@ -22555,7 +22555,7 @@
     ],
     "guarantees": []
   },
-  {
+  "Healing,Medic,Support": {
     "tags": [
       "Healing",
       "Medic",
@@ -22591,7 +22591,7 @@
       5
     ]
   },
-  {
+  "AoE,Debuff,Sniper": {
     "tags": [
       "AoE",
       "Debuff",
@@ -22615,7 +22615,7 @@
       5
     ]
   },
-  {
+  "AoE,Slow,Sniper": {
     "tags": [
       "AoE",
       "Slow",
@@ -22638,7 +22638,7 @@
       4
     ]
   },
-  {
+  "DPS,Debuff,Sniper": {
     "tags": [
       "DPS",
       "Debuff",
@@ -22661,7 +22661,7 @@
       4
     ]
   },
-  {
+  "DPS,Nuker,Sniper": {
     "tags": [
       "DPS",
       "Nuker",
@@ -22685,7 +22685,7 @@
       5
     ]
   },
-  {
+  "DPS,Slow,Sniper": {
     "tags": [
       "DPS",
       "Slow",
@@ -22719,7 +22719,7 @@
       4
     ]
   },
-  {
+  "DPS,Sniper,Survival": {
     "tags": [
       "DPS",
       "Sniper",
@@ -22742,7 +22742,7 @@
       4
     ]
   },
-  {
+  "Crowd-Control,Fast-Redeploy,Specialist": {
     "tags": [
       "Crowd-Control",
       "Fast-Redeploy",
@@ -22766,7 +22766,7 @@
       5
     ]
   },
-  {
+  "DPS,Shift,Specialist": {
     "tags": [
       "DPS",
       "Shift",
@@ -22790,7 +22790,7 @@
       5
     ]
   },
-  {
+  "DPS,Specialist,Survival": {
     "tags": [
       "DPS",
       "Specialist",
@@ -22814,7 +22814,7 @@
       5
     ]
   },
-  {
+  "Debuff,Fast-Redeploy,Specialist": {
     "tags": [
       "Debuff",
       "Fast-Redeploy",
@@ -22838,7 +22838,7 @@
       5
     ]
   },
-  {
+  "Defense,Fast-Redeploy,Specialist": {
     "tags": [
       "Defense",
       "Fast-Redeploy",
@@ -22861,7 +22861,7 @@
       4
     ]
   },
-  {
+  "Shift,Slow,Specialist": {
     "tags": [
       "Shift",
       "Slow",
@@ -22885,7 +22885,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Slow,Supporter": {
     "tags": [
       "Crowd-Control",
       "Slow",
@@ -22909,7 +22909,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,Summon,Supporter": {
     "tags": [
       "Crowd-Control",
       "Summon",
@@ -22933,7 +22933,7 @@
       5
     ]
   },
-  {
+  "DPS,Slow,Supporter": {
     "tags": [
       "DPS",
       "Slow",
@@ -22957,7 +22957,7 @@
       5
     ]
   },
-  {
+  "Crowd-Control,DP-Recovery,Vanguard": {
     "tags": [
       "Crowd-Control",
       "DP-Recovery",
@@ -22981,7 +22981,7 @@
       5
     ]
   },
-  {
+  "DP-Recovery,DPS,Vanguard": {
     "tags": [
       "DP-Recovery",
       "DPS",
@@ -23036,7 +23036,7 @@
     ],
     "guarantees": []
   },
-  {
+  "DP-Recovery,Healing,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Healing",
@@ -23059,7 +23059,7 @@
       4
     ]
   },
-  {
+  "DP-Recovery,Support,Vanguard": {
     "tags": [
       "DP-Recovery",
       "Support",
@@ -23083,7 +23083,7 @@
       5
     ]
   },
-  {
+  "DPS,Defense,Survival": {
     "tags": [
       "DPS",
       "Defense",
@@ -23108,7 +23108,7 @@
       5
     ]
   },
-  {
+  "DPS,Healing,Slow": {
     "tags": [
       "DPS",
       "Healing",
@@ -23133,4 +23133,4 @@
       5
     ]
   }
-]
+}

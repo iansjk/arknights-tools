@@ -97,49 +97,58 @@ const createRecruitmentJson = () => {
   const tagSets = Array(3)
     .fill(0)
     .flatMap((_, i) => [...new Combination(RECRUITMENT_TAGS, i + 1)]);
-  const recruitmentResults = tagSets
-    .map((tagSet) => ({
-      tags: tagSet.sort(),
-      operators: recruitment
-        .filter((recruitable) =>
-          tagSet.every(
-            (tag) =>
-              recruitable.tags.includes(tag) &&
-              (recruitable.rarity < 6 || tagSet.includes("Top Operator"))
+  const recruitmentResults = Object.fromEntries(
+    tagSets
+      .map((tagSet) => ({
+        tags: tagSet.sort(),
+        operators: recruitment
+          .filter((recruitable) =>
+            tagSet.every(
+              (tag) =>
+                recruitable.tags.includes(tag) &&
+                (recruitable.rarity < 6 || tagSet.includes("Top Operator"))
+            )
           )
-        )
-        .sort((op1, op2) => op2.rarity - op1.rarity),
-    }))
-    .filter((recruitData) => recruitData.operators.length > 0)
-    .map((result) => {
-      // for guaranteed tags, we only care about 1*, 4*, 5*, and 6*.
-      // we include 1* if
-      // - the otherwise highest rarity is 5 (1* and 5* can't coexist), or
-      // - the Robot tag is available
-      const lowestRarity = Math.min(
-        ...result.operators
-          .map((op) => op.rarity)
-          .filter((rarity) => rarity > 1)
-      );
-      if (lowestRarity > 1 && lowestRarity < 4) {
-        return {
-          ...result,
-          guarantees: [],
-        };
-      }
+          .sort((op1, op2) => op2.rarity - op1.rarity),
+      }))
+      .filter((recruitData) => recruitData.operators.length > 0)
+      .map((result) => {
+        // for guaranteed tags, we only care about 1*, 4*, 5*, and 6*.
+        // we include 1* if
+        // - the otherwise highest rarity is 5 (1* and 5* can't coexist), or
+        // - the Robot tag is available
+        const lowestRarity = Math.min(
+          ...result.operators
+            .map((op) => op.rarity)
+            .filter((rarity) => rarity > 1)
+        );
+        if (lowestRarity > 1 && lowestRarity < 4) {
+          return [
+            result.tags,
+            {
+              ...result,
+              guarantees: [],
+            },
+          ];
+        }
 
-      const guarantees = Number.isFinite(lowestRarity) ? [lowestRarity] : [];
-      if (
-        (result.operators.find((op) => op.rarity === 1) && lowestRarity >= 5) ||
-        result.tags.includes("Robot")
-      ) {
-        guarantees.push(1);
-      }
-      return {
-        ...result,
-        guarantees,
-      };
-    });
+        const guarantees = Number.isFinite(lowestRarity) ? [lowestRarity] : [];
+        if (
+          (result.operators.find((op) => op.rarity === 1) &&
+            lowestRarity >= 5) ||
+          result.tags.includes("Robot")
+        ) {
+          guarantees.push(1);
+        }
+        return [
+          result.tags,
+          {
+            ...result,
+            guarantees,
+          },
+        ];
+      })
+  );
   const outPath = path.join(DATA_OUTPUT_DIRECTORY, "recruitment.json");
   fs.writeFileSync(outPath, JSON.stringify(recruitmentResults, null, 2));
   console.log(`recruitment: wrote ${outPath}`);
