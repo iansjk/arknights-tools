@@ -8,7 +8,8 @@
     "preview": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "update-game-data": "git submodule update --remote && node scripts/all.mjs"
   },
   "resolutions": {
     "minimist": "^1.2.6",
