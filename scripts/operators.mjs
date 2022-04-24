@@ -144,17 +144,19 @@ const createOperatorsJson = () => {
     })
   );
 
-  fs.writeFileSync(
-    path.join(DATA_OUTPUT_DIRECTORY, "operators.json"),
-    JSON.stringify(operatorsJson, null, 2)
-  );
+  const operatorsOutPath = path.join(DATA_OUTPUT_DIRECTORY, "operators.json");
+  fs.writeFileSync(operatorsOutPath, JSON.stringify(operatorsJson, null, 2));
+  console.log(`operators: wrote ${operatorsOutPath}`);
 
   const opNameToId = Object.fromEntries(
     Object.entries(operatorsJson).map(([id, operator]) => [operator.name, id])
   );
-  const outPath = path.join(DATA_OUTPUT_DIRECTORY, "operator-name-to-id.json");
-  fs.writeFileSync(outPath, JSON.stringify(opNameToId, null, 2));
-  console.log(`operators: wrote ${outPath}`);
+  const nameToIdOutPath = path.join(
+    DATA_OUTPUT_DIRECTORY,
+    "operator-name-to-id.json"
+  );
+  fs.writeFileSync(nameToIdOutPath, JSON.stringify(opNameToId, null, 2));
+  console.log(`operators: wrote ${nameToIdOutPath}`);
 };
 
 export default createOperatorsJson;
