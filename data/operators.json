@@ -38,7 +38,7 @@
     "rarity": 1,
     "class": "Sniper",
     "branch": "fastshot",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
     "skills": []
@@ -3265,7 +3265,7 @@
     "rarity": 4,
     "class": "Caster",
     "branch": "chain",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -3406,7 +3406,7 @@
       {
         "skillId": "skcom_magic_rage[2]",
         "iconId": null,
-        "skillName": "战术咏唱·β型",
+        "skillName": "Tactical Chant β",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -3470,7 +3470,7 @@
       {
         "skillId": "skchr_pudd_2",
         "iconId": null,
-        "skillName": "扩散电流",
+        "skillName": "Diffusion Current",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -3533,7 +3533,7 @@
       }
     ],
     "module": {
-      "name": "便携测电设备",
+      "name": "Portable Electrical Measuring Equipment",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -9997,7 +9997,7 @@
       }
     ],
     "module": {
-      "name": "隐秘行动工具包",
+      "name": "Covert Action Toolkit",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -17039,7 +17039,7 @@
     "rarity": 5,
     "class": "Vanguard",
     "branch": "charger",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -17184,7 +17184,7 @@
       {
         "skillId": "skchr_wildmn_1",
         "iconId": null,
-        "skillName": "骑枪刺击",
+        "skillName": "Stabbing Lance",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -17248,7 +17248,7 @@
       {
         "skillId": "skchr_wildmn_2",
         "iconId": null,
-        "skillName": "夹枪冲锋",
+        "skillName": "Lance Charge",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -26729,7 +26729,7 @@
       }
     ],
     "module": {
-      "name": "“天地通明”",
+      "name": "'All the Thunderlight'",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -28179,7 +28179,7 @@
     "rarity": 5,
     "class": "Caster",
     "branch": "blastcaster",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -28324,7 +28324,7 @@
       {
         "skillId": "skchr_serum_1",
         "iconId": null,
-        "skillName": "专注力超载",
+        "skillName": "Focus Overload",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -28388,7 +28388,7 @@
       {
         "skillId": "skchr_serum_2",
         "iconId": null,
-        "skillName": "传导蚀滞弹",
+        "skillName": "Conductive Corrosive Blast",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -31551,7 +31551,7 @@
     "rarity": 5,
     "class": "Medic",
     "branch": "wandermedic",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -31696,7 +31696,7 @@
       {
         "skillId": "skchr_glider_1",
         "iconId": null,
-        "skillName": "精神护理",
+        "skillName": "Spiritual Care",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -31760,7 +31760,7 @@
       {
         "skillId": "skchr_glider_2",
         "iconId": null,
-        "skillName": "振奋",
+        "skillName": "Rouse",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -32657,7 +32657,7 @@
       }
     ],
     "module": {
-      "name": "神秘的道具包",
+      "name": "Mystery Prop Pack",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -32953,7 +32953,7 @@
       }
     ],
     "module": {
-      "name": "红眉咏春拳谱",
+      "name": "The Classic of Hung Mei Wing Chun",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -33249,7 +33249,7 @@
       }
     ],
     "module": {
-      "name": "魔方挂坠",
+      "name": "Rubik's Cube Pendant",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -47823,7 +47823,7 @@
     "rarity": 6,
     "class": "Vanguard",
     "branch": "pioneer",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -47976,7 +47976,7 @@
       {
         "skillId": "skchr_flamtl_1",
         "iconId": null,
-        "skillName": "迅敏直觉",
+        "skillName": "Quick Intuition",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -48040,7 +48040,7 @@
       {
         "skillId": "skchr_flamtl_2",
         "iconId": null,
-        "skillName": "“红松林”",
+        "skillName": "'Pinus Sylvestris'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -48104,7 +48104,7 @@
       {
         "skillId": "skchr_flamtl_3",
         "iconId": null,
-        "skillName": "焰心",
+        "skillName": "Flameheart",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -50303,7 +50303,7 @@
       }
     ],
     "module": {
-      "name": "电磁调节器",
+      "name": "Electromagnetic Regulator",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -53543,7 +53543,7 @@
       }
     ],
     "module": {
-      "name": "克里斯汀小姐的毛毡",
+      "name": "Miss Christine's Felt",
       "ingredients": [
         {
           "id": "mod_unlock_token",
@@ -61689,7 +61689,7 @@
     "rarity": 6,
     "class": "Guard",
     "branch": "fearless",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -61842,7 +61842,7 @@
       {
         "skillId": "skchr_nearl2_1",
         "iconId": null,
-        "skillName": "灿焰长刃",
+        "skillName": "Flaming Edge",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -61906,7 +61906,7 @@
       {
         "skillId": "skchr_nearl2_2",
         "iconId": null,
-        "skillName": "逐夜烁光",
+        "skillName": "Night-Scouring Gleam",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -61970,7 +61970,7 @@
       {
         "skillId": "skchr_nearl2_3",
         "iconId": null,
-        "skillName": "耀阳颔首",
+        "skillName": "Blazing Sun's Obeisance",
         "masteries": [
           {
             "masteryLevel": 1,

@@ -199,6 +199,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -588,6 +601,18 @@
           "Guard",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -687,6 +712,17 @@
           "Nuker",
           "Melee",
           "Specialist",
+          "Robot"
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
           "Robot"
         ]
       }
@@ -902,6 +938,18 @@
           "Survival",
           "Melee",
           "Guard",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
           "Senior Operator"
         ]
       },
@@ -1629,6 +1677,17 @@
           "Medic",
           "Robot"
         ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
       }
     ],
     "guarantees": []
@@ -1775,6 +1834,18 @@
         "tags": [
           "Defense",
           "Shift",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
           "Melee",
           "Defender",
           "Senior Operator"
@@ -2311,6 +2382,17 @@
           "Starter",
           "Ranged",
           "Sniper"
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
         ]
       }
     ],
@@ -3438,6 +3520,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_237_gravel",
         "name": "Gravel",
         "rarity": 4,
@@ -3610,6 +3704,18 @@
           "Slow",
           "Ranged",
           "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
           "Senior Operator"
         ]
       },
@@ -4038,6 +4144,17 @@
           "Guard",
           "Robot"
         ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
       }
     ],
     "guarantees": [
@@ -4369,6 +4486,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -4584,6 +4714,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -4808,6 +4951,30 @@
           "DPS",
           "Ranged",
           "Sniper",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
+  "Specialist,Top Operator": {
+    "tags": [
+      "Specialist",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -5087,6 +5254,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -5338,6 +5518,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -5607,6 +5800,18 @@
           "Guard",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -5872,6 +6077,18 @@
         "tags": [
           "Defense",
           "Shift",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
           "Melee",
           "Defender",
           "Senior Operator"
@@ -6730,6 +6947,18 @@
           "Guard",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -6834,6 +7063,18 @@
           "Slow",
           "Ranged",
           "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
           "Senior Operator"
         ]
       }
@@ -7329,6 +7570,17 @@
           "Medic",
           "Robot"
         ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
       }
     ],
     "guarantees": [
@@ -7371,6 +7623,28 @@
           "Healing",
           "Ranged",
           "Medic",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
+    ]
+  },
+  "Robot,Sniper": {
+    "tags": [
+      "Robot",
+      "Sniper"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
           "Robot"
         ]
       }
@@ -7461,6 +7735,17 @@
           "Guard",
           "Robot"
         ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
       }
     ],
     "guarantees": [
@@ -7517,6 +7802,18 @@
         "tags": [
           "Defense",
           "Shift",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
           "Melee",
           "Defender",
           "Senior Operator"
@@ -8498,6 +8795,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_237_gravel",
         "name": "Gravel",
         "rarity": 4,
@@ -8618,6 +8927,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
@@ -9344,6 +9665,17 @@
           "Starter",
           "Ranged",
           "Sniper"
+        ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
         ]
       }
     ],
@@ -10088,10 +10420,22 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
       }
     ],
     "guarantees": [
-      5
+      5,
+      1
     ]
   },
   "Ranged,Survival": {
@@ -10372,6 +10716,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_199_yak",
         "name": "Matterhorn",
         "rarity": 4,
@@ -10435,6 +10791,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
@@ -11300,6 +11668,28 @@
     ],
     "guarantees": [
       4
+    ]
+  },
+  "Sniper,Support": {
+    "tags": [
+      "Sniper",
+      "Support"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
     ]
   },
   "Sniper,Survival": {
@@ -12682,6 +13072,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_196_sunbr",
         "name": "Gummy",
         "rarity": 4,
@@ -13049,6 +13451,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -13275,6 +13690,31 @@
           "DPS",
           "Ranged",
           "Sniper",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
+  "Senior Operator,Specialist,Top Operator": {
+    "tags": [
+      "Senior Operator",
+      "Specialist",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -13560,6 +14000,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -13817,6 +14270,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -14439,6 +14905,31 @@
       6
     ]
   },
+  "Ranged,Specialist,Top Operator": {
+    "tags": [
+      "Ranged",
+      "Specialist",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
   "Ranged,Supporter,Top Operator": {
     "tags": [
       "Ranged",
@@ -14571,6 +15062,19 @@
           "DPS",
           "Ranged",
           "Supporter",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -14726,6 +15230,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
           "Top Operator",
           "Senior Operator"
         ]
@@ -15257,6 +15774,56 @@
       6
     ]
   },
+  "DPS,Specialist,Top Operator": {
+    "tags": [
+      "DPS",
+      "Specialist",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
+  "Specialist,Support,Top Operator": {
+    "tags": [
+      "Specialist",
+      "Support",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
   "DPS,Supporter,Top Operator": {
     "tags": [
       "DPS",
@@ -15622,6 +16189,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_225_haak",
+        "name": "Aak",
+        "rarity": 6,
+        "tags": [
+          "Support",
+          "DPS",
+          "Ranged",
+          "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -15860,6 +16440,18 @@
         "tags": [
           "Defense",
           "Shift",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
           "Melee",
           "Defender",
           "Senior Operator"
@@ -16382,6 +16974,18 @@
           "Guard",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -16434,6 +17038,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
@@ -17410,6 +18026,18 @@
           "Defender",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -17426,6 +18054,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
@@ -18848,6 +19488,18 @@
           "Defender",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -19193,6 +19845,29 @@
       1
     ]
   },
+  "Ranged,Robot,Sniper": {
+    "tags": [
+      "Ranged",
+      "Robot",
+      "Sniper"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
+    ]
+  },
   "Healing,Ranged,Robot": {
     "tags": [
       "Healing",
@@ -19208,6 +19883,29 @@
           "Healing",
           "Ranged",
           "Medic",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
+    ]
+  },
+  "Ranged,Robot,Support": {
+    "tags": [
+      "Ranged",
+      "Robot",
+      "Support"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
           "Robot"
         ]
       }
@@ -19254,6 +19952,29 @@
           "Healing",
           "Ranged",
           "Medic",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
+    ]
+  },
+  "Robot,Sniper,Support": {
+    "tags": [
+      "Robot",
+      "Sniper",
+      "Support"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
           "Robot"
         ]
       }
@@ -19379,6 +20100,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_199_yak",
         "name": "Matterhorn",
         "rarity": 4,
@@ -19443,6 +20176,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
@@ -20875,6 +21620,18 @@
         ]
       },
       {
+        "id": "char_226_hmau",
+        "name": "Hung",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_196_sunbr",
         "name": "Gummy",
         "rarity": 4,
@@ -21579,6 +22336,29 @@
     ],
     "guarantees": [
       4
+    ]
+  },
+  "Ranged,Sniper,Support": {
+    "tags": [
+      "Ranged",
+      "Sniper",
+      "Support"
+    ],
+    "operators": [
+      {
+        "id": "char_4000_jnight",
+        "name": "'Justice Knight'",
+        "rarity": 1,
+        "tags": [
+          "Support",
+          "Ranged",
+          "Sniper",
+          "Robot"
+        ]
+      }
+    ],
+    "guarantees": [
+      1
     ]
   },
   "Ranged,Sniper,Survival": {
@@ -22290,6 +23070,18 @@
       {
         "id": "char_148_nearl",
         "name": "Nearl",
+        "rarity": 5,
+        "tags": [
+          "Defense",
+          "Healing",
+          "Melee",
+          "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_226_hmau",
+        "name": "Hung",
         "rarity": 5,
         "tags": [
           "Defense",
