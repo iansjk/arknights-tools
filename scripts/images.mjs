@@ -26,6 +26,7 @@ const tasks = [
   {
     sourceDir: `${ACESHIP_ROOT}/img/skills`,
     destDir: "arknights/skills",
+    filter: (filename) => filename.endsWith(".png"),
     replace: (filename) =>
       path.parse(filename).name.replace(/^skill_icon_/, ""),
   },
@@ -37,6 +38,7 @@ const tasks = [
   {
     sourceDir: `${ACESHIP_ROOT}/img/equip/icon`,
     destDir: "arknights/equip",
+    filter: (filename) => filename.endsWith(".png"),
   },
   {
     sourceDir: `${ACESHIP_ROOT}/img/portraits`,
@@ -46,6 +48,7 @@ const tasks = [
   {
     sourceDir: `${ACESHIP_ROOT}/img/items`,
     destDir: "arknights/items",
+    filter: (filename) => filename.endsWith(".png"),
   },
 ];
 
