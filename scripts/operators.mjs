@@ -116,16 +116,21 @@ const createOperatorsJson = () => {
           };
         });
 
-      let module;
+      let modules;
       if (cnCharEquip[id] != null) {
-        const advancedModuleId = cnCharEquip[id].at(-1);
-        const cnModuleData = cnEquipDict[advancedModuleId];
-        const enModuleData = enEquipDict[advancedModuleId];
-        module = {
-          name: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
-          ingredients: cnModuleData.itemCost.map(gameDataCostToIngredient),
-          category: OperatorGoalCategory.Module,
-        };
+        cnCharEquip[id].shift();
+        modules = cnCharEquip[id].map((modName) => {
+          const cnModuleData = cnEquipDict[modName];
+          const enModuleData = enEquipDict[modName];
+          return [...Array(3)].map((_, n) => {
+            return {
+              name: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
+              moduleLevel: n+1,
+              ingredients: cnModuleData.itemCost[`${n+1}`].map(gameDataCostToIngredient),
+              category: OperatorGoalCategory.Module,
+            }
+          });
+        })
       }
 
       const outputOperator = {
@@ -138,7 +143,7 @@ const createOperatorsJson = () => {
         skillLevels: skillLevelGoals,
         elite: eliteGoals,
         skills,
-        module,
+        modules,
       };
       return [id, outputOperator];
     })
