@@ -122,14 +122,20 @@ const createOperatorsJson = () => {
         modules = cnCharEquip[id].map((modName) => {
           const cnModuleData = cnEquipDict[modName];
           const enModuleData = enEquipDict[modName];
-          return [...Array(3)].map((_, n) => {
+          const levels = [...Array(3)].map((_, n) => {
             return {
-              name: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
-              moduleLevel: n+1,
+              moduleLevel: n + 1,
               ingredients: cnModuleData.itemCost[`${n+1}`].map(gameDataCostToIngredient),
+              name: `Module ${n + 1} Stage ${n + 1}`,
               category: OperatorGoalCategory.Module,
             }
           });
+          return {
+            moduleName: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
+            moduleId: cnModuleData.uniEquipId,
+            typeName: cnModuleData.typeName1 + '-' + cnModuleData.typeName2,
+            levels
+          }
         })
       }
 
