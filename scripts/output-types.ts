@@ -74,7 +74,7 @@ export interface Module {
   moduleName: string;
   moduleId: string;
   typeName: string;
-  masteries: ModuleGoal[];
+  stages: ModuleGoal[];
 }
 
 export interface Operator {
