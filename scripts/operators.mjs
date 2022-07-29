@@ -119,16 +119,16 @@ const createOperatorsJson = () => {
       let modules;
       if (cnCharEquip[id] != null) {
         cnCharEquip[id].shift();
-        modules = cnCharEquip[id].map((modName) => {
+        modules = cnCharEquip[id].map((modName, modNumber) => {
           const cnModuleData = cnEquipDict[modName];
           const enModuleData = enEquipDict[modName];
-          const levels = [...Array(3)].map((_, n) => {
+          const levels = [...Array(3)].map((_, modLevel) => {
             return {
-              moduleLevel: n + 1,
-              ingredients: cnModuleData.itemCost[`${n + 1}`].map(
+              moduleLevel: modLevel + 1,
+              ingredients: cnModuleData.itemCost[`${modLevel + 1}`].map(
                 gameDataCostToIngredient
               ),
-              name: `Module ${n + 1} Stage ${n + 1}`,
+              name: `Module ${modNumber + 1} Stage ${modLevel + 1}`,
               category: OperatorGoalCategory.Module,
             };
           });
