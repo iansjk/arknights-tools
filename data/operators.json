@@ -2447,7 +2447,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-X Stage 1",
             "category": 3
           },
           {
@@ -2470,7 +2470,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-X Stage 2",
             "category": 3
           },
           {
@@ -2493,7 +2493,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-X Stage 3",
             "category": 3
           }
         ]
@@ -2795,7 +2795,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-Y Stage 1",
             "category": 3
           },
           {
@@ -2818,7 +2818,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-Y Stage 2",
             "category": 3
           },
           {
@@ -2841,7 +2841,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-Y Stage 3",
             "category": 3
           }
         ]
@@ -3418,7 +3418,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MSC-X Stage 1",
             "category": 3
           },
           {
@@ -3441,7 +3441,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MSC-X Stage 2",
             "category": 3
           },
           {
@@ -3464,7 +3464,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MSC-X Stage 3",
             "category": 3
           }
         ]
@@ -3766,7 +3766,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHA-Y Stage 1",
             "category": 3
           },
           {
@@ -3789,7 +3789,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHA-Y Stage 2",
             "category": 3
           },
           {
@@ -3812,7 +3812,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHA-Y Stage 3",
             "category": 3
           }
         ]
@@ -4114,7 +4114,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -4137,7 +4137,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -4160,7 +4160,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -4462,7 +4462,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -4485,7 +4485,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -4508,7 +4508,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -4810,7 +4810,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -4833,7 +4833,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -4856,7 +4856,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -5158,7 +5158,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -5181,7 +5181,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -5204,7 +5204,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -5506,7 +5506,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ART-Y Stage 1",
             "category": 3
           },
           {
@@ -5529,7 +5529,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ART-Y Stage 2",
             "category": 3
           },
           {
@@ -5552,7 +5552,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ART-Y Stage 3",
             "category": 3
           }
         ]
@@ -6129,7 +6129,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEA-X Stage 1",
             "category": 3
           },
           {
@@ -6152,7 +6152,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEA-X Stage 2",
             "category": 3
           },
           {
@@ -6175,7 +6175,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEA-X Stage 3",
             "category": 3
           }
         ]
@@ -6477,7 +6477,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ARC-X Stage 1",
             "category": 3
           },
           {
@@ -6500,7 +6500,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ARC-X Stage 2",
             "category": 3
           },
           {
@@ -6523,7 +6523,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ARC-X Stage 3",
             "category": 3
           }
         ]
@@ -7375,7 +7375,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHG-Y Stage 1",
             "category": 3
           },
           {
@@ -7398,7 +7398,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHG-Y Stage 2",
             "category": 3
           },
           {
@@ -7421,7 +7421,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHG-Y Stage 3",
             "category": 3
           }
         ]
@@ -8273,7 +8273,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module INS-Y Stage 1",
             "category": 3
           },
           {
@@ -8296,7 +8296,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module INS-Y Stage 2",
             "category": 3
           },
           {
@@ -8319,7 +8319,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module INS-Y Stage 3",
             "category": 3
           }
         ]
@@ -8621,7 +8621,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-Y Stage 1",
             "category": 3
           },
           {
@@ -8644,7 +8644,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-Y Stage 2",
             "category": 3
           },
           {
@@ -8667,7 +8667,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-Y Stage 3",
             "category": 3
           }
         ]
@@ -8969,7 +8969,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-X Stage 1",
             "category": 3
           },
           {
@@ -8992,7 +8992,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-X Stage 2",
             "category": 3
           },
           {
@@ -9015,7 +9015,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-X Stage 3",
             "category": 3
           }
         ]
@@ -10142,7 +10142,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SWO-Y Stage 1",
             "category": 3
           },
           {
@@ -10165,7 +10165,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SWO-Y Stage 2",
             "category": 3
           },
           {
@@ -10188,7 +10188,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SWO-Y Stage 3",
             "category": 3
           }
         ]
@@ -11040,7 +11040,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module EXE-X Stage 1",
             "category": 3
           },
           {
@@ -11063,7 +11063,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module EXE-X Stage 2",
             "category": 3
           },
           {
@@ -11086,7 +11086,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module EXE-X Stage 3",
             "category": 3
           }
         ]
@@ -11388,7 +11388,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MER-X Stage 1",
             "category": 3
           },
           {
@@ -11411,7 +11411,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MER-X Stage 2",
             "category": 3
           },
           {
@@ -11434,7 +11434,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MER-X Stage 3",
             "category": 3
           }
         ]
@@ -12836,7 +12836,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module RIN-Y Stage 1",
             "category": 3
           },
           {
@@ -12859,7 +12859,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module RIN-Y Stage 2",
             "category": 3
           },
           {
@@ -12882,7 +12882,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module RIN-Y Stage 3",
             "category": 3
           }
         ]
@@ -13184,7 +13184,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module WAH-Y Stage 1",
             "category": 3
           },
           {
@@ -13207,7 +13207,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module WAH-Y Stage 2",
             "category": 3
           },
           {
@@ -13230,7 +13230,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module WAH-Y Stage 3",
             "category": 3
           }
         ]
@@ -14632,7 +14632,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module GUA-X Stage 1",
             "category": 3
           },
           {
@@ -14655,7 +14655,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module GUA-X Stage 2",
             "category": 3
           },
           {
@@ -14678,7 +14678,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module GUA-X Stage 3",
             "category": 3
           }
         ]
@@ -15255,7 +15255,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SUM-Y Stage 1",
             "category": 3
           },
           {
@@ -15278,7 +15278,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SUM-Y Stage 2",
             "category": 3
           },
           {
@@ -15301,7 +15301,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SUM-Y Stage 3",
             "category": 3
           }
         ]
@@ -15603,7 +15603,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-Y Stage 1",
             "category": 3
           },
           {
@@ -15626,7 +15626,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-Y Stage 2",
             "category": 3
           },
           {
@@ -15649,7 +15649,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-Y Stage 3",
             "category": 3
           }
         ]
@@ -15951,7 +15951,7 @@
                 "quantity": 20000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-X Stage 1",
             "category": 3
           },
           {
@@ -15974,7 +15974,7 @@
                 "quantity": 25000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-X Stage 2",
             "category": 3
           },
           {
@@ -15997,7 +15997,7 @@
                 "quantity": 30000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-X Stage 3",
             "category": 3
           }
         ]
@@ -17128,7 +17128,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module RIN-X Stage 1",
             "category": 3
           },
           {
@@ -17151,7 +17151,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module RIN-X Stage 2",
             "category": 3
           },
           {
@@ -17174,7 +17174,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module RIN-X Stage 3",
             "category": 3
           }
         ]
@@ -17480,7 +17480,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module RIN-X Stage 1",
             "category": 3
           },
           {
@@ -17503,7 +17503,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module RIN-X Stage 2",
             "category": 3
           },
           {
@@ -17526,7 +17526,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module RIN-X Stage 3",
             "category": 3
           }
         ]
@@ -18669,7 +18669,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHG-Y Stage 1",
             "category": 3
           },
           {
@@ -18692,7 +18692,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHG-Y Stage 2",
             "category": 3
           },
           {
@@ -18715,7 +18715,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHG-Y Stage 3",
             "category": 3
           }
         ]
@@ -19021,7 +19021,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHG-X Stage 1",
             "category": 3
           },
           {
@@ -19044,7 +19044,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHG-X Stage 2",
             "category": 3
           },
           {
@@ -19067,7 +19067,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHG-X Stage 3",
             "category": 3
           }
         ]
@@ -19931,7 +19931,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module INS-X Stage 1",
             "category": 3
           },
           {
@@ -19954,7 +19954,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module INS-X Stage 2",
             "category": 3
           },
           {
@@ -19977,7 +19977,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module INS-X Stage 3",
             "category": 3
           }
         ]
@@ -20283,7 +20283,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module INS-X Stage 1",
             "category": 3
           },
           {
@@ -20306,7 +20306,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module INS-X Stage 2",
             "category": 3
           },
           {
@@ -20329,7 +20329,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module INS-X Stage 3",
             "category": 3
           }
         ]
@@ -20635,7 +20635,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-X Stage 1",
             "category": 3
           },
           {
@@ -20658,7 +20658,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-X Stage 2",
             "category": 3
           },
           {
@@ -20681,7 +20681,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-X Stage 3",
             "category": 3
           }
         ]
@@ -20987,7 +20987,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-Y Stage 1",
             "category": 3
           },
           {
@@ -21010,7 +21010,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-Y Stage 2",
             "category": 3
           },
           {
@@ -21033,7 +21033,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-Y Stage 3",
             "category": 3
           }
         ]
@@ -22455,7 +22455,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SWO-X Stage 1",
             "category": 3
           },
           {
@@ -22478,7 +22478,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SWO-X Stage 2",
             "category": 3
           },
           {
@@ -22501,7 +22501,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SWO-X Stage 3",
             "category": 3
           }
         ]
@@ -22807,7 +22807,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SWO-X Stage 1",
             "category": 3
           },
           {
@@ -22830,7 +22830,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SWO-X Stage 2",
             "category": 3
           },
           {
@@ -22853,7 +22853,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SWO-X Stage 3",
             "category": 3
           }
         ]
@@ -25112,7 +25112,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -25135,7 +25135,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -25158,7 +25158,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -25464,7 +25464,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -25487,7 +25487,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -25510,7 +25510,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -25816,7 +25816,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -25839,7 +25839,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -25862,7 +25862,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -26168,7 +26168,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -26191,7 +26191,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -26214,7 +26214,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -26520,7 +26520,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -26543,7 +26543,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -26566,7 +26566,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -26872,7 +26872,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ART-Y Stage 1",
             "category": 3
           },
           {
@@ -26895,7 +26895,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ART-Y Stage 2",
             "category": 3
           },
           {
@@ -26918,7 +26918,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ART-Y Stage 3",
             "category": 3
           }
         ]
@@ -27224,7 +27224,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ART-X Stage 1",
             "category": 3
           },
           {
@@ -27247,7 +27247,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ART-X Stage 2",
             "category": 3
           },
           {
@@ -27270,7 +27270,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ART-X Stage 3",
             "category": 3
           }
         ]
@@ -29035,7 +29035,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-Y Stage 1",
             "category": 3
           },
           {
@@ -29058,7 +29058,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-Y Stage 2",
             "category": 3
           },
           {
@@ -29081,7 +29081,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-Y Stage 3",
             "category": 3
           }
         ]
@@ -29387,7 +29387,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHA-X Stage 1",
             "category": 3
           },
           {
@@ -29410,7 +29410,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHA-X Stage 2",
             "category": 3
           },
           {
@@ -29433,7 +29433,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHA-X Stage 3",
             "category": 3
           }
         ]
@@ -29739,7 +29739,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHA-Y Stage 1",
             "category": 3
           },
           {
@@ -29762,7 +29762,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHA-Y Stage 2",
             "category": 3
           },
           {
@@ -29785,7 +29785,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHA-Y Stage 3",
             "category": 3
           }
         ]
@@ -30370,7 +30370,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-X Stage 1",
             "category": 3
           },
           {
@@ -30393,7 +30393,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-X Stage 2",
             "category": 3
           },
           {
@@ -30416,7 +30416,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-X Stage 3",
             "category": 3
           }
         ]
@@ -31001,7 +31001,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MSC-X Stage 1",
             "category": 3
           },
           {
@@ -31024,7 +31024,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MSC-X Stage 2",
             "category": 3
           },
           {
@@ -31047,7 +31047,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MSC-X Stage 3",
             "category": 3
           }
         ]
@@ -31353,7 +31353,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-X Stage 1",
             "category": 3
           },
           {
@@ -31376,7 +31376,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-X Stage 2",
             "category": 3
           },
           {
@@ -31399,7 +31399,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-X Stage 3",
             "category": 3
           }
         ]
@@ -32542,7 +32542,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SUM-X Stage 1",
             "category": 3
           },
           {
@@ -32565,7 +32565,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SUM-X Stage 2",
             "category": 3
           },
           {
@@ -32588,7 +32588,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SUM-X Stage 3",
             "category": 3
           }
         ]
@@ -32894,7 +32894,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SUM-X Stage 1",
             "category": 3
           },
           {
@@ -32917,7 +32917,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SUM-X Stage 2",
             "category": 3
           },
           {
@@ -32940,7 +32940,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SUM-X Stage 3",
             "category": 3
           }
         ]
@@ -34083,7 +34083,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module WAH-X Stage 1",
             "category": 3
           },
           {
@@ -34106,7 +34106,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module WAH-X Stage 2",
             "category": 3
           },
           {
@@ -34129,7 +34129,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module WAH-X Stage 3",
             "category": 3
           }
         ]
@@ -34435,7 +34435,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module WAH-X Stage 1",
             "category": 3
           },
           {
@@ -34458,7 +34458,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module WAH-X Stage 2",
             "category": 3
           },
           {
@@ -34481,7 +34481,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module WAH-X Stage 3",
             "category": 3
           }
         ]
@@ -35903,7 +35903,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module GUA-X Stage 1",
             "category": 3
           },
           {
@@ -35926,7 +35926,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module GUA-X Stage 2",
             "category": 3
           },
           {
@@ -35949,7 +35949,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module GUA-X Stage 3",
             "category": 3
           }
         ]
@@ -36255,7 +36255,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module GUA-Y Stage 1",
             "category": 3
           },
           {
@@ -36278,7 +36278,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module GUA-Y Stage 2",
             "category": 3
           },
           {
@@ -36301,7 +36301,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module GUA-Y Stage 3",
             "category": 3
           }
         ]
@@ -36607,7 +36607,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module EXE-Y Stage 1",
             "category": 3
           },
           {
@@ -36630,7 +36630,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module EXE-Y Stage 2",
             "category": 3
           },
           {
@@ -36653,7 +36653,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module EXE-Y Stage 3",
             "category": 3
           }
         ]
@@ -36959,7 +36959,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module EXE-X Stage 1",
             "category": 3
           },
           {
@@ -36982,7 +36982,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module EXE-X Stage 2",
             "category": 3
           },
           {
@@ -37005,7 +37005,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module EXE-X Stage 3",
             "category": 3
           }
         ]
@@ -37311,7 +37311,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module EXE-Y Stage 1",
             "category": 3
           },
           {
@@ -37334,7 +37334,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module EXE-Y Stage 2",
             "category": 3
           },
           {
@@ -37357,7 +37357,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module EXE-Y Stage 3",
             "category": 3
           }
         ]
@@ -37663,7 +37663,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MER-X Stage 1",
             "category": 3
           },
           {
@@ -37686,7 +37686,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MER-X Stage 2",
             "category": 3
           },
           {
@@ -37709,7 +37709,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MER-X Stage 3",
             "category": 3
           }
         ]
@@ -40805,7 +40805,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module HES-X Stage 1",
             "category": 3
           },
           {
@@ -40828,7 +40828,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module HES-X Stage 2",
             "category": 3
           },
           {
@@ -40851,7 +40851,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module HES-X Stage 3",
             "category": 3
           }
         ]
@@ -41157,7 +41157,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ARC-X Stage 1",
             "category": 3
           },
           {
@@ -41180,7 +41180,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ARC-X Stage 2",
             "category": 3
           },
           {
@@ -41203,7 +41203,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ARC-X Stage 3",
             "category": 3
           }
         ]
@@ -41509,7 +41509,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEA-Y Stage 1",
             "category": 3
           },
           {
@@ -41532,7 +41532,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEA-Y Stage 2",
             "category": 3
           },
           {
@@ -41555,7 +41555,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEA-Y Stage 3",
             "category": 3
           }
         ]
@@ -41861,7 +41861,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEA-X Stage 1",
             "category": 3
           },
           {
@@ -41884,7 +41884,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEA-X Stage 2",
             "category": 3
           },
           {
@@ -41907,7 +41907,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEA-X Stage 3",
             "category": 3
           }
         ]
@@ -44166,7 +44166,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-Y Stage 1",
             "category": 3
           },
           {
@@ -44189,7 +44189,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-Y Stage 2",
             "category": 3
           },
           {
@@ -44212,7 +44212,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-Y Stage 3",
             "category": 3
           }
         ]
@@ -44518,7 +44518,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-X Stage 1",
             "category": 3
           },
           {
@@ -44541,7 +44541,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-X Stage 2",
             "category": 3
           },
           {
@@ -44564,7 +44564,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-X Stage 3",
             "category": 3
           }
         ]
@@ -48218,7 +48218,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module PUM-Y Stage 1",
             "category": 3
           },
           {
@@ -48241,7 +48241,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module PUM-Y Stage 2",
             "category": 3
           },
           {
@@ -48264,7 +48264,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module PUM-Y Stage 3",
             "category": 3
           }
         ]
@@ -48570,7 +48570,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module PUM-X Stage 1",
             "category": 3
           },
           {
@@ -48593,7 +48593,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module PUM-X Stage 2",
             "category": 3
           },
           {
@@ -48616,7 +48616,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module PUM-X Stage 3",
             "category": 3
           }
         ]
@@ -48994,7 +48994,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-X Stage 1",
             "category": 3
           },
           {
@@ -49017,7 +49017,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-X Stage 2",
             "category": 3
           },
           {
@@ -49040,7 +49040,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-X Stage 3",
             "category": 3
           }
         ]
@@ -49418,7 +49418,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -49441,7 +49441,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -49464,7 +49464,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -49842,7 +49842,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MAR-Y Stage 1",
             "category": 3
           },
           {
@@ -49865,7 +49865,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MAR-Y Stage 2",
             "category": 3
           },
           {
@@ -49888,7 +49888,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MAR-Y Stage 3",
             "category": 3
           }
         ]
@@ -50266,7 +50266,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ARC-X Stage 1",
             "category": 3
           },
           {
@@ -50289,7 +50289,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ARC-X Stage 2",
             "category": 3
           },
           {
@@ -50312,7 +50312,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ARC-X Stage 3",
             "category": 3
           }
         ]
@@ -50690,7 +50690,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEA-X Stage 1",
             "category": 3
           },
           {
@@ -50713,7 +50713,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEA-X Stage 2",
             "category": 3
           },
           {
@@ -50736,7 +50736,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEA-X Stage 3",
             "category": 3
           }
         ]
@@ -51114,7 +51114,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ART-X Stage 1",
             "category": 3
           },
           {
@@ -51137,7 +51137,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ART-X Stage 2",
             "category": 3
           },
           {
@@ -51160,7 +51160,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ART-X Stage 3",
             "category": 3
           }
         ]
@@ -51538,7 +51538,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module ART-Y Stage 1",
             "category": 3
           },
           {
@@ -51561,7 +51561,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module ART-Y Stage 2",
             "category": 3
           },
           {
@@ -51584,7 +51584,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module ART-Y Stage 3",
             "category": 3
           }
         ]
@@ -53366,7 +53366,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHG-X Stage 1",
             "category": 3
           },
           {
@@ -53389,7 +53389,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHG-X Stage 2",
             "category": 3
           },
           {
@@ -53412,7 +53412,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHG-X Stage 3",
             "category": 3
           }
         ]
@@ -55194,7 +55194,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-Y Stage 1",
             "category": 3
           },
           {
@@ -55217,7 +55217,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-Y Stage 2",
             "category": 3
           },
           {
@@ -55240,7 +55240,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-Y Stage 3",
             "category": 3
           }
         ]
@@ -56320,7 +56320,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SPC-X Stage 1",
             "category": 3
           },
           {
@@ -56343,7 +56343,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SPC-X Stage 2",
             "category": 3
           },
           {
@@ -56366,7 +56366,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SPC-X Stage 3",
             "category": 3
           }
         ]
@@ -56744,7 +56744,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHA-X Stage 1",
             "category": 3
           },
           {
@@ -56767,7 +56767,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHA-X Stage 2",
             "category": 3
           },
           {
@@ -56790,7 +56790,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHA-X Stage 3",
             "category": 3
           }
         ]
@@ -56816,7 +56816,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 2 Stage 1",
+            "name": "Module CHA-Y Stage 1",
             "category": 3
           },
           {
@@ -56839,7 +56839,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 2 Stage 2",
+            "name": "Module CHA-Y Stage 2",
             "category": 3
           },
           {
@@ -56862,7 +56862,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 2 Stage 3",
+            "name": "Module CHA-Y Stage 3",
             "category": 3
           }
         ]
@@ -57942,7 +57942,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MSC-X Stage 1",
             "category": 3
           },
           {
@@ -57965,7 +57965,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MSC-X Stage 2",
             "category": 3
           },
           {
@@ -57988,7 +57988,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MSC-X Stage 3",
             "category": 3
           }
         ]
@@ -58717,7 +58717,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-Y Stage 1",
             "category": 3
           },
           {
@@ -58740,7 +58740,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-Y Stage 2",
             "category": 3
           },
           {
@@ -58763,7 +58763,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-Y Stage 3",
             "category": 3
           }
         ]
@@ -59141,7 +59141,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DEC-X Stage 1",
             "category": 3
           },
           {
@@ -59164,7 +59164,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DEC-X Stage 2",
             "category": 3
           },
           {
@@ -59187,7 +59187,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DEC-X Stage 3",
             "category": 3
           }
         ]
@@ -59565,7 +59565,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SUM-X Stage 1",
             "category": 3
           },
           {
@@ -59588,7 +59588,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SUM-X Stage 2",
             "category": 3
           },
           {
@@ -59611,7 +59611,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SUM-X Stage 3",
             "category": 3
           }
         ]
@@ -59637,7 +59637,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 2 Stage 1",
+            "name": "Module SUM-Y Stage 1",
             "category": 3
           },
           {
@@ -59660,7 +59660,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 2 Stage 2",
+            "name": "Module SUM-Y Stage 2",
             "category": 3
           },
           {
@@ -59683,7 +59683,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 2 Stage 3",
+            "name": "Module SUM-Y Stage 3",
             "category": 3
           }
         ]
@@ -60412,7 +60412,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SUM-Y Stage 1",
             "category": 3
           },
           {
@@ -60435,7 +60435,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SUM-Y Stage 2",
             "category": 3
           },
           {
@@ -60458,7 +60458,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SUM-Y Stage 3",
             "category": 3
           }
         ]
@@ -60836,7 +60836,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module EXE-X Stage 1",
             "category": 3
           },
           {
@@ -60859,7 +60859,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module EXE-X Stage 2",
             "category": 3
           },
           {
@@ -60882,7 +60882,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module EXE-X Stage 3",
             "category": 3
           }
         ]
@@ -61260,7 +61260,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module MER-X Stage 1",
             "category": 3
           },
           {
@@ -61283,7 +61283,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module MER-X Stage 2",
             "category": 3
           },
           {
@@ -61306,7 +61306,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module MER-X Stage 3",
             "category": 3
           }
         ]
@@ -63088,7 +63088,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module PUM-X Stage 1",
             "category": 3
           },
           {
@@ -63111,7 +63111,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module PUM-X Stage 2",
             "category": 3
           },
           {
@@ -63134,7 +63134,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module PUM-X Stage 3",
             "category": 3
           }
         ]
@@ -64214,7 +64214,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module RIN-X Stage 1",
             "category": 3
           },
           {
@@ -64237,7 +64237,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module RIN-X Stage 2",
             "category": 3
           },
           {
@@ -64260,7 +64260,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module RIN-X Stage 3",
             "category": 3
           }
         ]
@@ -64989,7 +64989,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module WAH-X Stage 1",
             "category": 3
           },
           {
@@ -65012,7 +65012,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module WAH-X Stage 2",
             "category": 3
           },
           {
@@ -65035,7 +65035,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module WAH-X Stage 3",
             "category": 3
           }
         ]
@@ -65764,7 +65764,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module GUA-X Stage 1",
             "category": 3
           },
           {
@@ -65787,7 +65787,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module GUA-X Stage 2",
             "category": 3
           },
           {
@@ -65810,7 +65810,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module GUA-X Stage 3",
             "category": 3
           }
         ]
@@ -66188,7 +66188,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module GUA-Y Stage 1",
             "category": 3
           },
           {
@@ -66211,7 +66211,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module GUA-Y Stage 2",
             "category": 3
           },
           {
@@ -66234,7 +66234,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module GUA-Y Stage 3",
             "category": 3
           }
         ]
@@ -67314,7 +67314,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module HES-X Stage 1",
             "category": 3
           },
           {
@@ -67337,7 +67337,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module HES-X Stage 2",
             "category": 3
           },
           {
@@ -67360,7 +67360,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module HES-X Stage 3",
             "category": 3
           }
         ]
@@ -69142,7 +69142,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SWO-X Stage 1",
             "category": 3
           },
           {
@@ -69165,7 +69165,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SWO-X Stage 2",
             "category": 3
           },
           {
@@ -69188,7 +69188,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SWO-X Stage 3",
             "category": 3
           }
         ]
@@ -69566,7 +69566,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module SWO-Y Stage 1",
             "category": 3
           },
           {
@@ -69589,7 +69589,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module SWO-Y Stage 2",
             "category": 3
           },
           {
@@ -69612,7 +69612,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module SWO-Y Stage 3",
             "category": 3
           }
         ]
@@ -71043,7 +71043,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module INS-X Stage 1",
             "category": 3
           },
           {
@@ -71066,7 +71066,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module INS-X Stage 2",
             "category": 3
           },
           {
@@ -71089,7 +71089,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module INS-X Stage 3",
             "category": 3
           }
         ]
@@ -71115,7 +71115,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 2 Stage 1",
+            "name": "Module INS-Y Stage 1",
             "category": 3
           },
           {
@@ -71138,7 +71138,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 2 Stage 2",
+            "name": "Module INS-Y Stage 2",
             "category": 3
           },
           {
@@ -71161,7 +71161,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 2 Stage 3",
+            "name": "Module INS-Y Stage 3",
             "category": 3
           }
         ]
@@ -71539,7 +71539,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-X Stage 1",
             "category": 3
           },
           {
@@ -71562,7 +71562,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-X Stage 2",
             "category": 3
           },
           {
@@ -71585,7 +71585,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-X Stage 3",
             "category": 3
           }
         ]
@@ -73235,7 +73235,7 @@
                 "quantity": 40000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module CHG-X Stage 1",
             "category": 3
           },
           {
@@ -73258,7 +73258,7 @@
                 "quantity": 50000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module CHG-X Stage 2",
             "category": 3
           },
           {
@@ -73281,7 +73281,7 @@
                 "quantity": 60000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module CHG-X Stage 3",
             "category": 3
           }
         ]
@@ -73659,7 +73659,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 1 Stage 1",
+            "name": "Module DRE-Y Stage 1",
             "category": 3
           },
           {
@@ -73682,7 +73682,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 1 Stage 2",
+            "name": "Module DRE-Y Stage 2",
             "category": 3
           },
           {
@@ -73705,7 +73705,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 1 Stage 3",
+            "name": "Module DRE-Y Stage 3",
             "category": 3
           }
         ]
@@ -73731,7 +73731,7 @@
                 "quantity": 80000
               }
             ],
-            "name": "Module 2 Stage 1",
+            "name": "Module DRE-X Stage 1",
             "category": 3
           },
           {
@@ -73754,7 +73754,7 @@
                 "quantity": 100000
               }
             ],
-            "name": "Module 2 Stage 2",
+            "name": "Module DRE-X Stage 2",
             "category": 3
           },
           {
@@ -73777,7 +73777,7 @@
                 "quantity": 120000
               }
             ],
-            "name": "Module 2 Stage 3",
+            "name": "Module DRE-X Stage 3",
             "category": 3
           }
         ]
