@@ -110,7 +110,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
         operatorId: operator.id,
         category: OperatorGoalCategory.Module,
         moduleId,
-        moduleLevel: moduleLevel,
+        moduleLevel,
       };
     } else {
       throw new Error(`Unrecognized goal or preset name: ${goalName}`);
