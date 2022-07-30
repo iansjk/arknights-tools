@@ -40,6 +40,8 @@ PtiloModule.args = {
   goal: {
     operatorId: "char_128_plosis",
     category: OperatorGoalCategory.Module,
+    moduleId: "uniequip_002_plosis",
+    moduleLevel: 2,
   },
 };
 
