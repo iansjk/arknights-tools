@@ -67,7 +67,7 @@ const PlannerGoalCard = React.forwardRef<HTMLLIElement, Props>((props, ref) => {
         const module = operator.modules.find(
           (m) => m.moduleId === goal.moduleId
         )!;
-        return `Module ${module.typeName} Stage ${goal.moduleLevel + 1}`;
+        return `Module ${module.typeName} Stage ${goal.moduleLevel}`;
       }
     }
   })();
