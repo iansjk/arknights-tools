@@ -28,7 +28,10 @@ const tasks = [
     destDir: "arknights/skills",
     filter: (filename) => filename.endsWith(".png"),
     replace: (filename) =>
-      path.parse(filename).name.replace(/^skill_icon_/, ""),
+      path
+        .parse(filename)
+        .name.replace(/^skill_icon_/, "")
+        .replace("#", "_"),
   },
   {
     sourceDir: `${ACESHIP_ROOT}/img/avatars`,
