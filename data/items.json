@@ -1595,5 +1595,19 @@
     "iconId": "mod_unlock_token",
     "tier": 5,
     "sortId": 90001
+  },
+  "mod_update_token_2": {
+    "id": "mod_update_token_2",
+    "name": "Supplementary Data Instrument",
+    "iconId": "mod_update_token_2",
+    "tier": 5,
+    "sortId": 90002
+  },
+  "mod_update_token_1": {
+    "id": "mod_update_token_1",
+    "name": "Supplementary Data Bar",
+    "iconId": "mod_update_token_1",
+    "tier": 4,
+    "sortId": 90003
   }
 }

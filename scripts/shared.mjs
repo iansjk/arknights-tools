@@ -13,12 +13,23 @@ const cnItems = cnItemTable.items;
 export const DATA_OUTPUT_DIRECTORY = path.join(__dirname, "../data");
 fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
 
+const unofficialItemNameTranslations = {
+  mod_update_token_1: "Supplementary Data Bar",
+  mod_update_token_2: "Supplementary Data Instrument",
+};
+
 export const getEnglishItemName = (itemId) => {
   const enEntry = enItems[itemId];
   const cnName = cnItems[itemId].name;
   let name = enEntry?.name;
   if (name == null) {
-    if (cnName != null) {
+    const unofficialName = unofficialItemNameTranslations[itemId];
+    if (unofficialName != null) {
+      console.log(
+        `Using unofficial item name translation for ID '${itemId}' => '${unofficialName}'`
+      );
+      name = unofficialName;
+    } else if (cnName != null) {
       console.warn(`No item name translation found for ID '${itemId}'`);
       name = cnName;
     } else {
