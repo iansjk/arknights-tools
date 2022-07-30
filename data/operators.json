@@ -8,7 +8,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_286_cast3": {
     "id": "char_286_cast3",
@@ -19,7 +20,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_376_therex": {
     "id": "char_376_therex",
@@ -30,7 +32,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_4000_jnight": {
     "id": "char_4000_jnight",
@@ -41,7 +44,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_502_nblade": {
     "id": "char_502_nblade",
@@ -52,7 +56,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_500_noirc": {
     "id": "char_500_noirc",
@@ -63,7 +68,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_503_rang": {
     "id": "char_503_rang",
@@ -74,7 +80,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_501_durin": {
     "id": "char_501_durin",
@@ -85,7 +92,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_009_12fce": {
     "id": "char_009_12fce",
@@ -96,7 +104,8 @@
     "isCnOnly": false,
     "skillLevels": [],
     "elite": [],
-    "skills": []
+    "skills": [],
+    "modules": []
   },
   "char_123_fang": {
     "id": "char_123_fang",
@@ -213,7 +222,8 @@
         "skillName": "Charge α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_240_wyvern": {
     "id": "char_240_wyvern",
@@ -330,7 +340,8 @@
         "skillName": "Command - Reinforcement",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_192_falco": {
     "id": "char_192_falco",
@@ -447,7 +458,8 @@
         "skillName": "Swift Strike α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_208_melan": {
     "id": "char_208_melan",
@@ -564,7 +576,8 @@
         "skillName": "ATK Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_281_popka": {
     "id": "char_281_popka",
@@ -681,7 +694,8 @@
         "skillName": "ATK Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_209_ardign": {
     "id": "char_209_ardign",
@@ -798,7 +812,8 @@
         "skillName": "Regeneration α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_122_beagle": {
     "id": "char_122_beagle",
@@ -915,7 +930,8 @@
         "skillName": "DEF Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_284_spot": {
     "id": "char_284_spot",
@@ -1032,7 +1048,8 @@
         "skillName": "Secondary Healing Mode",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_124_kroos": {
     "id": "char_124_kroos",
@@ -1149,7 +1166,8 @@
         "skillName": "Double Tap - Auto",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_211_adnach": {
     "id": "char_211_adnach",
@@ -1266,7 +1284,8 @@
         "skillName": "ATK Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_121_lava": {
     "id": "char_121_lava",
@@ -1383,7 +1402,8 @@
         "skillName": "Tactical Chant α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_120_hibisc": {
     "id": "char_120_hibisc",
@@ -1500,7 +1520,8 @@
         "skillName": "Healing Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_212_ansel": {
     "id": "char_212_ansel",
@@ -1617,7 +1638,8 @@
         "skillName": "Healing Range Up",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_210_stward": {
     "id": "char_210_stward",
@@ -1734,7 +1756,8 @@
         "skillName": "Power Strike α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_278_orchid": {
     "id": "char_278_orchid",
@@ -1851,7 +1874,8 @@
         "skillName": "Swift Strike α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_141_nights": {
     "id": "char_141_nights",
@@ -2125,7 +2149,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_109_fmout": {
     "id": "char_109_fmout",
@@ -3095,7 +3120,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_469_indigo": {
     "id": "char_469_indigo",
@@ -5805,7 +5831,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_302_glaze": {
     "id": "char_302_glaze",
@@ -6775,7 +6802,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_149_scave": {
     "id": "char_149_scave",
@@ -7049,7 +7077,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_290_vigna": {
     "id": "char_290_vigna",
@@ -7671,7 +7700,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_452_bstalk": {
     "id": "char_452_bstalk",
@@ -7945,7 +7975,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_130_doberm": {
     "id": "char_130_doberm",
@@ -9263,7 +9294,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_127_estell": {
     "id": "char_127_estell",
@@ -9537,7 +9569,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_185_frncat": {
     "id": "char_185_frncat",
@@ -9811,7 +9844,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_301_cutter": {
     "id": "char_301_cutter",
@@ -10433,7 +10467,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_271_spikes": {
     "id": "char_271_spikes",
@@ -10707,7 +10742,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_237_gravel": {
     "id": "char_237_gravel",
@@ -11677,7 +11713,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_117_myrrh": {
     "id": "char_117_myrrh",
@@ -11951,7 +11988,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_187_ccheal": {
     "id": "char_187_ccheal",
@@ -12225,7 +12263,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_298_susuro": {
     "id": "char_298_susuro",
@@ -12499,7 +12538,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_181_flower": {
     "id": "char_181_flower",
@@ -13469,7 +13509,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_199_yak": {
     "id": "char_199_yak",
@@ -13743,7 +13784,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_150_snakek": {
     "id": "char_150_snakek",
@@ -14017,7 +14059,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_381_bubble": {
     "id": "char_381_bubble",
@@ -14291,7 +14334,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_196_sunbr": {
     "id": "char_196_sunbr",
@@ -14913,7 +14957,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_110_deepcl": {
     "id": "char_110_deepcl",
@@ -16231,7 +16276,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_355_ethan": {
     "id": "char_355_ethan",
@@ -16505,7 +16551,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_277_sqrrel": {
     "id": "char_277_sqrrel",
@@ -16779,7 +16826,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_128_plosis": {
     "id": "char_128_plosis",
@@ -17761,7 +17809,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_102_texas": {
     "id": "char_102_texas",
@@ -18039,7 +18088,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_349_chiave": {
     "id": "char_349_chiave",
@@ -18317,7 +18367,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_261_sddrag": {
     "id": "char_261_sddrag",
@@ -19299,7 +19350,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_476_blkngt": {
     "id": "char_476_blkngt",
@@ -19577,7 +19629,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_308_swire": {
     "id": "char_308_swire",
@@ -21263,7 +21316,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_415_flint": {
     "id": "char_415_flint",
@@ -21541,7 +21595,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_140_whitew": {
     "id": "char_140_whitew",
@@ -21819,7 +21874,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_294_ayer": {
     "id": "char_294_ayer",
@@ -22097,7 +22153,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_252_bibeak": {
     "id": "char_252_bibeak",
@@ -23079,7 +23136,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_356_broca": {
     "id": "char_356_broca",
@@ -23357,7 +23415,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_274_astesi": {
     "id": "char_274_astesi",
@@ -23635,7 +23694,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_333_sidero": {
     "id": "char_333_sidero",
@@ -23913,7 +23973,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_475_akafyu": {
     "id": "char_475_akafyu",
@@ -24191,7 +24252,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_421_crow": {
     "id": "char_421_crow",
@@ -24469,7 +24531,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_486_takila": {
     "id": "char_486_takila",
@@ -24747,7 +24810,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_129_bluep": {
     "id": "char_129_bluep",
@@ -27489,7 +27553,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_346_aosta": {
     "id": "char_346_aosta",
@@ -27767,7 +27832,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_002_amiya": {
     "id": "char_002_amiya",
@@ -28109,7 +28175,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_405_absin": {
     "id": "char_405_absin",
@@ -28387,7 +28454,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_411_tomimi": {
     "id": "char_411_tomimi",
@@ -28665,7 +28733,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_166_skfire": {
     "id": "char_166_skfire",
@@ -29999,7 +30068,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_373_lionhd": {
     "id": "char_373_lionhd",
@@ -30629,7 +30699,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_338_iris": {
     "id": "char_338_iris",
@@ -31611,7 +31682,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4013_kjera": {
     "id": "char_4013_kjera",
@@ -31889,7 +31961,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4040_rockr": {
     "id": "char_4040_rockr",
@@ -32167,7 +32240,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_242_otter": {
     "id": "char_242_otter",
@@ -33149,7 +33223,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_171_bldsk": {
     "id": "char_171_bldsk",
@@ -33427,7 +33502,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_345_folnic": {
     "id": "char_345_folnic",
@@ -33705,7 +33781,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_348_ceylon": {
     "id": "char_348_ceylon",
@@ -34687,7 +34764,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_473_mberry": {
     "id": "char_473_mberry",
@@ -34965,7 +35043,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_449_glider": {
     "id": "char_449_glider",
@@ -35243,7 +35322,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_1024_hbisc2": {
     "id": "char_1024_hbisc2",
@@ -35521,7 +35601,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_148_nearl": {
     "id": "char_148_nearl",
@@ -37911,7 +37992,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_201_moeshd": {
     "id": "char_201_moeshd",
@@ -38189,7 +38271,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_325_bison": {
     "id": "char_325_bison",
@@ -38467,7 +38550,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_163_hpsts": {
     "id": "char_163_hpsts",
@@ -38745,7 +38829,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_378_asbest": {
     "id": "char_378_asbest",
@@ -39023,7 +39108,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4025_aprot2": {
     "id": "char_4025_aprot2",
@@ -39301,7 +39387,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4047_pianst": {
     "id": "char_4047_pianst",
@@ -39579,7 +39666,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_457_blitz": {
     "id": "char_457_blitz",
@@ -39857,7 +39945,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_304_zebra": {
     "id": "char_304_zebra",
@@ -40135,7 +40224,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_431_ashlok": {
     "id": "char_431_ashlok",
@@ -40413,7 +40503,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_422_aurora": {
     "id": "char_422_aurora",
@@ -42099,7 +42190,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4043_erato": {
     "id": "char_4043_erato",
@@ -42377,7 +42469,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_1027_greyy2": {
     "id": "char_1027_greyy2",
@@ -42655,7 +42748,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_173_slchan": {
     "id": "char_173_slchan",
@@ -42933,7 +43027,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_383_snsant": {
     "id": "char_383_snsant",
@@ -43211,7 +43306,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_174_slbell": {
     "id": "char_174_slbell",
@@ -43489,7 +43585,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_254_vodfox": {
     "id": "char_254_vodfox",
@@ -43767,7 +43864,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_195_glassb": {
     "id": "char_195_glassb",
@@ -44749,7 +44847,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_101_sora": {
     "id": "char_101_sora",
@@ -45027,7 +45126,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4045_heidi": {
     "id": "char_4045_heidi",
@@ -45305,7 +45405,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_343_tknogi": {
     "id": "char_343_tknogi",
@@ -45583,7 +45684,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4019_ncdeer": {
     "id": "char_4019_ncdeer",
@@ -45861,7 +45963,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_492_quercu": {
     "id": "char_492_quercu",
@@ -46139,7 +46242,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_215_mantic": {
     "id": "char_215_mantic",
@@ -46417,7 +46521,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_478_kirara": {
     "id": "char_478_kirara",
@@ -46695,7 +46800,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_241_panda": {
     "id": "char_241_panda",
@@ -46973,7 +47079,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4036_forcer": {
     "id": "char_4036_forcer",
@@ -47251,7 +47358,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_451_robin": {
     "id": "char_451_robin",
@@ -47529,7 +47637,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_458_rfrost": {
     "id": "char_458_rfrost",
@@ -47807,7 +47916,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_369_bena": {
     "id": "char_369_bena",
@@ -51829,7 +51939,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_391_rosmon": {
     "id": "char_391_rosmon",
@@ -52179,7 +52290,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_1013_chen2": {
     "id": "char_1013_chen2",
@@ -52529,7 +52641,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_112_siege": {
     "id": "char_112_siege",
@@ -52879,7 +52992,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_222_bpipe": {
     "id": "char_222_bpipe",
@@ -53653,7 +53767,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_479_sleach": {
     "id": "char_479_sleach",
@@ -54003,7 +54118,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_420_flamtl": {
     "id": "char_420_flamtl",
@@ -54353,7 +54469,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_134_ifrit": {
     "id": "char_134_ifrit",
@@ -54703,7 +54820,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_213_mostma": {
     "id": "char_213_mostma",
@@ -55477,7 +55595,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_2013_cerber": {
     "id": "char_2013_cerber",
@@ -55827,7 +55946,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_2015_dusk": {
     "id": "char_2015_dusk",
@@ -57097,7 +57217,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_377_gdglow": {
     "id": "char_377_gdglow",
@@ -57447,7 +57568,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4046_ebnhlz": {
     "id": "char_4046_ebnhlz",
@@ -58221,7 +58343,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_291_aglina": {
     "id": "char_291_aglina",
@@ -59915,7 +60038,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_2023_ling": {
     "id": "char_2023_ling",
@@ -61537,7 +61661,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_225_haak": {
     "id": "char_225_haak",
@@ -61887,7 +62012,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_474_glady": {
     "id": "char_474_glady",
@@ -62237,7 +62363,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_437_mizuki": {
     "id": "char_437_mizuki",
@@ -62587,7 +62714,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_1023_ghost2": {
     "id": "char_1023_ghost2",
@@ -63361,7 +63489,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_147_shining": {
     "id": "char_147_shining",
@@ -63711,7 +63840,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_179_cgbird": {
     "id": "char_179_cgbird",
@@ -64485,7 +64615,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_4042_lumen": {
     "id": "char_4042_lumen",
@@ -65259,7 +65390,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_202_demkni": {
     "id": "char_202_demkni",
@@ -66457,7 +66589,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_311_mudrok": {
     "id": "char_311_mudrok",
@@ -66807,7 +66940,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_416_zumama": {
     "id": "char_416_zumama",
@@ -67581,7 +67715,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_264_f12yin": {
     "id": "char_264_f12yin",
@@ -67931,7 +68066,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_172_svrash": {
     "id": "char_172_svrash",
@@ -68281,7 +68417,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_293_thorns": {
     "id": "char_293_thorns",
@@ -68631,7 +68768,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_010_chen": {
     "id": "char_010_chen",
@@ -69829,7 +69967,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_350_surtr": {
     "id": "char_350_surtr",
@@ -70179,7 +70318,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_188_helage": {
     "id": "char_188_helage",
@@ -70529,7 +70669,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_485_pallas": {
     "id": "char_485_pallas",
@@ -71727,7 +71868,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_282_catap": {
     "id": "char_282_catap",
@@ -71844,7 +71986,8 @@
         "skillName": "Blast Range Up α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_283_midn": {
     "id": "char_283_midn",
@@ -71961,7 +72104,8 @@
         "skillName": "Enchant Weapon α",
         "masteries": []
       }
-    ]
+    ],
+    "modules": []
   },
   "char_137_brownb": {
     "id": "char_137_brownb",
@@ -72235,7 +72379,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_347_jaksel": {
     "id": "char_347_jaksel",
@@ -72509,7 +72654,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_164_nightm": {
     "id": "char_164_nightm",
@@ -72787,7 +72933,8 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   },
   "char_220_grani": {
     "id": "char_220_grani",
@@ -73775,6 +73922,7 @@
           }
         ]
       }
-    ]
+    ],
+    "modules": []
   }
 }

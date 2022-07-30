@@ -116,7 +116,7 @@ const createOperatorsJson = () => {
           };
         });
 
-      let modules;
+      let modules = [];
       if (cnCharEquip[id] != null) {
         cnCharEquip[id].shift();
         modules = cnCharEquip[id].map((modName, modNumber) => {

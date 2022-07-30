@@ -87,7 +87,7 @@ export interface Operator {
   skillLevels: SkillLevelGoal[];
   elite: EliteGoal[];
   skills: Skill[];
-  modules?: Module[];
+  modules: Module[];
 }
 
 export interface RecruitableOperator {
