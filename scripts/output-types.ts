@@ -54,6 +54,7 @@ export interface MasteryGoal extends BaseOperatorGoal {
 
 export interface ModuleGoal extends BaseOperatorGoal {
   category: OperatorGoalCategory.Module;
+  moduleLevel: number;
 }
 
 export type OperatorGoal =
@@ -69,6 +70,13 @@ export interface Skill {
   masteries: MasteryGoal[];
 }
 
+export interface Module {
+  moduleName: string;
+  moduleId: string;
+  typeName: string;
+  stages: ModuleGoal[];
+}
+
 export interface Operator {
   id: string;
   name: string;
@@ -79,7 +87,7 @@ export interface Operator {
   skillLevels: SkillLevelGoal[];
   elite: EliteGoal[];
   skills: Skill[];
-  module?: ModuleGoal;
+  modules: Module[];
 }
 
 export interface RecruitableOperator {

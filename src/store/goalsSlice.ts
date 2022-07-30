@@ -25,6 +25,8 @@ interface PlannerMasteryGoal extends BasePlannerGoal {
 
 interface PlannerModuleGoal extends BasePlannerGoal {
   category: Output.OperatorGoalCategory.Module;
+  moduleId: string;
+  moduleLevel: number;
 }
 
 interface PlannerSkillLevelGoal extends BasePlannerGoal {
@@ -51,7 +53,7 @@ const getGoalKey = (goal: PlannerGoal) => {
     case OperatorGoalCategory.Mastery:
       return `${goal.operatorId}-${goal.category}-${goal.skillId}-${goal.masteryLevel}`;
     case OperatorGoalCategory.Module:
-      return `${goal.operatorId}-${goal.category}`;
+      return `${goal.operatorId}-${goal.category}-${goal.moduleId}-${goal.moduleLevel}`;
   }
 };
 

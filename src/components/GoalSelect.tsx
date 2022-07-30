@@ -32,6 +32,7 @@ const GoalMenuPlainItem = styled(MenuItem)(() => ({
 }));
 
 const masteryGoalRegex = /Skill (?<skillNumber>\d) Mastery (?<masteryLevel>\d)/;
+const moduleGoalRegex = /Module (?<typeName>\S+) Stage (?<moduleLevel>\d)/;
 
 interface Props {
   operator: Operator | null;
@@ -98,10 +99,18 @@ const GoalSelect: React.VFC<Props> = (props) => {
         skillId,
         masteryLevel,
       };
-    } else if (goalName === "Module") {
+    } else if (moduleGoalRegex.test(goalName)) {
+      const match = moduleGoalRegex.exec(goalName);
+      const typeName = match!.groups!.typeName;
+      const moduleLevel = Number(match!.groups!.moduleLevel);
+      const { moduleId } = operator.modules.find(
+        (module) => module.typeName === typeName
+      )!;
       return {
         operatorId: operator.id,
         category: OperatorGoalCategory.Module,
+        moduleId,
+        moduleLevel,
       };
     } else {
       throw new Error(`Unrecognized goal or preset name: ${goalName}`);
@@ -167,9 +176,6 @@ const GoalSelect: React.VFC<Props> = (props) => {
           }
           break;
         case "Everything": {
-          if (operator!.module != null) {
-            newSpecificGoals.add("Module");
-          }
           operator!.elite?.forEach((_, i) => {
             newSpecificGoals.add(`Elite ${i + 1}`);
           });
@@ -179,6 +185,11 @@ const GoalSelect: React.VFC<Props> = (props) => {
           operator!.skills?.forEach((_, i) => {
             operator!.skills[i].masteries.forEach((_, j) => {
               newSpecificGoals.add(`Skill ${i + 1} Mastery ${j + 1}`);
+            });
+          });
+          operator!.modules?.forEach((module) => {
+            module.stages.forEach((_, j) => {
+              newSpecificGoals.add(`Module ${module.typeName} Stage ${j + 1}`);
             });
           });
           break;
@@ -238,12 +249,19 @@ const GoalSelect: React.VFC<Props> = (props) => {
           ))
         : null;
 
+    const moduleGoals = operator.modules.flatMap((module) => module.stages);
     const module =
-      operator.module != null ? (
-        <GoalMenuPlainItem key={operator.module.name} value="Module">
-          Module
-        </GoalMenuPlainItem>
-      ) : null;
+      moduleGoals.length > 0
+        ? moduleGoals.map((goal) => (
+            <GoalMenuCheckboxItem key={goal.name} value={goal.name}>
+              <Checkbox
+                checked={selectedGoalNames.indexOf(goal.name) > -1}
+                size="small"
+              />{" "}
+              <ListItemText primary={goal.name} />
+            </GoalMenuCheckboxItem>
+          ))
+        : null;
 
     const presets =
       availablePresets.length > 0
@@ -260,7 +278,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
 
     const options = [...presets];
     if (module != null) {
-      options.push(module);
+      options.push(...module);
       options.push(<Divider key="1" />);
     }
     if (elite) {

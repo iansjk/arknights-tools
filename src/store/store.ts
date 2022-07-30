@@ -8,17 +8,53 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
+  createMigrate,
+  MigrationManifest,
+  PersistedState,
 } from "redux-persist";
+
+import operatorsJson from "../../data/operators.json";
+import { Operator, OperatorGoalCategory } from "../../scripts/output-types";
 
 import depotReducer from "./depotSlice";
 import goalsReducer from "./goalsSlice";
 import storage from "./storage";
 import userReducer from "./userSlice";
 
+const migrations: MigrationManifest = {
+  2: (state) => {
+    return {
+      ...state,
+      goals: (state as RootState).goals
+        .map((goal) => {
+          if (goal.category === OperatorGoalCategory.Module) {
+            goal.moduleLevel ??= 1;
+            if (goal.moduleId == null) {
+              const op: Operator =
+                operatorsJson[goal.operatorId as keyof typeof operatorsJson];
+              const firstModule = op.modules[0];
+              if (firstModule == null) {
+                console.warn(
+                  "Couldn't find any modules for this operator module goal",
+                  goal
+                );
+                return null;
+              }
+              goal.moduleId = firstModule.moduleId;
+            }
+          }
+          return goal;
+        })
+        .filter((goal) => Boolean(goal)),
+    } as PersistedState;
+  },
+};
+
 const persistConfig = {
   key: "root",
-  version: 1,
+  version: 2,
   storage,
+  migrate: createMigrate(migrations, { debug: true }),
 };
 
 const persistedReducer = persistReducer(

@@ -47,7 +47,7 @@ const RECRUITMENT_TAGS = [
   "Survival",
 ];
 
-const recruitDetail = gachaTable.recruitDetail;
+const { recruitDetail } = gachaTable;
 
 const createRecruitmentJson = () => {
   const operatorNameToId = Object.fromEntries(
@@ -55,7 +55,7 @@ const createRecruitmentJson = () => {
   );
 
   const recruitMessageHeader =
-    "<@rc.title>Recruitment Rules</>\n\n<@rc.em>Only when you choose this tag can you have a chance to obtain a ★★★★★★ Operator</>\n<@rc.em>Top Operator</>\n\n<@rc.subtitle>※All Possible Operators※</>\n<@rc.eml>Operators displayed in green cannot be obtained through Headhunting. You can get them through Recruitment</>\n\n";
+    "<@rc.title>Recruitment Rules</>\n\n<@rc.em>※Rare Tag Rules※</>\n<@rc.em>When a Top Operator Tag is selected, and the Recuitment Time is set to 9 hrs, a 6-star operator is guaranteed to appear</>\n<@rc.em>When a Senior Operator Tag is selected while a Top Operator Tag is not, and the Recuitment Time is set to 9 hrs, a 5-star operator is guaranteed to appear</>\n\n<@rc.subtitle>※All Possible Operators※</>\n<@rc.eml>Operators displayed in green cannot be obtained through Headhunting. You can get them through Recruitment</>\n\n";
   const recruitmentStrings = recruitDetail
     .replace(recruitMessageHeader, "")
     .split(/★+/);

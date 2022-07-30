@@ -32,7 +32,10 @@ const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
       icon = (
         <>
           <Image
-            src={`/arknights/skills/${skill.iconId ?? skill.skillId}`}
+            src={`/arknights/skills/${(skill.iconId ?? skill.skillId).replace(
+              "#",
+              "_"
+            )}`}
             width={24}
             height={24}
             alt=""
@@ -76,16 +79,6 @@ const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
           />
         );
       }
-      break;
-    case OperatorGoalCategory.Module:
-      icon = (
-        <Image
-          src="/arknights/items/mod_unlock_token"
-          width={24}
-          height={24}
-          alt=""
-        />
-      );
       break;
   }
   if (icon != null) {

@@ -79,5 +79,7 @@
   "Cutting Fluid Solution": "31054",
   "Chip Catalyst": "32001",
   "Module Data Block": "mod_unlock_token",
+  "Supplementary Data Instrument": "mod_update_token_2",
+  "Supplementary Data Bar": "mod_update_token_1",
   "Crystalline Electroassembly": "30145"
 }

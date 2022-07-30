@@ -116,16 +116,31 @@ const createOperatorsJson = () => {
           };
         });
 
-      let module;
+      let modules = [];
       if (cnCharEquip[id] != null) {
-        const advancedModuleId = cnCharEquip[id].at(-1);
-        const cnModuleData = cnEquipDict[advancedModuleId];
-        const enModuleData = enEquipDict[advancedModuleId];
-        module = {
-          name: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
-          ingredients: cnModuleData.itemCost.map(gameDataCostToIngredient),
-          category: OperatorGoalCategory.Module,
-        };
+        cnCharEquip[id].shift();
+        modules = cnCharEquip[id].map((modName) => {
+          const cnModuleData = cnEquipDict[modName];
+          const enModuleData = enEquipDict[modName];
+          const typeName =
+            cnModuleData.typeName1 + "-" + cnModuleData.typeName2;
+          const stages = [...Array(3)].map((_, modLevel) => {
+            return {
+              moduleLevel: modLevel + 1,
+              ingredients: cnModuleData.itemCost[`${modLevel + 1}`].map(
+                gameDataCostToIngredient
+              ),
+              name: `Module ${typeName} Stage ${modLevel + 1}`,
+              category: OperatorGoalCategory.Module,
+            };
+          });
+          return {
+            moduleName: enModuleData?.uniEquipName ?? cnModuleData.uniEquipName,
+            moduleId: cnModuleData.uniEquipId,
+            typeName,
+            stages,
+          };
+        });
       }
 
       const outputOperator = {
@@ -138,7 +153,7 @@ const createOperatorsJson = () => {
         skillLevels: skillLevelGoals,
         elite: eliteGoals,
         skills,
-        module,
+        modules,
       };
       return [id, outputOperator];
     })
