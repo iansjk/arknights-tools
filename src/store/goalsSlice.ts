@@ -25,6 +25,8 @@ interface PlannerMasteryGoal extends BasePlannerGoal {
 
 interface PlannerModuleGoal extends BasePlannerGoal {
   category: Output.OperatorGoalCategory.Module;
+  moduleId: string;
+  moduleLevel: number;
 }
 
 interface PlannerSkillLevelGoal extends BasePlannerGoal {
