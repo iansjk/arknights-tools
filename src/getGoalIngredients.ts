@@ -16,7 +16,8 @@ const getGoalIngredients = (goal: PlannerGoal) => {
       return skill.masteries[goal.masteryLevel - 1].ingredients;
     }
     case OperatorGoalCategory.Module:
-      return operator.module!.ingredients;
+      return operator.modules.find((mod) => mod.moduleId === goal.moduleId)!
+        .stages[goal.moduleLevel - 1].ingredients;
   }
 };
 export default getGoalIngredients;
