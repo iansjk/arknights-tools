@@ -32,7 +32,7 @@ const migrations: MigrationManifest = {
             if (goal.moduleId == null) {
               const op: Operator =
                 operatorsJson[goal.operatorId as keyof typeof operatorsJson];
-              const firstModule = op.modules.shift();
+              const firstModule = op.modules[0];
               if (firstModule == null) {
                 console.warn(
                   "Couldn't find any modules for this operator module goal",
