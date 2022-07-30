@@ -212,6 +212,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -611,6 +624,17 @@
           "Healing",
           "Melee",
           "Defender",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
           "Senior Operator"
         ]
       }
@@ -1421,6 +1445,28 @@
         ]
       },
       {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_141_nights",
         "name": "Haze",
         "rarity": 4,
@@ -1705,6 +1751,17 @@
           "DPS",
           "Healing",
           "Slow",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
           "Ranged",
           "Caster",
           "Senior Operator"
@@ -2129,6 +2186,17 @@
           "Ranged",
           "Medic",
           "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
         ]
       },
       {
@@ -3182,6 +3250,17 @@
         ]
       },
       {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_141_nights",
         "name": "Haze",
         "rarity": 4,
@@ -3720,6 +3799,17 @@
         ]
       },
       {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_117_myrrh",
         "name": "Myrrh",
         "rarity": 4,
@@ -4124,6 +4214,17 @@
         ]
       },
       {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_130_doberm",
         "name": "Dobermann",
         "rarity": 4,
@@ -4499,6 +4600,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -4730,6 +4844,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -4762,6 +4889,19 @@
         "tags": [
           "AoE",
           "Support",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
           "Crowd-Control",
           "Ranged",
           "Caster",
@@ -5090,6 +5230,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -5264,6 +5417,19 @@
           "DPS",
           "Ranged",
           "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
           "Top Operator",
           "Senior Operator"
         ]
@@ -5997,6 +6163,17 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -6017,6 +6194,17 @@
           "DPS",
           "Healing",
           "Slow",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
           "Ranged",
           "Caster",
           "Senior Operator"
@@ -6827,6 +7015,17 @@
           "DPS",
           "Melee",
           "Vanguard",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
           "Senior Operator"
         ]
       }
@@ -9298,6 +9497,17 @@
         ]
       },
       {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_141_nights",
         "name": "Haze",
         "rarity": 4,
@@ -9411,6 +9621,17 @@
           "Ranged",
           "Medic",
           "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
         ]
       },
       {
@@ -9964,6 +10185,17 @@
         ]
       },
       {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_141_nights",
         "name": "Haze",
         "rarity": 4,
@@ -10169,6 +10401,17 @@
           "Ranged",
           "Caster",
           "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
         ]
       },
       {
@@ -10422,6 +10665,17 @@
         ]
       },
       {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_4000_jnight",
         "name": "'Justice Knight'",
         "rarity": 1,
@@ -10434,8 +10688,7 @@
       }
     ],
     "guarantees": [
-      5,
-      1
+      4
     ]
   },
   "Ranged,Survival": {
@@ -10514,6 +10767,17 @@
           "DPS",
           "Healing",
           "Slow",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
           "Ranged",
           "Caster",
           "Senior Operator"
@@ -11279,6 +11543,17 @@
         ]
       },
       {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_117_myrrh",
         "name": "Myrrh",
         "rarity": 4,
@@ -11371,10 +11646,21 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
       }
     ],
     "guarantees": [
-      5
+      4
     ]
   },
   "AoE,Sniper": {
@@ -13208,10 +13494,21 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
       }
     ],
     "guarantees": [
-      5
+      4
     ]
   },
   "Shift,Slow": {
@@ -13464,6 +13761,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -13497,6 +13807,19 @@
         "tags": [
           "AoE",
           "Support",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
           "Crowd-Control",
           "Ranged",
           "Caster",
@@ -13834,6 +14157,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -14010,6 +14346,19 @@
           "DPS",
           "Ranged",
           "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
           "Top Operator",
           "Senior Operator"
         ]
@@ -14825,6 +15174,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -15015,6 +15377,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -15075,6 +15450,19 @@
           "DPS",
           "Ranged",
           "Specialist",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
           "Top Operator",
           "Senior Operator"
         ]
@@ -15305,6 +15693,44 @@
         "tags": [
           "AoE",
           "Support",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
+  "Caster,DPS,Top Operator": {
+    "tags": [
+      "Caster",
+      "DPS",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
           "Crowd-Control",
           "Ranged",
           "Caster",
@@ -16017,6 +16443,31 @@
         "tags": [
           "AoE",
           "Support",
+          "Crowd-Control",
+          "Ranged",
+          "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      }
+    ],
+    "guarantees": [
+      6
+    ]
+  },
+  "Crowd-Control,DPS,Top Operator": {
+    "tags": [
+      "Crowd-Control",
+      "DPS",
+      "Top Operator"
+    ],
+    "operators": [
+      {
+        "id": "char_2013_cerber",
+        "name": "Ceobe",
+        "rarity": 6,
+        "tags": [
+          "DPS",
           "Crowd-Control",
           "Ranged",
           "Caster",
@@ -17264,6 +17715,17 @@
           "Caster",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -17625,6 +18087,17 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -17874,6 +18347,17 @@
           "DPS",
           "Healing",
           "Slow",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
           "Ranged",
           "Caster",
           "Senior Operator"
@@ -21791,6 +22275,17 @@
         ]
       },
       {
+        "id": "char_306_leizi",
+        "name": "Leizi",
+        "rarity": 5,
+        "tags": [
+          "DPS",
+          "Ranged",
+          "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_141_nights",
         "name": "Haze",
         "rarity": 4,
@@ -21941,6 +22436,17 @@
         ]
       },
       {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
+      },
+      {
         "id": "char_117_myrrh",
         "name": "Myrrh",
         "rarity": 4,
@@ -22034,10 +22540,21 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
       }
     ],
     "guarantees": [
-      5
+      4
     ]
   },
   "AoE,Ranged,Sniper": {
@@ -22871,10 +23388,21 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
       }
     ],
     "guarantees": [
-      5
+      4
     ]
   },
   "AoE,Caster,Slow": {
@@ -23377,10 +23905,21 @@
           "Medic",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_385_finlpp",
+        "name": "Purestream",
+        "rarity": 4,
+        "tags": [
+          "Healing",
+          "Support",
+          "Ranged",
+          "Medic"
+        ]
       }
     ],
     "guarantees": [
-      5
+      4
     ]
   },
   "AoE,Debuff,Sniper": {
