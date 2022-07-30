@@ -278,7 +278,7 @@ const GoalSelect: React.VFC<Props> = (props) => {
 
     const options = [...presets];
     if (module != null) {
-      options.push(module);
+      options.push(...module);
       options.push(<Divider key="1" />);
     }
     if (elite) {
