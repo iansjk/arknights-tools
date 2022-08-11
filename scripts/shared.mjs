@@ -45,6 +45,7 @@ const operatorNameOverride = {
   Зима: "Zima",
   Истина: "Istina",
   Роса: "Rosa",
+  Позёмка: "Pozyomka",
 };
 
 export const getOperatorName = (operatorId) => {
