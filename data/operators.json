@@ -2427,7 +2427,7 @@
     ],
     "modules": [
       {
-        "moduleName": "占卜师旅行套装",
+        "moduleName": "Travel Kit for the Fortune-Teller",
         "moduleId": "uniequip_002_fmout",
         "typeName": "SPC-X",
         "stages": [
@@ -2775,7 +2775,7 @@
     ],
     "modules": [
       {
-        "moduleName": "新的开始",
+        "moduleName": "New Beginning",
         "moduleId": "uniequip_002_greyy",
         "typeName": "SPC-Y",
         "stages": [
@@ -5486,7 +5486,7 @@
     ],
     "modules": [
       {
-        "moduleName": "手里剑",
+        "moduleName": "Shuriken",
         "moduleId": "uniequip_002_yuki",
         "typeName": "ART-Y",
         "stages": [
@@ -10734,6 +10734,281 @@
               },
               {
                 "id": "31014",
+                "quantity": 2
+              }
+            ],
+            "name": "Skill 2 Mastery 3",
+            "category": 1
+          }
+        ]
+      }
+    ],
+    "modules": []
+  },
+  "char_4067_lolxh": {
+    "id": "char_4067_lolxh",
+    "name": "Luo Xiaohei",
+    "rarity": 4,
+    "class": "Guard",
+    "branch": "lord",
+    "isCnOnly": true,
+    "skillLevels": [
+      {
+        "skillLevel": 2,
+        "ingredients": [
+          {
+            "id": "3301",
+            "quantity": 2
+          }
+        ],
+        "name": "Skill Level 2",
+        "category": 2
+      },
+      {
+        "skillLevel": 3,
+        "ingredients": [
+          {
+            "id": "3301",
+            "quantity": 2
+          },
+          {
+            "id": "30031",
+            "quantity": 4
+          }
+        ],
+        "name": "Skill Level 3",
+        "category": 2
+      },
+      {
+        "skillLevel": 4,
+        "ingredients": [
+          {
+            "id": "3302",
+            "quantity": 3
+          },
+          {
+            "id": "30042",
+            "quantity": 2
+          }
+        ],
+        "name": "Skill Level 4",
+        "category": 2
+      },
+      {
+        "skillLevel": 5,
+        "ingredients": [
+          {
+            "id": "3302",
+            "quantity": 3
+          },
+          {
+            "id": "30052",
+            "quantity": 2
+          }
+        ],
+        "name": "Skill Level 5",
+        "category": 2
+      },
+      {
+        "skillLevel": 6,
+        "ingredients": [
+          {
+            "id": "3302",
+            "quantity": 3
+          },
+          {
+            "id": "30013",
+            "quantity": 3
+          }
+        ],
+        "name": "Skill Level 6",
+        "category": 2
+      },
+      {
+        "skillLevel": 7,
+        "ingredients": [
+          {
+            "id": "3303",
+            "quantity": 4
+          },
+          {
+            "id": "31013",
+            "quantity": 2
+          }
+        ],
+        "name": "Skill Level 7",
+        "category": 2
+      }
+    ],
+    "elite": [
+      {
+        "eliteLevel": 1,
+        "ingredients": [
+          {
+            "id": "4001",
+            "quantity": 15000
+          },
+          {
+            "id": "3221",
+            "quantity": 3
+          },
+          {
+            "id": "30042",
+            "quantity": 1
+          },
+          {
+            "id": "30012",
+            "quantity": 1
+          }
+        ],
+        "name": "Elite 1",
+        "category": 0
+      },
+      {
+        "eliteLevel": 2,
+        "ingredients": [
+          {
+            "id": "4001",
+            "quantity": 60000
+          },
+          {
+            "id": "3222",
+            "quantity": 5
+          },
+          {
+            "id": "30083",
+            "quantity": 15
+          },
+          {
+            "id": "30043",
+            "quantity": 9
+          }
+        ],
+        "name": "Elite 2",
+        "category": 0
+      }
+    ],
+    "skills": [
+      {
+        "skillId": "skchr_lolxh_1",
+        "iconId": null,
+        "skillName": "掠光尾影",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 2
+              },
+              {
+                "id": "31014",
+                "quantity": 1
+              },
+              {
+                "id": "30013",
+                "quantity": 6
+              }
+            ],
+            "name": "Skill 1 Mastery 1",
+            "category": 1
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 4
+              },
+              {
+                "id": "30104",
+                "quantity": 2
+              },
+              {
+                "id": "30084",
+                "quantity": 2
+              }
+            ],
+            "name": "Skill 1 Mastery 2",
+            "category": 1
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 6
+              },
+              {
+                "id": "30135",
+                "quantity": 2
+              },
+              {
+                "id": "31014",
+                "quantity": 2
+              }
+            ],
+            "name": "Skill 1 Mastery 3",
+            "category": 1
+          }
+        ]
+      },
+      {
+        "skillId": "skchr_lolxh_2",
+        "iconId": null,
+        "skillName": "碎金为刃",
+        "masteries": [
+          {
+            "masteryLevel": 1,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 2
+              },
+              {
+                "id": "31024",
+                "quantity": 1
+              },
+              {
+                "id": "31053",
+                "quantity": 3
+              }
+            ],
+            "name": "Skill 2 Mastery 1",
+            "category": 1
+          },
+          {
+            "masteryLevel": 2,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 4
+              },
+              {
+                "id": "31034",
+                "quantity": 2
+              },
+              {
+                "id": "31014",
+                "quantity": 2
+              }
+            ],
+            "name": "Skill 2 Mastery 2",
+            "category": 1
+          },
+          {
+            "masteryLevel": 3,
+            "ingredients": [
+              {
+                "id": "3303",
+                "quantity": 6
+              },
+              {
+                "id": "30145",
+                "quantity": 2
+              },
+              {
+                "id": "30014",
                 "quantity": 2
               }
             ],
@@ -27496,7 +27771,7 @@
     ],
     "modules": [
       {
-        "moduleName": "无名的身份牌",
+        "moduleName": "Tag of Nameless",
         "moduleId": "uniequip_002_meteo",
         "typeName": "ART-Y",
         "stages": [
@@ -27848,7 +28123,7 @@
     ],
     "modules": [
       {
-        "moduleName": "“灵魂共鸣”",
+        "moduleName": "'Soul Resonance'",
         "moduleId": "uniequip_002_sesa",
         "typeName": "ART-X",
         "stages": [
@@ -29659,7 +29934,7 @@
     ],
     "modules": [
       {
-        "moduleName": "阻燃处理方案",
+        "moduleName": "Fire Retardant Treatment",
         "moduleId": "uniequip_002_skfire",
         "typeName": "SPC-Y",
         "stages": [
@@ -30994,7 +31269,7 @@
     ],
     "modules": [
       {
-        "moduleName": "传承与开拓",
+        "moduleName": "Inheritance and Development",
         "moduleId": "uniequip_002_lionhd",
         "typeName": "SPC-X",
         "stages": [
@@ -31977,7 +32252,7 @@
     ],
     "modules": [
       {
-        "moduleName": "萨卡兹的刀",
+        "moduleName": "Sarkaz's Knife",
         "moduleId": "uniequip_002_lava2",
         "typeName": "SPC-X",
         "stages": [
@@ -48874,7 +49149,7 @@
     "rarity": 5,
     "class": "Specialist",
     "branch": "pusher",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -49019,7 +49294,7 @@
       {
         "skillId": "skchr_forcer_1",
         "iconId": null,
-        "skillName": "护身射击",
+        "skillName": "Deterring Shot",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -49083,7 +49358,7 @@
       {
         "skillId": "skchr_forcer_2",
         "iconId": null,
-        "skillName": "惊爆射击",
+        "skillName": "Staggering Shot",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -50063,7 +50338,7 @@
     "rarity": 5,
     "class": "Specialist",
     "branch": "dollkeeper",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -50208,7 +50483,7 @@
       {
         "skillId": "skchr_kazema_1",
         "iconId": null,
-        "skillName": "纸艺·迅击",
+        "skillName": "Origami Art - Swift Strike",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -50272,7 +50547,7 @@
       {
         "skillId": "skchr_kazema_2",
         "iconId": null,
-        "skillName": "纸艺·双影",
+        "skillName": "Origami Art - Twin Shadows",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -53376,7 +53651,7 @@
     ],
     "modules": [
       {
-        "moduleName": "佣兵的行囊",
+        "moduleName": "Mercenary's Bag",
         "moduleId": "uniequip_002_cqbw",
         "typeName": "ART-X",
         "stages": [
@@ -53455,7 +53730,7 @@
     "rarity": 6,
     "class": "Sniper",
     "branch": "aoesniper",
-    "isCnOnly": true,
+    "isCnOnly": false,
     "skillLevels": [
       {
         "skillLevel": 2,
@@ -53608,7 +53883,7 @@
       {
         "skillId": "skchr_phenxi_1",
         "iconId": null,
-        "skillName": "“你须直面”",
+        "skillName": "'Provocate'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -53672,7 +53947,7 @@
       {
         "skillId": "skchr_phenxi_2",
         "iconId": null,
-        "skillName": "“你须愧悔”",
+        "skillName": "'Paenitete'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -53736,7 +54011,7 @@
       {
         "skillId": "skchr_phenxi_3",
         "iconId": null,
-        "skillName": "“你须偿还”",
+        "skillName": "'Reponite'",
         "masteries": [
           {
             "masteryLevel": 1,
@@ -53800,7 +54075,7 @@
     ],
     "modules": [
       {
-        "moduleName": "“律外”特种弹药配给组",
+        "moduleName": "'Out-Law' Special Ammunition Surplus",
         "moduleId": "uniequip_002_phenxi",
         "typeName": "ART-Y",
         "stages": [
@@ -57456,7 +57731,7 @@
     ],
     "modules": [
       {
-        "moduleName": "锁与匙之家",
+        "moduleName": "Home of 'Black Lock' and 'White Key'",
         "moduleId": "uniequip_002_mostma",
         "typeName": "SPC-Y",
         "stages": [
@@ -58582,7 +58857,7 @@
     ],
     "modules": [
       {
-        "moduleName": "无题长卷",
+        "moduleName": "Untitled Scroll",
         "moduleId": "uniequip_002_dusk",
         "typeName": "SPC-X",
         "stages": [
