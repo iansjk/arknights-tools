@@ -3,7 +3,7 @@ import {
   Autocomplete,
   autocompleteClasses,
   Box,
-  createFilterOptions,
+  FilterOptionsState,
   InputAdornment,
   Popper,
   styled,
@@ -11,11 +11,22 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import React, { useMemo } from "react";
+import React, { useCallback } from "react";
 import { VariableSizeList, ListChildComponentProps } from "react-window";
 
 import operatorsJson from "../../data/operators.json";
 import { Operator } from "../../scripts/output-types";
+
+const normalizeOperatorName = (operatorName: string) =>
+  operatorName.toLowerCase().replace(/['"]/g, "").replace("ł", "l");
+
+const operators = Object.values(operatorsJson)
+  .filter((op) => op.rarity >= 3)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const operatorNormalizedNames = Object.fromEntries(
+  operators.map((op) => [op.name, normalizeOperatorName(op.name)])
+);
 
 interface Props {
   value: Operator | null;
@@ -24,22 +35,14 @@ interface Props {
 
 const OperatorSearch: React.VFC<Props> = (props) => {
   const { value, onChange } = props;
-  const operators = useMemo(
-    () =>
-      Object.values(operatorsJson)
-        .filter((op) => op.rarity >= 3)
-        .sort((a, b) => a.name.localeCompare(b.name)),
-    []
-  );
 
-  const filterOptions = useMemo(
-    () =>
-      createFilterOptions<Operator>({
-        matchFrom: "any",
-        ignoreCase: true,
-        ignoreAccents: true,
-        stringify: (option) => option.name.replace(/['"]/g, ""),
-      }),
+  const filterOptions = useCallback(
+    (operators: Operator[], { inputValue }: FilterOptionsState<Operator>) => {
+      const normalizedInput = normalizeOperatorName(inputValue);
+      return operators.filter((op) =>
+        operatorNormalizedNames[op.name].includes(normalizedInput)
+      );
+    },
     []
   );
 
