@@ -6,7 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 import dotenv from "dotenv";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ACESHIP_ROOT = path.join(__dirname, "../../AN-EN-Tags");
+const ACESHIP_ROOT = path.join(__dirname, "../../Arknight-Images");
 
 dotenv.config({
   path: path.join(__dirname, "../.env.local"),
@@ -24,7 +24,7 @@ cloudinary.config({
 /** @type {Array<{ sourceDir: string, destDir: string, replace?: (filename: string) => string, filter?: (filename: string) => boolean}} */
 const tasks = [
   {
-    sourceDir: `${ACESHIP_ROOT}/img/skills`,
+    sourceDir: `${ACESHIP_ROOT}/skills`,
     destDir: "arknights/skills",
     filter: (filename) => filename.endsWith(".png"),
     replace: (filename) =>
@@ -34,22 +34,22 @@ const tasks = [
         .replace("#", "_"),
   },
   {
-    sourceDir: `${ACESHIP_ROOT}/img/avatars`,
+    sourceDir: `${ACESHIP_ROOT}/avatars`,
     destDir: "arknights/avatars",
     filter: (filename) => /^char_[^_]+_[^_]+(_\d+\+?)?\.png$/.test(filename),
   },
   {
-    sourceDir: `${ACESHIP_ROOT}/img/equip/icon`,
+    sourceDir: `${ACESHIP_ROOT}/equip/icon`,
     destDir: "arknights/equip",
     filter: (filename) => filename.endsWith(".png"),
   },
   {
-    sourceDir: `${ACESHIP_ROOT}/img/portraits`,
+    sourceDir: `${ACESHIP_ROOT}/portraits`,
     destDir: "arknights/portraits",
     filter: (filename) => /^char_[^_]+_[^_]+_\d+\+?\.png$/.test(filename),
   },
   {
-    sourceDir: `${ACESHIP_ROOT}/img/items`,
+    sourceDir: `${ACESHIP_ROOT}/items`,
     destDir: "arknights/items",
     filter: (filename) => filename.endsWith(".png"),
   },
