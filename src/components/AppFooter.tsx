@@ -31,7 +31,7 @@ const DiscordTag = styled("code")(({ theme }) => ({
   fontSize: theme.typography.fontSize,
 }));
 
-const AppFooter: React.VFC = () => {
+const AppFooter: React.FC = () => {
   return (
     <Typography
       component="footer"

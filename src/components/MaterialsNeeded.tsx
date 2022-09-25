@@ -42,7 +42,7 @@ import ItemNeeded from "./ItemNeeded";
 
 const LMD_ITEM_ID = "4001";
 
-const MaterialsNeeded: React.VFC = React.memo(() => {
+const MaterialsNeeded: React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
   const stock = useAppSelector(selectStock);
   const crafting = useAppSelector(selectCrafting);

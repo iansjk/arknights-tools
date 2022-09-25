@@ -10,7 +10,7 @@ interface Props {
   item: Item;
 }
 
-const CraftingInfo: React.VFC<Props> = (props) => {
+const CraftingInfo: React.FC<Props> = (props) => {
   const { item } = props;
 
   if (item.ingredients == null || item.ingredients.length === 0) {

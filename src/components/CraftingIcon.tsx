@@ -1,4 +1,4 @@
-const CraftingIcon: React.VFC<React.HTMLAttributes<SVGElement>> = (props) => {
+const CraftingIcon: React.FC<React.HTMLAttributes<SVGElement>> = (props) => {
   return (
     <svg
       viewBox="0 0 78 78"

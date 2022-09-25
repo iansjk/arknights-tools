@@ -21,7 +21,7 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 import PlannerGoalCard from "./PlannerGoalCard";
 
-const OperatorGoals: React.VFC = () => {
+const OperatorGoals: React.FC = () => {
   const dispatch = useAppDispatch();
   const goals = useAppSelector(selectGoals);
 

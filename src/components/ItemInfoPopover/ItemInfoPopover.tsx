@@ -16,7 +16,7 @@ interface Props {
   onClose: () => void;
 }
 
-const ItemInfoPopover: React.VFC<Props> = React.memo((props) => {
+const ItemInfoPopover: React.FC<Props> = React.memo((props) => {
   const { itemId, ingredientToCraftedItemsMapping, open, onClose } = props;
   const item: Item | null =
     itemId != null ? itemsJson[itemId as keyof typeof itemsJson] : null;
