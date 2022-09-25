@@ -89,7 +89,7 @@ const OperatorSearch: React.FC<Props> = (props) => {
           />
         );
       }}
-      renderOption={(props, option) => [props, option]}
+      renderOption={(props, option) => [props, option] as React.ReactNode}
       disableListWrap
       filterOptions={filterOptions}
       sx={{
