@@ -381,10 +381,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 MaterialsNeeded.displayName = "MaterialsNeeded";
 export default MaterialsNeeded;
 
-const SettingsMenuItem: React.FC<{
-  onClick: () => void;
-  checked: boolean;
-}> = (props) => {
+const SettingsMenuItem: React.FC<
+  React.PropsWithChildren<{
+    onClick: () => void;
+    checked: boolean;
+  }>
+> = (props) => {
   const { onClick, checked, children } = props;
   return (
     <MenuItem onClick={onClick}>

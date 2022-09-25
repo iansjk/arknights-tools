@@ -9,7 +9,9 @@ interface Props {
   revalidateOn?: unknown[];
 }
 
-const ValidatedTextField: React.FC<Props & TextFieldProps> = (props) => {
+const ValidatedTextField: React.FC<
+  React.PropsWithChildren<Props & TextFieldProps>
+> = (props) => {
   const {
     validator,
     onChange,
