@@ -12,7 +12,7 @@ interface Props {
   ingredientToCraftedItemsMapping: { [ingredientId: string]: string[] };
 }
 
-const NeededToCraft: React.VFC<Props> = (props) => {
+const NeededToCraft: React.FC<Props> = (props) => {
   const { item, ingredientToCraftedItemsMapping } = props;
   const craftedItemIds = ingredientToCraftedItemsMapping[item.id];
 

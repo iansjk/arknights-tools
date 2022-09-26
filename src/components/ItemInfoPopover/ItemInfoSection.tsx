@@ -13,7 +13,7 @@ const ItemInfoDivider = styled(Divider)`
   background-color: #888;
 `;
 
-const ItemInfoSection: React.FC<Props> = (props) => {
+const ItemInfoSection: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { heading, children } = props;
   return (
     <Box mt={2}>

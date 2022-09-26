@@ -9,7 +9,7 @@ interface Props {
   item: Item;
 }
 
-const StageInfo: React.VFC<Props> = (props) => {
+const StageInfo: React.FC<Props> = (props) => {
   const { item } = props;
 
   if (
@@ -46,7 +46,7 @@ const StageInfo: React.VFC<Props> = (props) => {
 };
 export default StageInfo;
 
-const Stage: React.VFC<{ stage: StageData; stageType: string }> = (props) => {
+const Stage: React.FC<{ stage: StageData; stageType: string }> = (props) => {
   const { stage, stageType } = props;
   const { stageName, dropRate, stageSanityCost, itemSanityCost } = stage;
 

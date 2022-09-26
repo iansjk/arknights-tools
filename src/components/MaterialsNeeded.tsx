@@ -42,7 +42,7 @@ import ItemNeeded from "./ItemNeeded";
 
 const LMD_ITEM_ID = "4001";
 
-const MaterialsNeeded: React.VFC = React.memo(() => {
+const MaterialsNeeded: React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
   const stock = useAppSelector(selectStock);
   const crafting = useAppSelector(selectCrafting);
@@ -381,10 +381,12 @@ const MaterialsNeeded: React.VFC = React.memo(() => {
 MaterialsNeeded.displayName = "MaterialsNeeded";
 export default MaterialsNeeded;
 
-const SettingsMenuItem: React.FC<{
-  onClick: () => void;
-  checked: boolean;
-}> = (props) => {
+const SettingsMenuItem: React.FC<
+  React.PropsWithChildren<{
+    onClick: () => void;
+    checked: boolean;
+  }>
+> = (props) => {
   const { onClick, checked, children } = props;
   return (
     <MenuItem onClick={onClick}>

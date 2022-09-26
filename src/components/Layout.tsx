@@ -19,7 +19,7 @@ interface Props {
   page: keyof typeof config.pages;
 }
 
-const Layout: React.FC<Props> = (props) => {
+const Layout: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const { page, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { siteTitle, pages } = config;

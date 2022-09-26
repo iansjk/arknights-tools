@@ -383,7 +383,7 @@ const Leveling: NextPage = () => {
 };
 export default Leveling;
 
-const LmdIcon: React.VFC = () => {
+const LmdIcon: React.FC = () => {
   return (
     <Box component="span" position="relative" top={3}>
       <Image src="/arknights/lmd-icon" width={26} height={18} alt="LMD" />
@@ -391,7 +391,7 @@ const LmdIcon: React.VFC = () => {
   );
 };
 
-const OperatorImage: React.VFC<{
+const OperatorImage: React.FC<{
   operator: Operator | null;
   eliteLevel?: number;
 }> = ({ operator, eliteLevel = 0 }) => {

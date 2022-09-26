@@ -9,7 +9,7 @@ interface Props {
   goal: PlannerGoal;
 }
 
-const OperatorGoalIconography: React.VFC<Props> = ({ goal }) => {
+const OperatorGoalIconography: React.FC<Props> = ({ goal }) => {
   const operator: Operator =
     operatorsJson[goal.operatorId as keyof typeof operatorsJson];
 

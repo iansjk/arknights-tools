@@ -4,7 +4,7 @@ import React from "react";
 
 import { RecruitableOperator } from "../../scripts/output-types";
 
-const RecruitableOperatorChip: React.VFC<RecruitableOperator> = React.memo(
+const RecruitableOperatorChip: React.FC<RecruitableOperator> = React.memo(
   (props) => {
     const { id, name, rarity, tags } = props;
 

@@ -39,7 +39,7 @@ interface Props {
   onGoalsAdded: (goals: PlannerGoal[]) => void;
 }
 
-const GoalSelect: React.VFC<Props> = (props) => {
+const GoalSelect: React.FC<Props> = (props) => {
   const { operator, onGoalsAdded } = props;
   const [selectedGoalNames, setSelectedGoalNames] = useState<string[]>([]);
 

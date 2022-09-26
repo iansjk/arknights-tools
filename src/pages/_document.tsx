@@ -8,10 +8,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {(this.props as any).emotionStyleTags}
-
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -22,6 +18,9 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <meta name="emotion-insertion-point" content="" />
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />

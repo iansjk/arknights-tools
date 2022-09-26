@@ -9,7 +9,7 @@ export interface ItemStackProps extends ItemBaseProps {
   showItemNameTooltip?: boolean;
 }
 
-const ItemStack: React.VFC<ItemStackProps> = (props) => {
+const ItemStack: React.FC<ItemStackProps> = (props) => {
   const { quantity: rawQuantity, showItemNameTooltip, ...rest } = props;
   const { itemId } = rest;
   const quantity =

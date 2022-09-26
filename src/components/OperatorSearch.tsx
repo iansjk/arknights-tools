@@ -33,7 +33,7 @@ interface Props {
   onChange: (value: Operator | null) => void;
 }
 
-const OperatorSearch: React.VFC<Props> = (props) => {
+const OperatorSearch: React.FC<Props> = (props) => {
   const { value, onChange } = props;
 
   const filterOptions = useCallback(
@@ -89,7 +89,7 @@ const OperatorSearch: React.VFC<Props> = (props) => {
           />
         );
       }}
-      renderOption={(props, option) => [props, option]}
+      renderOption={(props, option) => [props, option] as React.ReactNode}
       disableListWrap
       filterOptions={filterOptions}
       sx={{

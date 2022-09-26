@@ -34,7 +34,7 @@ interface Props extends ItemStackProps {
   component?: ElementType;
 }
 
-const ItemNeeded: React.VFC<Props> = React.memo((props) => {
+const ItemNeeded: React.FC<Props> = React.memo((props) => {
   const {
     owned,
     isCrafting,

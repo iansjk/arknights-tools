@@ -21,7 +21,7 @@ const DRAWER_WIDTH_PX = 220;
 
 const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
 
-const ListItemLink: React.VFC<{ href: string; linkText: string }> = ({
+const ListItemLink: React.FC<{ href: string; linkText: string }> = ({
   href,
   linkText,
 }) => {
@@ -39,7 +39,7 @@ interface Props {
   onDrawerToggle: () => void;
 }
 
-const AppDrawer: React.VFC<Props> = React.memo((props) => {
+const AppDrawer: React.FC<Props> = React.memo((props) => {
   const { mobileOpen, onDrawerToggle } = props;
   const { siteTitle, siteUrl, pages } = config;
   const container = typeof window !== "undefined" ? document.body : undefined;
