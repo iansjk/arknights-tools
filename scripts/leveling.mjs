@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import gameDataConst from "./ArknightsGameData/zh_CN/gamedata/excel/gamedata_const.json" assert { type: "json" };
+import gameDataConst from "./GameData/zh_CN/gamedata/excel/gamedata_const.json" assert { type: "json" };
 import { DATA_OUTPUT_DIRECTORY } from "./shared.mjs";
 
 const {

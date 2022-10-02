@@ -6,7 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 import dotenv from "dotenv";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ACESHIP_ROOT = path.join(__dirname, "../../Arknight-Images");
+const ACESHIP_ROOT = path.join(__dirname, "./Images");
 
 dotenv.config({
   path: path.join(__dirname, "../.env.local"),

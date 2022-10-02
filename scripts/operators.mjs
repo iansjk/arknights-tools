@@ -2,14 +2,14 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import enCharacterPatchTable from "./ArknightsGameData/en_US/gamedata/excel/char_patch_table.json" assert { type: "json" };
-import enCharacterTable from "./ArknightsGameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
-import enSkillTable from "./ArknightsGameData/en_US/gamedata/excel/skill_table.json" assert { type: "json" };
-import enUniequipTable from "./ArknightsGameData/en_US/gamedata/excel/uniequip_table.json" assert { type: "json" };
-import cnCharacterPatchTable from "./ArknightsGameData/zh_CN/gamedata/excel/char_patch_table.json" assert { type: "json" };
-import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json" assert { type: "json" };
-import cnSkillTable from "./ArknightsGameData/zh_CN/gamedata/excel/skill_table.json" assert { type: "json" };
-import cnUniequipTable from "./ArknightsGameData/zh_CN/gamedata/excel/uniequip_table.json" assert { type: "json" };
+import enCharacterPatchTable from "./GameData/en_US/gamedata/excel/char_patch_table.json" assert { type: "json" };
+import enCharacterTable from "./GameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
+import enSkillTable from "./GameData/en_US/gamedata/excel/skill_table.json" assert { type: "json" };
+import enUniequipTable from "./GameData/en_US/gamedata/excel/uniequip_table.json" assert { type: "json" };
+import cnCharacterPatchTable from "./GameData/zh_CN/gamedata/excel/char_patch_table.json" assert { type: "json" };
+import cnCharacterTable from "./GameData/zh_CN/gamedata/excel/character_table.json" assert { type: "json" };
+import cnSkillTable from "./GameData/zh_CN/gamedata/excel/skill_table.json" assert { type: "json" };
+import cnUniequipTable from "./GameData/zh_CN/gamedata/excel/uniequip_table.json" assert { type: "json" };
 import {
   DATA_OUTPUT_DIRECTORY,
   gameDataCostToIngredient,

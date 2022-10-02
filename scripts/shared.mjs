@@ -2,9 +2,9 @@ import fs from "fs";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
-import enItemTable from "./ArknightsGameData/en_US/gamedata/excel/item_table.json" assert { type: "json" };
-import cnCharacterTable from "./ArknightsGameData/zh_CN/gamedata/excel/character_table.json" assert { type: "json" };
-import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
+import enItemTable from "./GameData/en_US/gamedata/excel/item_table.json" assert { type: "json" };
+import cnCharacterTable from "./GameData/zh_CN/gamedata/excel/character_table.json" assert { type: "json" };
+import cnItemTable from "./GameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const enItems = enItemTable.items;

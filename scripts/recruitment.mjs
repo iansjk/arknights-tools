@@ -4,8 +4,8 @@ import { fileURLToPath } from "url";
 
 import { Combination } from "js-combinatorics";
 
-import characterTable from "./ArknightsGameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
-import gachaTable from "./ArknightsGameData/en_US/gamedata/excel/gacha_table.json" assert { type: "json" };
+import characterTable from "./GameData/en_US/gamedata/excel/character_table.json" assert { type: "json" };
+import gachaTable from "./GameData/en_US/gamedata/excel/gacha_table.json" assert { type: "json" };
 import {
   DATA_OUTPUT_DIRECTORY,
   professionToClass,

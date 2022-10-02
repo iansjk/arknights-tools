@@ -5,10 +5,10 @@ import { fileURLToPath } from "url";
 import axios from "axios";
 import puppeteer from "puppeteer";
 
-import enStageData from "./ArknightsGameData/en_US/gamedata/excel/stage_table.json" assert { type: "json" };
-import cnBuildingData from "./ArknightsGameData/zh_CN/gamedata/excel/building_data.json" assert { type: "json" };
-import cnItemTable from "./ArknightsGameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
-import cnStageData from "./ArknightsGameData/zh_CN/gamedata/excel/stage_table.json" assert { type: "json" };
+import enStageData from "./GameData/en_US/gamedata/excel/stage_table.json" assert { type: "json" };
+import cnBuildingData from "./GameData/zh_CN/gamedata/excel/building_data.json" assert { type: "json" };
+import cnItemTable from "./GameData/zh_CN/gamedata/excel/item_table.json" assert { type: "json" };
+import cnStageData from "./GameData/zh_CN/gamedata/excel/stage_table.json" assert { type: "json" };
 import {
   getEnglishItemName,
   DATA_OUTPUT_DIRECTORY,
