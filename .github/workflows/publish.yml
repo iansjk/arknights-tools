@@ -22,9 +22,7 @@ jobs:
       - name: Upload new images
         run: |
           yarn install
-          node node/update-data.mjs
-          yarn run build
-          yarn run next export
+          node scripts/images.mjs
         env:
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
           CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
@@ -52,7 +50,7 @@ jobs:
       - name: Build the website
         run: |
           yarn install
-          node node/update-data.mjs
+          node scripts/update-data.mjs
           yarn run build
           yarn run next export
         env:

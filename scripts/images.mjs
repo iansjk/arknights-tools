@@ -125,5 +125,5 @@ const uploadAllImages = async () => {
 export default uploadAllImages;
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  uploadAllImages();
+  await uploadAllImages();
 }
