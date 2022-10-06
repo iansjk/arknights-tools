@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    name: Deploy to Cloudflare Pages
+    name: Upload new images to Cloudinary
     steps:
       - name: Checkout recursively
         uses: actions/checkout@v3
