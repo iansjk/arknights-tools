@@ -1,6 +1,36 @@
 on: [push, workflow_dispatch]
 
 jobs:
+  upload-images:
+    if: github.repository == 'iansjk/arknights-tools'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout recursively
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+      - name: Setup node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
+
+      - name: Upload new images
+        run: |
+          yarn install
+          node node/update-data.mjs
+          yarn run build
+          yarn run next export
+        env:
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+
   deploy:
     runs-on: ubuntu-latest
     permissions:
@@ -22,14 +52,12 @@ jobs:
       - name: Build the website
         run: |
           yarn install
-          node scripts/all.mjs
+          node node/update-data.mjs
           yarn run build
           yarn run next export
         env:
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
           CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
-          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
-          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
