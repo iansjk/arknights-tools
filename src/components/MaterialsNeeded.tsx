@@ -241,8 +241,8 @@ const MaterialsNeeded: React.FC = React.memo(() => {
         const compareBySortId = itemA.sortId - itemB.sortId;
         if (sortCompletedToBottom) {
           return (
-            (neededA <= stock[itemIdA] ? 1 : 0) -
-            (neededB <= stock[itemIdB] ? 1 : 0) ||
+            (neededA && neededA <= stock[itemIdA] ? 1 : 0) -
+            (neededB && neededB <= stock[itemIdB] ? 1 : 0) ||
             (canCompleteByCrafting[itemIdA] ? 1 : 0) -
             (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
             compareBySortId
