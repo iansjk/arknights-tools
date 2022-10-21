@@ -106,7 +106,7 @@ const ItemNeeded: React.FC<Props> = React.memo((props) => {
               : undefined
           }
         />
-        {isComplete && (
+        {quantity > 0 && isComplete && (
           <CheckCircleIcon
             htmlColor="greenyellow"
             opacity={0.8}
@@ -118,7 +118,7 @@ const ItemNeeded: React.FC<Props> = React.memo((props) => {
             }}
           />
         )}
-        {!isComplete && isCrafting && canCompleteByCrafting && (
+        {quantity > 0 && !isComplete && isCrafting && canCompleteByCrafting && (
           <Tooltip arrow title="Can be completed by crafting">
             <Box
               alignSelf="center"
