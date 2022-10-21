@@ -19,6 +19,14 @@ RefinedSolvent.args = {
   isCrafting: true,
 };
 
+export const UnusedRock = Template.bind({});
+UnusedRock.args = {
+  itemId: "30014",
+  quantity: 0,
+  owned: 0,
+  isCrafting: true,
+};
+
 export const LMD = Template.bind({});
 LMD.args = {
   itemId: "4001",
