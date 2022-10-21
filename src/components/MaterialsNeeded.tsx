@@ -229,27 +229,28 @@ const MaterialsNeeded: React.FC = React.memo(() => {
   const lmdCost = materialsNeeded[LMD_ITEM_ID] ?? 0;
   delete materialsNeeded[LMD_ITEM_ID];
 
-  const sortedMaterialsNeeded = Object.entries(materialsNeeded).sort(
-    ([itemIdA, neededA], [itemIdB, neededB]) => {
-      const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
-      const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
-      const compareBySortId = itemA.sortId - itemB.sortId;
-      if (sortCompletedToBottom) {
-        return (
-          (neededA <= stock[itemIdA] ? 1 : 0) -
-          (neededB <= stock[itemIdB] ? 1 : 0) ||
-          (canCompleteByCrafting[itemIdA] ? 1 : 0) -
-          (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
-          compareBySortId
-        );
-      }
-      return compareBySortId;
-    }
-  );
   const allItems: [string, number][] = Object.values(itemsJson)
-    .sort((a, b) => b.tier - a.tier)
     .filter(item => !(EXCLUDE.includes(item.id)))
     .map(item => [item.id, materialsNeeded[item.id] ?? 0]);
+
+  const sortedMaterialsNeeded =
+    (showInactiveMaterials ? allItems : Object.entries(materialsNeeded)).sort(
+      ([itemIdA, neededA], [itemIdB, neededB]) => {
+        const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
+        const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
+        const compareBySortId = itemA.sortId - itemB.sortId;
+        if (sortCompletedToBottom) {
+          return (
+            (neededA <= stock[itemIdA] ? 1 : 0) -
+            (neededB <= stock[itemIdB] ? 1 : 0) ||
+            (canCompleteByCrafting[itemIdA] ? 1 : 0) -
+            (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
+            compareBySortId
+          );
+        }
+        return compareBySortId;
+      }
+    );
 
   return (
     <Paper component="section" sx={{ p: 2 }}>
@@ -367,7 +368,7 @@ const MaterialsNeeded: React.FC = React.memo(() => {
           gridTemplateColumns: "repeat(auto-fill, minmax(110px, 1fr))",
         }}
       >
-        {(showInactiveMaterials ? allItems : sortedMaterialsNeeded).map(([itemId, needed]) => (
+        {sortedMaterialsNeeded.map(([itemId, needed]) => (
           <ItemNeeded
             key={itemId}
             component="li"
