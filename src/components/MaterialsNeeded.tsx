@@ -41,6 +41,7 @@ import ItemInfoPopover from "./ItemInfoPopover";
 import ItemNeeded from "./ItemNeeded";
 
 const LMD_ITEM_ID = "4001";
+const EXCLUDE = ["2001", "2002", "2003", "2004", "4001"];
 
 const MaterialsNeeded: React.FC = React.memo(() => {
   const dispatch = useAppDispatch();
@@ -55,6 +56,9 @@ const MaterialsNeeded: React.FC = React.memo(() => {
   );
   const hideIncrementDecrementButtons = useAppSelector((state) =>
     selectPreference(state, UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS)
+  );
+  const showInactiveMaterials = useAppSelector((state) =>
+    selectPreference(state, UserPreference.PLANNER_SHOW_INACTIVE_ITEMS)
   );
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [popoverItemId, setPopoverItemId] = useState<string | null>(null);
@@ -225,23 +229,28 @@ const MaterialsNeeded: React.FC = React.memo(() => {
   const lmdCost = materialsNeeded[LMD_ITEM_ID] ?? 0;
   delete materialsNeeded[LMD_ITEM_ID];
 
-  const sortedMaterialsNeeded = Object.entries(materialsNeeded).sort(
-    ([itemIdA, neededA], [itemIdB, neededB]) => {
-      const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
-      const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
-      const compareBySortId = itemA.sortId - itemB.sortId;
-      if (sortCompletedToBottom) {
-        return (
-          (neededA <= stock[itemIdA] ? 1 : 0) -
-            (neededB <= stock[itemIdB] ? 1 : 0) ||
-          (canCompleteByCrafting[itemIdA] ? 1 : 0) -
+  const allItems: [string, number][] = Object.values(itemsJson)
+    .filter(item => !(EXCLUDE.includes(item.id)))
+    .map(item => [item.id, materialsNeeded[item.id] ?? 0]);
+
+  const sortedMaterialsNeeded =
+    (showInactiveMaterials ? allItems : Object.entries(materialsNeeded)).sort(
+      ([itemIdA, neededA], [itemIdB, neededB]) => {
+        const itemA = itemsJson[itemIdA as keyof typeof itemsJson];
+        const itemB = itemsJson[itemIdB as keyof typeof itemsJson];
+        const compareBySortId = itemA.sortId - itemB.sortId;
+        if (sortCompletedToBottom) {
+          return (
+            (neededA && neededA <= stock[itemIdA] ? 1 : 0) -
+            (neededB && neededB <= stock[itemIdB] ? 1 : 0) ||
+            (canCompleteByCrafting[itemIdA] ? 1 : 0) -
             (canCompleteByCrafting[itemIdB] ? 1 : 0) ||
-          compareBySortId
-        );
+            compareBySortId
+          );
+        }
+        return compareBySortId;
       }
-      return compareBySortId;
-    }
-  );
+    );
 
   return (
     <Paper component="section" sx={{ p: 2 }}>
@@ -313,6 +322,14 @@ const MaterialsNeeded: React.FC = React.memo(() => {
           </SettingsMenuItem>
           <SettingsMenuItem
             onClick={handleTogglePreference(
+              UserPreference.PLANNER_SHOW_INACTIVE_ITEMS
+            )}
+            checked={showInactiveMaterials}
+          >
+            Show inactive materials
+          </SettingsMenuItem>
+          <SettingsMenuItem
+            onClick={handleTogglePreference(
               UserPreference.HIDE_INCREMENT_DECREMENT_BUTTONS
             )}
             checked={hideIncrementDecrementButtons}
@@ -357,7 +374,7 @@ const MaterialsNeeded: React.FC = React.memo(() => {
             component="li"
             itemId={itemId}
             owned={stock[itemId] ?? 0}
-            quantity={needed}
+            quantity={materialsNeeded[itemId] ?? needed}
             canCompleteByCrafting={canCompleteByCrafting[itemId]}
             isCrafting={crafting[itemId] ?? false}
             onChange={handleChange}

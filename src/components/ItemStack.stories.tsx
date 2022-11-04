@@ -17,6 +17,12 @@ RefinedSolvent.args = {
   quantity: 35,
 };
 
+export const UnusedRock = Template.bind({});
+UnusedRock.args = {
+  itemId: "30014",
+  quantity: 0,
+};
+
 export const LMD = Template.bind({});
 LMD.args = {
   itemId: "4001",
