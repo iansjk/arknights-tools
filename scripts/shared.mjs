@@ -16,6 +16,9 @@ fs.mkdirSync(DATA_OUTPUT_DIRECTORY, { recursive: true });
 const unofficialItemNameTranslations = {
   mod_update_token_1: "Supplementary Data Bar",
   mod_update_token_2: "Supplementary Data Instrument",
+  30155: "Sintered Core Crystals",
+  31063: "Transmuted Salt Cluster",
+  31064: "Transmuted Salt Block",
 };
 
 export const getEnglishItemName = (itemId) => {
