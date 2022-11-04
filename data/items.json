@@ -497,7 +497,7 @@
       "mostEfficient": {
         "stageSanityCost": 30,
         "stageName": "CA-5",
-        "itemSanityCost": 20.01,
+        "itemSanityCost": 19.99,
         "dropRate": 1.5
       }
     }
@@ -528,13 +528,13 @@
     "name": "Orirock",
     "iconId": "MTL_SL_G1",
     "tier": 1,
-    "sortId": 100015,
+    "sortId": 100029,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "S2-5",
-        "itemSanityCost": 3.25,
-        "dropRate": 3.69
+        "itemSanityCost": 3.24,
+        "dropRate": 3.71
       }
     }
   },
@@ -543,7 +543,7 @@
     "name": "Orirock Cube",
     "iconId": "MTL_SL_G2",
     "tier": 2,
-    "sortId": 100014,
+    "sortId": 100028,
     "ingredients": [
       {
         "id": "4001",
@@ -569,7 +569,7 @@
     "name": "Orirock Cluster",
     "iconId": "MTL_SL_G3",
     "tier": 3,
-    "sortId": 100013,
+    "sortId": 100027,
     "ingredients": [
       {
         "id": "4001",
@@ -587,7 +587,7 @@
     "name": "Orirock Concentration",
     "iconId": "MTL_SL_G4",
     "tier": 4,
-    "sortId": 100012,
+    "sortId": 100026,
     "ingredients": [
       {
         "id": "4001",
@@ -605,13 +605,13 @@
     "name": "Sugar Substitute",
     "iconId": "MTL_SL_STRG1",
     "tier": 1,
-    "sortId": 100027,
+    "sortId": 100041,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "S2-6",
-        "itemSanityCost": 4.8,
-        "dropRate": 2.5
+        "itemSanityCost": 4.82,
+        "dropRate": 2.49
       }
     }
   },
@@ -620,7 +620,7 @@
     "name": "Sugar",
     "iconId": "MTL_SL_STRG2",
     "tier": 2,
-    "sortId": 100026,
+    "sortId": 100040,
     "ingredients": [
       {
         "id": "4001",
@@ -636,7 +636,7 @@
       "leastSanity": {
         "stageSanityCost": 15,
         "stageName": "S3-1",
-        "itemSanityCost": 9.85,
+        "itemSanityCost": 9.84,
         "dropRate": 1.52
       }
     }
@@ -646,7 +646,7 @@
     "name": "Sugar Pack",
     "iconId": "MTL_SL_STRG3",
     "tier": 3,
-    "sortId": 100025,
+    "sortId": 100039,
     "ingredients": [
       {
         "id": "4001",
@@ -662,14 +662,14 @@
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "2-5",
-        "itemSanityCost": 32.7,
+        "itemSanityCost": 32.63,
         "dropRate": 0.37
       },
       "mostEfficient": {
-        "stageSanityCost": 18,
-        "stageName": "9-5",
-        "itemSanityCost": 45.99,
-        "dropRate": 0.39
+        "stageSanityCost": 21,
+        "stageName": "10-10",
+        "itemSanityCost": 46.72,
+        "dropRate": 0.45
       }
     }
   },
@@ -678,7 +678,7 @@
     "name": "Sugar Lump",
     "iconId": "MTL_SL_STRG4",
     "tier": 4,
-    "sortId": 100024,
+    "sortId": 100038,
     "ingredients": [
       {
         "id": "4001",
@@ -704,7 +704,7 @@
     "name": "Ester",
     "iconId": "MTL_SL_RUSH1",
     "tier": 1,
-    "sortId": 100023,
+    "sortId": 100037,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
@@ -719,7 +719,7 @@
     "name": "Polyester",
     "iconId": "MTL_SL_RUSH2",
     "tier": 2,
-    "sortId": 100022,
+    "sortId": 100036,
     "ingredients": [
       {
         "id": "4001",
@@ -735,7 +735,7 @@
       "leastSanity": {
         "stageSanityCost": 15,
         "stageName": "S3-2",
-        "itemSanityCost": 9.86,
+        "itemSanityCost": 9.85,
         "dropRate": 1.52
       }
     }
@@ -745,7 +745,7 @@
     "name": "Polyester Pack",
     "iconId": "MTL_SL_RUSH3",
     "tier": 3,
-    "sortId": 100021,
+    "sortId": 100035,
     "ingredients": [
       {
         "id": "4001",
@@ -761,7 +761,7 @@
       "leastSanity": {
         "stageSanityCost": 18,
         "stageName": "7-4",
-        "itemSanityCost": 32.51,
+        "itemSanityCost": 32.46,
         "dropRate": 0.55
       }
     }
@@ -771,7 +771,7 @@
     "name": "Polyester Lump",
     "iconId": "MTL_SL_RUSH4",
     "tier": 4,
-    "sortId": 100020,
+    "sortId": 100034,
     "ingredients": [
       {
         "id": "4001",
@@ -797,13 +797,13 @@
     "name": "Oriron Shard",
     "iconId": "MTL_SL_IRON1",
     "tier": 1,
-    "sortId": 100031,
+    "sortId": 100045,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "S2-8",
-        "itemSanityCost": 6.14,
-        "dropRate": 1.95
+        "itemSanityCost": 6.12,
+        "dropRate": 1.96
       }
     }
   },
@@ -812,7 +812,7 @@
     "name": "Oriron",
     "iconId": "MTL_SL_IRON2",
     "tier": 2,
-    "sortId": 100030,
+    "sortId": 100044,
     "ingredients": [
       {
         "id": "4001",
@@ -828,7 +828,7 @@
       "leastSanity": {
         "stageSanityCost": 15,
         "stageName": "S3-3",
-        "itemSanityCost": 12.26,
+        "itemSanityCost": 12.31,
         "dropRate": 1.22
       }
     }
@@ -838,7 +838,7 @@
     "name": "Oriron Cluster",
     "iconId": "MTL_SL_IRON3",
     "tier": 3,
-    "sortId": 100029,
+    "sortId": 100043,
     "ingredients": [
       {
         "id": "4001",
@@ -852,15 +852,15 @@
     "yield": 1,
     "stages": {
       "leastSanity": {
-        "stageSanityCost": 12,
-        "stageName": "2-8",
-        "itemSanityCost": 53.93,
-        "dropRate": 0.22
+        "stageSanityCost": 24,
+        "stageName": "10-11",
+        "itemSanityCost": 52.62,
+        "dropRate": 0.46
       },
       "mostEfficient": {
         "stageSanityCost": 18,
         "stageName": "5-5",
-        "itemSanityCost": 60.82,
+        "itemSanityCost": 60.7,
         "dropRate": 0.3
       }
     }
@@ -870,7 +870,7 @@
     "name": "Oriron Block",
     "iconId": "MTL_SL_IRON4",
     "tier": 4,
-    "sortId": 100028,
+    "sortId": 100042,
     "ingredients": [
       {
         "id": "4001",
@@ -896,13 +896,13 @@
     "name": "Diketon",
     "iconId": "MTL_SL_KETONE1",
     "tier": 1,
-    "sortId": 100035,
+    "sortId": 100049,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "S2-9",
-        "itemSanityCost": 6.02,
-        "dropRate": 1.99
+        "itemSanityCost": 6.01,
+        "dropRate": 2
       }
     }
   },
@@ -911,7 +911,7 @@
     "name": "Polyketon",
     "iconId": "MTL_SL_KETONE2",
     "tier": 2,
-    "sortId": 100034,
+    "sortId": 100048,
     "ingredients": [
       {
         "id": "4001",
@@ -927,8 +927,8 @@
       "leastSanity": {
         "stageSanityCost": 15,
         "stageName": "3-7",
-        "itemSanityCost": 12.23,
-        "dropRate": 1.23
+        "itemSanityCost": 12.25,
+        "dropRate": 1.22
       }
     }
   },
@@ -937,7 +937,7 @@
     "name": "Aketon",
     "iconId": "MTL_SL_KETONE3",
     "tier": 3,
-    "sortId": 100033,
+    "sortId": 100047,
     "ingredients": [
       {
         "id": "4001",
@@ -951,10 +951,10 @@
     "yield": 1,
     "stages": {
       "mostEfficient": {
-        "stageSanityCost": 18,
-        "stageName": "JT8-3",
-        "itemSanityCost": 40.17,
-        "dropRate": 0.45
+        "stageSanityCost": 21,
+        "stageName": "10-4",
+        "itemSanityCost": 38.58,
+        "dropRate": 0.54
       }
     }
   },
@@ -963,7 +963,7 @@
     "name": "Keton Colloid",
     "iconId": "MTL_SL_KETONE4",
     "tier": 4,
-    "sortId": 100032,
+    "sortId": 100046,
     "ingredients": [
       {
         "id": "4001",
@@ -989,13 +989,13 @@
     "name": "Damaged Device",
     "iconId": "MTL_SL_BOSS1",
     "tier": 1,
-    "sortId": 100019,
+    "sortId": 100033,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 12,
         "stageName": "2-3",
-        "itemSanityCost": 8.2,
-        "dropRate": 1.46
+        "itemSanityCost": 8.15,
+        "dropRate": 1.47
       }
     }
   },
@@ -1004,7 +1004,7 @@
     "name": "Device",
     "iconId": "MTL_SL_BOSS2",
     "tier": 2,
-    "sortId": 100018,
+    "sortId": 100032,
     "ingredients": [
       {
         "id": "4001",
@@ -1022,6 +1022,12 @@
         "stageName": "S3-4",
         "itemSanityCost": 16.33,
         "dropRate": 0.92
+      },
+      "mostEfficient": {
+        "stageSanityCost": 21,
+        "stageName": "10-4",
+        "itemSanityCost": 44.72,
+        "dropRate": 0.47
       }
     }
   },
@@ -1030,7 +1036,7 @@
     "name": "Integrated Device",
     "iconId": "MTL_SL_BOSS3",
     "tier": 3,
-    "sortId": 100017,
+    "sortId": 100031,
     "ingredients": [
       {
         "id": "4001",
@@ -1043,10 +1049,16 @@
     ],
     "yield": 1,
     "stages": {
+      "leastSanity": {
+        "stageSanityCost": 18,
+        "stageName": "9-10",
+        "itemSanityCost": 54.18,
+        "dropRate": 0.33
+      },
       "mostEfficient": {
         "stageSanityCost": 18,
         "stageName": "7-15",
-        "itemSanityCost": 54.09,
+        "itemSanityCost": 54.2,
         "dropRate": 0.33
       }
     }
@@ -1056,7 +1068,7 @@
     "name": "Optimized Device",
     "iconId": "MTL_SL_BOSS4",
     "tier": 4,
-    "sortId": 100016,
+    "sortId": 100030,
     "ingredients": [
       {
         "id": "4001",
@@ -1082,18 +1094,18 @@
     "name": "Loxic Kohl",
     "iconId": "MTL_SL_ALCOHOL1",
     "tier": 3,
-    "sortId": 100005,
+    "sortId": 100019,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 21,
         "stageName": "6-11",
-        "itemSanityCost": 42.71,
+        "itemSanityCost": 42.67,
         "dropRate": 0.49
       },
       "mostEfficient": {
         "stageSanityCost": 18,
         "stageName": "4-4",
-        "itemSanityCost": 48.61,
+        "itemSanityCost": 48.79,
         "dropRate": 0.37
       }
     }
@@ -1103,7 +1115,7 @@
     "name": "White Horse Kohl",
     "iconId": "MTL_SL_ALCOHOL2",
     "tier": 4,
-    "sortId": 100004,
+    "sortId": 100018,
     "ingredients": [
       {
         "id": "4001",
@@ -1129,19 +1141,19 @@
     "name": "Manganese Ore",
     "iconId": "MTL_SL_MANGANESE1",
     "tier": 3,
-    "sortId": 100007,
+    "sortId": 100021,
     "stages": {
       "leastSanity": {
-        "stageSanityCost": 15,
-        "stageName": "3-2",
-        "itemSanityCost": 40.59,
-        "dropRate": 0.37
+        "stageSanityCost": 21,
+        "stageName": "10-16",
+        "itemSanityCost": 38.21,
+        "dropRate": 0.55
       },
       "mostEfficient": {
-        "stageSanityCost": 18,
-        "stageName": "4-7",
-        "itemSanityCost": 60.71,
-        "dropRate": 0.3
+        "stageSanityCost": 24,
+        "stageName": "10-7",
+        "itemSanityCost": 56.2,
+        "dropRate": 0.43
       }
     }
   },
@@ -1150,7 +1162,7 @@
     "name": "Manganese Trihydrate",
     "iconId": "MTL_SL_MANGANESE2",
     "tier": 4,
-    "sortId": 100006,
+    "sortId": 100020,
     "ingredients": [
       {
         "id": "4001",
@@ -1176,18 +1188,18 @@
     "name": "Grindstone",
     "iconId": "MTL_SL_PG1",
     "tier": 3,
-    "sortId": 100009,
+    "sortId": 100023,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 18,
         "stageName": "9-16",
-        "itemSanityCost": 46.55,
+        "itemSanityCost": 46.14,
         "dropRate": 0.39
       },
       "mostEfficient": {
         "stageSanityCost": 21,
         "stageName": "4-8",
-        "itemSanityCost": 61.06,
+        "itemSanityCost": 61.4,
         "dropRate": 0.34
       }
     }
@@ -1197,7 +1209,7 @@
     "name": "Grindstone Pentahydrate",
     "iconId": "MTL_SL_PG2",
     "tier": 4,
-    "sortId": 100008,
+    "sortId": 100022,
     "ingredients": [
       {
         "id": "4001",
@@ -1223,19 +1235,19 @@
     "name": "RMA70-12",
     "iconId": "MTL_SL_RMA7012",
     "tier": 3,
-    "sortId": 100011,
+    "sortId": 100025,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 21,
         "stageName": "9-19",
-        "itemSanityCost": 52.47,
+        "itemSanityCost": 52.56,
         "dropRate": 0.4
       },
       "mostEfficient": {
         "stageSanityCost": 21,
         "stageName": "4-9",
-        "itemSanityCost": 71.18,
-        "dropRate": 0.3
+        "itemSanityCost": 71.36,
+        "dropRate": 0.29
       }
     }
   },
@@ -1244,7 +1256,7 @@
     "name": "RMA70-24",
     "iconId": "MTL_SL_RMA7024",
     "tier": 4,
-    "sortId": 100010,
+    "sortId": 100024,
     "ingredients": [
       {
         "id": "4001",
@@ -1270,7 +1282,7 @@
     "name": "Polymerization Preparation",
     "iconId": "MTL_SL_PP",
     "tier": 5,
-    "sortId": 100003,
+    "sortId": 100005,
     "ingredients": [
       {
         "id": "4001",
@@ -1296,7 +1308,7 @@
     "name": "Bipolar Nanoflake",
     "iconId": "MTL_SL_BN",
     "tier": 5,
-    "sortId": 100002,
+    "sortId": 100004,
     "ingredients": [
       {
         "id": "4001",
@@ -1318,7 +1330,7 @@
     "name": "D32 Steel",
     "iconId": "MTL_SL_DS",
     "tier": 5,
-    "sortId": 100001,
+    "sortId": 100003,
     "ingredients": [
       {
         "id": "4001",
@@ -1344,7 +1356,7 @@
     "name": "Crystalline Electronic Unit",
     "iconId": "MTL_SL_OEU",
     "tier": 5,
-    "sortId": 100040,
+    "sortId": 100002,
     "ingredients": [
       {
         "id": "4001",
@@ -1365,23 +1377,49 @@
     ],
     "yield": 1
   },
+  "30155": {
+    "id": "30155",
+    "name": "Sintered Core Crystals",
+    "iconId": "MTL_SL_SHJ",
+    "tier": 5,
+    "sortId": 100001,
+    "ingredients": [
+      {
+        "id": "4001",
+        "quantity": 400
+      },
+      {
+        "id": "31064",
+        "quantity": 1
+      },
+      {
+        "id": "31054",
+        "quantity": 1
+      },
+      {
+        "id": "31044",
+        "quantity": 2
+      }
+    ],
+    "yield": 1
+  },
   "31013": {
     "id": "31013",
     "name": "Coagulating Gel",
     "iconId": "MTL_SL_PGEL3",
     "tier": 3,
-    "sortId": 100037,
+    "sortId": 100017,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 18,
         "stageName": "R8-8",
-        "itemSanityCost": 57.44,
+        "itemSanityCost": 57.77,
         "dropRate": 0.31
       },
       "mostEfficient": {
         "stageSanityCost": 21,
         "stageName": "JT8-2",
-        "itemSanityCost": 63,
+        "itemSanityCost": 63.12,
         "dropRate": 0.33
       }
     }
@@ -1391,7 +1429,7 @@
     "name": "Polymerized Gel",
     "iconId": "MTL_SL_PGEL4",
     "tier": 4,
-    "sortId": 100036,
+    "sortId": 100016,
     "ingredients": [
       {
         "id": "4001",
@@ -1417,12 +1455,18 @@
     "name": "Incandescent Alloy",
     "iconId": "MTL_SL_IAM3",
     "tier": 3,
-    "sortId": 100039,
+    "sortId": 100015,
     "stages": {
-      "mostEfficient": {
+      "leastSanity": {
         "stageSanityCost": 15,
         "stageName": "S3-6",
-        "itemSanityCost": 37.61,
+        "itemSanityCost": 37.81,
+        "dropRate": 0.4
+      },
+      "mostEfficient": {
+        "stageSanityCost": 21,
+        "stageName": "10-14",
+        "itemSanityCost": 53.06,
         "dropRate": 0.4
       }
     }
@@ -1432,7 +1476,7 @@
     "name": "Incandescent Alloy Block",
     "iconId": "MTL_SL_IAM4",
     "tier": 4,
-    "sortId": 100038,
+    "sortId": 100014,
     "ingredients": [
       {
         "id": "4001",
@@ -1458,19 +1502,19 @@
     "name": "Crystalline Component",
     "iconId": "MTL_SL_OC3",
     "tier": 3,
-    "sortId": 100042,
+    "sortId": 100013,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 21,
         "stageName": "9-14",
-        "itemSanityCost": 38.95,
-        "dropRate": 0.54
+        "itemSanityCost": 37.95,
+        "dropRate": 0.55
       },
       "mostEfficient": {
         "stageSanityCost": 21,
         "stageName": "R8-11",
-        "itemSanityCost": 39.25,
-        "dropRate": 0.54
+        "itemSanityCost": 38.41,
+        "dropRate": 0.55
       }
     }
   },
@@ -1479,7 +1523,7 @@
     "name": "Crystalline Circuit",
     "iconId": "MTL_SL_OC4",
     "tier": 4,
-    "sortId": 100041,
+    "sortId": 100012,
     "ingredients": [
       {
         "id": "4001",
@@ -1505,18 +1549,18 @@
     "name": "Semi-Synthetic Solvent",
     "iconId": "MTL_SL_SS",
     "tier": 3,
-    "sortId": 100044,
+    "sortId": 100011,
     "stages": {
       "leastSanity": {
         "stageSanityCost": 21,
         "stageName": "9-18",
-        "itemSanityCost": 63.64,
+        "itemSanityCost": 63.77,
         "dropRate": 0.33
       },
       "mostEfficient": {
         "stageSanityCost": 18,
         "stageName": "9-4",
-        "itemSanityCost": 64.74,
+        "itemSanityCost": 64.75,
         "dropRate": 0.28
       }
     }
@@ -1526,7 +1570,7 @@
     "name": "Refined Solvent",
     "iconId": "MTL_SL_RS",
     "tier": 4,
-    "sortId": 100043,
+    "sortId": 100010,
     "ingredients": [
       {
         "id": "4001",
@@ -1552,13 +1596,13 @@
     "name": "Compound Cutting Fluid",
     "iconId": "MTL_SL_CCF",
     "tier": 3,
-    "sortId": 100046,
+    "sortId": 100009,
     "stages": {
       "mostEfficient": {
-        "stageSanityCost": 18,
-        "stageName": "9-6",
-        "itemSanityCost": 65.88,
-        "dropRate": 0.27
+        "stageSanityCost": 24,
+        "stageName": "10-17",
+        "itemSanityCost": 46.65,
+        "dropRate": 0.51
       }
     }
   },
@@ -1567,7 +1611,7 @@
     "name": "Cutting Fluid Solution",
     "iconId": "MTL_SL_PLCF",
     "tier": 4,
-    "sortId": 100045,
+    "sortId": 100008,
     "ingredients": [
       {
         "id": "4001",
@@ -1583,6 +1627,53 @@
       },
       {
         "id": "30103",
+        "quantity": 1
+      }
+    ],
+    "yield": 1
+  },
+  "31063": {
+    "id": "31063",
+    "name": "Transmuted Salt Cluster",
+    "iconId": "MTL_SL_ZY",
+    "tier": 3,
+    "sortId": 100007,
+    "stages": {
+      "leastSanity": {
+        "stageSanityCost": 24,
+        "stageName": "10-11",
+        "itemSanityCost": 989.3,
+        "dropRate": 0.02
+      },
+      "mostEfficient": {
+        "stageSanityCost": 18,
+        "stageName": "JT8-3",
+        "itemSanityCost": 1712.45,
+        "dropRate": 0.01
+      }
+    }
+  },
+  "31064": {
+    "id": "31064",
+    "name": "Transmuted Salt Block",
+    "iconId": "MTL_SL_ZYK",
+    "tier": 4,
+    "sortId": 100006,
+    "ingredients": [
+      {
+        "id": "4001",
+        "quantity": 300
+      },
+      {
+        "id": "31063",
+        "quantity": 1
+      },
+      {
+        "id": "31043",
+        "quantity": 1
+      },
+      {
+        "id": "30023",
         "quantity": 1
       }
     ],

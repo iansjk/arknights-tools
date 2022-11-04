@@ -225,6 +225,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -635,6 +648,18 @@
           "DPS",
           "Ranged",
           "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       }
@@ -1137,6 +1162,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_123_fang",
         "name": "Fang",
         "rarity": 3,
@@ -1452,6 +1488,18 @@
           "DPS",
           "Ranged",
           "Caster",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       },
@@ -2103,6 +2151,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -2342,6 +2401,18 @@
         "rarity": 5,
         "tags": [
           "DPS",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
           "Ranged",
           "Sniper",
           "Senior Operator"
@@ -2820,6 +2891,18 @@
           "Survival",
           "Melee",
           "Guard",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       },
@@ -3401,6 +3484,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_211_adnach",
         "name": "Adnachiel",
         "rarity": 3,
@@ -3502,6 +3596,18 @@
           "Debuff",
           "Melee",
           "Specialist",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       },
@@ -4362,6 +4468,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -4613,6 +4730,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -4726,6 +4856,19 @@
           "Survival",
           "Melee",
           "Guard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
           "Top Operator",
           "Senior Operator"
         ]
@@ -5167,6 +5310,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -5258,6 +5414,19 @@
       {
         "id": "char_112_siege",
         "name": "Siege",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
         "rarity": 6,
         "tags": [
           "DP-Recovery",
@@ -5430,6 +5599,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
           "Top Operator",
           "Senior Operator"
         ]
@@ -6174,6 +6356,18 @@
           "Caster",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -6488,6 +6682,18 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -6720,6 +6926,18 @@
           "Survival",
           "Melee",
           "Guard",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       }
@@ -7072,6 +7290,18 @@
           "Debuff",
           "Melee",
           "Specialist",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       }
@@ -8214,6 +8444,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -8869,6 +9110,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_192_falco",
         "name": "Plume",
         "rarity": 3,
@@ -9453,6 +9705,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -9784,6 +10047,18 @@
         ]
       },
       {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_235_jesica",
         "name": "Jessica",
         "rarity": 4,
@@ -10002,6 +10277,18 @@
         "rarity": 5,
         "tags": [
           "AoE",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
           "Ranged",
           "Sniper",
           "Senior Operator"
@@ -10319,6 +10606,18 @@
           "Debuff",
           "Ranged",
           "Supporter",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       },
@@ -11299,6 +11598,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -11472,6 +11782,17 @@
         "tags": [
           "Survival",
           "DPS",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
           "Melee",
           "Guard"
         ]
@@ -11693,6 +12014,18 @@
         ]
       },
       {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_118_yuki",
         "name": "Shirayuki",
         "rarity": 4,
@@ -11864,6 +12197,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
@@ -12676,6 +13021,18 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -13281,6 +13638,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -13642,6 +14010,19 @@
           "Survival",
           "Melee",
           "Guard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
           "Top Operator",
           "Senior Operator"
         ]
@@ -14092,6 +14473,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -14186,6 +14580,19 @@
       {
         "id": "char_112_siege",
         "name": "Siege",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
         "rarity": 6,
         "tags": [
           "DP-Recovery",
@@ -14359,6 +14766,19 @@
           "Crowd-Control",
           "Ranged",
           "Caster",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
           "Top Operator",
           "Senior Operator"
         ]
@@ -14827,6 +15247,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -14843,6 +15276,19 @@
       {
         "id": "char_112_siege",
         "name": "Siege",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
         "rarity": 6,
         "tags": [
           "DP-Recovery",
@@ -14952,6 +15398,19 @@
           "Survival",
           "Melee",
           "Guard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
           "Top Operator",
           "Senior Operator"
         ]
@@ -16347,6 +16806,19 @@
           "Top Operator",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -16363,6 +16835,19 @@
       {
         "id": "char_112_siege",
         "name": "Siege",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
         "rarity": 6,
         "tags": [
           "DP-Recovery",
@@ -16516,6 +17001,19 @@
       {
         "id": "char_112_siege",
         "name": "Siege",
+        "rarity": 6,
+        "tags": [
+          "DP-Recovery",
+          "DPS",
+          "Melee",
+          "Vanguard",
+          "Top Operator",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_222_bpipe",
+        "name": "Bagpipe",
         "rarity": 6,
         "tags": [
           "DP-Recovery",
@@ -17864,6 +18362,18 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -17954,6 +18464,18 @@
         "rarity": 5,
         "tags": [
           "AoE",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
           "Ranged",
           "Sniper",
           "Senior Operator"
@@ -18131,6 +18653,18 @@
           "Debuff",
           "Ranged",
           "Supporter",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
           "Senior Operator"
         ]
       }
@@ -18905,6 +19439,18 @@
           "Sniper",
           "Senior Operator"
         ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
       }
     ],
     "guarantees": [
@@ -18989,6 +19535,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
@@ -19504,6 +20062,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
@@ -20908,6 +21478,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -21085,6 +21666,17 @@
         "tags": [
           "Survival",
           "DPS",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
           "Melee",
           "Guard"
         ]
@@ -22024,6 +22616,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -22588,6 +23191,18 @@
         ]
       },
       {
+        "id": "char_379_sesa",
+        "name": "Sesa",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
         "id": "char_118_yuki",
         "name": "Shirayuki",
         "rarity": 4,
@@ -22761,6 +23376,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
@@ -23072,6 +23699,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
@@ -23862,6 +24501,17 @@
         ]
       },
       {
+        "id": "char_337_utage",
+        "name": "Utage",
+        "rarity": 4,
+        "tags": [
+          "DPS",
+          "Survival",
+          "Melee",
+          "Guard"
+        ]
+      },
+      {
         "id": "char_208_melan",
         "name": "Melantha",
         "rarity": 3,
@@ -23932,6 +24582,18 @@
       {
         "id": "char_219_meteo",
         "name": "Meteorite",
+        "rarity": 5,
+        "tags": [
+          "AoE",
+          "Debuff",
+          "Ranged",
+          "Sniper",
+          "Senior Operator"
+        ]
+      },
+      {
+        "id": "char_379_sesa",
+        "name": "Sesa",
         "rarity": 5,
         "tags": [
           "AoE",
