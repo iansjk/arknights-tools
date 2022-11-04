@@ -12,8 +12,17 @@ import {
   toTitleCase,
 } from "./shared.mjs";
 
+/**
+ * Unfortunately Justice Knight is missing the single quotes in the list of recruitable operators,
+ * so we'll have to manually map the name to char id
+ */
+const recruitableNameToIdOverride = {
+  "Justice Knight": "char_4000_jnight",
+};
+
 const nameOverrides = {
   "THRM-EX": "Thermal-EX",
+  "Justice Knight": "'Justice Knight'",
 };
 
 const RECRUITMENT_TAGS = [
@@ -55,7 +64,7 @@ const createRecruitmentJson = () => {
   );
 
   const recruitMessageHeader =
-    "<@rc.title>Recruitment Rules</>\n\n<@rc.em>※Rare Tag Rules※</>\n<@rc.em>When a Top Operator Tag is selected, and the Recuitment Time is set to 9 hrs, a 6-star operator is guaranteed to appear</>\n<@rc.em>When a Senior Operator Tag is selected while a Top Operator Tag is not, and the Recuitment Time is set to 9 hrs, a 5-star operator is guaranteed to appear</>\n\n<@rc.subtitle>※All Possible Operators※</>\n<@rc.eml>Operators displayed in green cannot be obtained through Headhunting. You can get them through Recruitment</>\n\n";
+    "<@rc.title>Recruitment Rules</>\n\n<@rc.em>※Rare recruitment tag rules※</>\n<@rc.em>When the Top Operator tag is chosen and the recruitment time is set to 9 hours, a 6-star operator is guaranteed</>\n<@rc.em>When the Senior Operator tag is chosen and the recruitment time is set to 9 hours, a 5-star operator is guaranteed</>\n\n<@rc.subtitle>※All Possible Operators※</>\n<@rc.eml>Operators displayed in green cannot be obtained through Headhunting. You can get them through Recruitment</>\n\n";
   const recruitmentStrings = recruitDetail
     .replace(recruitMessageHeader, "")
     .split(/★+/);
@@ -70,7 +79,8 @@ const createRecruitmentJson = () => {
     opNames
       .filter((name) => !!name)
       .map((opName) => {
-        const opId = operatorNameToId[opName];
+        const opId =
+          recruitableNameToIdOverride[opName] ?? operatorNameToId[opName];
         const opData = characterTable[opId];
         const tags = [
           ...(opData.tagList ?? []),
