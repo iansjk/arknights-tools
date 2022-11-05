@@ -15,14 +15,15 @@ const ItemStack: React.FC<ItemStackProps> = (props) => {
   const quantity =
     rawQuantity < 1000
       ? rawQuantity
-      : `${rawQuantity % 1000 === 0
-        ? `${rawQuantity / 1000}`
-        : (rawQuantity / 1000).toFixed(1)
-      }K`;
+      : `${
+          rawQuantity % 1000 === 0
+            ? `${rawQuantity / 1000}`
+            : (rawQuantity / 1000).toFixed(1)
+        }K`;
   const { name } = itemsJson[itemId as keyof typeof itemsJson];
   const itemBase = (
     <ItemBase {...rest}>
-      {quantity > 0 &&
+      {rawQuantity > 0 && (
         <Typography
           variant="body1"
           component="span"
@@ -41,7 +42,7 @@ const ItemStack: React.FC<ItemStackProps> = (props) => {
         >
           {quantity}
         </Typography>
-      }
+      )}
     </ItemBase>
   );
 
