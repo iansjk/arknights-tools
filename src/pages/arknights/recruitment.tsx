@@ -65,16 +65,21 @@ function getTagCombinations(activeTags: string[]) {
   );
 }
 
+interface Tag {
+  type: string;
+  value: string;
+}
+
 const Recruitment = ({
   options,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [activeTags, setActiveTags] = useState<string[]>([]);
+  const [activeTags, setActiveTags] = useState<Tag[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [inputNode, setInputNode] = useState<HTMLInputElement | null>(null);
   const [resultPaddingTop, setResultPaddingTop] = useState(0);
   const popperRef = useRef<Instance>(null);
 
-  const activeTagCombinations = getTagCombinations(activeTags);
+  const activeTagCombinations = getTagCombinations(activeTags.map(tag => tag.value));
   const matchingOperators = useMemo(
     () =>
       activeTagCombinations
@@ -105,7 +110,7 @@ const Recruitment = ({
     }[]
   ) => {
     if (selectedOptions.length <= 5) {
-      setActiveTags(selectedOptions.map((option) => option.value).sort());
+      setActiveTags(selectedOptions.sort());
     }
     if (selectedOptions.length === 5) {
       setIsOpen(false);
@@ -132,6 +137,9 @@ const Recruitment = ({
         groupBy={(option) => option.type}
         getOptionLabel={(option) => option.value}
         disableCloseOnSelect
+        value={activeTags}
+        onChange={handleTagsChanged}
+        isOptionEqualToValue={(option, value) => option.value === value.value}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -139,7 +147,15 @@ const Recruitment = ({
             inputRef={setInputNode}
           />
         )}
-        onChange={handleTagsChanged}
+        renderTags={(tagValue, getTagProps) =>
+          tagValue.map((option, index) => (
+            <Chip
+              {...getTagProps({ index })}
+              label={option.value}
+              onDelete={() => { setIsOpen(true); setActiveTags(activeTags.filter(e => e !== option)) }}
+            />
+          ))
+        }
         PopperComponent={(props) => (
           <Popper
             {...props}
@@ -167,9 +183,9 @@ const Recruitment = ({
               Math.min(
                 ...opSetB.map((op) => (op.rarity === 1 ? 4 : op.rarity))
               ) -
-                Math.min(
-                  ...opSetA.map((op) => (op.rarity === 1 ? 4 : op.rarity))
-                ) || tagSetB.length - tagSetA.length
+              Math.min(
+                ...opSetA.map((op) => (op.rarity === 1 ? 4 : op.rarity))
+              ) || tagSetB.length - tagSetA.length
           )
           .map(({ tags, operators, guarantees }) => (
             <Grid
