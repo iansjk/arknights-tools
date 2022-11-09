@@ -112,9 +112,7 @@ const Recruitment = ({
     if (selectedOptions.length <= 5) {
       setActiveTags(selectedOptions.sort());
     }
-    if (selectedOptions.length === 5) {
-      setIsOpen(false);
-    }
+    setIsOpen(selectedOptions.length !== 5);
   };
 
   const chipContainerStyles: SxProps<Theme> = {
@@ -147,15 +145,6 @@ const Recruitment = ({
             inputRef={setInputNode}
           />
         )}
-        renderTags={(tagValue, getTagProps) =>
-          tagValue.map((option, index) => (
-            <Chip
-              {...getTagProps({ index })}
-              label={option.value}
-              onDelete={() => { setIsOpen(true); setActiveTags(activeTags.filter(e => e !== option)) }}
-            />
-          ))
-        }
         PopperComponent={(props) => (
           <Popper
             {...props}
