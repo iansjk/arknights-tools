@@ -79,7 +79,9 @@ const Recruitment = ({
   const [resultPaddingTop, setResultPaddingTop] = useState(0);
   const popperRef = useRef<Instance>(null);
 
-  const activeTagCombinations = getTagCombinations(activeTags.map(tag => tag.value));
+  const activeTagCombinations = getTagCombinations(activeTags
+    .sort((a, b) => a.value.localeCompare(b.value))
+    .map(tag => tag.value));
   const matchingOperators = useMemo(
     () =>
       activeTagCombinations
@@ -110,7 +112,7 @@ const Recruitment = ({
     }[]
   ) => {
     if (selectedOptions.length <= 5) {
-      setActiveTags(selectedOptions.sort((a, b) => a.value.localeCompare(b.value)));
+      setActiveTags(selectedOptions);
     }
     setIsOpen(selectedOptions.length !== 5);
   };
