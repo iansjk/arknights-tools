@@ -110,7 +110,7 @@ const Recruitment = ({
     }[]
   ) => {
     if (selectedOptions.length <= 5) {
-      setActiveTags(selectedOptions.sort());
+      setActiveTags(selectedOptions.sort((a, b) => a.value.localeCompare(b.value)));
     }
     setIsOpen(selectedOptions.length !== 5);
   };
