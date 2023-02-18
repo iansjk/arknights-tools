@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Script (Node 17)",
+      "name": "Launch Script (Node 18)",
       "program": "${file}",
       "request": "launch",
       "skipFiles": ["<node_internals>/**"],
-      "type": "pwa-node",
-      "runtimeVersion": "17"
+      "type": "node",
+      "runtimeVersion": "18"
     }
   ]
 }

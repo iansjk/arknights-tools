@@ -63,11 +63,7 @@ const createRecruitmentJson = () => {
     Object.entries(characterTable).map(([id, opData]) => [opData.name, id])
   );
 
-  const recruitMessageHeader =
-    "<@rc.title>Recruitment Rules</>\n\n<@rc.em>※Rare recruitment tag rules※</>\n<@rc.em>When the Top Operator tag is chosen and the recruitment time is set to 9 hours, a 6-star operator is guaranteed</>\n<@rc.em>When the Senior Operator tag is chosen and the recruitment time is set to 9 hours, a 5-star operator is guaranteed</>\n\n<@rc.subtitle>※All Possible Operators※</>\n<@rc.eml>Operators displayed in green cannot be obtained through Headhunting. You can get them through Recruitment</>\n\n";
-  const recruitmentStrings = recruitDetail
-    .replace(recruitMessageHeader, "")
-    .split(/★+/);
+  const recruitmentStrings = recruitDetail.split(/★+/).slice(1);
   const recruitableOperators = recruitmentStrings.map((line) =>
     line
       .replace(/\n|-{2,}/g, "")
@@ -75,33 +71,35 @@ const createRecruitmentJson = () => {
       .filter((item) => !!item && item.trim())
   );
 
-  const recruitment = recruitableOperators.flatMap((opNames, rarity) =>
-    opNames
-      .filter((name) => !!name)
-      .map((opName) => {
-        const opId =
-          recruitableNameToIdOverride[opName] ?? operatorNameToId[opName];
-        const opData = characterTable[opId];
-        const tags = [
-          ...(opData.tagList ?? []),
-          toTitleCase(opData.position),
-          professionToClass(opData.profession),
-        ];
-        if (rarity === 1) {
-          tags.push("Robot");
-        } else if (rarity === 6) {
-          tags.push("Top Operator");
-        }
-        if (rarity >= 5) {
-          tags.push("Senior Operator");
-        }
-        return {
-          id: opId,
-          name: nameOverrides[opName] ?? opName,
-          rarity,
-          tags,
-        };
-      })
+  const recruitment = recruitableOperators.flatMap(
+    (opNames, zeroIndexedRarity) =>
+      opNames
+        .filter((name) => !!name)
+        .map((opName) => {
+          const rarity = zeroIndexedRarity + 1;
+          const opId =
+            recruitableNameToIdOverride[opName] ?? operatorNameToId[opName];
+          const opData = characterTable[opId];
+          const tags = [
+            ...(opData.tagList ?? []),
+            toTitleCase(opData.position),
+            professionToClass(opData.profession),
+          ];
+          if (rarity === 1) {
+            tags.push("Robot");
+          } else if (rarity === 6) {
+            tags.push("Top Operator");
+          }
+          if (rarity >= 5) {
+            tags.push("Senior Operator");
+          }
+          return {
+            id: opId,
+            name: nameOverrides[opName] ?? opName,
+            rarity,
+            tags,
+          };
+        })
   );
 
   const tagSets = Array(3)
