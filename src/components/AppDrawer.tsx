@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   Drawer,
   Hidden,
@@ -14,6 +15,7 @@ import React from "react";
 
 import config from "../config";
 import theme from "../theme";
+import MigrationModal from "./MigrationModal";
 
 import MuiNextLink from "./MuiNextLink";
 
@@ -78,6 +80,20 @@ const AppDrawer: React.FC<Props> = React.memo((props) => {
           />
         ))}
       </List>
+      <Divider />
+      <Typography
+        component="h2"
+        variant="h6"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "start",
+          marginTop: "8px",
+          ...theme.mixins.toolbar,
+        }}
+      >
+        <MigrationModal />
+      </Typography>
     </>
   );
 
