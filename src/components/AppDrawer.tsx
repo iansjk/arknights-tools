@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Divider,
   Drawer,
   Hidden,
@@ -15,8 +14,8 @@ import React from "react";
 
 import config from "../config";
 import theme from "../theme";
-import MigrationModal from "./MigrationModal";
 
+import MigrationModal from "./MigrationModal";
 import MuiNextLink from "./MuiNextLink";
 
 const DRAWER_WIDTH_PX = 220;

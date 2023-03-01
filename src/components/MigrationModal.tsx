@@ -1,9 +1,9 @@
 import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+
 import * as lz from "../lz-string";
 import { selectStock } from "../store/depotSlice";
-
 import {
   selectGoals,
 } from "../store/goalsSlice";
