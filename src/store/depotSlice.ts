@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import itemsJson from "../../data/items.json";
 import { Item } from "../../scripts/output-types";
@@ -90,8 +90,12 @@ export const depotSlice = createSlice({
   },
 });
 
-export const selectStock = (state: RootState) => state.depot.stock;
-export const selectCrafting = (state: RootState) => state.depot.crafting;
+export const selectDepot = (state: RootState) => state.depot;
+export const selectStock = createSelector(selectDepot, (depot) => depot.stock);
+export const selectCrafting = createSelector(
+  selectDepot,
+  (depot) => depot.crafting
+);
 
 export const {
   subtractStock,

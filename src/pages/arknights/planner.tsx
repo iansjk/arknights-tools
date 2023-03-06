@@ -1,4 +1,5 @@
-import { Grid } from "@mui/material";
+import { Alert, AlertTitle, Button, Grid, Link } from "@mui/material";
+import lzstring from "lz-string";
 import { NextPage } from "next";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
@@ -7,8 +8,9 @@ import { Operator } from "../../../scripts/output-types";
 import GoalSelect from "../../components/GoalSelect";
 import Layout from "../../components/Layout";
 import OperatorSearch from "../../components/OperatorSearch";
-import { addGoals, PlannerGoal } from "../../store/goalsSlice";
-import { useAppDispatch } from "../../store/hooks";
+import { selectDepot } from "../../store/depotSlice";
+import { addGoals, PlannerGoal, selectGoals } from "../../store/goalsSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import performLegacyMigration from "../../store/performLegacyMigration";
 
 const MaterialsNeeded = dynamic(
@@ -22,6 +24,8 @@ const PlannerGoals = dynamic(() => import("../../components/PlannerGoals"), {
 const Planner: NextPage = () => {
   const [operator, setOperator] = useState<Operator | null>(null);
   const dispatch = useAppDispatch();
+  const goals = useAppSelector(selectGoals);
+  const depot = useAppSelector(selectDepot);
 
   const handleGoalsAdded = (newGoals: PlannerGoal[]) => {
     dispatch(addGoals(newGoals));
@@ -41,8 +45,48 @@ const Planner: NextPage = () => {
     }
   }, [dispatch]);
 
+  const handleMigrationClick = () => {
+    const data = { goals, depot };
+    const encoded = lzstring.compressToEncodedURIComponent(
+      JSON.stringify(data)
+    );
+    window.location.href = `https://krooster.com/planner/goals?migrate=${encoded}`;
+  };
+
   return (
     <Layout page="/planner">
+      <Alert
+        severity="warning"
+        variant="outlined"
+        sx={{ mb: 3, pb: 2, maxWidth: "100ch" }}
+      >
+        <AlertTitle>Arknights Tools is now part of Krooster</AlertTitle>
+        <p>
+          Hi everyone, thank you for using samidare.io. Based on my limited free
+          time and in order to facilitate more timely updates,{" "}
+          <b>
+            Arknights Tools has merged with{" "}
+            <Link href="https://krooster.com" target="_blank" rel="noreferrer">
+              Krooster
+            </Link>
+          </b>
+          , an Arknights collection tracker.
+        </p>
+        <p>
+          This site will continue to be available, but{" "}
+          <b>this version on samidare.io won’t receive further updates</b>. If
+          you click the button below, your planner data will be copied and
+          migrated to Krooster (it won’t be deleted here). Thank you all for
+          your support!
+        </p>
+        <Button
+          variant="contained"
+          color="warning"
+          onClick={handleMigrationClick}
+        >
+          Migrate Data to Krooster
+        </Button>
+      </Alert>
       <Grid container mb={2}>
         <Grid
           item
