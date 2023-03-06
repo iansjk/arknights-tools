@@ -50,8 +50,7 @@ const Planner: NextPage = () => {
     const encoded = lzstring.compressToEncodedURIComponent(
       JSON.stringify(data)
     );
-    console.log("would send this:", encoded);
-    window.location.href = `http://example.com/?data=${encoded}`;
+    window.location.href = `https://krooster.com/planner/goals?migrate=${encoded}`;
   };
 
   return (
